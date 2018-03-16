@@ -1,0 +1,135 @@
+.mt-button {
+  --theme-primary: var(--main-color, teal);
+  --theme-secondary: var(--secondary-color, orange);
+
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  will-change: transform, opacity;
+  display: inline-block;
+  position: relative;
+  min-width: 64px;
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  text-align: center;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 2px;
+  cursor: pointer;
+
+  background-color: var(--theme-primary);
+  color: #fff;
+}
+
+.mt-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.1s ease-in-out;
+  z-index: -1;
+}
+
+.mt-button:hover:before,
+.mt-button:focus:before {
+  opacity: 0.3;
+}
+
+.mt-button:disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.38);
+  cursor: default;
+  pointer-events: none;
+}
+
+.mt-button.mt-button-compact {
+  padding: 0 8px;
+}
+
+.mt-button.mt-button-secondary {
+  --theme-primary: var(--theme-secondary);
+}
+
+.mt-button.mt-button-raised {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mt-button.mt-button-raised:disabled {
+  box-shadow: none;
+}
+
+.mt-button.mt-button-flat,
+.mt-button.mt-button-stroked {
+  background-color: transparent;
+  color: var(--theme-primary);
+}
+
+.mt-button.mt-button-flat:before,
+.mt-button.mt-button-stroked:before {
+  background-color: var(--theme-primary);
+}
+
+.mt-button.mt-button-flat:hover:before,
+.mt-button.mt-button-flat:focus:before,
+.mt-button.mt-button-stroked:hover:before,
+.mt-button.mt-button-stroked:focus:before {
+  opacity: 0.1;
+}
+
+.mt-button.mt-button-stroked {
+  border: 2px solid var(--theme-primary);
+  line-height: 32px;
+}
+
+.mt-button.mt-button-flat:disabled,
+.mt-button.mt-button-stroked:disabled {
+  color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.38);
+}
+
+.mt-buttonGroup {
+  display: flex;
+}
+
+.mt-buttonGroup .mt-button {
+  margin: 0 !important;
+  border-radius: 0;
+}
+
+.mt-buttonGroup .mt-button:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.mt-buttonGroup .mt-button:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.mt-buttonGroup .mt-button-stroked {
+  border-left: none;
+}
+
+.mt-buttonGroup .mt-button-stroked:first-child {
+  border-left: 2px solid var(--theme-primary);
+}
+
+.mt-button-flat .mt-ripple:after,
+.mt-button-stroked .mt-ripple:after {
+  background-color: var(--theme-primary);
+}

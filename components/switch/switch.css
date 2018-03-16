@@ -1,0 +1,68 @@
+.mt-switch {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mt-switch_input {
+  pointer-events: none;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+.mt-switch-noLabel .mt-switch_textWrapper {
+  padding: 0 36px 0 0;
+}
+
+.mt-switch_textWrapper {
+  display: inline-block;
+  user-select: none;
+  padding: 4px 43px 4px 10px;
+}
+
+.mt-switch_textWrapper:after,
+.mt-switch_textWrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: #f1f1f1;
+  z-index: 1;
+  border-radius: 20px;
+  will-change: transform, opacity;
+  transition: transform 0.15s ease-in-out;
+}
+
+.mt-switch_textWrapper:before {
+  background-color: turquoise;
+}
+
+.mt-switch_input:checked + .mt-switch_textWrapper:after,
+.mt-switch_input:checked + .mt-switch_textWrapper:before {
+  transform: translateX(15px);
+}
+
+.mt-switch_input:checked + .mt-switch_textWrapper:after {
+  opacity: 0;
+}
+
+.mt-switch:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+  border-radius: 7px;
+  background: repeating-linear-gradient(
+    to right,
+    teal,
+    teal 17px,
+    #ccc 17px,
+    #ccc 34px
+  );
+}

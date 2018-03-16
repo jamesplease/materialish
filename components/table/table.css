@@ -1,0 +1,122 @@
+.mt-table {
+  width: 100%;
+  min-width: 700px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  --border-color: #e0e0e0;
+  --row-height: 50px;
+}
+
+.mt-table_row {
+  height: var(--row-height);
+  vertical-align: middle;
+}
+
+.mt-table_row:nth-child(odd) {
+  outline: 1px solid var(--border-color);
+}
+
+.mt-table-clickableElement {
+  cursor: pointer;
+}
+
+.mt_table_row-tall {
+  height: calc(var(--row-height) * 1.25);
+}
+
+.mt-table_row:hover .mt-table_cell:before {
+  opacity: 1;
+}
+
+.mt-table_row-selected {
+  background-color: #e3f2fd;
+}
+
+.mt-table_row-selected .mt-table_cell:before {
+  background-color: #c0e2fa;
+}
+
+.mt-table_tableHeader {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.54);
+  height: 54px;
+  text-align: left;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mt-table_cell {
+  position: relative;
+  word-break: break-all;
+  padding: 0 10px;
+}
+
+.mt-table_cell-padded {
+  padding-left: 30px;
+}
+
+.mt-table_cell-separator {
+  border-right: 1px solid #ccc;
+}
+
+.mt-table_cell:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #eee;
+  opacity: 0;
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.mt-table_cellContents {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  color: #757575;
+}
+
+.mt-table_cellTitle {
+  font-weight: 400;
+  margin: 0;
+}
+
+.mt-table_cellSubtitle {
+  margin: 0;
+  font-weight: 100;
+  font-size: 0.9em;
+}
+
+.mt-table_message {
+  --numRows: 6;
+}
+
+.mt-table_messageContents {
+  vertical-align: middle;
+  text-align: center;
+  height: calc(var(--numRows) * var(--row-height));
+  color: #ccc;
+}
+
+.mt-table_footer {
+  height: 60px;
+  text-align: left;
+}
+
+.mt-table_footer .mt-table_footerRow {
+  height: 60px;
+  outline: none;
+}

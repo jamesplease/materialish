@@ -1,0 +1,43 @@
+.mt-ripple {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  --mt-ripple-top: 0px;
+  --mt-ripple-left: 0px;
+}
+
+.mt-ripple::after {
+  content: '';
+  position: absolute;
+  top: var(--mt-ripple-top, 0);
+  left: var(--mt-ripple-left, 0);
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 200%;
+  background-color: #fff;
+  will-change: transform;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mt-ripple--active::after {
+  animation: ripple 0.9s;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 0.5;
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(calc(3 * var(--mt-ripple-spread, 4)));
+    opacity: 0;
+  }
+}
