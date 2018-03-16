@@ -49,8 +49,6 @@ export default class Ripple extends Component {
       left: `${x}px`
     });
 
-    console.log(x, y);
-
     this.activeTimeout = setTimeout(() => {
       this.setState({
         active: true
