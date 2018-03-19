@@ -1,6 +1,6 @@
 # Materialish
 
-Vaguely Material components built for the Content Algorithms at Netflix.
+Vaguely Material components built for the Content Algorithms Team at Netflix.
 
 ### Installation
 
