@@ -32,3 +32,13 @@ npm run storybook
 
 These components will currently only be updated to support Content Algorithms use cases.
 We encourage you to fork the components if you need additional functionality.
+
+### Publishing the Storybook
+
+To update the documentation, run:
+
+```
+npm run storybook:publish
+```
+
+> Note: you must be a collaborator on this project to publish the documentation.
