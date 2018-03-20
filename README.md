@@ -1,13 +1,30 @@
 # Materialish
 
 [![Travis build status](http://img.shields.io/travis/jamesplease/materialish.svg?style=flat)](https://travis-ci.org/jamesplease/materialish)
+[![npm version](https://img.shields.io/npm/v/materialish.svg)](https://www.npmjs.com/package/materialish)
 
-Vaguely Material components built for the Content Algorithms Team at Netflix.
+React components that loosely follow Material Design.
+
+### Motivation
+
+The Netflix Studio design system is inspired by Material Design. This is an implementation of that
+design system in React.
+
+> Note: This project is a work-in-progress.
 
 ### Installation
 
-You must copy and paste the components to use them in your application. The
-components can be found in the `./components` directory.
+Install using [npm](https://www.npmjs.com):
+
+```
+npm install materialish
+```
+
+or [yarn](https://yarnpkg.com/):
+
+```
+yarn add materialish
+```
 
 ### Developing
 
