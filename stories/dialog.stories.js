@@ -1,9 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
-import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
-import { withNotes } from '@storybook/addon-notes';
 import '../components/dialog/dialog.css';
 import Dialog from '../components/dialog/dialog';
 import Button from '../components/button/button';

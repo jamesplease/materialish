@@ -1,9 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
-import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
-import { withNotes } from '@storybook/addon-notes';
 import '../components/menu/menu.css';
 import Menu from '../components/menu/menu';
 

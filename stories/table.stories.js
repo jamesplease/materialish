@@ -1,9 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/react';
-import { action } from '@storybook/addon-actions';
+import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { setOptions } from '@storybook/addon-options';
-import { withNotes } from '@storybook/addon-notes';
 import '../components/table/table.css';
 import Table from '../components/table/table';
 import Checkbox from '../components/checkbox/checkbox';

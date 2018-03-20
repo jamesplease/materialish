@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
 import '../components/navigation/navigation.css';
 import Navigation from '../components/navigation/navigation';
