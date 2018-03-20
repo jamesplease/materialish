@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Navigation extends Component {
   render() {
-    const { children, className = '', vertical = false, ...props } = this.props;
+    const { children, className = '', vertical = false } = this.props;
 
     return (
       <ul
@@ -18,7 +18,7 @@ class Navigation extends Component {
 
 Navigation.Item = class NavigationItem extends Component {
   render() {
-    const { children, className = '', active = false, ...props } = this.props;
+    const { children, className = '', active = false } = this.props;
 
     return (
       <li

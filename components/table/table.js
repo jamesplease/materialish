@@ -39,7 +39,6 @@ export class TableHeadCell extends Component {
       children,
       className,
       separator = false,
-      sortable = false,
       ...props
     } = this.props;
     const isClickable = typeof props.onClick === 'function';
