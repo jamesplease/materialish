@@ -1,4 +1,7 @@
 .mt-table {
+  --_mt-table-rowHeight: var(--mt-table-rowHeight, 50px);
+  --_mt-table-messageRowHeight: var(--mt-table-messageRowHeight, 6);
+
   width: 100%;
   min-width: 700px;
   border: 1px solid #e0e0e0;
@@ -6,17 +9,15 @@
   border-spacing: 0;
   border-collapse: separate;
   table-layout: fixed;
-  --border-color: #e0e0e0;
-  --row-height: 50px;
 }
 
 .mt-table_row {
-  height: var(--row-height);
+  height: var(--_mt-table-rowHeight);
   vertical-align: middle;
 }
 
 .mt-table_row:nth-child(odd) {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid #e0e0e0;
 }
 
 .mt-table-clickableElement {
@@ -24,7 +25,7 @@
 }
 
 .mt_table_row-tall {
-  height: calc(var(--row-height) * 1.25);
+  height: calc(var(--_mt-table-rowHeight) * 1.25);
 }
 
 .mt-table_row:hover .mt-table_cell:before {
@@ -40,7 +41,7 @@
 }
 
 .mt-table_tableHeader {
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.54);
   height: 54px;
   text-align: left;
@@ -96,18 +97,18 @@
 
 .mt-table_cellSubtitle {
   margin: 0;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 0.9em;
 }
 
 .mt-table_message {
-  --numRows: 6;
+  --_mt-table-messageRowHeight: 6;
 }
 
 .mt-table_messageContents {
   vertical-align: middle;
   text-align: center;
-  height: calc(var(--numRows) * var(--row-height));
+  height: calc(var(--_mt-table-messageRowHeight) * var(--_mt-table-rowHeight));
   color: #ccc;
 }
 

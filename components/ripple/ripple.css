@@ -1,4 +1,7 @@
 .mt-ripple {
+  --_mt-ripple-spread: var(--mt-ripple-spread, 4);
+  --_mt-ripple-color: var(--mt-ripple-color, #fff);
+
   position: absolute;
   display: block;
   top: 0;
@@ -6,21 +9,19 @@
   left: 0;
   right: 0;
   overflow: hidden;
-  --mt-ripple-top: 0px;
-  --mt-ripple-left: 0px;
 }
 
 .mt-ripple::after {
   content: '';
   position: absolute;
-  top: var(--mt-ripple-top, 0);
-  left: var(--mt-ripple-left, 0);
+  top: 0px;
+  left: 0px;
   margin-top: -10px;
   margin-left: -10px;
   width: 20px;
   height: 20px;
   border-radius: 200%;
-  background-color: #fff;
+  background-color: var(--_mt-ripple-color);
   will-change: transform;
   opacity: 0;
   pointer-events: none;
@@ -37,7 +38,7 @@
   }
 
   to {
-    transform: scale(calc(3 * var(--mt-ripple-spread, 4)));
+    transform: scale(calc(3 * var(--_mt-ripple-spread)));
     opacity: 0;
   }
 }

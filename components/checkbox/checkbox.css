@@ -1,4 +1,14 @@
 .mt-checkbox {
+  /*
+    This (ugly) set of variables defines the variable fallback implementation.
+
+    1. If `mt-checkbox-backgroundColor` is set, then that will be applied
+    2. Otherwise, `mt-mainColor` will be applied
+    3. Otherwise, `#2196f3` will be applied
+  */
+  --_mt-checkbox-backgroundColor: var(--mt-checkbox-backgroundColor, var(--mt-mainColor, #2196f3));
+  --_mt-checkbox-checkColor: var(--mt-checkbox-checkColor, #fff);
+
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -49,8 +59,8 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  border: 2px solid #2196f3;
-  background-color: #2196f3;
+  border: 2px solid var(--_mt-checkbox-backgroundColor);
+  background-color: var(--_mt-checkbox-backgroundColor);
   border-radius: 2px;
   position: absolute;
   top: 0px;
@@ -76,7 +86,7 @@
   display: inline-block;
   width: 5px;
   height: 11px;
-  border: 2px solid #fff;
+  border: 2px solid var(--_mt-checkbox-checkColor);
   border-left: none;
   border-top: none;
   border-radius: 2px;
