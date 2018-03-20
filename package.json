@@ -1,7 +1,7 @@
 {
-  "name": "storybook",
+  "name": "materialish",
   "version": "0.0.1",
-  "description": "",
+  "description": "React components that loosely follow Material Design",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
@@ -12,12 +12,31 @@
     "storybook:build": "build-storybook -o docs",
     "storybook:publish": "npm run storybook:clean && npm run storybook:build && cd docs && git init && git commit --allow-empty -m 'update storybook' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesplease/materialish.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "material",
+    "design",
+    "ux",
+    "ui"
+  ],
+  "author": "Javier Porrero <porrero.javier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesplease/materialish/issues"
+  },
+  "files": [
+    "components"
+  ],
+  "homepage": "https://jamesplease.github.io/materialish",
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
