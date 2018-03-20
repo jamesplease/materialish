@@ -15,8 +15,7 @@ class Checkbox extends Component {
           labelAlignment.toLowerCase() === 'right'
             ? 'mt-checkbox-rightLabel'
             : ''
-        } ${className}`}
-      >
+        } ${className}`}>
         <input type="checkbox" className="mt-checkbox_input" {...props} />
         <span className="mt-checkbox_textWrapper">{children}</span>
       </label>
