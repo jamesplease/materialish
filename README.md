@@ -1,5 +1,7 @@
 # Materialish
 
+[![Travis build status](http://img.shields.io/travis/jamesplease/materialish.svg?style=flat)](https://travis-ci.org/jamesplease/materialish)
+
 Vaguely Material components built for the Content Algorithms Team at Netflix.
 
 ### Installation
