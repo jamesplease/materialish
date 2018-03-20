@@ -18,8 +18,7 @@ storiesOf('Checkbox', module)
   .add('Regular', () => (
     <Checkbox
       onChange={action('onChange')}
-      labelAlignment={select('Label Alignment', alignmentOptions, 'right')}
-    >
+      labelAlignment={select('Label Alignment', alignmentOptions, 'right')}>
       Check me
     </Checkbox>
   ))

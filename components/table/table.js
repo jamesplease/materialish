@@ -35,20 +35,14 @@ export class TableHeadRow extends Component {
 
 export class TableHeadCell extends Component {
   render() {
-    const {
-      children,
-      className,
-      separator = false,
-      ...props
-    } = this.props;
+    const { children, className, separator = false, ...props } = this.props;
     const isClickable = typeof props.onClick === 'function';
     return (
       <th
         className={`mt-table_tableHeader mt-table_cell ${
           separator ? 'mt-table_cell-separator' : ''
         } ${isClickable ? 'mt-table-clickableElement' : ''} ${className}`}
-        {...props}
-      >
+        {...props}>
         <div className="mt-table_tableHeaderContents">{children}</div>
       </th>
     );
@@ -79,8 +73,7 @@ export class TableRow extends Component {
         } ${selected ? 'mt-table_row-selected' : ''} ${
           tall ? 'mt_table_row-tall' : ''
         } ${className}`}
-        {...props}
-      >
+        {...props}>
         {children}
       </tr>
     );
@@ -100,8 +93,7 @@ export class TableCell extends Component {
         className={`mt-table_cell ${
           separator ? 'mt-table_cell-separator' : ''
         } ${className}`}
-        {...props}
-      >
+        {...props}>
         <div className="mt-table_cellContents">{children}</div>
       </td>
     );
@@ -137,8 +129,7 @@ export class TableFootCell extends Component {
       <td
         className={`mt-table_footerCell ${className}`}
         colSpan="99"
-        {...props}
-      >
+        {...props}>
         {children}
       </td>
     );
@@ -158,8 +149,7 @@ export class TableMessage extends Component {
       <tr
         className={`mt-table_message ${className}`}
         style={{ '--numRows': rows, ...styles }}
-        {...props}
-      >
+        {...props}>
         <td className="mt-table_messageContents" colSpan="42">
           {children}
         </td>

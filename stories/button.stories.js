@@ -23,8 +23,7 @@ storiesOf('Button', module)
       flat={boolean('Flat', false, 'PROPS')}
       ripple={boolean('Ripple', true)}
       raised={boolean('Raised', false)}
-      stroked={boolean('Stroked', false)}
-    >
+      stroked={boolean('Stroked', false)}>
       {text('Text', 'Hello Button')}
     </Button>
   ))
@@ -38,8 +37,7 @@ storiesOf('Button', module)
         flat={boolean('Flat', false)}
         ripple={boolean('Ripple', true)}
         raised={boolean('Raised', false)}
-        stroked={boolean('Stroked', false)}
-      >
+        stroked={boolean('Stroked', false)}>
         {text('Text', 'Hello Button')}
       </Button>
       <Button
@@ -50,8 +48,7 @@ storiesOf('Button', module)
         flat={boolean('Flat', false)}
         ripple={boolean('Ripple', true)}
         raised={boolean('Raised', false)}
-        stroked={boolean('Stroked', false)}
-      >
+        stroked={boolean('Stroked', false)}>
         {text('Text', 'Hello Button')}
       </Button>
       <Button
@@ -62,8 +59,7 @@ storiesOf('Button', module)
         flat={boolean('Flat', false)}
         ripple={boolean('Ripple', true)}
         raised={boolean('Raised', false)}
-        stroked={boolean('Stroked', false)}
-      >
+        stroked={boolean('Stroked', false)}>
         {text('Text', 'Hello Button')}
       </Button>
     </Button.Group>

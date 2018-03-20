@@ -7,7 +7,7 @@
     "test": "npm run lint",
     "lint": "eslint components",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "prettier": "prettier **/*.js --write",
+    "prettier": "prettier --config ./.prettierrc --write **/*.{js,css} components/**/*.js",
     "storybook:clean": "rimraf docs",
     "storybook:build": "build-storybook -o docs",
     "storybook:publish": "npm run storybook:clean && npm run storybook:build && cd docs && git init && git commit --allow-empty -m 'update storybook' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force"

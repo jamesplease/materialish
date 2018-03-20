@@ -8,8 +8,7 @@ class Switch extends Component {
       <label
         className={`mt-switch ${
           children ? '' : 'mt-switch-noLabel'
-        } ${className}`}
-      >
+        } ${className}`}>
         <input className="mt-switch_input" type="checkbox" {...props} />
         <span className="mt-switch_textWrapper">{children}</span>
       </label>

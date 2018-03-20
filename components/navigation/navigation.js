@@ -8,8 +8,7 @@ class Navigation extends Component {
       <ul
         className={`mt-navigation ${
           vertical ? 'mt-navigation-vertical' : ''
-        } ${className}`}
-      >
+        } ${className}`}>
         {children}
       </ul>
     );
@@ -24,8 +23,7 @@ Navigation.Item = class NavigationItem extends Component {
       <li
         className={`mt-navigation_item ${
           active ? 'mt-navigation_item-active' : ''
-        } ${className}`}
-      >
+        } ${className}`}>
         {children}
       </li>
     );

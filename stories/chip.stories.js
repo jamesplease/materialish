@@ -18,8 +18,7 @@ storiesOf('Chip', module)
       disabled={boolean('Disabled', false)}
       closeable={boolean('Closeable', false)}
       onCloseClick={action('CloseClicked')}
-      onClick={action('Click')}
-    >
+      onClick={action('Click')}>
       {text('Text', 'Hello Button')}
     </Chip>
   ));
