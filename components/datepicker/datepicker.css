@@ -1,0 +1,168 @@
+.mt-datePicker {
+  width: 330px;
+  display: grid;
+  grid-template-rows: 100px 320px 55px;
+  grid-template-columns: 1fr;
+  background-color: #fff;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mt-datePicker_header {
+  background-color: #009588;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.mt-datePicker_body {
+  display: grid;
+  grid-template-rows: 50px 30px 240px;
+}
+
+.mt-datePicker-year .mt-datePicker_body {
+  grid-template-rows: 320px;
+}
+
+.mt-datePicker_selectedYear {
+  opacity: 0.8;
+  margin: 0;
+  padding: 0;
+}
+
+.mt-datePicker-year .mt-datePicker_selectedYear {
+  opacity: 1;
+}
+
+.mt-datePicker_yearContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: dense;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.mt-datePicker_year {
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+  font-size: 16px;
+}
+
+.mt-datePicker_year-today {
+  font-size: 28px;
+  line-height: 45px;
+  color: #009588;
+}
+
+.mt-datePicker_selectedDay {
+  font-size: 32px;
+  margin: 5px 0 0;
+  padding: 0;
+}
+
+.mt-datePicker-year .mt-datePicker_selectedDay {
+  opacity: 0.7;
+}
+
+.mt-datePicker_monthContainer {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-auto-flow: dense;
+}
+
+.mt-datePicker_monthName {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-datePicker_backArrow,
+.mt-datePicker_nextArrow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mt-datePicker_backArrow:after,
+.mt-datePicker_nextArrow:after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #757575;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+.mt-datePicker_nextArrow:after {
+  transform: rotate(135deg);
+}
+
+.mt-datePicker_weekdaysContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-flow: dense;
+}
+
+.mt-datePicker_dayName {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-size: 14px;
+}
+
+.mt-datePicker_daysContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-flow: dense;
+}
+
+.mt-datePicker_day {
+  font-size: 14px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.mt-datePicker_day-today {
+  color: #009588;
+}
+
+.mt-datePicker_day-selected {
+  color: #fff;
+}
+
+.mt-datePicker_day-selected:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #009588;
+  z-index: -1;
+  border-radius: 50%;
+  top: 0;
+  left: 4px;
+}
+
+.mt-datePicker_actionsContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
