@@ -55,26 +55,79 @@ DatePicker.Body = class DatePickerBody extends Component {
   }
 };
 
-DatePicker.DaysContainer = class DatePickerDaysContainer extends Component {
+DatePicker.CalendarContainer = class DatePickerCalendarContainer extends Component {
   render() {
-    const { children } = this.props;
+    const { children, onNextMonthClicked } = this.props;
+    return <div className="mt-datePicker_allDaysContainer">{children}</div>;
+  }
+};
+
+DatePicker.MonthBrowser = class DatePickerMonthBrowser extends Component {
+  render() {
+    const { children, className = '', ...props } = this.props;
     return (
-      <div className="mt-datePicker_allDaysContainer">
-        <div className="mt-datePicker_monthContainer">
-          <i className="mt-datePicker_backArrow" />
-          <p className="mt-datePicker_monthName">May 2018</p>
-          <i className="mt-datePicker_nextArrow" />
-        </div>
-        <div className="mt-datePicker_weekdaysContainer">
-          <p className="mt-datePicker_dayName">S</p>
-          <p className="mt-datePicker_dayName">M</p>
-          <p className="mt-datePicker_dayName">T</p>
-          <p className="mt-datePicker_dayName">W</p>
-          <p className="mt-datePicker_dayName">T</p>
-          <p className="mt-datePicker_dayName">F</p>
-          <p className="mt-datePicker_dayName">S</p>
-        </div>
-        <div className="mt-datePicker_daysContainer">{children}</div>
+      <div className={`mt-datePicker_monthContainer ${className}`} {...props}>
+        {children}
+      </div>
+    );
+  }
+};
+
+DatePicker.MonthBrowser.MonthLabel = class DatePickerMonthBrowserMonthLabel extends Component {
+  render() {
+    const { children, className = '', ...props } = this.props;
+    return (
+      <p className={`mt-datePicker_monthName ${className}`} {...props}>
+        {children}
+      </p>
+    );
+  }
+};
+
+DatePicker.MonthBrowser.BackButton = class DatePickerMonthBrowserBackButton extends Component {
+  render() {
+    const { className = '', ...props } = this.props;
+    return <i className={`mt-datePicker_backArrow ${className}`} {...props} />;
+  }
+};
+
+DatePicker.MonthBrowser.NextButton = class DatePickerMonthBrowserNextButton extends Component {
+  render() {
+    const { className = '', ...props } = this.props;
+    return <i className={`mt-datePicker_nextArrow ${className}`} {...props} />;
+  }
+};
+
+DatePicker.WeekLegend = class DatePickerWeekLegend extends Component {
+  render() {
+    const { children, className = '', ...props } = this.props;
+    return (
+      <div
+        className={`mt-datePicker_weekdaysContainer ${className}`}
+        {...props}>
+        {children}
+      </div>
+    );
+  }
+};
+
+DatePicker.WeekLegend.Label = class DatePickerWeekLegendLabel extends Component {
+  render() {
+    const { children, className = '', ...props } = this.props;
+    return (
+      <p className={`mt-datePicker_dayName ${className}`} {...props}>
+        {children}
+      </p>
+    );
+  }
+};
+
+DatePicker.DayContainer = class DatePickerDayContainer extends Component {
+  render() {
+    const { children, className = '', ...props } = this.props;
+    return (
+      <div className={`mt-datePicker_daysContainer ${className}`} {...props}>
+        {children}
       </div>
     );
   }
