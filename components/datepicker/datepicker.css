@@ -20,7 +20,6 @@
 
 .mt-datePicker_body {
   display: grid;
-  grid-template-rows: 50px 30px 240px;
 }
 
 .mt-datePicker-year .mt-datePicker_body {
@@ -37,6 +36,11 @@
   opacity: 1;
 }
 
+.mt-datePicker_allDaysContainer {
+  display: grid;
+  grid-template-rows: 50px 30px 240px 320px;
+}
+
 .mt-datePicker_yearContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,6 +54,8 @@
   line-height: 45px;
   margin: 0;
   font-size: 16px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .mt-datePicker_year-today {

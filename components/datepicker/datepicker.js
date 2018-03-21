@@ -55,11 +55,11 @@ DatePicker.Body = class DatePickerBody extends Component {
   }
 };
 
-DatePicker.DayContainer = class DatePickerDaysContainer extends Component {
+DatePicker.DaysContainer = class DatePickerDaysContainer extends Component {
   render() {
     const { children } = this.props;
     return (
-      <Fragment>
+      <div className="mt-datePicker_allDaysContainer">
         <div className="mt-datePicker_monthContainer">
           <i className="mt-datePicker_backArrow" />
           <p className="mt-datePicker_monthName">May 2018</p>
@@ -75,16 +75,42 @@ DatePicker.DayContainer = class DatePickerDaysContainer extends Component {
           <p className="mt-datePicker_dayName">S</p>
         </div>
         <div className="mt-datePicker_daysContainer">{children}</div>
-      </Fragment>
+      </div>
     );
   }
 };
 
 DatePicker.Day = class DatePickerDay extends Component {
   render() {
-    const { children, className = '', ...props } = this.props;
+    const { children, className = '', today = false, ...props } = this.props;
     return (
-      <p className={`mt-datePicker_day ${className}`} {...props}>
+      <p
+        className={`mt-datePicker_day ${
+          today ? 'mt-datePicker_day-today' : ''
+        } ${className}`}
+        {...props}>
+        {children}
+      </p>
+    );
+  }
+};
+
+DatePicker.YearsContainer = class DatePickerYearsContainer extends Component {
+  render() {
+    const { children } = this.props;
+    return <div className="mt-datePicker_yearContainer">{children}</div>;
+  }
+};
+
+DatePicker.Year = class DatePickerYear extends Component {
+  render() {
+    const { children, className = '', today = false, ...props } = this.props;
+    return (
+      <p
+        className={`mt-datePicker_year ${
+          today ? 'mt-datePicker_year-today' : ''
+        } ${className}`}
+        {...props}>
         {children}
       </p>
     );
