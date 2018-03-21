@@ -1,0 +1,25 @@
+.mt-tag {
+  --_mt-tag-backgroundColor: var(--mt-tag-backgroundColor, #eee);
+  --_mt-tag-secondaryBackgroundColor: var(
+    --mt-tag-secondaryBackgroundColor,
+    #e3f2fd
+  );
+  --_mt-tag-textColor: var(--mt-tag-textColor, #424242);
+  --_mt-tag-secondaryTextColor: var(--mt-tag-secondaryTextColor, #1a6fb3);
+
+  display: inline-block;
+  border-radius: 2;
+  background-color: var(--_mt-tag-backgroundColor);
+  padding: 6px 8px;
+  color: var(--_mt-tag-textColor);
+  user-select: none;
+}
+
+.mt-tag-highlighted {
+  background-color: var(--_mt-tag-secondaryBackgroundColor);
+  color: var(--_mt-tag-secondaryTextColor);
+}
+
+.mt-tag-clickable {
+  cursor: pointer;
+}
