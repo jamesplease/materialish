@@ -1,12 +1,21 @@
 .mt-button {
-  --theme-primary: var(--main-color, teal);
-  --theme-secondary: var(--secondary-color, orange);
+  /*
+    This (ugly) set of variables defines the variable fallback implementation.
+
+    1. If `mt-button-backgroundColor` is set, then that will be applied
+    2. Otherwise, `mt-mainColor` will be applied
+    3. Otherwise, `teal` will be applied
+  */
+  --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, teal));
+  --_mt-button-secondaryBackgroundColor: var(--mt-button-secondaryBackgroundColor, var(--mt-secondaryColor, orange));
+  --_mt-button-textColor: var(--mt-button-textColor, #fff);
+  --_mt-button-secondaryTextColor: var(--mt-button-secondaryTextColor, #fff);
 
   position: relative;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 28px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   will-change: transform, opacity;
@@ -25,8 +34,8 @@
   border-radius: 2px;
   cursor: pointer;
 
-  background-color: var(--theme-primary);
-  color: #fff;
+  background-color: var(--_mt-button-backgroundColor);
+  color: var(--_mt-button-textColor);
 }
 
 .mt-button:before {
@@ -61,7 +70,8 @@
 }
 
 .mt-button.mt-button-secondary {
-  --theme-primary: var(--theme-secondary);
+  --_mt-button-backgroundColor: var(--_mt-button-secondaryBackgroundColor);
+  --_mt-button-textColor: var(--_mt-button-secondaryTextColor);
 }
 
 .mt-button.mt-button-raised {
@@ -76,12 +86,12 @@
 .mt-button.mt-button-flat,
 .mt-button.mt-button-stroked {
   background-color: transparent;
-  color: var(--theme-primary);
+  color: var(--_mt-button-backgroundColor);
 }
 
 .mt-button.mt-button-flat:before,
 .mt-button.mt-button-stroked:before {
-  background-color: var(--theme-primary);
+  background-color: var(--_mt-button-backgroundColor);
 }
 
 .mt-button.mt-button-flat:hover:before,
@@ -92,14 +102,15 @@
 }
 
 .mt-button.mt-button-stroked {
-  border: 2px solid var(--theme-primary);
+  border: 2px solid var(--_mt-button-backgroundColor);
   line-height: 32px;
 }
 
 .mt-button.mt-button-flat:disabled,
 .mt-button.mt-button-stroked:disabled {
-  color: rgba(0, 0, 0, 0.38);
-  border-color: rgba(0, 0, 0, 0.38);
+  /* We may wish to make these into separate variables */
+  color: var(--_mt-button-disabledTextColor);
+  border-color: var(--_mt-button-disabledTextColor);
 }
 
 .mt-buttonGroup {
@@ -126,10 +137,10 @@
 }
 
 .mt-buttonGroup .mt-button-stroked:first-child {
-  border-left: 2px solid var(--theme-primary);
+  border-left: 2px solid var(--_mt-button-backgroundColor);
 }
 
 .mt-button-flat .mt-ripple:after,
 .mt-button-stroked .mt-ripple:after {
-  background-color: var(--theme-primary);
+  background-color: var(--_mt-button-backgroundColor);
 }

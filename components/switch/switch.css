@@ -1,4 +1,14 @@
 .mt-switch {
+  /*
+    This (ugly) set of variables defines the variable fallback implementation.
+
+    1. If `mt-switch-mainColor` is set, then that will be applied
+    2. Otherwise, `mt-mainColor` will be applied
+    3. Otherwise, `turquoise` will be applied
+  */
+  --_mt-switch-mainColor: var(--mt-switch-mainColor, var(--mt-mainColor, turquoise));
+  --_mt-switch-backgroundColor: var(--mt-switch-backgroundColor, teal);
+
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -37,7 +47,7 @@
 }
 
 .mt-switch_textWrapper:before {
-  background-color: turquoise;
+  background-color: var(--_mt-switch-mainColor);
 }
 
 .mt-switch_input:checked + .mt-switch_textWrapper:after,
@@ -60,8 +70,8 @@
   border-radius: 7px;
   background: repeating-linear-gradient(
     to right,
-    teal,
-    teal 17px,
+    var(--_mt-switch-backgroundColor),
+    var(--_mt-switch-backgroundColor) 17px,
     #ccc 17px,
     #ccc 34px
   );
