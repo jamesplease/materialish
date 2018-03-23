@@ -1,0 +1,35 @@
+.mt-stackview {
+  --grid-template-items: 1fr;
+  --grid-template-rows: none;
+  --spacing: 10px;
+  display: grid;
+  grid-template-columns: var(--grid-template-items);
+  grid-template-rows: none;
+  grid-column-gap: calc(1px * var(--spacing));
+  grid-row-gap: 0;
+  justify-content: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.mt-stackview-vertical {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: var(--grid-template-items);
+  grid-row-gap: calc(1px * var(--spacing));
+  grid-column-gap: 0;
+}
+
+.mt-stackview-tiled {
+  grid-template-columns: var(--grid-template-items);
+  grid-template-rows: none;
+  grid-column-gap: calc(1px * var(--spacing));
+  grid-row-gap: calc(1px * var(--spacing));
+  justify-items: center;
+  align-content: start;
+}
+
+.mt-stackview_item {
+  width: 100%;
+  position: relative;
+}

@@ -1,7 +1,13 @@
 .mt-navigation {
-  --_mt-navigation-backgroundColor: var(--mt-navigation-backgroundColor, #262626);
+  --_mt-navigation-backgroundColor: var(
+    --mt-navigation-backgroundColor,
+    #262626
+  );
   --_mt-navigation-textColor: var(--mt-navigation-textColor, #fff);
-  --_mt-navigation-activeIndicatorColor: var(--mt-navigation-activeIndicatorColor, var(--mt-mainColor, #4d91ec));
+  --_mt-navigation-activeIndicatorColor: var(
+    --mt-navigation-activeIndicatorColor,
+    var(--mt-mainColor, #4d91ec)
+  );
 
   height: 46px;
   width: 100%;
@@ -12,6 +18,7 @@
   padding: 0 5px;
   list-style: none;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .mt-navigation-vertical {
