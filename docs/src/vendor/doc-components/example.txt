@@ -1,0 +1,28 @@
+// Materialish Demo
+// -------------------------------------------------------------------
+// Try out Materialish here
+
+class Welcome extends React.Component {
+  state = {
+    active: false
+  };
+
+  handleToggle = () => {
+    this.setState({active: !this.state.active});
+  }
+
+  actions = [{
+    label: 'Great!',
+    onClick: this.handleToggle
+  }];
+
+  render () {
+    return (
+      <div>
+        Hello
+      </div>
+    );
+  }
+}
+
+return <Welcome />;

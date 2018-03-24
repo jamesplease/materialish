@@ -1,0 +1,48 @@
+.nav {
+  background-color: #fff;
+  width: calc((100% - var(--maxAppWidth)) / 2 + var(--navWidth));
+  min-width: var(--navWidth);
+  display: flex;
+  justify-content: flex-end;
+  min-height: calc(100% - var(--headerHeight));
+  padding-top: var(--appTopPadding);
+}
+
+.nav_navSubList,
+.nav_navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_navListItem {
+  margin-bottom: 40px;
+}
+
+.nav_navList {
+  width: var(--navWidth);
+  margin: 0;
+  padding: 0 var(--standardContentPadding);
+}
+
+.nav_navLink,
+.nav_navSectionLink {
+  color: #222;
+  text-decoration: none;
+}
+
+.nav_navSectionLink {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 13px;
+  display: block;
+}
+
+.nav_navLink {
+  font-size: 1.5rem;
+}
+
+.nav_navSubListItem {
+  height: 40px;
+  line-height: 40px;
+}

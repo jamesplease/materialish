@@ -1,0 +1,18 @@
+.header {
+  background-color: var(--mainColor);
+  height: var(--headerHeight);
+  line-height: var(--headerHeight);
+  width: 100%;
+}
+
+.header_appName {
+  margin: 0;
+  padding: 0;
+}
+
+.header_appLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: normal;
+}

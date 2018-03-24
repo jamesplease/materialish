@@ -1,0 +1,46 @@
+:root {
+  font-size: 10px;
+
+  --maxAppWidth: 1440px;
+  --standardContentPadding: 20px;
+  --appBodyPadding: 40px;
+  --navWidth: 300px;
+  --headerHeight: 65px;
+  --appTopPadding: 30px;
+
+  --mainColor: #5e35b1;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  height: 100%;
+  min-height: 100%;
+}
+
+#root,
+.app {
+  min-height: 100%;
+  height: 100%;
+}
+
+.app_body {
+  height: calc(100% - var(--headerHeight));
+}
+
+.contents {
+  max-width: var(--maxAppWidth);
+  padding: 0 var(--standardContentPadding);
+  margin: 0 auto;
+  font-size: 1.6rem;
+}

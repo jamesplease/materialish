@@ -1,0 +1,31 @@
+body {
+  font-size: 1.6rem;
+}
+
+.primaryHeader,
+.secondaryHeader,
+.markdown h1,
+.markdown h2 {
+  color: var(--mainColor);
+  font-weight: 400;
+  padding: 0;
+}
+
+.primaryHeader,
+.markdown h1 {
+  margin: 0 0 30px;
+  font-size: 2.5rem;
+}
+
+.secondaryHeader,
+.markdown h2 {
+  margin: 0 0 20px;
+  font-size: 2.1rem;
+}
+
+.markdown pre {
+  padding: 15px 10px;
+  background-color: #eee;
+  color: #514056;
+  border-radius: 2px;
+}
