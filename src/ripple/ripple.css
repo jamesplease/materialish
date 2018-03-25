@@ -1,6 +1,8 @@
 .mt-ripple {
   --_mt-ripple-spread: var(--mt-ripple-spread, 4);
   --_mt-ripple-color: var(--mt-ripple-color, #fff);
+  --_mt-ripple-top: var(--mt-ripple-top, 0);
+  --_mt-ripple-left: var(--mt-ripple-left, 0);
 
   position: absolute;
   display: block;
@@ -14,8 +16,8 @@
 .mt-ripple::after {
   content: '';
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: var(--_mt-ripple-top);
+  left: var(--_mt-ripple-left);
   margin-top: -10px;
   margin-left: -10px;
   width: 20px;
