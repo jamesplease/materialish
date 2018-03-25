@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.5 (2018/3/25)
+
+* Resolves a bug with the previous release.
+
 ### v0.0.4 (2018/3/25)
 
 * The library is now distributed in a prebuilt format.
