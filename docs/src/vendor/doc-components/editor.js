@@ -2,7 +2,7 @@ import React from "react";
 import CodeMirror from "codemirror";
 import "codemirror/mode/javascript/javascript";
 import "./editor.css";
-import "./editor-theme.css";
+import "./editor-theme-two.css";
 
 class Editor extends React.Component {
   // static propTypes = {
@@ -20,7 +20,7 @@ class Editor extends React.Component {
     lineNumbers: false,
     readOnly: false,
     tabSize: 2,
-    theme: "one-dark"
+    theme: "oceanic-next"
   };
 
   componentDidMount() {
