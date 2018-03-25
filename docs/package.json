@@ -8,6 +8,7 @@
     "fetch-dedupe": "^3.0.0-beta1",
     "highlight.js": "^9.0.0",
     "materialish": "0.0.5",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-lowlight": "^2.0.0",

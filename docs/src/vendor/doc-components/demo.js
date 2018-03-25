@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { fetchDedupe } from 'fetch-dedupe';
-import {Button, Ripple} from 'materialish';
 import Editor from './editor';
 import Preview from './preview';
 import codeTextUrl from './example.txt';
 
 class Playground extends React.Component {
-  // static propTypes = {
-  //   className: React.PropTypes.string
-  // };
+  static propTypes = {
+    className: PropTypes.string,
+    scope: PropTypes.object
+  };
 
   state = {
     code: null
@@ -23,6 +24,7 @@ class Playground extends React.Component {
   }
 
   render() {
+    const { scope } = this.props;
     const { code } = this.state;
 
     if (code === null) {
@@ -36,11 +38,7 @@ class Playground extends React.Component {
           codeText={this.state.code}
           onChange={this.handleCodeChange}
         />
-        <Preview code={this.state.code} scope={{
-          React,
-          Button,
-          Ripple
-        }} />
+        <Preview code={this.state.code} scope={scope} />
       </div>
     );
   }

@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { transform } from '@babel/standalone';
 
 const ERROR_TIMEOUT = 500;
 
 export default class Preview extends Component {
-  // propTypes: {
-  //   className: React.PropTypes.string,
-  //   code: React.PropTypes.string.isRequired,
-  //   scope: React.PropTypes.object
-  // },
+  static propTypes = {
+    className: PropTypes.string,
+    code: PropTypes.string.isRequired,
+    scope: PropTypes.object
+  }
 
-  // getDefaultProps() {
-  //   return {
-  //     className: "",
-  //     scope: { React }
-  //   };
-  // }
+  static defaultProps = {
+    className: "",
+    scope: { React }
+  }
 
   state = {
     error: null
