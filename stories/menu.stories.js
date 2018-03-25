@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import '../components/menu/menu.css';
-import Menu from '../components/menu/menu';
+import { Menu } from '../index';
 
 setOptions({
   name: 'Materialish',

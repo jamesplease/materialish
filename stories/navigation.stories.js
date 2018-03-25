@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import '../components/navigation/navigation.css';
-import Navigation from '../components/navigation/navigation';
+import { Navigation } from '../index';
 
 setOptions({
   name: 'Materialish',

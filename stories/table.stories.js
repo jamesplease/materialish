@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { setOptions } from '@storybook/addon-options';
 import '../components/table/table.css';
-import Table from '../components/table/table';
-import Checkbox from '../components/checkbox/checkbox';
+import { Checkbox, Table } from '../index';
 
 setOptions({
   name: 'Materialish',

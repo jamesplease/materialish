@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
 import '../components/button/button.css';
 import '../components/ripple/ripple.css';
-import Button from '../components/button/button';
+import { Button } from '../index';
 
 setOptions({
   name: 'Materialish',

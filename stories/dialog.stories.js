@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import '../components/dialog/dialog.css';
-import Dialog from '../components/dialog/dialog';
-import Button from '../components/button/button';
+import { Button, Dialog } from '../index';
 
 setOptions({
   name: 'Materialish',
