@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import { fetchDedupe } from "fetch-dedupe";
+import CodeHighlighter from "./code-highlighter";
+import "./highlight-github-gist-theme.css";
 
 export default class Markdown extends Component {
   render() {
@@ -10,7 +12,15 @@ export default class Markdown extends Component {
       return null;
     }
 
-    return <ReactMarkdown source={markdownText} className="markdown" />;
+    return (
+      <ReactMarkdown
+        source={markdownText}
+        className="markdown"
+        renderers={{
+          code: CodeHighlighter
+        }}
+      />
+    );
   }
 
   state = {

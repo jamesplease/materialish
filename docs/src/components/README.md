@@ -7,7 +7,11 @@ The button is a cool little thing.
 ```jsx
 import Button from "materialish/button";
 
-<Button>Text here</Button>;
+export default function() {
+  return (
+    <Button>Text here</Button>;
+  );
+}
 ```
 
 ## Tips

@@ -23,9 +23,13 @@ body {
   font-size: 2.1rem;
 }
 
+.markdown pre,
+.markdown code {
+  background-color: #eee;
+}
+
 .markdown pre {
   padding: 15px 10px;
-  background-color: #eee;
   color: #514056;
   border-radius: 2px;
 }
