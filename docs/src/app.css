@@ -7,5 +7,5 @@
     (100% - var(--maxAppWidth)) / 2 + var(--maxAppWidth) - var(--navWidth)
   );
   max-width: calc(var(--maxAppWidth) - var(--navWidth));
-  padding: var(--appTopPadding) var(--appBodyPadding) 0;
+  margin: var(--appTopPadding) var(--appBodyPadding) 0;
 }
