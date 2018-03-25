@@ -1,6 +1,6 @@
 {
   "name": "materialish",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React components that loosely follow Material Design",
   "main": "index.js",
   "scripts": {
