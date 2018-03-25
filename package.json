@@ -38,7 +38,9 @@
     "url": "https://github.com/jamesplease/materialish/issues"
   },
   "files": [
-    "components"
+    "dist",
+    "lib",
+    "es"
   ],
   "homepage": "https://jamesplease.github.io/materialish",
   "dependencies": {
