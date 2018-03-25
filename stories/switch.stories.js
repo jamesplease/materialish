@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
 import '../components/switch/switch.css';
-import Switch from '../components/switch/switch';
+import { Switch } from '../index';
 
 setOptions({
   name: 'Materialish',

@@ -4,7 +4,7 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
 import '../components/chip/chip.css';
-import Chip from '../components/chip/chip';
+import { Chip } from '../index';
 
 setOptions({
   name: 'Materialish',

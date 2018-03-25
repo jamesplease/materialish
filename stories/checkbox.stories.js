@@ -4,7 +4,7 @@ import { withKnobs, select } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
 import '../components/checkbox/checkbox.css';
-import Checkbox from '../components/checkbox/checkbox';
+import { Checkbox } from '../index';
 
 setOptions({
   name: 'Materialish',
