@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Markdown from './vendor/doc-components/markdown';
+import { Markdown } from 'doc-components';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
 import Nav from './common/nav';

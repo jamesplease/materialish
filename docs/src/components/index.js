@@ -18,7 +18,7 @@ export default class Components extends Component {
                 key={`${component.name}-main`}
                 exact
                 path={`${match.url}${component.url}`}
-                component={component.component}
+                render={props => <component.component {...props} {...component} />}
               />
             );
           })}

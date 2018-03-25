@@ -1,8 +1,8 @@
-class ButtonsExample extends React.Component {
+class ButtonsExample extends Component {
   render () {
     return (
-      <Button ripple>
-        Hello
+      <Button>
+        Perform Action
       </Button>
     );
   }

@@ -1,0 +1,11 @@
+class CheckboxExample extends Component {
+  render () {
+    return (
+      <Checkbox labelAlignment="right">
+        Check me
+      </Checkbox>
+    );
+  }
+}
+
+return <CheckboxExample />;

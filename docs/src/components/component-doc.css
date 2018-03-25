@@ -1,0 +1,57 @@
+.componentDoc {
+  --mt-navigation-backgroundColor: transparent;
+  --mt-navigation-textColor: #757575;
+  --mt-navigation-activeIndicatorColor: var(--mainColor);
+}
+
+.componentDoc_links {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  list-style: none;
+  display: flex;
+}
+
+.primaryHeader.componentDoc_primaryHeader {
+  margin-bottom: 20px;
+}
+
+.componentDoc_linkItem {
+  margin-left: 35px;
+}
+
+.componentDoc_linkItem:first-child {
+  margin-left: 0;
+}
+
+.componentDoc_linkAnchor {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #9c91b4;
+}
+
+.componentDoc_linkAnchor:hover {
+  color: #817894;
+}
+
+.componentDoc_icon {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.componentDoc .mt-navigation {
+  border-bottom: 1px solid #ddd;
+}
+
+.componentDoc_editor {
+  margin-bottom: 20px;
+}
+
+.componentDoc_note {
+  margin: 25px 0;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  color: #55a5e2;
+  background-color: #e0f5ff;
+}

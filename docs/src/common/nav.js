@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 import "./nav.css";
 import componentsData from "../components/components";
 
+// This ensures that the components appear in the navigation in
+// alphabetical order
+const sortedComponentsData = Array.from(componentsData).sort((a, b) => {
+  if (a.componentKey === b.componentKey) {
+    return 0;
+  }
+
+  return a.componentKey < b.componentKey ? -1 : 1;
+});
+
 export default class Nav extends Component {
   render() {
     return (
@@ -35,7 +45,7 @@ export default class Nav extends Component {
               Components
             </Link>
             <ul className="nav_navSubList">
-              {componentsData.map(component => {
+              {sortedComponentsData.map(component => {
                 return (
                   <li className="nav_navSubListItem" key={component.name}>
                     <Link

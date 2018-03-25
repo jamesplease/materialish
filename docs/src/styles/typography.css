@@ -28,6 +28,10 @@ body {
   font-size: 2.1rem;
 }
 
+a {
+  color: var(--mainColor);
+}
+
 .markdown pre,
 .markdown code {
   background-color: #eee;
