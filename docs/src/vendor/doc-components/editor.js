@@ -2,6 +2,7 @@ import React from "react";
 import CodeMirror from "codemirror";
 import "codemirror/mode/javascript/javascript";
 import "./editor.css";
+import "./editor-theme.css";
 
 class Editor extends React.Component {
   // static propTypes = {
