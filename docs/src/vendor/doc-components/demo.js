@@ -1,8 +1,9 @@
-import React from "react";
-import { fetchDedupe } from "fetch-dedupe";
-import Editor from "./editor";
-import Preview from "./preview";
-import codeTextUrl from "./example.txt";
+import React from 'react';
+import { fetchDedupe } from 'fetch-dedupe';
+import {Button, Ripple} from 'materialish';
+import Editor from './editor';
+import Preview from './preview';
+import codeTextUrl from './example.txt';
 
 class Playground extends React.Component {
   // static propTypes = {
@@ -35,13 +36,17 @@ class Playground extends React.Component {
           codeText={this.state.code}
           onChange={this.handleCodeChange}
         />
-        <Preview code={this.state.code} scope={{ React }} />
+        <Preview code={this.state.code} scope={{
+          React,
+          Button,
+          Ripple
+        }} />
       </div>
     );
   }
 
   componentDidMount() {
-    fetchDedupe(codeTextUrl, { responseType: "text" }).then(res => {
+    fetchDedupe(codeTextUrl, { responseType: 'text' }).then(res => {
       this.setState({
         code: res.data
       });

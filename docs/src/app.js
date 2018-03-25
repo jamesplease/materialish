@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import "./app.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Markdown from "./vendor/doc-components/markdown";
-import ScrollToTop from "./common/scroll-to-top";
-import Header from "./common/header";
-import Nav from "./common/nav";
-import NotFound from "./common/not-found";
-import Components from "./components";
-import Button from "./components/button";
-import introductionUrl from "./introduction/index.md";
+import React, { Component } from 'react';
+import './app.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Markdown from './vendor/doc-components/markdown';
+import ScrollToTop from './common/scroll-to-top';
+import Header from './common/header';
+import Nav from './common/nav';
+import NotFound from './common/not-found';
+import Components from './components';
+import introductionUrl from './introduction/index.md';
 
 class App extends Component {
   render() {

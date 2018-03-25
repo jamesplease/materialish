@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { transform } from "@babel/standalone";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { transform } from '@babel/standalone';
 
 const ERROR_TIMEOUT = 500;
 
@@ -49,7 +49,7 @@ export default class Preview extends Component {
       });`;
 
     return transform(code, {
-      presets: ["es2015", "stage-0", "react"]
+      presets: ['es2017', 'stage-0', 'react'],
     }).code;
   };
 

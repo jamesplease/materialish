@@ -1,15 +1,11 @@
-// Materialish Demo
-// -------------------------------------------------------------------
-// Try out Materialish here
-
-class Welcome extends React.Component {
+class ButtonsExample extends React.Component {
   render () {
     return (
-      <div>
+      <Button ripple>
         Hello
-      </div>
+      </Button>
     );
   }
 }
 
-return <Welcome />;
+return <ButtonsExample />;

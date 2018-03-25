@@ -8,6 +8,8 @@ export default class Ripple extends Component {
       'mt-ripple--active': active
     });
 
+    console.log('things', top, left);
+
     const styles = {
       '--mt-ripple-top': top,
       '--mt-ripple-left': left
