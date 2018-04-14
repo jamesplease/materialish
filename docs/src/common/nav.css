@@ -5,6 +5,7 @@
   justify-content: flex-end;
   min-height: calc(100% - var(--headerHeight));
   padding-top: var(--appTopPadding);
+  margin-right: 40px;
 }
 
 .nav_navSubList,
