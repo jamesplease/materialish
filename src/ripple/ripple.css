@@ -4,6 +4,8 @@
   --_mt-ripple-top: var(--mt-ripple-top, 50%);
   --_mt-ripple-left: var(--mt-ripple-left, 50%);
 
+  all: initial;
+
   position: absolute;
   display: block;
   top: 0;
