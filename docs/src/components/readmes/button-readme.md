@@ -2,14 +2,7 @@
 
 ```jsx
 import Button from "materialish/button";
-
-export default function() {
-  return (
-    <Button>
-      Save
-    </Button>
-  );
-}
+import "materialish/button.css";
 ```
 
 ## Props
