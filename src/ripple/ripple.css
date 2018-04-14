@@ -32,7 +32,7 @@
   pointer-events: none;
 }
 
-.mt-ripple--active::after {
+.mt-ripple-active::after {
   animation: ripple 0.9s;
 }
 

@@ -1,3 +1,4 @@
 # Docs
 
-This is the documentation for Materialish
+This is the documentation site for Materialish.
+
