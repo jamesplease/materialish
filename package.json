@@ -9,16 +9,17 @@
     "lint": "eslint components stories",
     "prepublish": "in-publish && npm run build || not-in-publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "clean": "rimraf dist es tmp lib",
+    "clean": "rimraf dist es tmp lib ./*.js ./*.css",
+    "copy-source": "node ./build/copy-source-files.js",
     "prettier": "prettier --config ./.prettierrc --write **/*.{js,css} components/**/*.js",
     "storybook:clean": "rimraf docs",
     "storybook:build": "build-storybook -o docs",
     "storybook:publish": "npm run storybook:clean && npm run storybook:build && cd docs && git init && git commit --allow-empty -m 'update storybook' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force",
-    "build": "npm run clean && npm run build:umd && npm run build:umd:min && npm run build:es && npm run build:commonjs",
+    "build": "npm run clean && npm run build:umd && npm run build:umd:min && npm run build:es && npm run build:commonjs && npm run copy-source",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:umd": "cross-env NODE_ENV=development BABEL_ENV=build rollup -c -i src/index.js -o dist/materialish.js",
-    "build:umd:min": "cross-env NODE_ENV=production BABEL_ENV=buildProd rollup -c -i src/index.js -o dist/materialish.min.js"
+    "build:umd": "cross-env NODE_ENV=development BABEL_ENV=build rollup -c build/rollup.config.js -i src/index.js -o dist/materialish.js",
+    "build:umd:min": "cross-env NODE_ENV=production BABEL_ENV=buildProd rollup -c build/rollup.config.js -i src/index.js -o dist/materialish.min.js"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,9 @@
   "files": [
     "dist",
     "lib",
-    "es"
+    "es",
+    "./*.js",
+    "./*.css"
   ],
   "homepage": "https://jamesplease.github.io/materialish",
   "dependencies": {
@@ -66,9 +69,11 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "chalk": "^2.3.2",
     "cross-env": "^5.1.4",
     "eslint": "^4.19.0",
     "eslint-plugin-react": "^7.7.0",
+    "glob": "^7.1.2",
     "in-publish": "^2.0.0",
     "prettier": "^1.11.1",
     "rimraf": "^2.6.2",
