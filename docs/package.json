@@ -8,7 +8,7 @@
     "doc-components": "0.0.4",
     "fetch-dedupe": "^3.0.0-beta1",
     "highlight.js": "^9.0.0",
-    "materialish": "0.0.8-beta.2",
+    "materialish": "0.0.8-beta.4",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
