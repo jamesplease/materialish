@@ -25,7 +25,7 @@
 }
 
 .componentDoc_linkAnchor {
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   text-decoration: none;
   color: #9c91b4;
 }
@@ -50,7 +50,7 @@
 .componentDoc_note {
   margin: 25px 0;
   padding: 15px;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   border-radius: 4px;
   color: #4498e4;
   border: 1px solid #95cef9;

@@ -1,6 +1,4 @@
 :root {
-  font-size: 10px;
-
   --maxAppWidth: 1200px;
   --standardContentPadding: 20px;
   --appBodyPadding: 40px;
@@ -42,5 +40,4 @@ body {
   max-width: var(--maxAppWidth);
   padding: 0 var(--standardContentPadding);
   margin: 0 auto;
-  font-size: 1.6rem;
 }
