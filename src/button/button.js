@@ -15,6 +15,7 @@ class Button extends Component {
       ripple = true,
       ...props
     } = this.props;
+
     const componentClassNames = classnames('mt-button', className, {
       'mt-button-raised': raised,
       'mt-button-flat': flat,
@@ -22,6 +23,7 @@ class Button extends Component {
       'mt-button-compact': compact,
       'mt-button-secondary': secondary
     });
+
     return (
       <button className={componentClassNames} {...props}>
         {ripple && <Ripple />}
