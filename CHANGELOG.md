@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.6 (2018/4/13)
+
+* Update the Button to use `em`s rather than hardcoded values
+
+* Remove most of the components (for now)
+
 ### v0.0.5 (2018/3/25)
 
 * Resolves a bug with the previous release.
