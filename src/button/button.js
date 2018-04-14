@@ -13,7 +13,7 @@ class Button extends Component {
       compact = flat,
       secondary = false,
       ripple = true,
-      ...props
+      ...otherProps
     } = this.props;
 
     const componentClassNames = classnames('mt-button', className, {
@@ -26,7 +26,7 @@ class Button extends Component {
 
     return (
       <button
-        {...props}
+        {...otherProps}
         className={componentClassNames}
         onClick={this.onClick}>
         {ripple && (

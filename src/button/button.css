@@ -12,13 +12,12 @@
   --_mt-button-secondaryTextColor: var(--mt-button-secondaryTextColor, #fff);
   --_mt-button-disabledTextColor: var(--mt-button-disabledTextColor, rgba(0, 0, 0, 0.38));
 
-  /* Reset things */
   all: initial;
   font-family: 'Roboto';
 
   position: relative;
   -webkit-font-smoothing: antialiased;
-  font-size: 1rem;
+  font-size: var(--mt-baseFontSize, 1rem);
   font-weight: 500;
   letter-spacing: 0.04em;
   text-decoration: none;
