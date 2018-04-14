@@ -1,8 +1,6 @@
 import ComponentDoc from "./component-doc";
 import buttonCodeUrl from './examples/button.txt';
 import buttonReadmeUrl from './readmes/button-readme.md';
-import checkboxCodeUrl from './examples/checkbox.txt';
-import checkboxReadmeUrl from './readmes/checkbox-readme.md';
 
 export default [
   {
