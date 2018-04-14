@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import Ripple from '../ripple/ripple';
 
-console.log('WAT');
-
 class Button extends Component {
   render() {
     const {
@@ -39,15 +37,15 @@ class Button extends Component {
     );
   }
 
-  getRippleRef = (node, thing) => {
-    this.ripple = node;
+  getRippleRef = (component) => {
+    this.rippleComponent = component;
   }
 
   onClick = (e) => {
     const { onClick } = this.props;
 
-    if (this.ripple) {
-      this.ripple.onClick(e);
+    if (this.rippleComponent) {
+      this.rippleComponent.onClick(e);
     }
 
     if (onClick) {
