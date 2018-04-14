@@ -12,7 +12,3 @@ npm install materialish
 
 yarn add materialish
 ```
-
-## Motivation
-
-There are several implementations of Material design components. Materialish focuses on X, Y, and Z.

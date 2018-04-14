@@ -5,7 +5,7 @@ export default class ComponentsLandingPage extends Component {
     return (
       <div>
         <h1 className="primaryHeader">Components</h1>
-        <p className="paragraph">Components are cool</p>
+        <p className="paragraph">Materialish has a single component: a Button.</p>
       </div>
     );
   }

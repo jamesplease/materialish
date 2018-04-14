@@ -3,6 +3,7 @@
   height: var(--headerHeight);
   line-height: var(--headerHeight);
   width: 100%;
+  padding: 0 var(--standardContentPadding);
 }
 
 .header_appName {

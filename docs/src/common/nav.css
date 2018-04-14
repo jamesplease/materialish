@@ -1,7 +1,6 @@
 .nav {
   background-color: #fff;
-  width: calc((100% - var(--maxAppWidth)) / 2 + var(--navWidth));
-  min-width: var(--navWidth);
+  width: var(--navWidth);
   display: flex;
   justify-content: flex-end;
   min-height: calc(100% - var(--headerHeight));

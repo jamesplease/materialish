@@ -23,7 +23,8 @@ export default class Nav extends Component {
               Introduction
             </Link>
           </li>
-          <li className="nav_navListItem">
+          {/* One day... */}
+          {/* <li className="nav_navListItem">
             <Link to="/guides" className="nav_navSectionLink">
               Guides
             </Link>
@@ -39,7 +40,7 @@ export default class Nav extends Component {
                 </Link>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li className="nav_navListItem">
             <Link to="/components" className="nav_navSectionLink">
               Components

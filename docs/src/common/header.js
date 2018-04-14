@@ -6,13 +6,11 @@ export default class Header extends Component {
   render() {
     return (
       <header className="header">
-        <div className="contents">
-          <h1 className="header_appName">
-            <Link to="/" className="header_appLink">
-              Materialish
-            </Link>
-          </h1>
-        </div>
+        <h1 className="header_appName">
+          <Link to="/" className="header_appLink">
+            Materialish
+          </Link>
+        </h1>
       </header>
     );
   }

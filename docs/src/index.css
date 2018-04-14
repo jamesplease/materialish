@@ -1,7 +1,7 @@
 :root {
   font-size: 10px;
 
-  --maxAppWidth: 1440px;
+  --maxAppWidth: 1100px;
   --standardContentPadding: 20px;
   --appBodyPadding: 40px;
   --navWidth: 300px;
@@ -9,6 +9,8 @@
   --appTopPadding: 30px;
 
   --mainColor: #5e35b1;
+
+  --mt-baseFontSize: 16px;
 }
 
 *,

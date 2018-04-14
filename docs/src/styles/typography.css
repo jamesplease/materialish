@@ -42,3 +42,7 @@ a {
   color: #514056;
   border-radius: 2px;
 }
+
+.markdown p {
+  line-height: 1.7;
+}
