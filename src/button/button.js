@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import Ripple from '../ripple/ripple';
 
+console.log('WAT');
+
 class Button extends Component {
   render() {
     const {
@@ -25,24 +27,33 @@ class Button extends Component {
     });
 
     return (
-      <button className={componentClassNames} {...props}>
-        {ripple && <Ripple />}
+      <button
+        {...props}
+        className={componentClassNames}
+        onClick={this.onClick}>
+        {ripple && (
+          <Ripple ref={this.getRippleRef} />
+        )}
         {children}
       </button>
     );
   }
-}
 
-Button.Group = class ButtonGroup extends Component {
-  render() {
-    const { children, className = '', ...props } = this.props;
-
-    return (
-      <div className={`mt-buttonGroup ${className}`} {...props}>
-        {children}
-      </div>
-    );
+  getRippleRef = (node, thing) => {
+    this.ripple = node;
   }
-};
+
+  onClick = (e) => {
+    const { onClick } = this.props;
+
+    if (this.ripple) {
+      this.ripple.onClick(e);
+    }
+
+    if (onClick) {
+      onClick();
+    }
+  }
+}
 
 export default Button;

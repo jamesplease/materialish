@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
-import '../components/button/button.css';
-import '../components/ripple/ripple.css';
-import { Button } from '../index';
+import '../src/button/button.css';
+import '../src/ripple/ripple.css';
+import { Button } from '../src/index';
 
 setOptions({
   name: 'Materialish',
@@ -26,41 +26,4 @@ storiesOf('Button', module)
       stroked={boolean('Stroked', false)}>
       {text('Text', 'Hello Button')}
     </Button>
-  ))
-  .add('Button Group', () => (
-    <Button.Group>
-      <Button
-        onClick={action('clicked')}
-        disabled={boolean('Disabled', false)}
-        secondary={boolean('Secondary', false)}
-        compact={boolean('Compact', false)}
-        flat={boolean('Flat', false)}
-        ripple={boolean('Ripple', true)}
-        raised={boolean('Raised', false)}
-        stroked={boolean('Stroked', false)}>
-        {text('Text', 'Hello Button')}
-      </Button>
-      <Button
-        onClick={action('clicked')}
-        disabled={boolean('Disabled', false)}
-        secondary={boolean('Secondary', false)}
-        compact={boolean('Compact', false)}
-        flat={boolean('Flat', false)}
-        ripple={boolean('Ripple', true)}
-        raised={boolean('Raised', false)}
-        stroked={boolean('Stroked', false)}>
-        {text('Text', 'Hello Button')}
-      </Button>
-      <Button
-        onClick={action('clicked')}
-        disabled={boolean('Disabled', false)}
-        secondary={boolean('Secondary', false)}
-        compact={boolean('Compact', false)}
-        flat={boolean('Flat', false)}
-        ripple={boolean('Ripple', true)}
-        raised={boolean('Raised', false)}
-        stroked={boolean('Stroked', false)}>
-        {text('Text', 'Hello Button')}
-      </Button>
-    </Button.Group>
   ));

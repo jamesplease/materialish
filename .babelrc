@@ -1,4 +1,9 @@
 {
+  "plugins": [
+    "transform-react-jsx",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ],
   "env": {
     "build": {
       "presets": [["env", { "modules": false }], "stage-3", "react"],
