@@ -1,8 +1,9 @@
 ## Usage
 
 ```jsx
-import Button from "materialish/button";
+import { Button } from "materialish";
 import "materialish/button.css";
+import "materialish/ripple.css";
 ```
 
 ## Props

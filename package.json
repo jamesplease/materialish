@@ -1,13 +1,12 @@
 {
   "name": "materialish",
-  "version": "0.0.7",
+  "version": "0.0.8-beta.2",
   "description": "React components that loosely follow Material Design",
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint components stories",
-    "prepublish": "in-publish && npm run build || not-in-publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "clean": "rimraf dist es tmp lib ./*.js ./*.css",
     "copy-source": "node ./build/copy-source-files.js",
@@ -39,8 +38,8 @@
     "dist",
     "lib",
     "es",
-    "./*.js",
-    "./*.css"
+    "ripple.css",
+    "button.css"
   ],
   "homepage": "https://jamesplease.github.io/materialish",
   "dependencies": {
