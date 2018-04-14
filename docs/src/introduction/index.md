@@ -7,7 +7,7 @@ Materialish is a set of React components that are loosely inspired by
 
 Install Materialish using npm or yarn.
 
-```
+```js
 npm install materialish
 
 yarn add materialish
