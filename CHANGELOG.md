@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.7 (2018/4/14)
+
+* Distribute individual component CSS files with the library
+
 ### v0.0.6 (2018/4/13)
 
 * Update the Button to use `em`s rather than hardcoded values
