@@ -1,0 +1,6 @@
+src
+docs
+.storybook
+.vscode
+build
+stories

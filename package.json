@@ -1,6 +1,6 @@
 {
   "name": "materialish",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React components that loosely follow Material Design",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -12,9 +12,6 @@
     "clean": "rimraf dist es tmp lib ./*.js ./*.css",
     "copy-source": "node ./build/copy-source-files.js",
     "prettier": "prettier --config ./.prettierrc --write **/*.{js,css} components/**/*.js",
-    "storybook:clean": "rimraf docs",
-    "storybook:build": "build-storybook -o docs",
-    "storybook:publish": "npm run storybook:clean && npm run storybook:build && cd docs && git init && git commit --allow-empty -m 'update storybook' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force",
     "build": "npm run clean && npm run build:umd && npm run build:umd:min && npm run build:es && npm run build:commonjs && npm run copy-source",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
@@ -42,8 +39,8 @@
     "dist",
     "lib",
     "es",
-    "./*.js",
-    "./*.css"
+    "*.js",
+    "*.css"
   ],
   "homepage": "https://jamesplease.github.io/materialish",
   "dependencies": {

@@ -1,0 +1,23 @@
+/* This sets the cursor to be a more reasonable default */
+
+body {
+  cursor: default;
+}
+
+code {
+  cursor: text;
+}
+
+a,
+button,
+input[type="button"],
+input[type="radio"],
+input[type="submit"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}

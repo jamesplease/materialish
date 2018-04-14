@@ -1,0 +1,13 @@
+.app_body {
+  display: flex;
+}
+
+.app_bodyContents {
+  width: calc(
+    (100% - var(--maxAppWidth)) / 2 + var(--maxAppWidth) - var(--navWidth)
+  );
+  max-width: calc(var(--maxAppWidth) - var(--navWidth));
+  min-width: 450px;
+  margin: var(--appTopPadding) auto 60px;
+  padding-right: 40px;
+}

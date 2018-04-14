@@ -3,15 +3,21 @@
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
+const glob = require('glob');
 const copyFiles = require('./copy-files');
 
 const NODE_MODULES = path.join(__dirname, '..', 'docs', 'node_modules');
 const DESTINATION_DIRECTORY = path.join(__dirname, '..', 'docs', 'src', 'styles', 'npm-package-styles');
+const MATERIALISH_GLOB = 'materialish/*.css';
 
 const filesToCopy = [
   'highlight.js/styles/github-gist.css',
-  'codemirror/theme/oceanic-next.css'
+  'codemirror/theme/oceanic-next.css',
 ];
+
+const materialishCss = glob.sync(`${NODE_MODULES}/${MATERIALISH_GLOB}`);
+const fullPathsToCopy = filesToCopy.map(file => path.join(NODE_MODULES, file));
+const allFiles = [...fullPathsToCopy, ...materialishCss];
 
 console.log(chalk.blue('\nCopying stylesheets from node_modules into the docs src folder.'));
 
@@ -21,5 +27,5 @@ fs.access(NODE_MODULES, (err) => {
     process.exit(1);
   }
 
-  copyFiles(filesToCopy.map(file => path.join(NODE_MODULES, file)), DESTINATION_DIRECTORY);
+  copyFiles(allFiles, DESTINATION_DIRECTORY);
 });

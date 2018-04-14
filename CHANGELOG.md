@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.8 (2018/4/14)
+
+* Fix bug with the previous release
+
 ### v0.0.7 (2018/4/14)
 
 * Distribute individual component CSS files with the library
