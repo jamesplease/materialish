@@ -69,48 +69,48 @@
   pointer-events: none;
 }
 
-.mt-button.mt-button-compact {
+.mt-button-compact {
   padding: .55em .5em;
 }
 
-.mt-button.mt-button-secondary {
+.mt-button-secondary {
   --_mt-button-backgroundColor: var(--_mt-button-secondaryBackgroundColor);
   --_mt-button-textColor: var(--_mt-button-secondaryTextColor);
 }
 
-.mt-button.mt-button-raised {
+.mt-button-raised {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
-.mt-button.mt-button-raised:disabled {
+.mt-button-raised:disabled {
   box-shadow: none;
 }
 
-.mt-button.mt-button-flat,
-.mt-button.mt-button-stroked {
+.mt-button-flat,
+.mt-button-stroked {
   background-color: transparent;
   color: var(--_mt-button-backgroundColor);
 }
 
-.mt-button.mt-button-flat:before,
-.mt-button.mt-button-stroked:before {
+.mt-button-flat:before,
+.mt-button-stroked:before {
   background-color: var(--_mt-button-backgroundColor);
 }
 
-.mt-button.mt-button-flat:hover:before,
-.mt-button.mt-button-flat:focus:before,
-.mt-button.mt-button-stroked:hover:before,
-.mt-button.mt-button-stroked:focus:before {
+.mt-button-flat:hover:before,
+.mt-button-flat:focus:before,
+.mt-button-stroked:hover:before,
+.mt-button-stroked:focus:before {
   opacity: 0.1;
 }
 
-.mt-button.mt-button-stroked {
+.mt-button-stroked {
   border: 2px solid var(--_mt-button-backgroundColor);
 }
 
-.mt-button.mt-button-flat:disabled,
-.mt-button.mt-button-stroked:disabled {
+.mt-button-flat:disabled,
+.mt-button-stroked:disabled {
   /* We may wish to make these into separate variables */
   color: var(--_mt-button-disabledTextColor);
   border-color: var(--_mt-button-disabledTextColor);
