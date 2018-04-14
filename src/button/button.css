@@ -6,24 +6,27 @@
     2. Otherwise, `mt-mainColor` will be applied
     3. Otherwise, `teal` will be applied
   */
-  --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, teal));
-  --_mt-button-secondaryBackgroundColor: var(--mt-button-secondaryBackgroundColor, var(--mt-secondaryColor, orange));
+  --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, cadetblue));
+  --_mt-button-secondaryBackgroundColor: var(--mt-button-secondaryBackgroundColor, var(--mt-secondaryColor, coral));
   --_mt-button-textColor: var(--mt-button-textColor, #fff);
   --_mt-button-secondaryTextColor: var(--mt-button-secondaryTextColor, #fff);
+  --_mt-button-disabledTextColor: var(--mt-button-disabledTextColor, rgba(0, 0, 0, 0.38));
+
+  all: initial;
+  font-family: 'Roboto';
 
   position: relative;
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
-  line-height: 28px;
-  font-weight: 400;
+  font-size: var(--mt-baseFontSize, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-decoration: none;
   text-transform: uppercase;
   will-change: transform, opacity;
   display: inline-block;
   position: relative;
-  min-width: 64px;
-  height: 36px;
-  padding: 0 16px;
+  min-width: 4em;
+  padding: .55em 1em;
   border: none;
   outline: none;
   text-align: center;
@@ -31,8 +34,9 @@
   -webkit-appearance: none;
   overflow: hidden;
   vertical-align: middle;
-  border-radius: 2px;
+  border-radius: .2em;
   cursor: pointer;
+  white-space: nowrap;
 
   background-color: var(--_mt-button-backgroundColor);
   color: var(--_mt-button-textColor);
@@ -66,7 +70,7 @@
 }
 
 .mt-button.mt-button-compact {
-  padding: 0 8px;
+  padding: .55em .5em;
 }
 
 .mt-button.mt-button-secondary {
@@ -103,7 +107,6 @@
 
 .mt-button.mt-button-stroked {
   border: 2px solid var(--_mt-button-backgroundColor);
-  line-height: 32px;
 }
 
 .mt-button.mt-button-flat:disabled,
@@ -111,33 +114,6 @@
   /* We may wish to make these into separate variables */
   color: var(--_mt-button-disabledTextColor);
   border-color: var(--_mt-button-disabledTextColor);
-}
-
-.mt-buttonGroup {
-  display: flex;
-}
-
-.mt-buttonGroup .mt-button {
-  margin: 0 !important;
-  border-radius: 0;
-}
-
-.mt-buttonGroup .mt-button:first-child {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-
-.mt-buttonGroup .mt-button:last-child {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-.mt-buttonGroup .mt-button-stroked {
-  border-left: none;
-}
-
-.mt-buttonGroup .mt-button-stroked:first-child {
-  border-left: 2px solid var(--_mt-button-backgroundColor);
 }
 
 .mt-button-flat .mt-ripple:after,

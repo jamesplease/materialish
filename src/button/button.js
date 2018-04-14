@@ -13,7 +13,7 @@ class Button extends Component {
       compact = flat,
       secondary = false,
       ripple = true,
-      ...props
+      ...otherProps
     } = this.props;
 
     const componentClassNames = classnames('mt-button', className, {
@@ -25,24 +25,33 @@ class Button extends Component {
     });
 
     return (
-      <button className={componentClassNames} {...props}>
-        {ripple && <Ripple />}
+      <button
+        {...otherProps}
+        className={componentClassNames}
+        onClick={this.onClick}>
+        {ripple && (
+          <Ripple ref={this.getRippleRef} />
+        )}
         {children}
       </button>
     );
   }
-}
 
-Button.Group = class ButtonGroup extends Component {
-  render() {
-    const { children, className = '', ...props } = this.props;
-
-    return (
-      <div className={`mt-buttonGroup ${className}`} {...props}>
-        {children}
-      </div>
-    );
+  getRippleRef = (component) => {
+    this.rippleComponent = component;
   }
-};
+
+  onClick = (e) => {
+    const { onClick } = this.props;
+
+    if (this.rippleComponent) {
+      this.rippleComponent.onClick(e);
+    }
+
+    if (onClick) {
+      onClick();
+    }
+  }
+}
 
 export default Button;

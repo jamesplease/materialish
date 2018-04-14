@@ -1,7 +1,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 <style>
-  html {
-    font-family: Roboto;
-  }
+  /*
+    This is intentionally weird CSS to ensure that the components
+    are developed with these environments in mind
+  */
 
+  html {
+    /* Don't change this: Use Roboto in your component instead! */
+    font-family: Georgia;
+    /* Make sure that your component looks at `--mt-baseFontSize`! */
+    font-size: 100px;
+    /* Be sure to set the proper colors */
+    color: peru;
+
+    /* This mimics the behavior you would expect when you build with the right API */
+    --mt-baseFontSize: 16px;
+  }
 </style>

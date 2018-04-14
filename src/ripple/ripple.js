@@ -40,13 +40,14 @@ export default class Ripple extends Component {
   };
 
   onClick = e => {
-    const x = e.nativeEvent.layerX;
-    const y = e.nativeEvent.layerY;
+    const wasMouseClick = e.nativeEvent.x && e.nativeEvent.y;
+    const left = wasMouseClick ? `${e.nativeEvent.layerX}px` : '50%';
+    const top = wasMouseClick ? `${e.nativeEvent.layerY}px` : '50%';
 
     this.setState({
       active: false,
-      top: `${y}px`,
-      left: `${x}px`
+      top,
+      left
     });
 
     this.activeTimeout = setTimeout(() => {
