@@ -6,7 +6,7 @@
     2. Otherwise, `mt-mainColor` will be applied
     3. Otherwise, `teal` will be applied
   */
-  --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, cadetblue));
+  --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, #2196f3));
   --_mt-button-secondaryBackgroundColor: var(--mt-button-secondaryBackgroundColor, var(--mt-secondaryColor, coral));
   --_mt-button-textColor: var(--mt-button-textColor, #fff);
   --_mt-button-secondaryTextColor: var(--mt-button-secondaryTextColor, #fff);
