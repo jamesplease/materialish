@@ -106,7 +106,7 @@
 }
 
 .mt-button-stroked {
-  border: 2px solid var(--_mt-button-backgroundColor);
+  border: .15em solid var(--_mt-button-backgroundColor);
 }
 
 .mt-button-flat:disabled,

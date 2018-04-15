@@ -5,6 +5,7 @@
   --_mt-ripple-left: var(--mt-ripple-left, 50%);
 
   all: initial;
+  font-size: inherit;
 
   position: absolute;
   display: block;
@@ -23,8 +24,8 @@
   left: var(--_mt-ripple-left);
   margin-top: -10px;
   margin-left: -10px;
-  width: 20px;
-  height: 20px;
+  width: 1.25em;
+  height: 1.25em;
   border-radius: 200%;
   background-color: var(--_mt-ripple-color);
   will-change: transform;
