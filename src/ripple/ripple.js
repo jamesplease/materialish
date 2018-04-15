@@ -4,14 +4,15 @@ import classnames from 'classnames';
 export default class Ripple extends Component {
   render() {
     const { active, top, left } = this.state;
-    const classname = classnames('mt-ripple', {
-      'mt-ripple--active': active
-    });
 
+    const classname = classnames('mt-ripple', {
+      'mt-ripple-active': active
+    });
     const styles = {
       '--mt-ripple-top': top,
       '--mt-ripple-left': left
     };
+
     return <span style={styles} className={classname} onClick={this.onClick} />;
   }
 
