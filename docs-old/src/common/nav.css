@@ -1,0 +1,50 @@
+.nav {
+  background-color: #fafafa;
+  width: var(--navWidth);
+  display: flex;
+  justify-content: flex-end;
+  min-height: calc(100% - var(--headerHeight));
+  padding-top: var(--appTopPadding);
+  margin-right: 40px;
+}
+
+.nav_navSubList,
+.nav_navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_navListItem {
+  margin-bottom: 40px;
+}
+
+.nav_navList {
+  width: var(--navWidth);
+  margin: 0;
+  padding: 0 var(--standardContentPadding);
+}
+
+.nav_navLink,
+.nav_navSectionLink {
+  color: #222;
+  text-decoration: none;
+}
+
+.nav_navSectionLink {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 13px;
+  display: block;
+  user-select: none;
+}
+
+.nav_navLink {
+  font-size: 1rem;
+  user-select: none;
+}
+
+.nav_navSubListItem {
+  height: 40px;
+  line-height: 40px;
+}

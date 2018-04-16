@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 import * as Materialish from 'materialish';
-import { Markdown, CodeManager, Editor, Preview } from 'doc-components';
+import { Markdown, CodeManager, Editor, Preview } from "doc-components";
 import PropTypes from 'prop-types';
 import './component-doc.css';
 
