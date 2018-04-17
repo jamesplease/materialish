@@ -5,7 +5,10 @@
   --_mt-ripple-left: var(--mt-ripple-left, 50%);
 
   all: initial;
+<<<<<<< HEAD
   font-size: inherit;
+=======
+>>>>>>> Begin modifying new docs
 
   position: absolute;
   display: block;
@@ -24,8 +27,13 @@
   left: var(--_mt-ripple-left);
   margin-top: -10px;
   margin-left: -10px;
+<<<<<<< HEAD
   width: 1.25em;
   height: 1.25em;
+=======
+  width: 20px;
+  height: 20px;
+>>>>>>> Begin modifying new docs
   border-radius: 200%;
   background-color: var(--_mt-ripple-color);
   will-change: transform;
@@ -33,7 +41,11 @@
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 .mt-ripple-active::after {
+=======
+.mt-ripple--active::after {
+>>>>>>> Begin modifying new docs
   animation: ripple 0.9s;
 }
 
