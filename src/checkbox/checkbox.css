@@ -1,0 +1,113 @@
+.mt-checkbox {
+  /*
+    This (ugly) set of variables defines the variable fallback implementation.
+    1. If `mt-checkbox-backgroundColor` is set, then that will be applied
+    2. Otherwise, `mt-mainColor` will be applied
+    3. Otherwise, `#2196f3` will be applied
+  */
+  --_mt-checkbox-backgroundColor: var(--mt-checkbox-backgroundColor, var(--mt-mainColor, #2196f3));
+  --_mt-checkbox-checkColor: var(--mt-checkbox-checkColor, #fff);
+
+  all: initial;
+  font-family: 'Roboto';
+
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.mt-checkbox-noLabel .mt-checkbox_textWrapper {
+  padding: 0 18px 0 0;
+}
+
+.mt-checkbox:after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.mt-checkbox-rightLabel:after {
+  right: auto;
+  left: 0;
+}
+
+.mt-checkbox_input {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+.mt-checkbox_textWrapper {
+  padding: 5px 25px 5px 10px;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.mt-checkbox-rightLabel .mt-checkbox_textWrapper {
+  padding: 5px 10px 5px 25px;
+}
+
+.mt-checkbox_textWrapper:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--_mt-checkbox-backgroundColor);
+  background-color: var(--_mt-checkbox-backgroundColor);
+  border-radius: 2px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+  will-change: transform;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.mt-checkbox-rightLabel .mt-checkbox_textWrapper:after {
+  right: auto;
+  left: 0;
+}
+
+.mt-checkbox_input:checked + .mt-checkbox_textWrapper:after {
+  transform: scale(1);
+}
+
+.mt-checkbox_textWrapper:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  width: 5px;
+  height: 11px;
+  border: 2px solid var(--_mt-checkbox-checkColor);
+  border-left: none;
+  border-top: none;
+  border-radius: 2px;
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  z-index: 2;
+  will-change: transform;
+  transform-origin: center;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.mt-checkbox-rightLabel .mt-checkbox_textWrapper:before {
+  right: auto;
+  left: 7px;
+}
+
+.mt-checkbox_input:checked + .mt-checkbox_textWrapper:before {
+  transform: rotate(45deg) scale(1);
+}
