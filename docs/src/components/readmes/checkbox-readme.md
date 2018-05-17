@@ -10,7 +10,7 @@ import 'materialish/checkbox.css';
 | Prop Name | Default Value | Required | Description                                              |
 | --------- | ------------- | -------- | -------------------------------------------------------- |
 | className |               | No       | Additional class name(s) to add to the Checkbox          |
-| style     |               | No       | Inline styles to add to the root element of theCheckbox  |
+| style     |               | No       | Inline styles to add to the root element of the Checkbox |
 | ...rest   |               | No       | Other props are placed on the underlying `input` element |
 
 ## CSS Variables
