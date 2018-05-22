@@ -13,7 +13,7 @@ export default [
     name: "Checkbox",
     url: "checkbox",
     componentKey: 'checkbox',
-    description: 'A Checkbox represents a boolean value that can be in two states, true or false.',
+    description: 'A Checkbox represents a boolean value that can be in one of two states, true or false.',
     component: 'src/components/component-doc',
     materialDocsLink: 'https://material.io/design/components/selection-controls.html#checkboxes'
   }
