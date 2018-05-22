@@ -20,10 +20,6 @@ export default {
         component: 'src/components/Home',
       },
       {
-        path: '/about',
-        component: 'src/components/About',
-      },
-      {
         path: '/components',
         component: 'src/components/components',
         getData: async () => ({
@@ -37,10 +33,6 @@ export default {
             component
           }),
         }))
-      },
-      {
-        path: '/search',
-        component: 'src/components/Search',
       },
       {
         is404: true,
