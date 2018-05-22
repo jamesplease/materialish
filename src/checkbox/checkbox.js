@@ -6,8 +6,8 @@ class Checkbox extends Component {
     return (
       <div className={`mt-checkbox ${className}`} style={style}>
         <input className="mt-checkbox_input" type="checkbox" {...props} />
-        <div class="mt-checkbox_checkbox" />
-        <div class="mt-checkbox_focus" />
+        <div className="mt-checkbox_checkbox" />
+        <div className="mt-checkbox_focus" />
       </div>
     );
   }

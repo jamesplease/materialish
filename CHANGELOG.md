@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.1.2 (2018/5/21)
+
+* Fix the `className` property on the Checkbox
+
 ### v0.1.1 (2018/5/21)
 
 * Fix the previous release
