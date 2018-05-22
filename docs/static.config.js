@@ -17,7 +17,7 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/components/Home',
+        component: 'src/components/home',
       },
       {
         path: '/components',
@@ -27,7 +27,6 @@ export default {
         }),
         children: components.map(component => ({
           path: component.url,
-          // component: 'src/components/About',
           component: component.component,
           getData: async () => ({
             component
