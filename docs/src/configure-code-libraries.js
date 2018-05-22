@@ -28,7 +28,10 @@ import "./styles/npm-package-styles/github-gist.css";
 // Oceanic Next is the theme that we use for CodeMirror
 import './styles/npm-package-styles/oceanic-next.css';
 // This allows us to use the JS mode of CodeMirror
-import "codemirror/mode/javascript/javascript";
+
+if (typeof navigator !== 'undefined') {
+  require('codemirror/mode/javascript/javascript').default
+}
 
 // This registers JavaScript as a language for Highlight.js.
 Lowlight.registerLanguage("js", js);

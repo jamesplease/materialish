@@ -1,38 +1,22 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
+import { Router } from 'react-static';
+import Routes from 'react-static-routes';
 import './app.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Markdown } from 'doc-components';
-import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
 import Nav from './common/nav';
-import NotFound from './common/not-found';
-import Components from './components';
-import introductionUrl from './introduction/index.md';
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <ScrollToTop>
-          <Header />
-          <div className="app_body">
-            <Nav />
-            <div className="app_bodyContents">
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={() => <Markdown markdownUrl={introductionUrl} />}
-                />
-                <Route path="/components" component={Components} />
-                <Route component={NotFound} />
-              </Switch>
-            </div>
-          </div>
-        </ScrollToTop>
-      </BrowserRouter>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <Fragment>
+      <Header/>
+      <div className="app_body">
+        <Nav/>
+        <div className="app_bodyContents">
+          <Routes />
+        </div>
+      </div>
+    </Fragment>
+  </Router>
+)
 
 export default App;

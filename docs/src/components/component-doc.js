@@ -1,8 +1,19 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 import * as Materialish from 'materialish';
-import { Markdown, CodeManager, Editor, Preview } from "doc-components";
 import PropTypes from 'prop-types';
+import {withRouteData} from 'react-static';
+import * as readmes from '../readmes';
+import * as examples from '../examples';
 import './component-doc.css';
+
+let Markdown, CodeManager, Editor, Preview;
+if (typeof navigator !== 'undefined') {
+  const docComponent = require('doc-components');
+  Markdown = docComponent.Markdown;
+  CodeManager = docComponent.CodeManager;
+  Editor = docComponent.Editor;
+  Preview = docComponent.Preview;
+}
 
 const demoScope = {
   React,
@@ -14,17 +25,17 @@ const demoScope = {
 
 const rootSourceUrl = 'https://github.com/jamesplease/materialish/tree/master/src/';
 
-export default class ComponentDoc extends Component {
+export class ComponentDoc extends Component {
   render() {
     const {
-      readmeUrl,
-      exampleUrl,
-      name,
-      description,
-      componentKey,
       sourceLink,
-      materialDocsLink
+      component
     } = this.props;
+
+    const {materialDocsLink, description, name, componentKey} = component;
+
+    const readmeUrl = readmes[componentKey];
+    const exampleUrl = examples[componentKey];
 
     const sourceLinkToUse = sourceLink ? sourceLink : `${rootSourceUrl}${componentKey}`;
 
@@ -73,8 +84,14 @@ export default class ComponentDoc extends Component {
             </Fragment>
           )}
         </CodeManager>
-        <Markdown markdownUrl={readmeUrl} />
+       {readmeUrl && (<Markdown markdownUrl={readmeUrl} />)}
       </div>
     );
   }
+
+  state = {
+    readmeUrl: null
+  };
 }
+
+export default withRouteData(ComponentDoc);

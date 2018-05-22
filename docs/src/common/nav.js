@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-static";
 import "./nav.css";
-import componentsData from "../components/components";
+import componentsData from '../../components';
 
 // This ensures that the components appear in the navigation in
 // alphabetical order
@@ -50,7 +50,7 @@ export default class Nav extends Component {
                 return (
                   <li className="nav_navSubListItem" key={component.name}>
                     <Link
-                      to={`/components${component.url}`}
+                      to={`/components/${component.url}`}
                       className="nav_navLink"
                     >
                       {component.name}

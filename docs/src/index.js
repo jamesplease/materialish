@@ -10,4 +10,9 @@ import './configure-code-libraries';
 import './load-materialish-styles';
 import App from './app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// This export is used for static rendering
+export default App;
+
+if (typeof document !== 'undefined') {
+  ReactDOM.render(<App />, document.getElementById('root'));
+}
