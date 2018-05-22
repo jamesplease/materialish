@@ -7,7 +7,7 @@ class Components extends Component {
 
     return (
       <div>
-        <h1>Components are cool</h1>
+        <h1 className="primaryHeader">Components</h1>
         <ul>
           {components.map(component => (
             <li key={component.componentKey}>
