@@ -1,5 +1,3 @@
-// import buttonCodeUrl from './button.oogla';
-
 export default [
   {
     name: "Button",
