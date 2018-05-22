@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { Markdown } from 'doc-components';
 import markdownUrl from './index.md';
+
+let Markdown;
+if (typeof navigator !== 'undefined') {
+  const docComponent = require('doc-components');
+  Markdown = docComponent.Markdown;
+}
 
 export default class Home extends Component {
   render() {
