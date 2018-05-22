@@ -19,20 +19,20 @@ export default {
         path: '/',
         component: 'src/components/home',
       },
-      {
-        path: '/components',
-        component: 'src/components/components',
-        getData: async () => ({
-          components
-        }),
-        children: components.map(component => ({
-          path: component.url,
-          component: component.component,
-          getData: async () => ({
-            component
-          }),
-        }))
-      },
+      // {
+      //   path: '/components',
+      //   component: 'src/components/components',
+      //   getData: async () => ({
+      //     components
+      //   }),
+      //   children: components.map(component => ({
+      //     path: component.url,
+      //     component: component.component,
+      //     getData: async () => ({
+      //       component
+      //     }),
+      //   }))
+      // },
       {
         is404: true,
         component: 'src/components/404',
