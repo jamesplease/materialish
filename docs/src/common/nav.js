@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-static";
 import "./nav.css";
-// import componentsData from "../components/components";
-
-const componentsData = [];
+import componentsData from '../../components';
 
 // This ensures that the components appear in the navigation in
 // alphabetical order
@@ -14,8 +12,6 @@ const sortedComponentsData = Array.from(componentsData).sort((a, b) => {
 
   return a.componentKey < b.componentKey ? -1 : 1;
 });
-
-console.log('wat', sortedComponentsData);
 
 export default class Nav extends Component {
   render() {
@@ -54,7 +50,7 @@ export default class Nav extends Component {
                 return (
                   <li className="nav_navSubListItem" key={component.name}>
                     <Link
-                      to={`/components${component.url}`}
+                      to={`/components/${component.url}`}
                       className="nav_navLink"
                     >
                       {component.name}
@@ -69,11 +65,3 @@ export default class Nav extends Component {
     );
   }
 }
-
-
-// import { Router, Link } from 'react-static';
-// //
-// <Link to="/">Home</Link>
-//           <Link to="/about">About</Link>
-//           <Link to="/components">Components</Link>
-//           <Link to="/search">Search</Link>

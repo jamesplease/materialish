@@ -14,8 +14,11 @@
     "algoliasearch": "^3.24.11",
     "axios": "^0.16.2",
     "codemirror": "^5.36.0",
+    "doc-components": "0.0.4",
     "fetch-dedupe": "^3.0.0",
     "highlight.js": "^9.12.0",
+    "materialish": "0.0.8-beta.4",
+    "prop-types": "^15.6.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^4.0.0-beta.21",
@@ -23,7 +26,7 @@
     "react-lowlight": "^2.0.0",
     "react-markdown": "^3.3.0",
     "react-router": "^4.2.0",
-    "react-static": "^5.7.5"
+    "react-static": "^5.9.3"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { withRouteData, Link } from 'react-static'
+import { withRouteData, Link } from 'react-static';
 
 class Components extends Component {
   render() {
     const {components} = this.props;
-
-    console.log('components', components);
 
     return (
       <div>

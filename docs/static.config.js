@@ -3,8 +3,10 @@ import components from './components';
 // import { addSearchObjects } from './algolia'
 
 export default {
+  siteRoot: 'https://jamesplease.github.io/materialish',
   getSiteData: () => ({
     title: 'Materialish',
+    components
   }),
   getRoutes: async () => {
     // This is how I would add data to Algolia. It probably
@@ -23,15 +25,16 @@ export default {
       {
         path: '/components',
         component: 'src/components/components',
-        getData: () => ({
+        getData: async () => ({
           components
         }),
         children: components.map(component => ({
           path: component.url,
-          component: 'src/components/About',
-          getData: () => ({
+          // component: 'src/components/About',
+          component: component.component,
+          getData: async () => ({
             component
-          })
+          }),
         }))
       },
       {
