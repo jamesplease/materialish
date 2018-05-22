@@ -1,5 +1,13 @@
 # Changelog
 
+### v0.1.1 (2018/5/21)
+
+* Fix the previous release
+
+### v0.1.0 (2018/5/17)
+
+* Add the Checkbox component
+
 ### v0.0.8 (2018/4/14)
 
 * Fix bug with the previous release
