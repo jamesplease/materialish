@@ -4,7 +4,8 @@ import components from './components';
 // import { addSearchObjects } from './algolia'
 
 export default {
-  siteRoot: 'https://jamesplease.github.io/materialish',
+  siteRoot: 'https://jamesplease.github.io',
+  basePath: 'materialish',
   getSiteData: () => ({
     title: 'Materialish',
     components
