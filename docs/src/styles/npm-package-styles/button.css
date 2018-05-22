@@ -7,10 +7,14 @@
     3. Otherwise, `teal` will be applied
   */
 <<<<<<< HEAD
+<<<<<<< HEAD
   --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, #2196f3));
 =======
   --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, cadetblue));
 >>>>>>> Begin modifying new docs
+=======
+  --_mt-button-backgroundColor: var(--mt-button-backgroundColor, var(--mt-mainColor, #2196f3));
+>>>>>>> Update Materialish
   --_mt-button-secondaryBackgroundColor: var(--mt-button-secondaryBackgroundColor, var(--mt-secondaryColor, coral));
   --_mt-button-textColor: var(--mt-button-textColor, #fff);
   --_mt-button-secondaryTextColor: var(--mt-button-secondaryTextColor, #fff);
@@ -111,10 +115,14 @@
 
 .mt-button-stroked {
 <<<<<<< HEAD
+<<<<<<< HEAD
   border: .15em solid var(--_mt-button-backgroundColor);
 =======
   border: 2px solid var(--_mt-button-backgroundColor);
 >>>>>>> Begin modifying new docs
+=======
+  border: .15em solid var(--_mt-button-backgroundColor);
+>>>>>>> Update Materialish
 }
 
 .mt-button-flat:disabled,
