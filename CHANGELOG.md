@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.1.3 (2018/5/23)
+
+* `npm` was having issues with published packages. Publishing a new version
+  seems to fix it.
+
 ### v0.1.2 (2018/5/21)
 
 * Fix the `className` property on the Checkbox
