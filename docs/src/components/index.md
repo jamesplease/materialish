@@ -5,10 +5,14 @@ Materialish is a set of React components that are loosely inspired by
 
 ## Installation
 
-Install Materialish using npm or yarn.
+Install Materialish using [npm](https://www.npmjs.com):
 
-```js
+```
 npm install materialish
+```
 
+or [yarn](https://yarnpkg.com/):
+
+```
 yarn add materialish
 ```

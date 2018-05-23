@@ -71,7 +71,7 @@ export class ComponentDoc extends Component {
                 onChange={handleCodeChange}
               />
               {code && (
-                <Preview code={code} scope={demoScope} />
+                <Preview className="componentDoc_preview" code={code} scope={demoScope} />
               )}
             </Fragment>
           )}

@@ -83,7 +83,7 @@ export default class Preview extends Component {
   };
 
   render() {
-    const { className } = this.props.className;
+    const { className } = this.props;
 
     return (
       <div className={className}>

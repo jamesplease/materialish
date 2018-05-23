@@ -1,5 +1,6 @@
 body {
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 .primaryHeader,
@@ -8,24 +9,25 @@ body {
 .markdown h2 {
   color: var(--mainColor);
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
   padding: 0;
 }
 
 .primaryHeader,
 .markdown h1 {
-  margin: 35px 0 30px;
-  font-size: 1.8rem;
+  margin: 45px 0 30px;
+  font-size: 2.3rem;
 }
 
 .primaryHeader:first-child,
 .markdown h1:first-child {
-  margin-top: 0;
+  margin-top: 25px;
 }
 
 .secondaryHeader,
 .markdown h2 {
-  margin: 30px 0 20px;
-  font-size: 1.4rem;
+  margin: 80px 0 20px;
+  font-size: 1.6rem;
 }
 
 a {
@@ -34,7 +36,11 @@ a {
 
 .markdown pre,
 .markdown code {
-  background-color: #f7f7f7;
+  background-color: #f0f5ff;
+}
+
+.hljs {
+  color: #000;
 }
 
 .markdown pre {
