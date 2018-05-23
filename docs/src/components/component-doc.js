@@ -62,7 +62,7 @@ export class ComponentDoc extends Component {
             <Fragment>
               <div className="componentDoc_note">
                 Heads up! This code is editable. The preview below will
-                reflect your changes.
+                update to reflect your changes.
               </div>
               {code && (
                 <Preview className="componentDoc_preview" code={code} scope={demoScope} />
