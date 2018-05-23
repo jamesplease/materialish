@@ -64,15 +64,15 @@ export class ComponentDoc extends Component {
                 Heads up! This code is editable. The preview below will
                 reflect your changes.
               </div>
+              {code && (
+                <Preview className="componentDoc_preview" code={code} scope={demoScope} />
+              )}
               <Editor
                 className="componentDoc_editor"
                 theme='oceanic-next'
                 codeText={code}
                 onChange={handleCodeChange}
               />
-              {code && (
-                <Preview className="componentDoc_preview" code={code} scope={demoScope} />
-              )}
             </Fragment>
           )}
         </CodeManager>

@@ -5,8 +5,7 @@ import { fetchDedupe } from 'fetch-dedupe';
 export default class CodeManager extends React.Component {
   render() {
     const { children } = this.props;
-
-    const code = this.props.code || this.state.code;
+    const { code } = this.state;
 
     if (code === null) {
       return null;
@@ -45,6 +44,10 @@ export default class CodeManager extends React.Component {
   componentDidMount() {
     if (this.props.codeTextUrl) {
       this.fetchCode();
+    } else if (this.props.code) {
+      this.setState({
+        code: this.props.code
+      });
     }
   }
 

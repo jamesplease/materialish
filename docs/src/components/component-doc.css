@@ -43,10 +43,6 @@
   border-bottom: 1px solid #ddd;
 }
 
-.componentDoc_editor {
-  margin-bottom: 20px;
-}
-
 .componentDoc_note {
   margin: 25px 0;
   padding: 15px;
@@ -62,5 +58,5 @@
   justify-content: center;
   min-height: 150px;
   background-color: #f2f2f2;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
