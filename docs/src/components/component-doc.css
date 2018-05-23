@@ -43,13 +43,18 @@
   border-bottom: 1px solid #ddd;
 }
 
+.componentDoc_noteEmoji {
+  font-size: 1.2rem;
+}
+
 .componentDoc_note {
-  margin: 25px 0;
-  padding: 15px;
+  margin: 0px 0 0px;
+  padding: 10px 20px;
   font-size: 0.9rem;
-  border-radius: 4px;
-  color: #3b98ff;
-  background-color: #dcf5ff;
+  font-weight: 500;
+  border-bottom: 1px solid #4d585e;
+  background-color: #314048;
+  color: #c5c7c8;
 }
 
 .componentDoc_preview {
@@ -59,4 +64,5 @@
   min-height: 150px;
   background-color: #f2f2f2;
   border-radius: 5px 5px 0 0;
+  margin-top: 50px;
 }

@@ -60,13 +60,13 @@ export class ComponentDoc extends Component {
         <CodeManager code={example}>
           {({ code, handleCodeChange }) => (
             <Fragment>
-              <div className="componentDoc_note">
-                Heads up! This code is editable. The preview below will
-                update to reflect your changes.
-              </div>
               {code && (
                 <Preview className="componentDoc_preview" code={code} scope={demoScope} />
               )}
+              <div className="componentDoc_note">
+                <span className="componentDoc_noteEmoji">🙌</span> Heads up! This code is editable. The preview above will
+                update to reflect your changes.
+              </div>
               <Editor
                 className="componentDoc_editor"
                 theme='oceanic-next'
