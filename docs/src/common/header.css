@@ -9,7 +9,8 @@
 .header_appName {
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header_appLink {

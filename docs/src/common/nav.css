@@ -1,11 +1,11 @@
 .nav {
-  background-color: #fafafa;
   width: var(--navWidth);
   display: flex;
   justify-content: flex-end;
   min-height: calc(100% - var(--headerHeight));
   padding-top: var(--appTopPadding);
   margin-right: 40px;
+  border-right: 1px solid #e1dfe6;
 }
 
 .nav_navSubList,
@@ -33,15 +33,18 @@
 
 .nav_navSectionLink {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
   margin-bottom: 13px;
   display: block;
   user-select: none;
 }
 
 .nav_navLink {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  -webkit-font-smoothing: antialiased;
   user-select: none;
+  color: #888;
 }
 
 .nav_navSubListItem {
