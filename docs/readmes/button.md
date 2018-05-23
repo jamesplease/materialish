@@ -24,7 +24,7 @@ import "materialish/ripple.css";
 | Variable  | Default Value | Description                                   |
 | --------- | ------------- | --------------------------------------------- |
 | --mt-baseFontSize  | 1rem   | The text size and dimensions of the button are based off of this value |
-| --mt-button-backgroundColor  | cadetblue   | The background color of primary buttons |
+| --mt-button-backgroundColor  | #2196f3   | The background color of primary buttons |
 | --mt-button-secondaryBackgroundColor  | coral   | The background color of secondary buttons |
 | --mt-button-textColor  | #fff   | The foreground color of primary buttons |
 | --mt-button-secondaryTextColor  | #fff   | The foreground color of secondary buttons |
