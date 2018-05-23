@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import markdownUrl from './index.md';
+import { withRouteData } from 'react-static';
 import { Markdown } from '../vendor/doc-components';
 
-export default class Home extends Component {
+export class Home extends Component {
   render() {
-    return (<Markdown markdownUrl={markdownUrl} />);
+    const {homeMarkdown} = this.props;
+
+    return (<Markdown markdownText={homeMarkdown} />);
   }
 }
+
+export default withRouteData(Home);

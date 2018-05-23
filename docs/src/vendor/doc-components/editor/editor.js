@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CodeMirror from "codemirror";
+
+let CodeMirror;
+if (typeof document !== 'undefined') {
+  CodeMirror = require('codemirror');
+}
 
 class Editor extends React.Component {
   static propTypes = {
@@ -22,6 +26,10 @@ class Editor extends React.Component {
   };
 
   componentDidMount() {
+    if (!CodeMirror) {
+      return;
+    }
+
     this.editor = CodeMirror.fromTextArea(this.refs.editor, {
       mode: "javascript",
       lineNumbers: this.props.lineNumbers,

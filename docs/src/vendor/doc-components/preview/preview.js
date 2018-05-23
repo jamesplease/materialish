@@ -48,7 +48,7 @@ export default class Preview extends Component {
       });`;
 
     return transform(code, {
-      presets: ['es2017', 'stage-0', 'react'],
+      presets: ['es2017', 'stage-3', 'react'],
     }).code;
   };
 

@@ -1,19 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import * as Materialish from 'materialish';
+import { withRouteData } from 'react-static';
+import { Markdown, CodeManager, Editor, Preview } from '../vendor/doc-components';
 import PropTypes from 'prop-types';
-import {withRouteData} from 'react-static';
-import * as readmes from '../readmes';
-import * as examples from '../examples';
 import './component-doc.css';
-
-let Markdown, CodeManager, Editor, Preview;
-if (typeof navigator !== 'undefined') {
-  const docComponent = require('doc-components');
-  Markdown = docComponent.Markdown;
-  CodeManager = docComponent.CodeManager;
-  Editor = docComponent.Editor;
-  Preview = docComponent.Preview;
-}
 
 const demoScope = {
   React,
@@ -27,23 +17,22 @@ const rootSourceUrl = 'https://github.com/jamesplease/materialish/tree/master/sr
 
 export class ComponentDoc extends Component {
   render() {
+    const {component, markdown, example} = this.props;
+
     const {
+      readmeUrl,
+      exampleUrl,
+      name,
+      description,
+      componentKey,
       sourceLink,
-      component
-    } = this.props;
-
-    const {materialDocsLink, description, name, componentKey} = component;
-
-    const readmeUrl = readmes[componentKey];
-    const exampleUrl = examples[componentKey];
+      materialDocsLink
+    } = component;
 
     const sourceLinkToUse = sourceLink ? sourceLink : `${rootSourceUrl}${componentKey}`;
 
     return (
       <div className="componentDoc">
-        <h1 className="primaryHeader componentDoc_primaryHeader">
-          {name}
-        </h1>
         <ul className="componentDoc_links">
           <li className="componentDoc_linkItem">
             <a href={sourceLinkToUse} className="componentDoc_linkAnchor">
@@ -65,7 +54,7 @@ export class ComponentDoc extends Component {
         <p className="paragraph">
           {description}
         </p>
-        <CodeManager codeTextUrl={exampleUrl}>
+        <CodeManager code={example}>
           {({ code, handleCodeChange }) => (
             <Fragment>
               <div className="componentDoc_note">
@@ -84,14 +73,9 @@ export class ComponentDoc extends Component {
             </Fragment>
           )}
         </CodeManager>
-       {readmeUrl && (<Markdown markdownUrl={readmeUrl} />)}
-      </div>
-    );
+        <Markdown markdownText={markdown} />
+      </div>);
   }
-
-  state = {
-    readmeUrl: null
-  };
 }
 
 export default withRouteData(ComponentDoc);
