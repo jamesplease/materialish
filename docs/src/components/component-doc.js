@@ -33,6 +33,9 @@ export class ComponentDoc extends Component {
 
     return (
       <div className="componentDoc">
+        <h1 className="primaryHeader componentDoc_primaryHeader">
+          {name}
+        </h1>
         <ul className="componentDoc_links">
           <li className="componentDoc_linkItem">
             <a href={sourceLinkToUse} className="componentDoc_linkAnchor">
