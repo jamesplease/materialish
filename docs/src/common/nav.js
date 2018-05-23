@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { Link, withSiteData } from "react-static";
 import "./nav.css";
 
-
-
-
 export class Nav extends Component {
   render() {
     const {components} = this.props;
@@ -15,7 +12,7 @@ export class Nav extends Component {
       if (a.componentKey === b.componentKey) {
         return 0;
       }
-    
+
       return a.componentKey < b.componentKey ? -1 : 1;
     });
 
@@ -23,7 +20,7 @@ export class Nav extends Component {
       <nav className="nav">
         <ul className="nav_navList">
           <li className="nav_navListItem">
-            <Link to="/" className="nav_navSectionLink">
+            <Link exact to="/" className="nav_navSectionLink">
               Introduction
             </Link>
           </li>
@@ -46,7 +43,7 @@ export class Nav extends Component {
             </ul>
           </li> */}
           <li className="nav_navListItem">
-            <Link to="/components" className="nav_navSectionLink">
+            <Link exact to="/components" className="nav_navSectionLink">
               Components
             </Link>
             <ul className="nav_navSubList">
@@ -54,6 +51,7 @@ export class Nav extends Component {
                 return (
                   <li className="nav_navSubListItem" key={component.name}>
                     <Link
+                      exact
                       to={`/components/${component.url}`}
                       className="nav_navLink"
                     >
