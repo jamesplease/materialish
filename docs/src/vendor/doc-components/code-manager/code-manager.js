@@ -5,7 +5,8 @@ import { fetchDedupe } from 'fetch-dedupe';
 export default class CodeManager extends React.Component {
   render() {
     const { children } = this.props;
-    const { code } = this.state;
+
+    const code = this.props.code || this.state.code;
 
     if (code === null) {
       return null;

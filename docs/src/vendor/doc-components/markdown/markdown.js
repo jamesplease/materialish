@@ -5,7 +5,7 @@ import CodeHighlighter from "./code-highlighter";
 
 export default class Markdown extends Component {
   render() {
-    const { markdownText } = this.state;
+    const markdownText = this.props.markdownText || this.state.markdownText;
 
     if (!markdownText) {
       return null;
@@ -27,7 +27,9 @@ export default class Markdown extends Component {
   };
 
   componentDidMount() {
-    this.fetchMarkdown();
+    if (this.props.markdownUrl) {
+      this.fetchMarkdown();
+    }
   }
 
   componentWillReceiveProps(nextProps) {

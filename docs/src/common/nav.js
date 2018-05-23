@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import { Link } from "react-static";
+import { Link, withSiteData } from "react-static";
 import "./nav.css";
-import componentsData from '../../components';
 
-// This ensures that the components appear in the navigation in
-// alphabetical order
-const sortedComponentsData = Array.from(componentsData).sort((a, b) => {
-  if (a.componentKey === b.componentKey) {
-    return 0;
-  }
 
-  return a.componentKey < b.componentKey ? -1 : 1;
-});
 
-export default class Nav extends Component {
+
+export class Nav extends Component {
   render() {
+    const {components} = this.props;
+
+    // This ensures that the components appear in the navigation in
+    // alphabetical order
+    const sortedComponentsData = Array.from(components).sort((a, b) => {
+      if (a.componentKey === b.componentKey) {
+        return 0;
+      }
+    
+      return a.componentKey < b.componentKey ? -1 : 1;
+    });
+
     return (
       <nav className="nav">
         <ul className="nav_navList">
@@ -65,3 +69,5 @@ export default class Nav extends Component {
     );
   }
 }
+
+export default withSiteData(Nav);
