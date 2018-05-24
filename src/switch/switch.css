@@ -37,6 +37,8 @@
   position: relative;
   height: 1.25em;
   align-items: center;
+  position: relative;
+  z-index: 0;
 }
 
 .mt-switch_input {
@@ -68,6 +70,7 @@
     var(--_mt-switch-backgroundColor) 100%
   );
   border-radius: 0.8em;
+  position: static;
 }
 
 .mt-switch_switch:before,

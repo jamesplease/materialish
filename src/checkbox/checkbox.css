@@ -20,6 +20,7 @@
   vertical-align: bottom;
   margin: 2px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 0;
 }
 
 .mt-checkbox_input {
