@@ -23,6 +23,7 @@ import 'materialish/ripple.css';
 | Variable                      | Default Value       | Description                                                            |
 | ----------------------------- | ------------------- | ---------------------------------------------------------------------- |
 | --mt-baseFontSize             | 1rem                | The text size and dimensions of the button are based off of this value |
+| --mt-fontFamily               | 'Roboto'            | The font family to use for the button text                             |
 | --mt-button-backgroundColor   | #2196f3             | The background color of primary buttons                                |
 | --mt-button-textColor         | #fff                | The foreground color of primary buttons                                |
 | --mt-button-disabledTextColor | rgba(0, 0, 0, 0.38) | The color of disabled buttons                                          |
