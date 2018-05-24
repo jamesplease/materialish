@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.3.0 (2018/5/23)
+
+* Removed the `secondary` prop from the button
+* Added the ability to customize the Button's font with the `--mt-fontFamily` CSS Variable
+* The built files no longer ship with JavaScript Classes
+
 ### v0.2.1 (2018/5/23)
 
 * Small fixes to both the Switch and Checkbox.
