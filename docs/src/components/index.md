@@ -1,6 +1,6 @@
 # Introduction
 
-Materialish is a set of React components that are loosely inspired by
+Materialish is a collection of React components that are loosely inspired by
 [Material Design](https://material.io/).
 
 ## Installation

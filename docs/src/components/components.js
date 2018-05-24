@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
+import "./components.css";
 
 class Components extends Component {
   render() {
@@ -8,9 +9,13 @@ class Components extends Component {
     return (
       <div>
         <h1 className="primaryHeader">Components</h1>
-        <ul>
+        <p className="paragraph">
+          Materialish is a collection of React components. Select the component you would like to
+          read more about.
+        </p>
+        <ul className="components_list">
           {components.map(component => (
-            <li key={component.componentKey}>
+            <li key={component.componentKey} className="components_listItem">
               <Link to={`/components/${component.url}`}>
                 {component.name}
               </Link>

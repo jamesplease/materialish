@@ -92,3 +92,13 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 650px) {
+  .nav_navSectionLink {
+    font-size: 1.15rem;
+  }
+
+  .nav_navLink {
+    font-size: 1rem;
+  }
+}

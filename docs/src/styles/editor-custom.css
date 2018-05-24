@@ -2,3 +2,9 @@
   padding: 30px 10px;
   font-size: 1.25rem;
 }
+
+@media (max-width: 650px) {
+  .CodeMirror {
+    font-size: 16px;
+  }
+}
