@@ -35,8 +35,7 @@ export class Nav extends Component {
                 Introduction
               </Link>
             </li>
-            {/* One day... */}
-            {/* <li className="nav_navListItem">
+            <li className="nav_navListItem">
               <Link to="/guides" className="nav_navSectionLink">
                 Guides
               </Link>
@@ -52,7 +51,58 @@ export class Nav extends Component {
                   </Link>
                 </li>
               </ul>
-            </li> */}
+            </li>
+            <li className="nav_navListItem">
+              <Link to="/guides" className="nav_navSectionLink">
+                Guides
+              </Link>
+              <ul className="nav_navSubList">
+                <li className="nav_navSubListItem">
+                  <Link to="/styling" className="nav_navLink">
+                    Styling
+                  </Link>
+                </li>
+                <li className="nav_navSubListItem">
+                  <Link to="/best-practices" className="nav_navLink">
+                    Best Practices
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav_navListItem">
+              <Link to="/guides" className="nav_navSectionLink">
+                Guides
+              </Link>
+              <ul className="nav_navSubList">
+                <li className="nav_navSubListItem">
+                  <Link to="/styling" className="nav_navLink">
+                    Styling
+                  </Link>
+                </li>
+                <li className="nav_navSubListItem">
+                  <Link to="/best-practices" className="nav_navLink">
+                    Best Practices
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav_navListItem">
+              <Link to="/guides" className="nav_navSectionLink">
+                Guides
+              </Link>
+              <ul className="nav_navSubList">
+                <li className="nav_navSubListItem">
+                  <Link to="/styling" className="nav_navLink">
+                    Styling
+                  </Link>
+                </li>
+                <li className="nav_navSubListItem">
+                  <Link to="/best-practices" className="nav_navLink">
+                    Best Practices
+                  </Link>
+                </li>
+              </ul>
+            </li>
             <li className="nav_navListItem">
               <Link
                 exact

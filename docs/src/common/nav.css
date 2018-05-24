@@ -9,6 +9,9 @@
   position: fixed;
   left: 0;
   top: var(--headerHeight);
+  height: calc(100% - var(--headerHeight));
+  overflow-y: scroll;
+  overscroll-behavior: contain;
   background: #fff;
 }
 
