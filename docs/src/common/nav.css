@@ -41,7 +41,7 @@
 .nav_navSectionLink {
   font-size: 1.15rem;
   font-weight: 400;
-  padding: 15px var(--standardContentPadding);
+  padding: 13px var(--standardContentPadding);
   -webkit-font-smoothing: antialiased;
   display: block;
   user-select: none;
@@ -75,7 +75,7 @@
 .nav_navLink {
   display: block;
   font-size: 0.9rem;
-  padding: 15px calc(var(--standardContentPadding) + 25px);
+  padding: 13px calc(var(--standardContentPadding) + 25px);
   -webkit-font-smoothing: antialiased;
   user-select: none;
   color: #616161;

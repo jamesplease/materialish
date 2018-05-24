@@ -4,6 +4,7 @@ import Routes from 'react-static-routes';
 import './app.css';
 import Header from './common/header';
 import Nav from './common/nav';
+import Footer from './common/footer';
 import noScroll from 'no-scroll';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
             <Nav isMenuOpen={isMenuOpen} onToggleMenu={this.onToggleMenu} />
             <div className="app_bodyContents">
               <Routes />
+              <Footer />
             </div>
           </div>
         </Fragment>
