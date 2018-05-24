@@ -7,13 +7,13 @@ import Nav from './common/nav';
 
 class App extends Component {
   render() {
-    const {isMenuOpen} = this.state;
+    const { isMenuOpen } = this.state;
     return (
       <Router>
         <Fragment>
-          <Header onToggleMenu={this.onToggleMenu}/>
+          <Header onToggleMenu={this.onToggleMenu} />
           <div className="app_body">
-            <Nav isMenuOpen={isMenuOpen} onToggleMenu={this.onToggleMenu}/>
+            <Nav isMenuOpen={isMenuOpen} onToggleMenu={this.onToggleMenu} />
             <div className="app_bodyContents">
               <Routes />
             </div>
@@ -24,13 +24,13 @@ class App extends Component {
   }
 
   state = {
-    isMenuOpen: false
-  }
+    isMenuOpen: false,
+  };
 
   onToggleMenu = () => {
-    const {isMenuOpen} = this.state;
-    this.setState({isMenuOpen: !isMenuOpen});
-  }
+    const { isMenuOpen } = this.state;
+    this.setState({ isMenuOpen: !isMenuOpen });
+  };
 }
 
 export default App;

@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
-import { Link, withSiteData } from "react-static";
+import { Link, withSiteData } from 'react-static';
 import Overlay from './overlay';
-import "./nav.css";
+import './nav.css';
 
 export class Nav extends Component {
   render() {
-    const {components, isMenuOpen, onToggleMenu} = this.props;
+    const { components, isMenuOpen, onToggleMenu } = this.props;
 
     // This ensures that the components appear in the navigation in
     // alphabetical order
@@ -19,7 +19,7 @@ export class Nav extends Component {
     });
 
     const navClassnames = classnames('nav', {
-      'nav-open': isMenuOpen
+      'nav-open': isMenuOpen,
     });
 
     return (
@@ -27,7 +27,11 @@ export class Nav extends Component {
         <nav className={navClassnames}>
           <ul className="nav_navList">
             <li className="nav_navListItem">
-              <Link exact to="/" className="nav_navSectionLink" onClick={this.onNavigate}>
+              <Link
+                exact
+                to="/"
+                className="nav_navSectionLink"
+                onClick={this.onNavigate}>
                 Introduction
               </Link>
             </li>
@@ -50,7 +54,11 @@ export class Nav extends Component {
               </ul>
             </li> */}
             <li className="nav_navListItem">
-              <Link exact to="/components" className="nav_navSectionLink" onClick={this.onNavigate}>
+              <Link
+                exact
+                to="/components"
+                className="nav_navSectionLink"
+                onClick={this.onNavigate}>
                 Components
               </Link>
               <ul className="nav_navSubList">
@@ -61,8 +69,7 @@ export class Nav extends Component {
                         exact
                         to={`/components/${component.url}`}
                         className="nav_navLink"
-                        onClick={this.onNavigate}
-                      >
+                        onClick={this.onNavigate}>
                         {component.name}
                       </Link>
                     </li>
@@ -78,12 +85,12 @@ export class Nav extends Component {
   }
 
   onNavigate = () => {
-    const {isMenuOpen, onToggleMenu} = this.props;
+    const { isMenuOpen, onToggleMenu } = this.props;
 
     if (isMenuOpen) {
       onToggleMenu();
     }
-  }
+  };
 }
 
 export default withSiteData(Nav);

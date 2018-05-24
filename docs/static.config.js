@@ -3,7 +3,7 @@ import components from './components';
 
 const fs = require('fs');
 
-const homeMarkdown = fs.readFileSync('./src/components/index.md', {
+const homeMarkdown = fs.readFileSync('./src/home/index.md', {
   encoding: 'utf-8',
 });
 
@@ -36,14 +36,14 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/components/home',
+        component: 'src/home/index',
         getData: async () => ({
           homeMarkdown,
         }),
       },
       {
         path: '/components',
-        component: 'src/components/components',
+        component: 'src/components/index',
         getData: async () => ({
           components,
         }),
@@ -59,7 +59,7 @@ export default {
       },
       {
         is404: true,
-        component: 'src/components/404',
+        component: 'src/common/404',
       },
     ];
   },

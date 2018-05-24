@@ -3,9 +3,12 @@ import './overlay.css';
 
 export default class Overlay extends Component {
   render() {
-    const {active, onClick} = this.props;
+    const { active, onClick } = this.props;
     return (
-      <div className={`overlay ${active ? 'overlay-active' : ''}`} onClick={onClick}/>
+      <div
+        className={`overlay ${active ? 'overlay-active' : ''}`}
+        onClick={onClick}
+      />
     );
   }
 }
