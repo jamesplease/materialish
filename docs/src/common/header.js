@@ -9,7 +9,7 @@ export default class Header extends Component {
 
     return (
       <header className="header">
-        <i class="zmdi zmdi-menu header_navToggle" onClick={onToggleMenu} />
+        <i className="zmdi zmdi-menu header_navToggle" onClick={onToggleMenu} />
         <Link to="/">
           <img src={logo} className="materialishLogo" />
         </Link>
@@ -21,7 +21,7 @@ export default class Header extends Component {
         <a
           href="https://github.com/jamesplease/materialish"
           className="header_githubLink">
-          <i class="zmdi zmdi-github" />
+          <i className="zmdi zmdi-github" />
         </a>
       </header>
     );
