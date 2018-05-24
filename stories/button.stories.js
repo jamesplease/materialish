@@ -9,7 +9,7 @@ import { Button } from '../src/index';
 
 setOptions({
   name: 'Materialish',
-  addonPanelInRight: true
+  addonPanelInRight: true,
 });
 
 storiesOf('Button', module)
@@ -18,7 +18,6 @@ storiesOf('Button', module)
     <Button
       onClick={action('clicked')}
       disabled={boolean('Disabled', false, 'PROPS')}
-      secondary={boolean('Secondary', false, 'PROPS')}
       compact={boolean('Compact', false, 'PROPS')}
       flat={boolean('Flat', false, 'PROPS')}
       ripple={boolean('Ripple', true)}

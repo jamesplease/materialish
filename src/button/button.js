@@ -11,7 +11,6 @@ class Button extends Component {
       flat = false,
       stroked = false,
       compact = flat,
-      secondary = false,
       ripple = true,
       ...otherProps
     } = this.props;
@@ -21,7 +20,6 @@ class Button extends Component {
       'mt-button-flat': flat,
       'mt-button-stroked': stroked,
       'mt-button-compact': compact,
-      'mt-button-secondary': secondary
     });
 
     return (
@@ -29,19 +27,17 @@ class Button extends Component {
         {...otherProps}
         className={componentClassNames}
         onClick={this.onClick}>
-        {ripple && (
-          <Ripple ref={this.getRippleRef} />
-        )}
+        {ripple && <Ripple ref={this.getRippleRef} />}
         {children}
       </button>
     );
   }
 
-  getRippleRef = (component) => {
+  getRippleRef = component => {
     this.rippleComponent = component;
-  }
+  };
 
-  onClick = (e) => {
+  onClick = e => {
     const { onClick } = this.props;
 
     if (this.rippleComponent) {
@@ -51,7 +47,7 @@ class Button extends Component {
     if (onClick) {
       onClick();
     }
-  }
+  };
 }
 
 export default Button;
