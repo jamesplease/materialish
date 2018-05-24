@@ -1,0 +1,34 @@
+.mt-avatar {
+  /*
+    This (ugly) set of variables defines the variable fallback implementation.
+
+    1. If `mt-avatar-backgroundColor` is set, then that will be applied
+    2. Otherwise, `#ccc` will be applied
+  */
+  --_mt-avatar-backgroundColor: var(--mt-avatar-backgroundColor, #ccc);
+  --_mt-avatar-color: var(--mt-avatar-color, #333);
+
+  font-size: var(--mt-baseFontSize, 1rem);
+  font-family: var(--mt-fontFamily, 'Roboto');
+  width: 5em;
+  height: 5em;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--_mt-avatar-backgroundColor);
+  color: var(--_mt-avatar-color);
+  vertical-align: middle;
+}
+
+.mt-avatar_image {
+  width: 100%;
+  height: 100%;
+}
+
+.mt-avatar_initials {
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+}
