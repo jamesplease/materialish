@@ -29,7 +29,9 @@
   margin-right: 10px;
 }
 
-.header_navToggle {
+/* See: https://github.com/nozzle/react-static/issues/622 */
+
+.header .header_navToggle {
   color: #fff;
   margin-right: 15px;
   font-size: 1.2rem;
@@ -43,7 +45,7 @@
 }
 
 @media (max-width: 1000px) {
-  .header_navToggle {
+  .header .header_navToggle {
     display: block;
   }
 }
