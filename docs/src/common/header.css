@@ -5,6 +5,9 @@
   align-items: center;
   width: 100%;
   padding: 0 var(--standardContentPadding);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .header_appName {
@@ -24,4 +27,17 @@
   width: 33px;
   position: relative;
   margin-right: 10px;
+}
+
+.header_navToggle {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .header_navToggle {
+    display: block;
+  }
 }

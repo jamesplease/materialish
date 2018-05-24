@@ -5,8 +5,11 @@ import logo from "../materialish-logo.svg";
 
 export default class Header extends Component {
   render() {
+    const {onToggleMenu} = this.props;
+
     return (
       <header className="header">
+        <i class="zmdi zmdi-menu header_navToggle" onClick={onToggleMenu}/>
         <Link to="/">
           <img src={logo} className="materialishLogo"/>
         </Link>
@@ -17,5 +20,9 @@ export default class Header extends Component {
         </h1>
       </header>
     );
+  }
+
+  state = {
+    menuOpen: false
   }
 }

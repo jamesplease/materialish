@@ -41,3 +41,13 @@ body {
   padding: 0 var(--standardContentPadding);
   margin: 0 auto;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

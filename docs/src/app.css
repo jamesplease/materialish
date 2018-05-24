@@ -3,11 +3,32 @@
 }
 
 .app_bodyContents {
+  --bodyPadding: 40px;
+
+  width: calc(100% - var(--navWidth));
+  margin: calc(var(--appTopPadding) + var(--headerHeight)) 0 60px var(--navWidth);
+  padding: 0 var(--bodyPadding);
+}
+
+.app_bodyContents > * {
   width: calc(
     (100% - var(--maxAppWidth)) / 2 + var(--maxAppWidth) - var(--navWidth)
   );
   max-width: calc(var(--maxAppWidth) - var(--navWidth));
-  min-width: 450px;
-  margin: var(--appTopPadding) auto 60px;
-  padding-right: 40px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .app_bodyContents {
+    --bodyPadding: 20px;
+
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .app_bodyContents > * {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
 }
