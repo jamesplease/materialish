@@ -14,5 +14,13 @@ export default [
     description: 'A Checkbox represents a boolean value that can be in one of two states, true or false.',
     component: 'src/components/component-doc',
     materialDocsLink: 'https://material.io/design/components/selection-controls.html#checkboxes'
+  },
+  {
+    name: "Switch",
+    url: "switch",
+    componentKey: 'switch',
+    description: 'A Switch represents a value that can be toggled on or off.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/selection-controls.html#switches'
   }
 ];

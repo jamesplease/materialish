@@ -1,0 +1,159 @@
+.mt-switch {
+  /*
+    This (ugly) set of variables defines the variable fallback implementation.
+
+    1. If `mt-switch-knobColorActive` is set, then that will be applied
+    2. Otherwise, `mt-mainColor` will be applied
+    3. Otherwise, #2196f3 will be applied
+  */
+  --_mt-switch-backgroundColor: var(--mt-switch-backgroundColor, #979696);
+  --_mt-switch-backgroundColorActive: var(
+    --mt-switch-backgroundColorActive,
+    #b0cfe9
+  );
+  --_mt-switch-backgroundColorDisabled: var(
+    --mt-switch-backgroundColorDisabled,
+    #d9d9d9
+  );
+
+  --_mt-switch-knobColor: var(--mt-switch-knobColor, #fafafa);
+  --_mt-switch-knobColorActive: var(
+    --mt-switch-knobColorActive,
+    var(--mt-mainColor, #2196f3)
+  );
+  --_mt-switch-knobColorDisabled: var(--mt-switch-knobColorDisabled, #979696);
+
+  --_mt-switch-focusColorActive: var(
+    --mt-switch-focusColorActive,
+    var(--_mt-switch-knobColorActive)
+  );
+  --_mt-switch-focusColor: var(
+    --mt-switch-focusColor,
+    var(--_mt-switch-knobColorDisabled)
+  );
+
+  font-size: var(--mt-baseFontSize, 1rem);
+  display: inline-flex;
+  position: relative;
+  height: 1.25em;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.mt-switch_input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: block;
+  cursor: pointer;
+  z-index: 20;
+  transform: translateZ(0);
+}
+
+.mt-switch_switch {
+  width: 2em;
+  height: 0.8em;
+  background: linear-gradient(
+    to right,
+    var(--_mt-switch-backgroundColorActive) 0%,
+    var(--_mt-switch-backgroundColorActive) 50%,
+    var(--_mt-switch-backgroundColor) 50%,
+    var(--_mt-switch-backgroundColor) 100%
+  );
+  border-radius: 0.8em;
+  position: static;
+}
+
+.mt-switch_switch:before,
+.mt-switch_switch:after {
+  content: '';
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  background-color: var(--_mt-switch-knobColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  transition: transform 90ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mt-switch_switch:after {
+  background-color: var(--_mt-switch-knobColorActive);
+  opacity: 0;
+  will-change: opacity;
+  transition: transform 90ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 90ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mt-switch_input:checked + .mt-switch_switch:before,
+.mt-switch_input:checked + .mt-switch_switch:after {
+  transform: translateX(0.75em);
+  transform-origin: right center;
+}
+
+.mt-switch_input:checked + .mt-switch_switch:after {
+  opacity: 1;
+}
+
+.mt-switch_input:disabled + .mt-switch_switch {
+  background: var(--_mt-switch-backgroundColorDisabled);
+}
+
+.mt-switch_input:disabled + .mt-switch_switch:before,
+.mt-switch_input:disabled + .mt-switch_switch:after {
+  background-color: var(--_mt-switch-knobColorDisabled);
+}
+
+.mt-switch_focus {
+  position: absolute;
+  top: -0.3em;
+  bottom: -0.3em;
+  left: -0.3em;
+  right: -0.3em;
+  z-index: -1;
+  border-radius: 1em;
+  opacity: 0.2;
+  transform: scale(0);
+  will-change: transform;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.mt-switch_focus:before,
+.mt-switch_focus:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--_mt-switch-focusColor);
+}
+
+.mt-switch_focus:after {
+  background-color: var(--_mt-switch-focusColorActive);
+  opacity: 0;
+  will-change: opacity;
+}
+
+.mt-switch_input:focus + .mt-switch_switch + .mt-switch_focus {
+  transform: scale(1);
+}
+
+.mt-switch_input:focus:checked + .mt-switch_switch + .mt-switch_focus:after {
+  opacity: 1;
+}
