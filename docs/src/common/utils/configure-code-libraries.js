@@ -6,7 +6,7 @@
 //   in-browser text editor
 //
 // For the first use case, a few libraries are used:
-// 
+//
 // - React Markdown: this parses the Markdown files. Note that
 //   this library is not configured in this file.
 // - React Lowlight: this adds syntax highlighting support to
@@ -19,21 +19,19 @@
 //
 // This file configures all of these libraries
 
-import Lowlight from "react-lowlight";
-import js from "highlight.js/lib/languages/javascript";
+import Lowlight from 'react-lowlight';
+import js from 'highlight.js/lib/languages/javascript';
 
 // This themes the highlighted syntax within Markdown as a GitHub Gist.
-import "./styles/npm-package-styles/github-gist.css";
+import '../../styles/npm-package-styles/github-gist.css';
 
 // Oceanic Next is the theme that we use for CodeMirror
-import './styles/npm-package-styles/oceanic-next.css';
+import '../../styles/npm-package-styles/oceanic-next.css';
 // This allows us to use the JS mode of CodeMirror
 
 if (typeof navigator !== 'undefined') {
-  require('codemirror/mode/javascript/javascript').default
+  require('codemirror/mode/javascript/javascript').default;
 }
 
 // This registers JavaScript as a language for Highlight.js.
-Lowlight.registerLanguage("js", js);
-
-
+Lowlight.registerLanguage('js', js);

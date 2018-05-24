@@ -5,6 +5,9 @@
   align-items: center;
   width: 100%;
   padding: 0 var(--standardContentPadding);
+  position: fixed;
+  top: 0;
+  z-index: 1500;
 }
 
 .header_appName {
@@ -24,4 +27,25 @@
   width: 33px;
   position: relative;
   margin-right: 10px;
+}
+
+/* See: https://github.com/nozzle/react-static/issues/622 */
+
+.header .header_navToggle {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.header_githubLink {
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .header .header_navToggle {
+    display: block;
+  }
 }

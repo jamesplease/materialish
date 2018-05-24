@@ -5,9 +5,7 @@
   --navWidth: 300px;
   --headerHeight: 65px;
   --appTopPadding: 30px;
-
   --mainColor: #6045f5;
-
   --mt-baseFontSize: 16px;
 }
 
@@ -40,4 +38,14 @@ body {
   max-width: var(--maxAppWidth);
   padding: 0 var(--standardContentPadding);
   margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

@@ -3,19 +3,21 @@ import components from './components';
 
 const fs = require('fs');
 
-const homeMarkdown = fs.readFileSync('./src/components/index.md', {encoding: 'utf-8'});
+const homeMarkdown = fs.readFileSync('./src/home/index.md', {
+  encoding: 'utf-8',
+});
 
 const readmes = {
-  button: fs.readFileSync('./readmes/button.md', {encoding: 'utf-8'}),
-  checkbox: fs.readFileSync('./readmes/checkbox.md', {encoding: 'utf-8'}),
-  switch: fs.readFileSync('./readmes/switch.md', {encoding: 'utf-8'}),
+  button: fs.readFileSync('./readmes/button.md', { encoding: 'utf-8' }),
+  checkbox: fs.readFileSync('./readmes/checkbox.md', { encoding: 'utf-8' }),
+  switch: fs.readFileSync('./readmes/switch.md', { encoding: 'utf-8' }),
 };
 
 const examples = {
-  button: fs.readFileSync('./examples/button.txt', {encoding: 'utf-8'}),
-  checkbox: fs.readFileSync('./examples/checkbox.txt', {encoding: 'utf-8'}),
-  switch: fs.readFileSync('./examples/switch.txt', {encoding: 'utf-8'})
-}
+  button: fs.readFileSync('./examples/button.js', { encoding: 'utf-8' }),
+  checkbox: fs.readFileSync('./examples/checkbox.js', { encoding: 'utf-8' }),
+  switch: fs.readFileSync('./examples/switch.js', { encoding: 'utf-8' }),
+};
 
 // import { addSearchObjects } from './algolia'
 
@@ -34,16 +36,16 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/components/home',
+        component: 'src/home/index',
         getData: async () => ({
-          homeMarkdown
-        })
+          homeMarkdown,
+        }),
       },
       {
         path: '/components',
-        component: 'src/components/components',
+        component: 'src/components/index',
         getData: async () => ({
-          components
+          components,
         }),
         children: components.map(component => ({
           path: component.url,
@@ -51,15 +53,15 @@ export default {
           getData: async () => ({
             component,
             markdown: readmes[component.componentKey],
-            example: examples[component.componentKey]
-          })
-        }))
+            example: examples[component.componentKey],
+          }),
+        })),
       },
       {
         is404: true,
-        component: 'src/components/404',
+        component: 'src/common/404',
       },
-    ]
+    ];
   },
 
   Document: ({ Html, Head, Body, children, siteData }) => (
@@ -67,15 +69,37 @@ export default {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"/>
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+        />
         <title>{siteData.title}</title>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
       </Head>
       <Body>
-        <div id="root">
-          {children}
-        </div>
+        <div id="root">{children}</div>
       </Body>
     </Html>
-  )
-}
+  ),
+};

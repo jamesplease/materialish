@@ -51,6 +51,7 @@ a {
   line-height: 1.4;
 }
 
+.paragraph,
 .markdown p {
   line-height: 1.7;
 }
