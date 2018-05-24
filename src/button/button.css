@@ -10,7 +10,7 @@
   --_mt-button-textColor: var(--mt-button-textColor, #fff);
   --_mt-button-disabledTextColor: var(--mt-button-disabledTextColor, rgba(0, 0, 0, 0.38));
   all: initial;
-  font-family: 'Roboto';
+  font-family: var(--mt-fontFamily, 'Roboto');
   position: relative;
   -webkit-font-smoothing: antialiased;
   font-size: var(--mt-baseFontSize, 1rem);
