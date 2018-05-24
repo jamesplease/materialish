@@ -1,6 +1,7 @@
 {
-  "name": "react-static-example-algolia",
-  "version": "1.0.1",
+  "name": "materialish-docs",
+  "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -18,7 +19,7 @@
     "codemirror": "^5.36.0",
     "fetch-dedupe": "^3.0.0",
     "highlight.js": "^9.12.0",
-    "materialish": "0.1.3-beta.1",
+    "materialish": "0.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
