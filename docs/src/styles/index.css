@@ -22,12 +22,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--headerHeight));
 }
 
-#root,
-.app {
-  min-height: 100vh;
+#root {
+  min-height: calc(100vh - var(--headerHeight));
 }
 
 .app_body {
