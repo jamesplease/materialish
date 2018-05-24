@@ -23,10 +23,10 @@ import Lowlight from 'react-lowlight';
 import js from 'highlight.js/lib/languages/javascript';
 
 // This themes the highlighted syntax within Markdown as a GitHub Gist.
-import './styles/npm-package-styles/github-gist.css';
+import '../../styles/npm-package-styles/github-gist.css';
 
 // Oceanic Next is the theme that we use for CodeMirror
-import './styles/npm-package-styles/oceanic-next.css';
+import '../../styles/npm-package-styles/oceanic-next.css';
 // This allows us to use the JS mode of CodeMirror
 
 if (typeof navigator !== 'undefined') {

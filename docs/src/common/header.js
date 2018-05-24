@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import logo from '../materialish-logo.svg';
+import logo from '../images/materialish-logo.svg';
 
 export default class Header extends Component {
   render() {
