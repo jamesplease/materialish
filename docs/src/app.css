@@ -11,7 +11,8 @@
 }
 
 .app_bodyContents > * {
-  width: calc(var(--maxAppWidth) - var(--navWidth));
+  width: 100%;
+  max-width: calc(var(--maxAppWidth) - var(--navWidth));
   margin: 0 auto;
 }
 
