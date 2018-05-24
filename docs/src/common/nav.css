@@ -71,7 +71,7 @@
   padding: 10px var(--standardContentPadding);
   -webkit-font-smoothing: antialiased;
   user-select: none;
-  color: #888;
+  color: #616161;
   position: relative;
   z-index: 0;
 }
