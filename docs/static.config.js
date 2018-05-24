@@ -7,12 +7,14 @@ const homeMarkdown = fs.readFileSync('./src/components/index.md', {encoding: 'ut
 
 const readmes = {
   button: fs.readFileSync('./readmes/button.md', {encoding: 'utf-8'}),
-  checkbox: fs.readFileSync('./readmes/checkbox.md', {encoding: 'utf-8'})
+  checkbox: fs.readFileSync('./readmes/checkbox.md', {encoding: 'utf-8'}),
+  switch: fs.readFileSync('./readmes/switch.md', {encoding: 'utf-8'}),
 };
 
 const examples = {
   button: fs.readFileSync('./examples/button.txt', {encoding: 'utf-8'}),
-  checkbox: fs.readFileSync('./examples/checkbox.txt', {encoding: 'utf-8'})
+  checkbox: fs.readFileSync('./examples/checkbox.txt', {encoding: 'utf-8'}),
+  switch: fs.readFileSync('./examples/switch.txt', {encoding: 'utf-8'})
 }
 
 // import { addSearchObjects } from './algolia'
