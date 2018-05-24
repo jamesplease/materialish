@@ -1,5 +1,13 @@
 export default [
   {
+    name: 'Avatar',
+    url: 'avatar',
+    componentKey: 'avatar',
+    description:
+      'An Avatar is an image that repesents the user. If no image is present it will show the initials.',
+    component: 'src/components/component-doc',
+  },
+  {
     name: 'Button',
     url: 'button',
     componentKey: 'button',

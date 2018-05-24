@@ -8,12 +8,14 @@ const homeMarkdown = fs.readFileSync('./src/home/index.md', {
 });
 
 const readmes = {
+  avatar: fs.readFileSync('./readmes/avatar.md', { encoding: 'utf-8' }),
   button: fs.readFileSync('./readmes/button.md', { encoding: 'utf-8' }),
   checkbox: fs.readFileSync('./readmes/checkbox.md', { encoding: 'utf-8' }),
   switch: fs.readFileSync('./readmes/switch.md', { encoding: 'utf-8' }),
 };
 
 const examples = {
+  avatar: fs.readFileSync('./examples/avatar.js', { encoding: 'utf-8' }),
   button: fs.readFileSync('./examples/button.js', { encoding: 'utf-8' }),
   checkbox: fs.readFileSync('./examples/checkbox.js', { encoding: 'utf-8' }),
   switch: fs.readFileSync('./examples/switch.js', { encoding: 'utf-8' }),
