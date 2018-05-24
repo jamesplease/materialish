@@ -15,14 +15,12 @@
     --mt-switch-backgroundColorDisabled,
     #d9d9d9
   );
-
   --_mt-switch-knobColor: var(--mt-switch-knobColor, #fafafa);
   --_mt-switch-knobColorActive: var(
     --mt-switch-knobColorActive,
     var(--mt-mainColor, #2196f3)
   );
   --_mt-switch-knobColorDisabled: var(--mt-switch-knobColorDisabled, #979696);
-
   --_mt-switch-focusColorActive: var(
     --mt-switch-focusColorActive,
     var(--_mt-switch-knobColorActive)
@@ -31,7 +29,6 @@
     --mt-switch-focusColor,
     var(--_mt-switch-knobColorDisabled)
   );
-
   font-size: var(--mt-baseFontSize, 1rem);
   display: inline-flex;
   position: relative;
@@ -124,12 +121,10 @@
   left: -0.3em;
   right: -0.3em;
   z-index: -1;
-  border-radius: 1em;
   opacity: 0.2;
   transform: scale(0);
   will-change: transform;
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
 }
 
 .mt-switch_focus:before,
@@ -142,6 +137,7 @@
   bottom: 0;
   left: 0;
   background-color: var(--_mt-switch-focusColor);
+  border-radius: 1em;
 }
 
 .mt-switch_focus:after {

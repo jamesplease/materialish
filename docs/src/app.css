@@ -5,11 +5,12 @@
 .app_bodyContents {
   --bodyPadding: 40px;
   width: calc(100% - var(--navWidth));
-  margin: calc(var(--appTopPadding) + var(--headerHeight)) 0 60px var(--navWidth);
+  margin: calc(var(--appTopPadding) + var(--headerHeight)) 0 60px
+    var(--navWidth);
   padding: 0 var(--bodyPadding);
 }
 
-.app_bodyContents>* {
+.app_bodyContents > * {
   width: 100%;
   max-width: calc(var(--maxAppWidth) - var(--navWidth));
   margin: 0 auto;
@@ -21,7 +22,7 @@
     margin-left: 0;
     width: 100%;
   }
-  .app_bodyContents>* {
+  .app_bodyContents > * {
     width: 100%;
     max-width: none;
     margin: 0;

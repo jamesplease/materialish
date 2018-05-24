@@ -7,7 +7,14 @@ const glob = require('glob');
 const copyFiles = require('./copy-files');
 
 const NODE_MODULES = path.join(__dirname, '..', 'docs', 'node_modules');
-const DESTINATION_DIRECTORY = path.join(__dirname, '..', 'docs', 'src', 'styles', 'npm-package-styles');
+const DESTINATION_DIRECTORY = path.join(
+  __dirname,
+  '..',
+  'docs',
+  'src',
+  'styles',
+  'npm-package-styles'
+);
 const MATERIALISH_GLOB = 'materialish/*.css';
 
 const filesToCopy = [
@@ -19,11 +26,19 @@ const materialishCss = glob.sync(`${NODE_MODULES}/${MATERIALISH_GLOB}`);
 const fullPathsToCopy = filesToCopy.map(file => path.join(NODE_MODULES, file));
 const allFiles = [...fullPathsToCopy, ...materialishCss];
 
-console.log(chalk.blue('\nCopying stylesheets from node_modules into the docs src folder.'));
+console.log(
+  chalk.blue(
+    '\nCopying stylesheets from node_modules into the docs src folder.'
+  )
+);
 
-fs.access(NODE_MODULES, (err) => {
+fs.access(NODE_MODULES, err => {
   if (err && err.code === 'ENOENT') {
-    console.error(chalk.red('Please install the node modules within the /docs directory by running `npm install`'));
+    console.error(
+      chalk.red(
+        'Please install the node modules within the /docs directory by running `npm install`'
+      )
+    );
     process.exit(1);
   }
 
