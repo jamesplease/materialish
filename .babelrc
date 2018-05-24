@@ -6,30 +6,50 @@
   ],
   "env": {
     "build": {
-      "presets": [["env", { "modules": false }], "stage-3", "react"],
+      "presets": [
+        ["env", {
+          "modules": false
+        }], "stage-3", "react"
+      ],
       "plugins": [
         "external-helpers",
         "transform-class-properties",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread", ["transform-es2015-classes", {
+          "loose": true
+        }]
       ]
     },
     "buildProd": {
-      "presets": [["env", { "modules": false }], "stage-3", "react"],
+      "presets": [
+        ["env", {
+          "modules": false
+        }], "stage-3", "react"
+      ],
       "plugins": [
         "external-helpers",
         "transform-class-properties",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread", ["transform-es2015-classes", {
+          "loose": true
+        }]
       ]
     },
     "es": {
-      "presets": [["env", { "modules": false }], "stage-3", "react"],
+      "presets": [
+        ["env", {
+          "modules": false
+        }], "stage-3", "react"
+      ],
       "plugins": ["transform-class-properties", "transform-object-rest-spread"]
     },
     "commonjs": {
       "plugins": [
-        ["transform-es2015-modules-commonjs", { "loose": true }],
+        ["transform-es2015-modules-commonjs", {
+          "loose": true
+        }],
         "transform-class-properties",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread", ["transform-es2015-classes", {
+          "loose": true
+        }]
       ],
       "presets": ["stage-3", "react"]
     },
