@@ -11,7 +11,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "clean": "rimraf dist es tmp lib ./*.js ./*.css",
     "copy-source": "node ./build/copy-source-files.js",
-    "prettier": "prettier --config ./.prettierrc --write **/*.{js,css} components/**/*.js",
+    "prettier": "prettier --config ./.prettierrc --write **/*.{js,css}",
     "build": "npm run clean && npm run build:umd && npm run build:umd:min && npm run build:es && npm run build:commonjs && npm run copy-source",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",

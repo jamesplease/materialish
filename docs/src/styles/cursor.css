@@ -10,10 +10,10 @@ code {
 
 a,
 button,
-input[type="button"],
-input[type="radio"],
-input[type="submit"],
-input[type="checkbox"] {
+input[type='button'],
+input[type='radio'],
+input[type='submit'],
+input[type='checkbox'] {
   cursor: pointer;
 }
 

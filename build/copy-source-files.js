@@ -10,7 +10,7 @@ const DESTINATION_DIRECTORY = path.join(__dirname, '..');
 
 const cssFilesToCopy = `${COMPONENT_DIR}/*/*.css`;
 
-glob(cssFilesToCopy, function (err, files) {
+glob(cssFilesToCopy, function(err, files) {
   if (err) {
     console.log(chalk.red('There was an error when reading the source files.'));
     process.exit(1);

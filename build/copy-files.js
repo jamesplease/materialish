@@ -11,10 +11,10 @@ module.exports = function(files, destination) {
   // copying of the files will fail.
   try {
     fs.mkdirSync(destination);
-  } catch(e) {
+  } catch (e) {
     // Intentionally blank.
   }
-  
+
   files.forEach(filepath => {
     const basename = path.basename(filepath);
     const fullDestPath = path.join(destination, basename);
@@ -23,4 +23,4 @@ module.exports = function(files, destination) {
   });
 
   console.log(chalk.green('✔ All done!'));
-}
+};
