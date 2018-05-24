@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.3.1 (2018/5/23)
+
+* Update the way that the Switch focus state is rendered
+
 ### v0.3.0 (2018/5/23)
 
 * Removed the `secondary` prop from the button
