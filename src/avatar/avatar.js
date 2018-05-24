@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class Avatar extends Component {
   render() {
-    const { className = '', image, initials, ...props } = this.props;
+    const { className = '', image, initials = '', ...props } = this.props;
+
     return (
       <div className={`mt-avatar ${className}`} {...props}>
         {image ? (
