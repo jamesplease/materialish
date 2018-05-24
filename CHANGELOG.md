@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.4.0 (2018/5/24)
+
+* Introduces the Avatar component
+
 ### v0.3.1 (2018/5/23)
 
 * Update the way that the Switch focus state is rendered
