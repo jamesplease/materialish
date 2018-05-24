@@ -6,13 +6,6 @@
 
 React components that loosely follow Material Design.
 
-### Motivation
-
-The Netflix Studio design system is inspired by Material Design. This is an implementation of that
-design system in React.
-
-> Note: This project is a work-in-progress.
-
 ### Installation
 
 Install using [npm](https://www.npmjs.com):
@@ -27,28 +20,12 @@ or [yarn](https://yarnpkg.com/):
 yarn add materialish
 ```
 
-### Developing
+### Documentation
 
-First, clone this repository.
-
-```
-git@github.com:jamesplease/materialish.git
-```
-
-Navigate into the repository's directory, and install the dependencies.
-
-```
-cd materialish
-npm install
-```
-
-To see the examples in action, run:
-
-```
-npm run storybook
-```
+View the documentation at **[jamesplease.github.io/materialish ⇗](https://jamesplease.github.io/materialish)**.
 
 ### Contributing
 
-These components will currently only be updated to support Content Algorithms use cases.
-We encourage you to fork the components if you need additional functionality.
+Thanks for your interest in helping out! Check out the
+[Contributing Guide](./CONTRIBUTING.md), which covers everything you'll need to
+get up and running.
