@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.2.1 (2018/5/23)
+
+* Small fixes to both the Switch and Checkbox.
+
 ### v0.2.0 (2018/5/23)
 
 * Add `Switch` component.
