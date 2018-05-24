@@ -9,7 +9,7 @@
   pointer-events: none;
   transition: opacity 200ms ease-in-out;
   will-change: opacity;
-  z-index: 1500;
+  z-index: 1000;
 }
 
 .overlay-active {
