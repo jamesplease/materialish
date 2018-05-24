@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.2.0 (2018/5/23)
+
+* Add `Switch` component.
+
 ### v0.1.3 (2018/5/23)
 
 * `npm` was having issues with published packages. Publishing a new version
