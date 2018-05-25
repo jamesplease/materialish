@@ -11,7 +11,7 @@
     "serve": "serve dist -p 3000",
     "clean": "rimraf dist src/styles/npm-package-styles",
     "copy-css-files": "node ../build/copy-www-files.js",
-    "publish": "npm run clean && npm run build && cd dist && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force"
+    "deploy": "npm run clean && npm run build && cd dist && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force"
   },
   "dependencies": {
     "@babel/standalone": "^7.0.0-beta.44",
