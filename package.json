@@ -12,6 +12,7 @@
     "clean": "rimraf dist es tmp lib ./*.js ./*.css",
     "copy-source": "node ./build/copy-source-files.js",
     "concat-css": "node ./build/concatenate-css-files.js",
+    "icons": "cd icons && npm run build",
     "prettier": "prettier --config ./.prettierrc --write **/*.{js,css}",
     "build": "npm run clean && npm run build:umd && npm run build:umd:min && npm run build:es && npm run build:commonjs && npm run copy-source && npm run concat-css",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
@@ -47,8 +48,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
@@ -74,6 +74,8 @@
     "cross-env": "^5.1.4",
     "eslint": "^4.19.0",
     "eslint-plugin-react": "^7.7.0",
+    "find": "^0.2.9",
+    "git-clone": "^0.1.0",
     "glob": "^7.1.2",
     "in-publish": "^2.0.0",
     "prettier": "^1.11.1",
