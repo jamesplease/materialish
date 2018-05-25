@@ -1,5 +1,17 @@
 # Changelog
 
+### v0.6.2 (2018/5/25)
+
+* The icons files are now transpiled to ES5 and CJS.
+
+### v0.6.1 (2018/5/25)
+
+* Ensures that the `/icons` directory is included in the npm package.
+
+### v0.6.0 (2018/5/25)
+
+* Icon Components are now shipped with Materialish.
+
 ### v0.5.0 (2018/5/24)
 
 * The library is now distributed with a `materialish.css` and `materialish.min.css` to provide a

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const clone = require('git-clone');
+const mkdirp = require('mkdirp');
 const find = require('find');
 const chalk = require('chalk');
 
@@ -9,19 +10,19 @@ const MATERIAL_ICONS_REPO_PATH = path.join(
   '..',
   'material-icons-repo'
 );
-const OUTPUT_DIRECTORY = path.join(__dirname, '..', 'icons');
-const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_DIRECTORY, 'index.js');
+const PROJECT_DIRECTORY = path.join(__dirname, '..');
+const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-src');
+const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-index-src');
+const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_INDEX_DIRECTORY, 'index.js');
 
-const template = `import React, { Component } from "react";
+const template = `import React from "react";
 
-export default class [[classname]] extends Component {
-  render() {
-    const { size = "1em", ...props } = this.props;
+export default function [[classname]](props) {
+  const { size = "1em", ...rest } = props;
 
-    return (
-      [[svg]]
-    );
-  }
+  return (
+    [[svg]]
+  );
 }
 `;
 
@@ -81,10 +82,11 @@ clone(
         namedExports[classname] = fileName;
 
         const svg = contents
-          .replace('>', ' {...props} > ')
+          .replace('>', ' {...rest} > ')
           .replace(/width="48"/, 'width={size}')
           .replace(/height="48"/, 'height={size}');
 
+        mkdirp.sync(OUTPUT_DIRECTORY);
         const outputFilePath = path.join(OUTPUT_DIRECTORY, `${fileName}.js`);
 
         fs.writeFileSync(
@@ -102,11 +104,12 @@ clone(
 
         let fileContent = '';
         Object.keys(namedExports).forEach(classname => {
-          fileContent += `export { ${classname} } from './${
+          fileContent += `export { default as ${classname} } from '../${
             namedExports[classname]
           }'\n`;
         });
 
+        mkdirp.sync(OUTPUT_INDEX_DIRECTORY);
         fs.writeFileSync(OUTPUT_INDEX_FILEPATH, fileContent);
         console.log(chalk.blue(`  ✔ The index.js file was saved!`));
         console.log(chalk.green(`✔ Creating the Icon files was successful.`));

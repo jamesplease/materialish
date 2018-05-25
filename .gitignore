@@ -21,3 +21,6 @@ website/i18n/*
 !website/i18n/en.json
 icons/*.js
 material-icons-repo
+icons
+icons-src
+icons-index-src
