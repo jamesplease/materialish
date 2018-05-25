@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import * as Materialish from 'materialish';
+import * as MaterialishIcons from 'materialish/icons';
 import { withRouteData } from 'react-static';
 import {
   Markdown,
@@ -16,6 +17,7 @@ const demoScope = {
   Fragment,
   PropTypes,
   ...Materialish,
+  ...MaterialishIcons,
 };
 
 const rootSourceUrl =

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import * as Materialish from 'materialish';
-import * as MaterialishIcons from 'materialish-icons';
+import * as MaterialishIcons from 'materialish/icons';
 import { withRouteData } from 'react-static';
 import {
   Markdown,
@@ -38,8 +38,7 @@ export class Icons extends Component {
         </ul>
         <p className="paragraph">
           Materialish provides an individual React Component for each Material
-          Design icon. The icons are distributed in a separate npm package,
-          materialish-icons.
+          Design icon.
         </p>
         <CodeManager code={example}>
           {({ code, handleCodeChange }) => (
