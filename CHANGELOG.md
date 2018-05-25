@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.6.0 (2018/5/25)
+
+* Icon Components are now shipped with Materialish.
+
 ### v0.5.0 (2018/5/24)
 
 * The library is now distributed with a `materialish.css` and `materialish.min.css` to provide a
