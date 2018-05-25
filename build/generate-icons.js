@@ -10,15 +10,15 @@ const MATERIAL_ICONS_REPO_PATH = path.join(
   '..',
   'material-icons-repo'
 );
-const OUTPUT_DIRECTORY = path.join(__dirname, '..');
-const OUTPUT_INDEX_DIRECTORY = path.join(OUTPUT_DIRECTORY, 'icons');
+const PROJECT_DIRECTORY = path.join(__dirname, '..');
+const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-src');
+const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons');
 const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_INDEX_DIRECTORY, 'index.js');
 
 const template = `import React from "react";
 
 export default function [[classname]](props) {
-  const { size, ...rest } = props;
-  let sizeToUse = size || "1em";
+  const { size = "1em", ...rest } = props;
 
   return (
     [[svg]]
@@ -83,9 +83,10 @@ clone(
 
         const svg = contents
           .replace('>', ' {...rest} > ')
-          .replace(/width="48"/, 'width={sizeToUse}')
-          .replace(/height="48"/, 'height={sizeToUse}');
+          .replace(/width="48"/, 'width={size}')
+          .replace(/height="48"/, 'height={size}');
 
+        mkdirp.sync(OUTPUT_DIRECTORY);
         const outputFilePath = path.join(OUTPUT_DIRECTORY, `${fileName}.js`);
 
         fs.writeFileSync(
