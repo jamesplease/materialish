@@ -22,23 +22,9 @@ class Ripple extends Component {
     left: 0,
   };
 
-  componentDidMount() {
-    this.setRipple(this.props.spread);
-  }
-
   componentWillUnmount() {
     clearTimeout(this.activeTimeout);
   }
-
-  componentWillReceiveProps(newProps) {
-    this.setRipple(newProps.spread);
-  }
-
-  setRipple = spread => {
-    if (this.el && spread) {
-      this.el.style.setProperty('--mt-ripple-spread', spread);
-    }
-  };
 
   onClick = e => {
     const wasMouseClick = e.nativeEvent.x && e.nativeEvent.y;
