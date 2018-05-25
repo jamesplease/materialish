@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const clone = require('git-clone');
+const mkdirp = require('mkdirp');
 const find = require('find');
 const chalk = require('chalk');
 
@@ -9,10 +10,11 @@ const MATERIAL_ICONS_REPO_PATH = path.join(
   '..',
   'material-icons-repo'
 );
-const OUTPUT_DIRECTORY = path.join(__dirname, '..', 'icons');
-const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_DIRECTORY, 'index.js');
+const OUTPUT_DIRECTORY = path.join(__dirname, '..');
+const OUTPUT_INDEX_DIRECTORY = path.join(OUTPUT_DIRECTORY, 'icons');
+const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_INDEX_DIRECTORY, 'index.js');
 
-const template = `import React, { Component } from "react";
+const template = `import React from "react";
 
 export default function [[classname]](props) {
   const { size, ...rest } = props;
@@ -101,11 +103,12 @@ clone(
 
         let fileContent = '';
         Object.keys(namedExports).forEach(classname => {
-          fileContent += `export { default as ${classname} } from './${
+          fileContent += `export { default as ${classname} } from '../${
             namedExports[classname]
           }'\n`;
         });
 
+        mkdirp.sync(OUTPUT_INDEX_DIRECTORY);
         fs.writeFileSync(OUTPUT_INDEX_FILEPATH, fileContent);
         console.log(chalk.blue(`  ✔ The index.js file was saved!`));
         console.log(chalk.green(`✔ Creating the Icon files was successful.`));
