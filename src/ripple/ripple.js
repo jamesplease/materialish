@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-export default class Ripple extends Component {
+class Ripple extends Component {
   render() {
     const { active, top, left } = this.state;
 
     const classname = classnames('mt-ripple', {
-      'mt-ripple-active': active
+      'mt-ripple-active': active,
     });
     const styles = {
       '--mt-ripple-top': top,
-      '--mt-ripple-left': left
+      '--mt-ripple-left': left,
     };
 
     return <span style={styles} className={classname} onClick={this.onClick} />;
@@ -19,7 +19,7 @@ export default class Ripple extends Component {
   state = {
     active: false,
     top: 0,
-    left: 0
+    left: 0,
   };
 
   componentDidMount() {
@@ -48,13 +48,15 @@ export default class Ripple extends Component {
     this.setState({
       active: false,
       top,
-      left
+      left,
     });
 
     this.activeTimeout = setTimeout(() => {
       this.setState({
-        active: true
+        active: true,
       });
     }, 25);
   };
 }
+
+export default Ripple;

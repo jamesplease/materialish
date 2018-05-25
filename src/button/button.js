@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Ripple from '../ripple/ripple';
 
@@ -49,5 +50,15 @@ class Button extends Component {
     }
   };
 }
+
+Button.PropTypes = {
+  className: PropTypes.string,
+  raised: PropTypes.bool,
+  flat: PropTypes.bool,
+  stroked: PropTypes.bool,
+  compact: PropTypes.bool,
+  ripple: PropTypes.bool,
+  onClick: PropTypes.func,
+};
 
 export default Button;

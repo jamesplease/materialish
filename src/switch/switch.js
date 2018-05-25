@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class Checkbox extends Component {
+class Switch extends Component {
   render() {
     const { className = '', style, ...props } = this.props;
     return (
@@ -13,4 +14,9 @@ class Checkbox extends Component {
   }
 }
 
-export default Checkbox;
+Switch.PropTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+};
+
+export default Switch;
