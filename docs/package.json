@@ -5,11 +5,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "react-static start",
+    "start": "npm run copy-css-files && react-static start",
     "stage": "react-static build --staging",
-    "build": "react-static build",
+    "build": "npm run copy-css-files && react-static build",
     "serve": "serve dist -p 3000",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist src/styles/npm-package-styles",
+    "copy-css-files": "node ../build/copy-www-files.js",
     "publish": "npm run clean && npm run build && cd dist && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jamesplease/materialish gh-pages --force"
   },
   "dependencies": {
