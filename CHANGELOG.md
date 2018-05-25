@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.6.2 (2018/5/25)
+
+* The icons files are now transpiled to ES5 and CJS.
+
 ### v0.6.1 (2018/5/25)
 
 * Ensures that the `/icons` directory is included in the npm package.
