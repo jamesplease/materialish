@@ -13,6 +13,13 @@ Accordingly, `wifi_lock` can be found at `materialish/icon-wifi-lock`:
 import IconWifiLock from 'materialish/icon-wifi-lock';
 ```
 
+## Props
+
+| Prop Name | Default Value | Required | Description                                      |
+| --------- | ------------- | -------- | ------------------------------------------------ |
+| size      | "1rem"        | No       | The size of the SVG                              |
+| ...rest   |               | No       | Other props are placed on the root `svg` element |
+
 ## Performance
 
 You may be wondering why each icon is shipped as an individual Component, rather
