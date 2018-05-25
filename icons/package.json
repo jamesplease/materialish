@@ -1,0 +1,34 @@
+{
+  "name": "materialish-icons",
+  "version": "0.0.1",
+  "description": "React components for Material icons",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesplease/materialish.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "material",
+    "design",
+    "ux",
+    "ui",
+    "icons"
+  ],
+  "author": "Javier Porrero <porrero.javier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesplease/materialish/issues"
+  },
+  "files": [
+    "*.js"
+  ],
+  "homepage": "https://jamesplease.github.io/materialish",
+  "dependencies": {
+    "react": "^16.0.0"
+  },
+  "devDependencies": {}
+}
