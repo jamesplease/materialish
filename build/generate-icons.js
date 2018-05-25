@@ -14,14 +14,12 @@ const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_DIRECTORY, 'index.js');
 
 const template = `import React, { Component } from "react";
 
-export default class [[classname]] extends Component {
-  render() {
-    const { size = "1em", ...props } = this.props;
+export default function [[classname]](props) {
+  const { size = "1em", ...rest } = props;
 
-    return (
-      [[svg]]
-    );
-  }
+  return (
+    [[svg]]
+  );
 }
 `;
 
@@ -81,7 +79,7 @@ clone(
         namedExports[classname] = fileName;
 
         const svg = contents
-          .replace('>', ' {...props} > ')
+          .replace('>', ' {...rest} > ')
           .replace(/width="48"/, 'width={size}')
           .replace(/height="48"/, 'height={size}');
 
@@ -102,7 +100,7 @@ clone(
 
         let fileContent = '';
         Object.keys(namedExports).forEach(classname => {
-          fileContent += `export { ${classname} } from './${
+          fileContent += `export { default as ${classname} } from './${
             namedExports[classname]
           }'\n`;
         });

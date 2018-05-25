@@ -12,6 +12,7 @@ const readmes = {
   button: fs.readFileSync('./readmes/button.md', { encoding: 'utf-8' }),
   checkbox: fs.readFileSync('./readmes/checkbox.md', { encoding: 'utf-8' }),
   switch: fs.readFileSync('./readmes/switch.md', { encoding: 'utf-8' }),
+  icons: fs.readFileSync('./readmes/icons.md', { encoding: 'utf-8' }),
 };
 
 const examples = {
@@ -19,6 +20,7 @@ const examples = {
   button: fs.readFileSync('./examples/button.js', { encoding: 'utf-8' }),
   checkbox: fs.readFileSync('./examples/checkbox.js', { encoding: 'utf-8' }),
   switch: fs.readFileSync('./examples/switch.js', { encoding: 'utf-8' }),
+  icons: fs.readFileSync('./examples/icons.js', { encoding: 'utf-8' }),
 };
 
 // import { addSearchObjects } from './algolia'
@@ -51,7 +53,7 @@ export default {
         }),
         children: components.map(component => ({
           path: component.url,
-          component: 'src/components/component-doc',
+          component: component.component,
           getData: async () => ({
             component,
             markdown: readmes[component.componentKey],
