@@ -1,6 +1,6 @@
 {
   "name": "materialish-icons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React components for Material icons",
   "main": "index.js",
   "module": "index.js",
