@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.6.1 (2018/5/25)
+
+* Ensures that the `/icons` directory is included in the npm package.
+
 ### v0.6.0 (2018/5/25)
 
 * Icon Components are now shipped with Materialish.
