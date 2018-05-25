@@ -46,6 +46,14 @@ export default {
         }),
       },
       {
+        path: '/icons',
+        component: 'src/icons',
+        getData: async () => ({
+          markdown: readmes.icons,
+          example: examples.icons,
+        }),
+      },
+      {
         path: '/components',
         component: 'src/components/index',
         getData: async () => ({

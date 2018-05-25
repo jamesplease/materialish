@@ -9,7 +9,6 @@ import {
   Preview,
 } from '../vendor/doc-components';
 import PropTypes from 'prop-types';
-import './component-doc.css';
 
 const demoScope = {
   React,
@@ -20,44 +19,28 @@ const demoScope = {
   ...MaterialishIcons,
 };
 
-const rootSourceUrl =
-  'https://github.com/jamesplease/materialish/tree/master/src/';
-
-export class ComponentDoc extends Component {
+export class Icons extends Component {
   render() {
-    const { component, markdown, example } = this.props;
-
-    const {
-      name,
-      description,
-      componentKey,
-      sourceLink,
-      materialDocsLink,
-    } = component;
-
-    const sourceLinkToUse = sourceLink
-      ? sourceLink
-      : `${rootSourceUrl}${componentKey}`;
+    const { markdown, example } = this.props;
 
     return (
       <div className="componentDoc">
-        <h1 className="primaryHeader componentDoc_primaryHeader">{name}</h1>
+        <h1 className="primaryHeader componentDoc_primaryHeader">Icons</h1>
         <ul className="componentDoc_links">
           <li className="componentDoc_linkItem">
-            <a href={sourceLinkToUse} className="componentDoc_linkAnchor">
-              <i className="componentDoc_icon zmdi zmdi-code" /> View Source
+            <a
+              href="https://material.io/tools/icons/?style=baseline"
+              className="componentDoc_linkAnchor">
+              <i className="componentDoc_icon zmdi zmdi-file-text" /> Material
+              Docs
             </a>
           </li>
-          {materialDocsLink && (
-            <li className="componentDoc_linkItem">
-              <a href={materialDocsLink} className="componentDoc_linkAnchor">
-                <i className="componentDoc_icon zmdi zmdi-file-text" /> Material
-                Docs
-              </a>
-            </li>
-          )}
         </ul>
-        <p className="paragraph">{description}</p>
+        <p className="paragraph">
+          Materialish provides an individual React Component for each Material
+          Design icon. The icons are distributed in a separate npm package,
+          materialish-icons.
+        </p>
         <CodeManager code={example}>
           {({ code, handleCodeChange }) => (
             <Fragment>
@@ -88,4 +71,4 @@ export class ComponentDoc extends Component {
   }
 }
 
-export default withRouteData(ComponentDoc);
+export default withRouteData(Icons);

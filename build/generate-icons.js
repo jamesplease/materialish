@@ -15,7 +15,8 @@ const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_DIRECTORY, 'index.js');
 const template = `import React, { Component } from "react";
 
 export default function [[classname]](props) {
-  const { size = "1em", ...rest } = props;
+  const { size, ...rest } = props;
+  let sizeToUse = size || "1em";
 
   return (
     [[svg]]
@@ -80,8 +81,8 @@ clone(
 
         const svg = contents
           .replace('>', ' {...rest} > ')
-          .replace(/width="48"/, 'width={size}')
-          .replace(/height="48"/, 'height={size}');
+          .replace(/width="48"/, 'width={sizeToUse}')
+          .replace(/height="48"/, 'height={sizeToUse}');
 
         const outputFilePath = path.join(OUTPUT_DIRECTORY, `${fileName}.js`);
 

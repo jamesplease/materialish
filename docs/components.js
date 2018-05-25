@@ -35,13 +35,13 @@ export default [
     materialDocsLink:
       'https://material.io/design/components/selection-controls.html#switches',
   },
-  {
-    name: 'Icons',
-    url: 'icons',
-    componentKey: 'icons',
-    description:
-      'Materialish provides an individual React Component for each Material Design icon.',
-    component: 'src/components/icons',
-    materialDocsLink: 'https://material.io/tools/icons/?style=baseline',
-  },
+  // {
+  //   name: 'Icons',
+  //   url: 'icons',
+  //   componentKey: 'icons',
+  //   description:
+  //     'Materialish provides an individual React Component for each Material Design icon.',
+  //   component: 'src/components/icons',
+  //   materialDocsLink: 'https://material.io/tools/icons/?style=baseline',
+  // },
 ];

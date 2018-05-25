@@ -38,6 +38,15 @@ export class Nav extends Component {
             <li className="nav_navListItem">
               <Link
                 exact
+                to="/icons"
+                className="nav_navSectionLink"
+                onClick={this.onNavigate}>
+                Icons
+              </Link>
+            </li>
+            <li className="nav_navListItem">
+              <Link
+                exact
                 to="/components"
                 className="nav_navSectionLink"
                 onClick={this.onNavigate}>
