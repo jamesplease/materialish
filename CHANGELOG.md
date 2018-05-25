@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.6.3 (2018/5/25)
+
+* The unused `spread` prop has been removed from the Ripple.
+
 ### v0.6.2 (2018/5/25)
 
 * The icons files are now transpiled to ES5 and CJS.
