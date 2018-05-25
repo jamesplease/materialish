@@ -1,8 +1,16 @@
 const fs = require('fs');
-const mkdirp = require('mkdirp');
+const path = require('path');
 const clone = require('git-clone');
 const find = require('find');
 const chalk = require('chalk');
+
+const MATERIAL_ICONS_REPO_PATH = path.join(
+  __dirname,
+  '..',
+  'material-icons-repo'
+);
+const OUTPUT_DIRECTORY = path.join(__dirname, '..', 'icons');
+const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_DIRECTORY, 'index.js');
 
 const template = `import React, { Component } from "react";
 
@@ -29,7 +37,7 @@ console.log(
 let fileCount = 0;
 clone(
   'https://github.com/google/material-design-icons.git',
-  './material-icons-repo',
+  MATERIAL_ICONS_REPO_PATH,
   {},
   () => {
     console.log(
@@ -43,7 +51,7 @@ clone(
     );
 
     find
-      .eachfile(/_48px.svg$/, './material-icons-repo/', function(file) {
+      .eachfile(/_48px.svg$/, MATERIAL_ICONS_REPO_PATH, function(file) {
         if (file.indexOf('design') !== -1) {
           return;
         }
@@ -77,8 +85,10 @@ clone(
           .replace(/width="48"/, 'width={size}')
           .replace(/height="48"/, 'height={size}');
 
+        const outputFilePath = path.join(OUTPUT_DIRECTORY, `${fileName}.js`);
+
         fs.writeFileSync(
-          './icons/' + fileName + '.js',
+          outputFilePath,
           template.replace('[[svg]]', svg).replace('[[classname]]', classname)
         );
       })
@@ -97,8 +107,7 @@ clone(
           }'\n`;
         });
 
-        mkdirp.sync('./icons');
-        fs.writeFileSync('./icons/index.js', fileContent);
+        fs.writeFileSync(OUTPUT_INDEX_FILEPATH, fileContent);
         console.log(chalk.blue(`  ✔ The index.js file was saved!`));
         console.log(chalk.green(`✔ Creating the Icon files was successful.`));
       });

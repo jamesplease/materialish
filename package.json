@@ -78,7 +78,6 @@
     "git-clone": "^0.1.0",
     "glob": "^7.1.2",
     "in-publish": "^2.0.0",
-    "mkdirp": "^0.5.1",
     "prettier": "^1.11.1",
     "rimraf": "^2.6.2",
     "rollup": "^0.57.1",
