@@ -2,7 +2,7 @@
 
 const path = require('path');
 const glob = require('glob');
-const chalk = require('glob');
+const chalk = require('chalk');
 const copyFiles = require('./copy-files');
 
 const COMPONENT_DIR = path.join(__dirname, '..', 'src');

@@ -15,7 +15,7 @@ const DESTINATION_DIRECTORY = path.join(
   'styles',
   'npm-package-styles'
 );
-const MATERIALISH_GLOB = 'materialish/*.css';
+const MATERIALISH_GLOB = 'materialish/materialish.css';
 
 const filesToCopy = [
   'highlight.js/styles/github-gist.css',
