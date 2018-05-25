@@ -12,7 +12,7 @@ const MATERIAL_ICONS_REPO_PATH = path.join(
 );
 const PROJECT_DIRECTORY = path.join(__dirname, '..');
 const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-src');
-const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons');
+const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-index-src');
 const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_INDEX_DIRECTORY, 'index.js');
 
 const template = `import React from "react";
