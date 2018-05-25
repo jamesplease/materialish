@@ -42,5 +42,10 @@ fs.access(NODE_MODULES, err => {
     process.exit(1);
   }
 
-  copyFiles(allFiles, DESTINATION_DIRECTORY);
+  copyFiles(
+    allFiles,
+    DESTINATION_DIRECTORY,
+    `Copying ${allFiles.length} files to the website source directory...`,
+    '✔ The files from node_modules have been copied to the website source directory. You are ready to develop the site!'
+  );
 });
