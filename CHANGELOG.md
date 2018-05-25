@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.5.0 (2018/5/24)
+
+* The library is now distributed with a `materialish.css` and `materialish.min.css` to provide a
+  simpler alternative to loading all of the library's CSS.
+
 ### v0.4.0 (2018/5/24)
 
 * Introduces the Avatar component
