@@ -4,12 +4,10 @@ const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 
-module.exports = function(files, destination) {
-  console.log(
-    chalk.blue(
-      `Copying ${files.length} files to the website source directory...`
-    )
-  );
+module.exports = function(files, destination, onStartMsg, onEndMsg) {
+  const startMsg = onStartMsg || `Copying ${files.length} files...`;
+  const endMsg = onEndMsg || '✔ The files were successfully copied!';
+  console.log(chalk.blue(startMsg));
 
   // We need to ensure that the destination directory exists. Otherwise, the
   // copying of the files will fail.
@@ -26,9 +24,5 @@ module.exports = function(files, destination) {
     fs.copyFileSync(filepath, fullDestPath);
   });
 
-  console.log(
-    chalk.green(
-      '✔ The files from node_modules have been copied to the website source directory. You are ready to develop the site!'
-    )
-  );
+  console.log(chalk.green(endMsg));
 };
