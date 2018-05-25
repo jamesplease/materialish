@@ -12,7 +12,7 @@
     "clean": "rimraf dist es tmp lib ./*.js ./*.css",
     "copy-source": "node ./build/copy-source-files.js",
     "concat-css": "node ./build/concatenate-css-files.js",
-    "icons": "rimraf icons/*.js material-icons-repo && node ./build/generate-icons.js",
+    "icons": "cd icons && npm run build",
     "prettier": "prettier --config ./.prettierrc --write **/*.{js,css}",
     "build": "npm run clean && npm run build:umd && npm run build:umd:min && npm run build:es && npm run build:commonjs && npm run copy-source && npm run concat-css",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
