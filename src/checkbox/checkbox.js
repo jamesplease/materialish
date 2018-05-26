@@ -14,7 +14,7 @@ class Checkbox extends Component {
   }
 }
 
-Checkbox.PropTypes = {
+Checkbox.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
 };

@@ -51,7 +51,7 @@ class Button extends Component {
   };
 }
 
-Button.PropTypes = {
+Button.propTypes = {
   className: PropTypes.string,
   raised: PropTypes.bool,
   flat: PropTypes.bool,
