@@ -52,6 +52,20 @@ export default {
           markdown: readmes.icons,
           example: examples.icons,
         }),
+        children: [
+          {
+            path: '/catalog',
+            component: 'src/icons/catalog',
+          },
+          {
+            path: '/usage',
+            component: 'src/icons/usage',
+            getData: async () => ({
+              markdown: readmes.icons,
+              example: examples.icons,
+            }),
+          },
+        ],
       },
       {
         path: '/components',
