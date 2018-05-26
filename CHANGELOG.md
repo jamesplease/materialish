@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.6.4 (2018/5/25)
+
+* Fix the `propTypes` prop on the exported Components.
+* Exports `materialish/icons-data.json`, which contains information about the icons that are included
+  in the project.
+
 ### v0.6.3 (2018/5/25)
 
 * The unused `spread` prop has been removed from the Ripple.
