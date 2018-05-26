@@ -17,7 +17,7 @@ class Avatar extends Component {
   }
 }
 
-Avatar.PropTypes = {
+Avatar.propTypes = {
   className: PropTypes.string,
   image: PropTypes.string,
   initials: PropTypes.string,

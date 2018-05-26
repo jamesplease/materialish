@@ -14,6 +14,10 @@ const PROJECT_DIRECTORY = path.join(__dirname, '..');
 const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-src');
 const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-index-src');
 const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_INDEX_DIRECTORY, 'index.js');
+const OUTPUT_METADATA_FILEPATH = path.join(
+  PROJECT_DIRECTORY,
+  'icons-data.json'
+);
 
 const template = `import React from "react";
 
@@ -34,6 +38,10 @@ console.log(
     '  Cloning https://github.com/google/material-design-icons.git into ./material-icons-repo'
   )
 );
+
+const iconData = {
+  icons: [],
+};
 
 let fileCount = 0;
 clone(
@@ -61,25 +69,34 @@ clone(
 
         const contents = fs.readFileSync(file, 'utf8');
 
+        const iconName = file
+          .replace('ic_', '')
+          .replace('_48px.svg', '')
+          .split('/')
+          .pop()
+          .toLowerCase();
+
         const fileName =
           'icon-' +
-          file
-            .replace('ic_', '')
-            .replace('_48px.svg', '')
-            .split('/')
-            .pop()
+          iconName
             .split('_')
             .join('-')
             .toLowerCase();
 
         const classname = fileName
           .split('-')
-          .map((val, idx) => {
+          .map(val => {
             return val.charAt(0).toUpperCase() + val.slice(1);
           })
           .join('');
 
         namedExports[classname] = fileName;
+
+        iconData.icons.push({
+          iconName,
+          fileName,
+          iconClass: classname,
+        });
 
         const svg = contents
           .replace('>', ' {...rest} > ')
@@ -95,6 +112,8 @@ clone(
         );
       })
       .end(() => {
+        iconData.count = fileCount;
+
         console.log(
           chalk.blue(
             `  ✔ Successfully created ${fileCount} SVG component files. They can be found in ./icons`
@@ -111,6 +130,8 @@ clone(
 
         mkdirp.sync(OUTPUT_INDEX_DIRECTORY);
         fs.writeFileSync(OUTPUT_INDEX_FILEPATH, fileContent);
+        fs.writeFileSync(OUTPUT_METADATA_FILEPATH, JSON.stringify(iconData));
+
         console.log(chalk.blue(`  ✔ The index.js file was saved!`));
         console.log(chalk.green(`✔ Creating the Icon files was successful.`));
       });

@@ -14,7 +14,7 @@ class Switch extends Component {
   }
 }
 
-Switch.PropTypes = {
+Switch.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
 };

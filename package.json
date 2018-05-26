@@ -10,7 +10,7 @@
     "prepublish": "in-publish && npm run build || not-in-publish",
     "postpublish": "npm run clean",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "clean": "rimraf ./dist ./es ./tmp ./lib ./*.js ./*.css ./material-icons-repo ./icons ./icons-src ./icons-index-src",
+    "clean": "rimraf ./dist ./es ./tmp ./lib ./*.js ./*.css ./material-icons-repo ./icons ./icons-src ./icons-index-src icons-data.json",
     "copy-source": "node ./build/copy-source-files.js",
     "concat-css": "node ./build/concatenate-css-files.js",
     "icons": "node ./build/generate-icons.js",
@@ -46,7 +46,8 @@
     "es",
     "icons",
     "*.js",
-    "*.css"
+    "*.css",
+    "icons-data.json"
   ],
   "homepage": "https://jamesplease.github.io/materialish",
   "dependencies": {
