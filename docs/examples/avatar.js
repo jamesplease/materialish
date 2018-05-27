@@ -1,6 +1,11 @@
 class AvatarExample extends Component {
   render() {
-    return <Avatar image="https://randomuser.me/api/portraits/women/50.jpg" />;
+    return (
+      <Fragment>
+        <Avatar image="https://randomuser.me/api/portraits/women/50.jpg" />
+        <Avatar initials="JP" />
+      </Fragment>
+    );
   }
 }
 
