@@ -6,13 +6,9 @@
     2. Otherwise, `mt-mainColor` will be applied
     3. Otherwise, #2196f3 will be applied
   */
-  --_mt-checkbox-backgroundColor: var(
-    --mt-checkbox-backgroundColor,
-    var(--mt-mainColor, #2196f3)
-  );
+  --_mt-checkbox-backgroundColor: var( --mt-checkbox-backgroundColor, var(--mt-mainColor, #2196f3));
   --_mt-checkbox-tickColor: var(--mt-checkbox-tickColor, #fff);
   --_mt-checkbox-focusColor: var(--mt-checkbox-focusColor, #e8e8e8);
-
   position: relative;
   font-size: var(--mt-baseFontSize, 1rem);
   cursor: pointer;
@@ -62,7 +58,7 @@
   border-radius: 100%;
   transform: scale(0);
   will-change: transform;
-  transition: transform 0.2s ease-in;
+  transition: transform 0.15s ease-in;
   z-index: 3;
 }
 
@@ -78,15 +74,15 @@
   border-left: none;
   transform: translate3d(0, 0, 0) rotate(45deg) scale(0);
   will-change: transform;
-  transition: transform 0.2s ease-in;
+  transition: transform 0.15s ease-in;
   z-index: 3;
 }
 
-.mt-checkbox_input:checked + .mt-checkbox_checkbox:before {
+.mt-checkbox_input:checked+.mt-checkbox_checkbox:before {
   transform: scale(2);
 }
 
-.mt-checkbox_input:checked + .mt-checkbox_checkbox:after {
+.mt-checkbox_input:checked+.mt-checkbox_checkbox:after {
   transform: translate3d(0, -0.05em, 0) rotate(45deg) scale(1);
 }
 
@@ -113,7 +109,7 @@
   background-color: var(--_mt-checkbox-backgroundColor);
   opacity: 0;
   will-change: opacity;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 
 .mt-checkbox_focus:after {
@@ -127,22 +123,18 @@
   background-color: var(--_mt-checkbox-focusColor);
   opacity: 0;
   will-change: opacity;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 
-.mt-checkbox_input:focus + .mt-checkbox_checkbox + .mt-checkbox_focus:after {
+.mt-checkbox_input:focus+.mt-checkbox_checkbox+.mt-checkbox_focus:after {
   opacity: 1;
 }
 
-.mt-checkbox_input:focus:checked
-  + .mt-checkbox_checkbox
-  + .mt-checkbox_focus:after {
+.mt-checkbox_input:focus:checked+.mt-checkbox_checkbox+.mt-checkbox_focus:after {
   opacity: 0;
 }
 
-.mt-checkbox_input:focus:checked
-  + .mt-checkbox_checkbox
-  + .mt-checkbox_focus:before {
+.mt-checkbox_input:focus:checked+.mt-checkbox_checkbox+.mt-checkbox_focus:before {
   opacity: 0.3;
 }
 
@@ -150,7 +142,7 @@
   cursor: not-allowed;
 }
 
-.mt-checkbox_input:disabled + .mt-checkbox_checkbox {
+.mt-checkbox_input:disabled+.mt-checkbox_checkbox {
   box-shadow: inset 0 0 0 0.12em #ccc, 0 0 0 2px #ccc !important;
 }
 
@@ -158,6 +150,6 @@
   cursor: not-allowed;
 }
 
-.mt-checkbox_input:disabled:checked + .mt-checkbox_checkbox:before {
+.mt-checkbox_input:disabled:checked+.mt-checkbox_checkbox:before {
   background-color: var(--_mt-checkbox-focusColor);
 }

@@ -7,11 +7,10 @@
   */
   --_mt-avatar-backgroundColor: var(--mt-avatar-backgroundColor, #ccc);
   --_mt-avatar-color: var(--mt-avatar-color, #333);
-
   font-size: var(--mt-baseFontSize, 1rem);
   font-family: var(--mt-fontFamily, 'Roboto');
-  width: 5em;
-  height: 5em;
+  width: 2.5em;
+  height: 2.5em;
   overflow: hidden;
   border-radius: 50%;
   display: inline-flex;
@@ -28,7 +27,7 @@
 }
 
 .mt-avatar_initials {
-  font-size: 3em;
+  font-size: 1.2em;
   width: 100%;
   text-align: center;
 }

@@ -6,29 +6,23 @@
     2. Otherwise, `mt-mainColor` will be applied
     3. Otherwise, `teal` will be applied
   */
-  --_mt-button-backgroundColor: var(
-    --mt-button-backgroundColor,
-    var(--mt-mainColor, #2196f3)
-  );
+  --_mt-button-backgroundColor: var( --mt-button-backgroundColor, var(--mt-mainColor, #2196f3));
   --_mt-button-textColor: var(--mt-button-textColor, #fff);
-  --_mt-button-disabledTextColor: var(
-    --mt-button-disabledTextColor,
-    rgba(0, 0, 0, 0.38)
-  );
+  --_mt-button-disabledTextColor: var( --mt-button-disabledTextColor, rgba(0, 0, 0, 0.38));
   all: initial;
   font-family: var(--mt-fontFamily, 'Roboto');
   position: relative;
   -webkit-font-smoothing: antialiased;
-  font-size: var(--mt-baseFontSize, 1rem);
+  font-size: calc(0.875 * var(--mt-baseFontSize, 1rem));
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.075em;
   text-decoration: none;
   text-transform: uppercase;
   will-change: transform, opacity;
   display: inline-block;
   position: relative;
-  min-width: 4em;
-  padding: 0.55em 1em;
+  min-width: 4.6em;
+  padding: 0.65em 1.15em;
   border: none;
   outline: none;
   text-align: center;
@@ -36,7 +30,7 @@
   -webkit-appearance: none;
   overflow: hidden;
   vertical-align: middle;
-  border-radius: 0.2em;
+  border-radius: 0.22em;
   cursor: pointer;
   white-space: nowrap;
   background-color: var(--_mt-button-backgroundColor);
@@ -71,12 +65,11 @@
 }
 
 .mt-button-compact {
-  padding: 0.55em 0.5em;
+  padding: 0.63em 0.57em;
 }
 
 .mt-button-raised {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .mt-button-raised:disabled {
@@ -102,7 +95,7 @@
 }
 
 .mt-button-stroked {
-  border: 0.15em solid var(--_mt-button-backgroundColor);
+  border: 0.17em solid var(--_mt-button-backgroundColor);
 }
 
 .mt-button-flat:disabled,
