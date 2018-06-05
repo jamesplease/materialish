@@ -1,0 +1,54 @@
+.mt-spinner {
+  --duration: 2s;
+
+  animation: mt-spinner-rotator var(--duration) ease-in infinite;
+}
+
+.mt-spinner_path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: mt-spinner-dash var(--duration) ease-in-out infinite,
+    mt-spinner-colors calc(var(--duration) * 4) ease-in-out infinite;
+}
+
+@keyframes mt-spinner-rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mt-spinner-colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
+}
+
+@keyframes mt-spinner-dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46;
+    transform: rotate(90deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(355deg);
+  }
+}
