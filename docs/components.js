@@ -38,7 +38,7 @@ export default [
     name: 'Spinner',
     url: 'spinner',
     componentKey: 'spinner',
-    description: 'A Spinner is an nondeterministic loading indicator.',
+    description: 'A Spinner is a nondeterministic loading indicator.',
     component: 'src/components/component-doc',
   },
 ];
