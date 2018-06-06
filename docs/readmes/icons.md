@@ -1,7 +1,7 @@
 ## Usage
 
 First, identify the icon that you want to use. You can see the full list of icons
-[here](/materialish/icons/catalog).
+in [**the catalog**](/icons/catalog).
 
 Let's assume that we want the `wifi_lock` icon. Each icon's path within the
 `materialish` project is prefixed with `icon-`, and underscores are replaced

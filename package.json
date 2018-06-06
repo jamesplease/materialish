@@ -49,7 +49,7 @@
     "*.css",
     "icons-data.json"
   ],
-  "homepage": "https://jamesplease.github.io/materialish",
+  "homepage": "https://materialish.js.org",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",

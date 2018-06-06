@@ -22,7 +22,7 @@ yarn add materialish
 
 ### Documentation
 
-View the documentation at **[jamesplease.github.io/materialish ⇗](https://jamesplease.github.io/materialish)**.
+View the documentation at **[materialish.js.org ⇗](https://materialish.js.org)**.
 
 ### Contributing
 
