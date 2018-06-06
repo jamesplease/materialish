@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.7.0 (2018/6/5)
+
+* New Component: Spinner
+* Adjusts the size of the Avatar component
+* Adjusts the default sizing of Buttons to more closely match the Material spec
+* Flat and stroked buttons that are disabled no longer have a background
+
 ### v0.6.4 (2018/5/25)
 
 * Fix the `propTypes` prop on the exported Components.
