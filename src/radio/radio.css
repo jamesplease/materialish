@@ -46,10 +46,10 @@
 .mt-radio_radio:after {
   content: '';
   position: absolute;
-  top: 0.2em;
-  left: 0.2em;
-  right: 0.2em;
-  bottom: 0.2em;
+  height: 0.75em;
+  width: 0.75em;
+  top: calc(50% - 0.375em);
+  left: calc(50% - 0.375em);
   background-color: var(--_mt-radio-checkedColor);
   border-radius: 50%;
   transform: scale(0);
@@ -98,4 +98,9 @@
 
 .mt-radio_input:focus + .mt-radio_radio + .mt-radio_focus {
   opacity: 1;
+}
+
+.mt-radio_input:checked:focus + .mt-radio_radio + .mt-radio_focus:before {
+  background-color: var(--_mt-radio-checkedColor);
+  opacity: 0.3;
 }
