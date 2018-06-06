@@ -3,8 +3,7 @@ export default [
     name: 'Avatar',
     url: 'avatar',
     componentKey: 'avatar',
-    description:
-      'An Avatar repesents a user. Avatars can render either an image or initials.',
+    description: `An Avatar repesents a user. Avatars can display an image representing the user, or their initials.`,
     component: 'src/components/component-doc',
   },
   {
