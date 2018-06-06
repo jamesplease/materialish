@@ -14,7 +14,7 @@
 }
 
 .iconsCatalog_count {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .iconsCatalog_icon {
@@ -65,6 +65,23 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.iconsCatalog_category {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.iconsCatalog_category:first-child {
+  border-top: 1px solid #ddd;
+  padding-top: 40px;
+}
+
+.iconsCategory_categoryHeader {
+  color: var(--mainColor);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 @media (max-width: 650px) {
