@@ -103,7 +103,6 @@ clone(
           iconName,
           fileName,
           iconClass: classname,
-          categoryName,
         };
 
         iconData.categories[categoryName].push(iconInformation);
