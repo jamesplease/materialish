@@ -64,6 +64,11 @@
   pointer-events: none;
 }
 
+.mt-button-flat:disabled,
+.mt-button-stroked:disabled {
+  background-color: transparent;
+}
+
 .mt-button-compact {
   padding: 0.63em 0.57em;
 }
