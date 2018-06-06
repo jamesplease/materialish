@@ -28,8 +28,7 @@ const examples = {
 // import { addSearchObjects } from './algolia'
 
 export default {
-  siteRoot: 'https://jamesplease.github.io',
-  basePath: 'materialish',
+  siteRoot: 'https://materialish.js.org',
   getSiteData: () => ({
     title: 'Materialish',
     components,
