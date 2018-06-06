@@ -35,6 +35,13 @@ export default [
     materialDocsLink:
       'https://material.io/design/components/selection-controls.html#switches',
   },
+  {
+    name: 'Spinner',
+    url: 'spinner',
+    componentKey: 'spinner',
+    description: 'A Spinner is an nondeterministic loading indicator.',
+    component: 'src/components/component-doc',
+  },
   // {
   //   name: 'Icons',
   //   url: 'icons',

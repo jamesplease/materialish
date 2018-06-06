@@ -17,7 +17,7 @@ import IconWifiLock from 'materialish/icon-wifi-lock';
 
 | Prop Name | Default Value | Required | Description                                      |
 | --------- | ------------- | -------- | ------------------------------------------------ |
-| size      | "1rem"        | No       | The size of the SVG                              |
+| size      | "1em"         | No       | The size of the SVG                              |
 | ...rest   |               | No       | Other props are placed on the root `svg` element |
 
 ## Performance
