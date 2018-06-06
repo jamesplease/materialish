@@ -87,6 +87,7 @@
     "lodash": "^4.17.10",
     "mkdirp": "^0.5.1",
     "prettier": "^1.11.1",
+    "react-dom": "^16.4.0",
     "rimraf": "^2.6.2",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",

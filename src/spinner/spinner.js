@@ -3,12 +3,21 @@ import PropTypes from 'prop-types';
 
 class Spinner extends Component {
   render() {
-    const { size = '1.5rem', className = '', ...props } = this.props;
+    const {
+      size = 'calc(var(--mt-baseFontSize, 1rem) * 1.5)',
+      className = '',
+      style,
+      ...props
+    } = this.props;
+
     return (
       <svg
         className={`mt-spinner ${className}`}
-        width={size}
-        height={size}
+        style={{
+          width: size,
+          height: size,
+          ...style,
+        }}
         viewBox="0 0 66 66"
         xmlns="http://www.w3.org/2000/svg"
         {...props}>
