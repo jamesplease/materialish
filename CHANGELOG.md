@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.7.3 (2018/6/5)
+
+* Adjusts dimensions and rendering of Checkbox to more closely align with the Material spec
+
 ### v0.7.2 (2018/6/5)
 
 * Fixes an issue with the previous release
