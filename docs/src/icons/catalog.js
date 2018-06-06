@@ -27,8 +27,11 @@ export class IconsCatalog extends Component {
       }
     );
 
-    const visibleCount = _.flatMap(filteredCategories).length;
-    const totalCount = _.flatMap(iconsData.categories).length;
+    const visibleCount = _.chain(filteredCategories)
+      .flatMap()
+      .uniqBy('iconName')
+      .value().length;
+    const totalCount = _.size(iconsData.icons);
 
     return (
       <div className="iconsCatalog">
