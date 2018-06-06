@@ -17,13 +17,11 @@ export class IconsCatalog extends Component {
           if (!icon.iconName || !icon.iconClass) {
             return false;
           }
-          const lowercaseCategory = categoryName.toLowerCase();
 
           return (
             icon.iconName.toLowerCase().includes(lowercaseQuery) ||
             icon.iconClass.toLowerCase().includes(lowercaseQuery) ||
-            icon.iconName.toLowerCase().includes(lowercaseCategory) ||
-            icon.iconClass.toLowerCase().includes(lowercaseCategory)
+            categoryName.toLowerCase().includes(lowercaseQuery)
           );
         });
       }
