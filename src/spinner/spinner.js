@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Spinner extends Component {
   render() {
-    const { size = '1.5em', className = '', ...props } = this.props;
+    const { size = '1.5rem', className = '', ...props } = this.props;
     return (
       <svg
         className={`mt-spinner ${className}`}
