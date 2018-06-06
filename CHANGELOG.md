@@ -1,5 +1,15 @@
 # Changelog
 
+### v0.7.2 (2018/6/5)
+
+* Fixes an issue with the previous release
+
+### v0.7.1 (2018/6/5)
+
+* Updates the Spinner to use `mt-baseFontSize`
+* The `icons-data.json` file now includes category information
+* Fixed an issue where some icons were using attribute names instead of prop names
+
 ### v0.7.0 (2018/6/5)
 
 * New Component: Spinner
