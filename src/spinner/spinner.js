@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Spinner extends Component {
+class Spinner extends Component {
   render() {
     const { size = '1.5rem', className = '', ...props } = this.props;
     return (
@@ -24,3 +25,10 @@ export default class Spinner extends Component {
     );
   }
 }
+
+Spinner.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  className: PropTypes.string,
+};
+
+export default Spinner;
