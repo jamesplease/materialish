@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.7.2 (2018/6/5)
+
+* Fixes an issue with the previous release
+
 ### v0.7.1 (2018/6/5)
 
 * Updates the Spinner to use `mt-baseFontSize`
