@@ -41,13 +41,4 @@ export default [
     description: 'A Spinner is an nondeterministic loading indicator.',
     component: 'src/components/component-doc',
   },
-  // {
-  //   name: 'Icons',
-  //   url: 'icons',
-  //   componentKey: 'icons',
-  //   description:
-  //     'Materialish provides an individual React Component for each Material Design icon.',
-  //   component: 'src/components/icons',
-  //   materialDocsLink: 'https://material.io/tools/icons/?style=baseline',
-  // },
 ];
