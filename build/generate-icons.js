@@ -7,11 +7,9 @@ const _ = require('lodash');
 const chalk = require('chalk');
 const svgAttributeList = require('./svg-attribute-list');
 
-const MATERIAL_ICONS_REPO_PATH = path.join(
-  __dirname,
-  '..',
-  'material-icons-repo'
-);
+const ICONS_REPO_DIR = 'material-icons-repo';
+
+const MATERIAL_ICONS_REPO_PATH = path.join(__dirname, '..', ICONS_REPO_DIR);
 const PROJECT_DIRECTORY = path.join(__dirname, '..');
 const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-src');
 const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-index-src');
@@ -43,6 +41,7 @@ console.log(
 
 const iconData = {
   icons: [],
+  categories: {},
 };
 
 let fileCount = 0;
@@ -66,8 +65,6 @@ clone(
         if (file.indexOf('design') !== -1) {
           return;
         }
-
-        fileCount++;
 
         const contents = fs.readFileSync(file, 'utf8');
 
@@ -94,11 +91,30 @@ clone(
 
         namedExports[classname] = fileName;
 
-        iconData.icons.push({
+        const splitFile = file.split('/');
+        const repoNameIndex = splitFile.indexOf(ICONS_REPO_DIR);
+        const categoryName = splitFile[repoNameIndex + 1];
+
+        if (!iconData.categories[categoryName]) {
+          iconData.categories[categoryName] = [];
+        }
+
+        const iconInformation = {
           iconName,
           fileName,
           iconClass: classname,
-        });
+          categoryName,
+        };
+
+        iconData.categories[categoryName].push(iconInformation);
+
+        // This ensures that we don't add duplicates
+        if (_.find(iconData.icons, { iconName })) {
+          return;
+        }
+
+        fileCount++;
+        iconData.icons.push(iconInformation);
 
         let svg = contents
           .replace('>', ' {...rest} > ')
