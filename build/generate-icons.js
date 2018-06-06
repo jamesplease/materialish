@@ -3,7 +3,9 @@ const path = require('path');
 const clone = require('git-clone');
 const mkdirp = require('mkdirp');
 const find = require('find');
+const _ = require('lodash');
 const chalk = require('chalk');
+const svgAttributeList = require('./svg-attribute-list');
 
 const MATERIAL_ICONS_REPO_PATH = path.join(
   __dirname,
@@ -98,10 +100,15 @@ clone(
           iconClass: classname,
         });
 
-        const svg = contents
+        let svg = contents
           .replace('>', ' {...rest} > ')
           .replace(/width="48"/, 'width={size}')
           .replace(/height="48"/, 'height={size}');
+
+        // This ensures that SVG attribute names with hyphens are prop'd
+        _.forEach(svgAttributeList, attrName => {
+          svg = svg.replace(attrName, _.camelCase(attrName));
+        });
 
         mkdirp.sync(OUTPUT_DIRECTORY);
         const outputFilePath = path.join(OUTPUT_DIRECTORY, `${fileName}.js`);
