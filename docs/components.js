@@ -42,7 +42,7 @@ export default [
     component: 'src/components/component-doc',
   },
   {
-    name: 'Radio',
+    name: 'Radio Button',
     url: 'radio',
     componentKey: 'radio',
     description: 'A Radio button represents one option among several choices.',

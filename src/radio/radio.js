@@ -6,10 +6,10 @@ class Radio extends Component {
     const { className = '', style, ...props } = this.props;
 
     return (
-      <div class={`mt-radio ${className}`} style={style}>
-        <input class="mt-radio_input" type="radio" {...props} />
-        <div class="mt-radio_radio" />
-        <div class="mt-radio_focus" />
+      <div className={`mt-radio ${className}`} style={style}>
+        <input className="mt-radio_input" type="radio" {...props} />
+        <div className="mt-radio_radio" />
+        <div className="mt-radio_focus" />
       </div>
     );
   }
