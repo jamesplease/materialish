@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.8.0 (2018/6/6)
+
+* Adds Radio component
+
 ### v0.7.3 (2018/6/5)
 
 * Adjusts dimensions and rendering of Checkbox to more closely align with the Material spec
