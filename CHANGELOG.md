@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.9.0 (2018/6/7)
+
+* Adds Dialog component
+* Adds Elevation component
+* Adds three Chip components
+
 ### v0.8.0 (2018/6/6)
 
 * Adds Radio component
