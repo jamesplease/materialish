@@ -60,4 +60,45 @@ export default [
     component: 'src/components/component-doc',
     materialDocsLink: 'https://material.io/design/components/dialogs.html',
   },
+  {
+    name: 'Chips',
+    url: 'chips',
+    componentKey: 'chips',
+    description:
+      'Chips are versatile elements that can serve numerous roles in your application.',
+    component: 'src/components/chips',
+    materialDocsLink: 'https://material.io/design/components/chips.html',
+    children: [
+      {
+        name: 'Action Chip',
+        url: 'action-chip',
+        componentKey: 'action-chip',
+        description:
+          'Action chips represent that an action will occur when a user clicks or touches it. They are an alternative to buttons.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/chips.html#action-chips',
+      },
+      {
+        name: 'Choice Chip',
+        url: 'choice-chip',
+        componentKey: 'choice-chip',
+        description:
+          'Choice chips allow for the selection of a single chip from a set of options. They are an alternative to dropdowns and radio buttons.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/chips.html#choice-chips',
+      },
+      {
+        name: 'Filter Chip',
+        url: 'filter-chip',
+        componentKey: 'filter-chip',
+        description:
+          'Filter chips use descriptive words to filter content. They are an alternative to checkboxes.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/chips.html#filter-chips',
+      },
+    ],
+  },
 ];

@@ -6,5 +6,20 @@ import Avatar from './avatar/avatar';
 import Spinner from './spinner/spinner';
 import Radio from './radio/radio';
 import Dialog from './dialog/dialog';
+import ActionChip from './action-chip/action-chip';
+import ChoiceChip from './choice-chip/choice-chip';
+import FilterChip from './filter-chip/filter-chip';
 
-export { Avatar, Button, Checkbox, Dialog, Ripple, Spinner, Switch, Radio };
+export {
+  Avatar,
+  Button,
+  Checkbox,
+  Ripple,
+  Spinner,
+  Switch,
+  Radio,
+  Dialog,
+  ActionChip,
+  ChoiceChip,
+  FilterChip,
+};
