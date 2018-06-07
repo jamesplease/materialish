@@ -61,6 +61,14 @@ export default [
     materialDocsLink: 'https://material.io/design/components/dialogs.html',
   },
   {
+    name: 'Elevation',
+    url: 'elevation',
+    componentKey: 'elevation',
+    description:
+      'Elevations create a sense of depth by applying a drop shadow to an element.',
+    component: 'src/components/component-doc',
+  },
+  {
     name: 'Chips',
     url: 'chips',
     componentKey: 'chips',

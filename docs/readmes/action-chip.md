@@ -8,13 +8,12 @@ import 'materialish/ripple.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                       |
-| --------- | ------------- | -------- | --------------------------------------------------------------------------------- |
-| children  |               | No       | The contents that are rendered within the chip                                    |
-| className |               | No       | Additional class name(s) to add to the chip                                       |
-| ripple    | true          | No       | Whether or not to display the "ripple" effect                                     |
-| onClick   |               | No       | The existence of this prop determines whether the Chip behaves as a button or not |
-| ...rest   |               | No       | Other props are placed on the root element                                        |
+| Prop Name | Default Value | Required | Description                                    |
+| --------- | ------------- | -------- | ---------------------------------------------- |
+| children  |               | No       | The contents that are rendered within the chip |
+| className |               | No       | Additional class name(s) to add to the chip    |
+| ripple    | true          | No       | Whether or not to display the "ripple" effect  |
+| ...rest   |               | No       | Other props are placed on the root element     |
 
 ## CSS Variables
 
