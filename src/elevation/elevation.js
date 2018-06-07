@@ -23,7 +23,7 @@ class Elevation extends Component {
 
 Elevation.propTypes = {
   className: PropTypes.string,
-  depth: PropTypes.oneOf([1, 2, 3, 4, 5]),
+  depth: PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
 };
 
 export default Elevation;

@@ -39,7 +39,6 @@ class ActionChip extends Component {
 ActionChip.propTypes = {
   className: PropTypes.string,
   ripple: PropTypes.bool,
-  icon: PropTypes.element,
   onClick: PropTypes.func,
 };
 

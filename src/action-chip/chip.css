@@ -1,11 +1,23 @@
 .mt-chip {
   --_mt-chip-mainColor: var(--mt-mainColor, #2196f3);
   --_mt-chip-backgroundColor: var(--mt-chip-backgroundColor, #e0dfe0);
-  --_mt-chip-backgroundColorFocus: var( --mt-chip-backgroundColorFocus, rgb(51, 51, 51, 0.2));
-  --_mt-chip-backgroundColorActive: var( --mt-chip-backgroundColorActive, #d9edff);
-  --_mt-chip-backgroundColorActiveFocus: var( --mt-chip-backgroundColorActiveFocus, rgb(33, 150, 243, 0.2));
-  --_mt-chip-textColor: var(--mt-chip-textColor, rgba(0, 0, 0, 0.87));
-  --_mt-chip-textColorActive: var( --mt-chip-textColorActive, var(--_mt-chip-mainColor));
+  --_mt-chip-backgroundColorFocus: var(
+    --mt-chip-backgroundColorFocus,
+    rgb(51, 51, 51, 0.2)
+  );
+  --_mt-chip-backgroundColorActive: var(
+    --mt-chip-backgroundColorActive,
+    #d9edff
+  );
+  --_mt-chip-backgroundColorActiveFocus: var(
+    --mt-chip-backgroundColorActiveFocus,
+    rgb(33, 150, 243, 0.2)
+  );
+  --_mt-chip-textColor: var(--mt-chip-textColor, #212121);
+  --_mt-chip-textColorActive: var(
+    --mt-chip-textColorActive,
+    var(--_mt-chip-mainColor)
+  );
   --mt-ripple-color: rgba(0, 0, 0, 0.5);
   font-size: calc(var(--mt-baseFontSize, 1rem) * 0.875);
   font-family: var(--mt-fontFamily, 'Roboto');
@@ -76,21 +88,21 @@
   background-color: var(--_mt-chip-backgroundColorFocus);
 }
 
-.mt-chip_input:checked~.mt-chip_chip:before {
+.mt-chip_input:checked ~ .mt-chip_chip:before {
   opacity: 1;
 }
 
 .mt-chip:focus .mt-chip_chip:after,
-.mt-chip_input:focus~.mt-chip_chip:after {
+.mt-chip_input:focus ~ .mt-chip_chip:after {
   opacity: 1;
 }
 
-.mt-chip_input:focus:checked~.mt-chip_chip:after {
+.mt-chip_input:focus:checked ~ .mt-chip_chip:after {
   background-color: var(--_mt-chip-backgroundColorActiveFocus);
   opacity: 1;
 }
 
-.mt-chip_input:checked~.mt-chip_chip {
+.mt-chip_input:checked ~ .mt-chip_chip {
   color: var(--_mt-chip-textColorActive);
 }
 
@@ -104,14 +116,14 @@
   fill: #606060;
 }
 
-.mt-chip_icon+.mt-chip_checkmark {
+.mt-chip_icon + .mt-chip_checkmark {
   position: absolute;
   left: 1em;
   top: calc(50% - 0.45em);
   width: 1.5em;
 }
 
-.mt-chip_checkmark~.mt-chip_chip {
+.mt-chip_checkmark ~ .mt-chip_chip {
   padding-left: 0.4em;
 }
 
@@ -124,12 +136,12 @@
   transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mt-chip_input:checked~.mt-chip_icon {
+.mt-chip_input:checked ~ .mt-chip_icon {
   opacity: 0;
   transition: opacity 0.01s linear;
 }
 
-.mt-chip_input:checked~.mt-chip_checkmark {
+.mt-chip_input:checked ~ .mt-chip_checkmark {
   width: 1.5em;
 }
 
@@ -139,11 +151,11 @@
   transition: stroke-dashoffset 0.15s cubic-bezier(0.4, 0, 0.6, 1) 50ms;
 }
 
-.mt-chip_input:checked~.mt-chip_checkmark .mt-chip_checkmarkPath {
+.mt-chip_input:checked ~ .mt-chip_checkmark .mt-chip_checkmarkPath {
   stroke: var(--_mt-chip-textColorActive);
   stroke-dashoffset: 0;
 }
 
-.mt-chip_input:checked~.mt-ripple {
+.mt-chip_input:checked ~ .mt-ripple {
   --mt-ripple-color: var(--_mt-chip_mainColor, #2196f3);
 }
