@@ -18,12 +18,12 @@ storiesOf('Dialog', module).add('Regular', () => (
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
         consequatur enim voluptates nobis perferendis voluptatibus alias modi
         voluptate dolorum ipsa amet, aliquam similique blanditiis iusto ipsam,
-        atque beatae aliquid sit!Lorem ipsum dolor sit amet consectetur
+        atque beatae aliquid sit! Lorem ipsum dolor sit amet consectetur
         adipisicing elit.
       </p>
     </Dialog.Body>
     <Dialog.Actions>
-      <Button flat>Cancel</Button>
+      <Button flat>Nevermind</Button>
       <Button flat>Accept</Button>
     </Dialog.Actions>
   </Dialog>

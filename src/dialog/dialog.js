@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Dialog extends Component {
+class Dialog extends Component {
   static Title = ({ className = '', ...props }) => (
     <div className={`mt-dialog_title ${className}`} {...props} />
   );
@@ -17,3 +18,9 @@ export default class Dialog extends Component {
     return <div className={`mt-dialog ${className}`} {...props} />;
   }
 }
+
+Dialog.propTypes = {
+  className: PropTypes.string,
+};
+
+export default Dialog;

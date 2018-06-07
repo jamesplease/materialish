@@ -15,6 +15,7 @@ const readmes = {
   icons: fs.readFileSync('./readmes/icons.md', { encoding: 'utf-8' }),
   spinner: fs.readFileSync('./readmes/spinner.md', { encoding: 'utf-8' }),
   radio: fs.readFileSync('./readmes/radio.md', { encoding: 'utf-8' }),
+  dialog: fs.readFileSync('./readmes/dialog.md', { encoding: 'utf-8' }),
 };
 
 const examples = {
@@ -25,6 +26,7 @@ const examples = {
   icons: fs.readFileSync('./examples/icons.js', { encoding: 'utf-8' }),
   spinner: fs.readFileSync('./examples/spinner.js', { encoding: 'utf-8' }),
   radio: fs.readFileSync('./examples/radio.js', { encoding: 'utf-8' }),
+  dialog: fs.readFileSync('./examples/dialog.js', { encoding: 'utf-8' }),
 };
 
 // import { addSearchObjects } from './algolia'
