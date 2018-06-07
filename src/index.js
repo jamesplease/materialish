@@ -5,5 +5,6 @@ import Switch from './switch/switch';
 import Avatar from './avatar/avatar';
 import Spinner from './spinner/spinner';
 import Radio from './radio/radio';
+import Dialog from './dialog/dialog';
 
-export { Avatar, Button, Checkbox, Ripple, Spinner, Switch, Radio };
+export { Avatar, Button, Checkbox, Dialog, Ripple, Spinner, Switch, Radio };

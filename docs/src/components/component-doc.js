@@ -33,6 +33,7 @@ export class ComponentDoc extends Component {
       componentKey,
       sourceLink,
       materialDocsLink,
+      editorHeight = '300px',
     } = component;
 
     const sourceLinkToUse = sourceLink
@@ -74,6 +75,9 @@ export class ComponentDoc extends Component {
                 your changes.
               </div>
               <Editor
+                style={{
+                  '--editorHeight': editorHeight,
+                }}
                 className="componentDoc_editor"
                 theme="oceanic-next"
                 codeText={code}

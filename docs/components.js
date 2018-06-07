@@ -50,4 +50,14 @@ export default [
     materialDocsLink:
       'https://material.io/design/components/selection-controls.html#radio-buttons',
   },
+  {
+    name: 'Dialog',
+    url: 'dialog',
+    componentKey: 'dialog',
+    editorHeight: '500px',
+    description:
+      'Dialogs inform users about a task or decision that needs to be made.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/dialogs.html',
+  },
 ];
