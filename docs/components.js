@@ -61,6 +61,15 @@ export default [
     materialDocsLink: 'https://material.io/design/components/dialogs.html',
   },
   {
+    name: 'Card',
+    url: 'card',
+    componentKey: 'card',
+    description:
+      'Cards create a sense of depth by applying a drop shadow to an element.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/dialogs.html',
+  },
+  {
     name: 'Chips',
     url: 'chips',
     componentKey: 'chips',

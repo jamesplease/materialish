@@ -6,6 +6,7 @@ import Avatar from './avatar/avatar';
 import Spinner from './spinner/spinner';
 import Radio from './radio/radio';
 import Dialog from './dialog/dialog';
+import Card from './card/card';
 import ActionChip from './action-chip/action-chip';
 import ChoiceChip from './choice-chip/choice-chip';
 import FilterChip from './filter-chip/filter-chip';
@@ -19,6 +20,7 @@ export {
   Switch,
   Radio,
   Dialog,
+  Card,
   ActionChip,
   ChoiceChip,
   FilterChip,
