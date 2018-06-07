@@ -6,9 +6,9 @@ import Avatar from './avatar/avatar';
 import Spinner from './spinner/spinner';
 import Radio from './radio/radio';
 import Dialog from './dialog/dialog';
-import ActionChip from './chip/action-chip';
-import ChoiceChip from './chip/choice-chip';
-import FilterChip from './chip/filter-chip';
+import ActionChip from './action-chip/action-chip';
+import ChoiceChip from './choice-chip/choice-chip';
+import FilterChip from './filter-chip/filter-chip';
 
 export {
   Avatar,

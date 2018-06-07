@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Ripple from '../ripple/ripple';
 
-export default class FilterChip extends Component {
+class FilterChip extends Component {
   render() {
     const {
       className = '',
@@ -10,6 +11,7 @@ export default class FilterChip extends Component {
       children,
       ...props
     } = this.props;
+
     return (
       <div className={`mt-chip ${className}`} onClick={this.onClick}>
         <input type="checkbox" className="mt-chip_input" {...props} />
@@ -47,3 +49,12 @@ export default class FilterChip extends Component {
     }
   };
 }
+
+FilterChip.propTypes = {
+  className: PropTypes.string,
+  ripple: PropTypes.bool,
+  icon: PropTypes.element,
+  onClick: PropTypes.func,
+};
+
+export default FilterChip;

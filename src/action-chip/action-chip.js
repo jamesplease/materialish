@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Ripple from '../ripple/ripple';
 
-export default class ChoiceChip extends Component {
+class ActionChip extends Component {
   render() {
     const { className = '', ripple = true, children, ...props } = this.props;
+
     return (
-      <div className={`mt-chip ${className}`} onClick={this.onClick}>
-        <input type="radio" className="mt-chip_input" {...props} />
+      <div
+        className={`mt-chip ${
+          props.onClick ? '' : 'mt-chip-notClickable'
+        } ${className}`}
+        {...props}
+        onClick={this.onClick}>
         <div className="mt-chip_chip">{children}</div>
-        {ripple && <Ripple ref={this.getRippleRef} />}
+        {ripple && props.onClick && <Ripple ref={this.getRippleRef} />}
       </div>
     );
   }
@@ -29,3 +35,12 @@ export default class ChoiceChip extends Component {
     }
   };
 }
+
+ActionChip.propTypes = {
+  className: PropTypes.string,
+  ripple: PropTypes.bool,
+  icon: PropTypes.element,
+  onClick: PropTypes.func,
+};
+
+export default ActionChip;

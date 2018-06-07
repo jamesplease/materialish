@@ -1,6 +1,10 @@
+function onClick() {
+  console.log('Clicked');
+}
+
 class ActionChipExample extends Component {
   render() {
-    return <ActionChip>I am a chip</ActionChip>;
+    return <ActionChip onClick={onClick}>Perform Action</ActionChip>;
   }
 }
 

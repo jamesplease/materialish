@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
-import '../src/chip/chip.css';
+import '../src/action-chip/chip.css';
 import '../src/ripple/ripple.css';
 import { ActionChip, ChoiceChip, FilterChip } from '../src/index';
 

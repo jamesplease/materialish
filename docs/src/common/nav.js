@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
+import _ from 'lodash';
 import { Link, withSiteData } from 'react-static';
 import Overlay from './overlay';
 import './nav.css';
@@ -74,6 +75,8 @@ export class Nav extends Component {
               </Link>
               <ul className="nav_navSubList">
                 {sortedComponentsData.map(component => {
+                  const hasChildren = Boolean(_.size(component.children));
+
                   return (
                     <li className="nav_navSubListItem" key={component.name}>
                       <Link
@@ -83,6 +86,25 @@ export class Nav extends Component {
                         onClick={this.onNavigate}>
                         {component.name}
                       </Link>
+                      {hasChildren && (
+                        <ul>
+                          {component.children.map(childComponent => {
+                            return (
+                              <li
+                                key={childComponent.name}
+                                className="nav_navSubListItem">
+                                <Link
+                                  exact
+                                  to={`/components/${childComponent.url}`}
+                                  className="nav_navSubLink"
+                                  onClick={this.onNavigate}>
+                                  {childComponent.name}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
                     </li>
                   );
                 })}

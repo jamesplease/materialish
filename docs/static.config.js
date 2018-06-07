@@ -1,32 +1,39 @@
 import React from 'react';
+import _ from 'lodash';
 import components from './components';
 
 const fs = require('fs');
 
-const homeMarkdown = fs.readFileSync('./src/home/index.md', {
-  encoding: 'utf-8',
-});
+const fsOptions = { encoding: 'utf-8' };
+
+const homeMarkdown = fs.readFileSync('./src/home/index.md', fsOptions);
 
 const readmes = {
-  avatar: fs.readFileSync('./readmes/avatar.md', { encoding: 'utf-8' }),
-  button: fs.readFileSync('./readmes/button.md', { encoding: 'utf-8' }),
-  checkbox: fs.readFileSync('./readmes/checkbox.md', { encoding: 'utf-8' }),
-  switch: fs.readFileSync('./readmes/switch.md', { encoding: 'utf-8' }),
-  icons: fs.readFileSync('./readmes/icons.md', { encoding: 'utf-8' }),
-  spinner: fs.readFileSync('./readmes/spinner.md', { encoding: 'utf-8' }),
-  radio: fs.readFileSync('./readmes/radio.md', { encoding: 'utf-8' }),
-  dialog: fs.readFileSync('./readmes/dialog.md', { encoding: 'utf-8' }),
+  avatar: fs.readFileSync('./readmes/avatar.md', fsOptions),
+  button: fs.readFileSync('./readmes/button.md', fsOptions),
+  checkbox: fs.readFileSync('./readmes/checkbox.md', fsOptions),
+  switch: fs.readFileSync('./readmes/switch.md', fsOptions),
+  icons: fs.readFileSync('./readmes/icons.md', fsOptions),
+  spinner: fs.readFileSync('./readmes/spinner.md', fsOptions),
+  radio: fs.readFileSync('./readmes/radio.md', fsOptions),
+  dialog: fs.readFileSync('./readmes/dialog.md', fsOptions),
+  'action-chip': fs.readFileSync('./readmes/action-chip.md', fsOptions),
+  'filter-chip': fs.readFileSync('./readmes/filter-chip.md', fsOptions),
+  'choice-chip': fs.readFileSync('./readmes/choice-chip.md', fsOptions),
 };
 
 const examples = {
-  avatar: fs.readFileSync('./examples/avatar.js', { encoding: 'utf-8' }),
-  button: fs.readFileSync('./examples/button.js', { encoding: 'utf-8' }),
-  checkbox: fs.readFileSync('./examples/checkbox.js', { encoding: 'utf-8' }),
-  switch: fs.readFileSync('./examples/switch.js', { encoding: 'utf-8' }),
-  icons: fs.readFileSync('./examples/icons.js', { encoding: 'utf-8' }),
-  spinner: fs.readFileSync('./examples/spinner.js', { encoding: 'utf-8' }),
-  radio: fs.readFileSync('./examples/radio.js', { encoding: 'utf-8' }),
-  dialog: fs.readFileSync('./examples/dialog.js', { encoding: 'utf-8' }),
+  avatar: fs.readFileSync('./examples/avatar.js', fsOptions),
+  button: fs.readFileSync('./examples/button.js', fsOptions),
+  checkbox: fs.readFileSync('./examples/checkbox.js', fsOptions),
+  switch: fs.readFileSync('./examples/switch.js', fsOptions),
+  icons: fs.readFileSync('./examples/icons.js', fsOptions),
+  spinner: fs.readFileSync('./examples/spinner.js', fsOptions),
+  radio: fs.readFileSync('./examples/radio.js', fsOptions),
+  dialog: fs.readFileSync('./examples/dialog.js', fsOptions),
+  'action-chip': fs.readFileSync('./examples/action-chip.js', fsOptions),
+  'filter-chip': fs.readFileSync('./examples/filter-chip.js', fsOptions),
+  'choice-chip': fs.readFileSync('./examples/choice-chip.js', fsOptions),
 };
 
 // import { addSearchObjects } from './algolia'
@@ -78,15 +85,31 @@ export default {
         getData: async () => ({
           components,
         }),
-        children: components.map(component => ({
-          path: component.url,
-          component: component.component,
-          getData: async () => ({
-            component,
-            markdown: readmes[component.componentKey],
-            example: examples[component.componentKey],
-          }),
-        })),
+        children: _.flatMap(components, component => {
+          const main = {
+            path: component.url,
+            component: component.component,
+            getData: async () => ({
+              component,
+              markdown: readmes[component.componentKey],
+              example: examples[component.componentKey],
+            }),
+          };
+
+          const children = _.map(component.children, child => {
+            return {
+              path: child.url,
+              component: child.component,
+              getData: async () => ({
+                component: child,
+                markdown: readmes[child.componentKey],
+                example: examples[child.componentKey],
+              }),
+            };
+          });
+
+          return [main, ...children];
+        }),
       },
       {
         is404: true,
