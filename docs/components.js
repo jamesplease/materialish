@@ -41,4 +41,13 @@ export default [
     description: 'A Spinner is a nondeterministic loading indicator.',
     component: 'src/components/component-doc',
   },
+  {
+    name: 'Radio Button',
+    url: 'radio',
+    componentKey: 'radio',
+    description: 'A Radio button represents one option among several choices.',
+    component: 'src/components/component-doc',
+    materialDocsLink:
+      'https://material.io/design/components/selection-controls.html#radio-buttons',
+  },
 ];

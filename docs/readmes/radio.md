@@ -1,0 +1,22 @@
+## Usage
+
+```jsx
+import { Radio } from 'materialish';
+import 'materialish/radio.css';
+```
+
+## Props
+
+| Prop Name | Default Value | Required | Description                                              |
+| --------- | ------------- | -------- | -------------------------------------------------------- |
+| className |               | No       | Additional class name(s) to add to the Radio             |
+| style     |               | No       | Inline styles to add to the root element of the Radio    |
+| ...rest   |               | No       | Other props are placed on the underlying `input` element |
+
+## CSS Variables
+
+| Variable                | Default Value           | Description                                      |
+| ----------------------- | ----------------------- | ------------------------------------------------ |
+| --mt-baseFontSize       | --mt-baseFontSize, 1rem | The size of the radio is based off of this value |
+| --mt-radio-checkedColor | --mt-mainColor, #2196f3 | The color of the radio when it is checked        |
+| --mt-radio-focusColor   | #e8e8e8                 | The color of the focused circle layer            |
