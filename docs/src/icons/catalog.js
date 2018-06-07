@@ -59,7 +59,7 @@ export class IconsCatalog extends Component {
             }
 
             return (
-              <div className="iconsCatalog_category">
+              <div className="iconsCatalog_category" key={categoryName}>
                 <h2 className="iconsCategory_categoryHeader">
                   {_.startCase(categoryName)}
                 </h2>
