@@ -8,12 +8,13 @@ import 'materialish/ripple.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                              |
-| --------- | ------------- | -------- | -------------------------------------------------------- |
-| children  |               | No       | The contents that are rendered within the chip           |
-| className |               | No       | Additional class name(s) to add to the chip              |
-| ripple    | true          | No       | Whether or not to display the "ripple" effect            |
-| ...rest   |               | No       | Other props are placed on the underlying `input` element |
+| Prop Name | Default Value | Required | Description                                                |
+| --------- | ------------- | -------- | ---------------------------------------------------------- |
+| children  |               | No       | The contents that are rendered within the chip             |
+| className |               | No       | Additional class name(s) to add to the chip                |
+| ripple    | true          | No       | Whether or not to display the "ripple" effect              |
+| icon      |               | No       | A [Materialish icon](/icons) element to render in the chip |
+| ...rest   |               | No       | Other props are placed on the underlying `input` element   |
 
 ## CSS Variables
 

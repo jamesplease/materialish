@@ -35,7 +35,6 @@ class ChoiceChip extends Component {
 ChoiceChip.propTypes = {
   className: PropTypes.string,
   ripple: PropTypes.bool,
-  icon: PropTypes.element,
   onClick: PropTypes.func,
 };
 
