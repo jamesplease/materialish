@@ -7,7 +7,7 @@ class ActionChip extends Component {
     const { className = '', ripple = true, children, ...props } = this.props;
 
     return (
-      <div
+      <button
         className={`mt-chip ${
           props.onClick ? '' : 'mt-chip-notClickable'
         } ${className}`}
@@ -15,7 +15,7 @@ class ActionChip extends Component {
         onClick={this.onClick}>
         <div className="mt-chip_chip">{children}</div>
         {ripple && props.onClick && <Ripple ref={this.getRippleRef} />}
-      </div>
+      </button>
     );
   }
 
