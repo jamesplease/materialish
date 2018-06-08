@@ -95,6 +95,16 @@ export default [
     materialDocsLink: 'https://material.io/design/components/chips.html',
     children: [
       {
+        name: 'Input Chip',
+        url: 'input-chip',
+        componentKey: 'input-chip',
+        description:
+          'Input chips represent information, such as an entity or different attributes.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/chips.html#input-chips',
+      },
+      {
         name: 'Action Chip',
         url: 'action-chip',
         componentKey: 'action-chip',
