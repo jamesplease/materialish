@@ -11,6 +11,7 @@ import ActionChip from './action-chip/action-chip';
 import ChoiceChip from './choice-chip/choice-chip';
 import FilterChip from './filter-chip/filter-chip';
 import Menu from './menu/menu';
+import Snackbar from './snackbar/snackbar';
 
 export {
   Avatar,
@@ -26,4 +27,5 @@ export {
   ChoiceChip,
   FilterChip,
   Menu,
+  Snackbar,
 };
