@@ -69,6 +69,14 @@ export default [
     component: 'src/components/component-doc',
   },
   {
+    name: 'Menu',
+    url: 'menu',
+    componentKey: 'menu',
+    description:
+      'Menus represent a list of items. They can be used within selects or dropdowns.',
+    component: 'src/components/component-doc',
+  },
+  {
     name: 'Chips',
     url: 'chips',
     componentKey: 'chips',

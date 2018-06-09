@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Ripple from '../ripple/ripple';
 import Elevation from '../elevation/elevation';
 
@@ -13,7 +14,11 @@ export default class Menu extends Component {
   }
 }
 
-class MenuItem extends Component {
+Menu.propTypes = {
+  className: PropTypes.string,
+};
+
+class Item extends Component {
   render() {
     const {
       className = '',
@@ -53,4 +58,11 @@ class MenuItem extends Component {
   };
 }
 
-Menu.Item = MenuItem;
+Item.propTypes = {
+  className: PropTypes.string,
+  separator: PropTypes.bool,
+  selected: PropTypes.bool,
+  ripple: PropTypes.bool,
+};
+
+Menu.Item = Item;

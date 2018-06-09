@@ -19,7 +19,7 @@
   position: relative;
   box-sizing: border-box;
   display: block;
-  min-height: var(--itemHeight);
+  min-height: var(--mt-menuItemMinHeight);
   margin: 0;
   padding: 1.1em 1.7em;
   z-index: 0;
