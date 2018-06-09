@@ -25,6 +25,10 @@ export class Chips extends Component {
         <p />
         <ul className="icons_links">
           <li className="icons_link">
+            <Link to="/components/input-chip">Input Chip</Link>: represents an
+            entity or different attributes.
+          </li>
+          <li className="icons_link">
             <Link to="/components/action-chip">Action Chip</Link>: an
             alternative to buttons.
           </li>

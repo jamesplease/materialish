@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { setOptions } from '@storybook/addon-options';
 import '../src/action-chip/chip.css';
 import '../src/ripple/ripple.css';
-import { ActionChip, ChoiceChip, FilterChip } from '../src/index';
+import { ActionChip, ChoiceChip, FilterChip, InputChip } from '../src/index';
 
 setOptions({
   name: 'Materialish',
@@ -42,4 +42,9 @@ storiesOf('Chip', module)
         Three
       </FilterChip>
     </Fragment>
+  ))
+  .add('Input Chip', () => (
+    <InputChip onClick={action('clicked')} onClose={action('closed')}>
+      I am a chip
+    </InputChip>
   ));

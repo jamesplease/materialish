@@ -7,6 +7,7 @@ import Spinner from './spinner/spinner';
 import Radio from './radio/radio';
 import Dialog from './dialog/dialog';
 import Elevation from './elevation/elevation';
+import InputChip from './input-chip/input-chip';
 import ActionChip from './action-chip/action-chip';
 import ChoiceChip from './choice-chip/choice-chip';
 import FilterChip from './filter-chip/filter-chip';
@@ -23,6 +24,7 @@ export {
   Radio,
   Dialog,
   Elevation,
+  InputChip,
   ActionChip,
   ChoiceChip,
   FilterChip,
