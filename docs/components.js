@@ -101,6 +101,7 @@ export default [
         description:
           'Input chips represent information, such as an entity or different attributes.',
         component: 'src/components/component-doc',
+        editorHeight: '470px',
         materialDocsLink:
           'https://material.io/design/components/chips.html#input-chips',
       },
