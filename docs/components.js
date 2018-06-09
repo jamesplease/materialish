@@ -77,6 +77,15 @@ export default [
     component: 'src/components/component-doc',
   },
   {
+    name: 'Snackbar',
+    url: 'snackbar',
+    componentKey: 'snackbar',
+    description:
+      'Snackbars provide brief messages about app processes at the bottom of the screen.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/snackbars.html',
+  },
+  {
     name: 'Chips',
     url: 'chips',
     componentKey: 'chips',

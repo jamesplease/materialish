@@ -2,7 +2,7 @@
   all: initial;
   background-color: #323232;
   color: #fff;
-  font-size: var(--mt-baseFontSize, 1rem);
+  font-size: calc(var(--mt-baseFontSize, 1rem) * 0.875);
   font-family: var(--mt-fontFamily, 'Roboto');
   padding: 0 1.5em;
   display: inline-block;
@@ -11,10 +11,11 @@
   align-items: center;
   height: 3em;
   line-height: 3em;
+  -webkit-font-smoothing: antialiased;
 }
 
-.mt-snackbar > .mt-button {
-  font-size: 0.875em;
+.mt-snackbar>.mt-button {
+  font-size: 1em;
   margin-right: -1.3em;
   margin-left: 0.3em;
 }

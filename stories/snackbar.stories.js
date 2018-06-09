@@ -12,10 +12,10 @@ setOptions({
 storiesOf('Snackbar', module)
   .add('Regular', () => (
     <Snackbar>
-      Oooops! Something went wrong
-      <Button flat>Retry</Button>
+      There was an error.
+      <Button flat ripple={false}>
+        Retry
+      </Button>
     </Snackbar>
   ))
-  .add('Without button', () => (
-    <Snackbar>Oooops! Something went wrong</Snackbar>
-  ));
+  .add('Without button', () => <Snackbar>There was an error.</Snackbar>);
