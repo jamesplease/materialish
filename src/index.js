@@ -10,6 +10,7 @@ import Elevation from './elevation/elevation';
 import ActionChip from './action-chip/action-chip';
 import ChoiceChip from './choice-chip/choice-chip';
 import FilterChip from './filter-chip/filter-chip';
+import Menu from './menu/menu';
 
 export {
   Avatar,
@@ -24,4 +25,5 @@ export {
   ActionChip,
   ChoiceChip,
   FilterChip,
+  Menu,
 };
