@@ -1,4 +1,4 @@
-class SnackBar extends Component {
+class SnackBarExample extends Component {
   render() {
     return (
       <Snackbar>
@@ -11,4 +11,4 @@ class SnackBar extends Component {
   }
 }
 
-return <SnackBar />;
+return <SnackBarExample />;

@@ -22,7 +22,7 @@ storiesOf('Table', module)
         </Table.HeadRow>
       </Table.Head>
       <Table.Body>
-        <Table.Row>
+        <Table.Row selected>
           <Table.Cell>Test.doc</Table.Cell>
           <Table.Cell>Not Delivered</Table.Cell>
           <Table.Cell>6/12/2018</Table.Cell>
@@ -57,10 +57,10 @@ storiesOf('Table', module)
     <Table>
       <Table.Head>
         <Table.HeadRow>
-          <Table.HeadCell separator>File</Table.HeadCell>
-          <Table.HeadCell separator>Status</Table.HeadCell>
-          <Table.HeadCell separator>Due Date</Table.HeadCell>
-          <Table.HeadCell separator>Size</Table.HeadCell>
+          <Table.HeadCell rightBorder>File</Table.HeadCell>
+          <Table.HeadCell rightBorder>Status</Table.HeadCell>
+          <Table.HeadCell rightBorder>Due Date</Table.HeadCell>
+          <Table.HeadCell rightBorder>Size</Table.HeadCell>
           <Table.HeadCell>Assignee</Table.HeadCell>
         </Table.HeadRow>
       </Table.Head>

@@ -35,7 +35,7 @@
   flex-basis: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  height: var(--height);
+  height: var(--mt-table-cellHeight);
   transition: height 0.2s ease-out;
 }
 
@@ -86,7 +86,7 @@
   padding: 1.2em 1em;
 }
 
-.mt-table_cell-separator {
+.mt-table_cell-rightBorder {
   border-right: 1px solid #d5d5d5;
 }
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const TableContext = React.createContext({ columnProps: {} });
 
-const columnInheritedProps = ['width', 'separator'];
+const columnInheritedProps = ['width', 'rightBorder'];
 
 function areEqualShallow(a, b) {
   for (let key in a) {
@@ -161,13 +162,7 @@ class TableBody extends Component {
 
 class TableRow extends Component {
   render() {
-    const {
-      children,
-      className = '',
-      tall = false,
-      selected = false,
-      ...props
-    } = this.props;
+    const { children, className = '', ...props } = this.props;
     const isClickable = typeof props.onClick === 'function';
     return (
       <TableContext.Consumer>
@@ -175,8 +170,6 @@ class TableRow extends Component {
           <div
             className={`mt-table_row ${
               isClickable ? 'mt-table-clickableElement' : ''
-            } ${selected ? 'mt-table_row-selected' : ''} ${
-              tall ? 'mt_table_row-tall' : ''
             } ${className}`}
             role="row"
             {...props}>
@@ -199,7 +192,7 @@ class TableCell extends Component {
     const {
       children,
       className = '',
-      separator = false,
+      rightBorder = false,
       width,
       style,
       ...props
@@ -207,7 +200,7 @@ class TableCell extends Component {
     return (
       <div
         className={`mt-table_cell ${
-          separator ? 'mt-table_cell-separator' : ''
+          rightBorder ? 'mt-table_cell-rightBorder' : ''
         } ${className}`}
         role="cell"
         style={{
@@ -241,7 +234,7 @@ class TableExpandedRowContent extends Component {
     if (!this.el) return;
     const bb = this.el.getBoundingClientRect();
     this.el.style.setProperty(
-      '--height',
+      '--mt-table-cellHeight',
       this.props.open ? `${bb.height}px` : 0
     );
   }
@@ -249,7 +242,7 @@ class TableExpandedRowContent extends Component {
   componentDidUpdate() {
     if (!this.el) return;
     if (!this.props.open) {
-      this.el.style.setProperty('--height', 0);
+      this.el.style.setProperty('--mt-table-cellHeight', 0);
       return;
     }
 
@@ -262,7 +255,7 @@ class TableExpandedRowContent extends Component {
     this.el.style.transition = null;
     this.el.style.display = null;
     requestAnimationFrame(() => {
-      this.el.style.setProperty('--height', `${bb.height}px`);
+      this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
     });
   }
 
