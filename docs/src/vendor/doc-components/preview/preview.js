@@ -83,12 +83,12 @@ export default class Preview extends Component {
   };
 
   render() {
-    const { className } = this.props;
+    const { className, wrapperStyle } = this.props;
 
     return (
       <div className={className}>
         {this.state.error !== null ? <span>{this.state.error}</span> : null}
-        <div ref="mount" />
+        <div ref="mount" style={wrapperStyle} />
       </div>
     );
   }

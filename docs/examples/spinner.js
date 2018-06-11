@@ -1,7 +1,7 @@
-class SpinnersExample extends Component {
+class SpinnerExample extends Component {
   render() {
     return <Spinner />;
   }
 }
 
-return <SpinnersExample />;
+return <SpinnerExample />;

@@ -33,6 +33,7 @@ export class ComponentDoc extends Component {
       componentKey,
       sourceLink,
       materialDocsLink,
+      wrapperStyle = {},
       editorHeight = '300px',
     } = component;
 
@@ -64,6 +65,7 @@ export class ComponentDoc extends Component {
             <Fragment>
               {code && (
                 <Preview
+                  wrapperStyle={wrapperStyle}
                   className="componentDoc_preview"
                   code={code}
                   scope={demoScope}

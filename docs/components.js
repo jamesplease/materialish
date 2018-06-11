@@ -86,6 +86,16 @@ export default [
     materialDocsLink: 'https://material.io/design/components/snackbars.html',
   },
   {
+    name: 'Table',
+    url: 'table',
+    componentKey: 'table',
+    editorHeight: '700px',
+    wrapperStyle: { width: '100%' },
+    description: 'Tables present structured information.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/data-tables.html',
+  },
+  {
     name: 'Chips',
     url: 'chips',
     componentKey: 'chips',
