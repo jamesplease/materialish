@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.10.1 (2018/6/13)
+
+- Fixes a bug in the Table.ExpandedRowContent
+
 ### v0.10.0 (2018/6/10)
 
 - New components: Menu, Snackbar, Table, and InputChip
