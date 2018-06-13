@@ -240,6 +240,11 @@ class TableExpandedRowContent extends Component {
   }
 
   componentDidUpdate() {
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+      this.timeout = null;
+    }
+
     if (!this.el) return;
 
     const initialBb = this.el.getBoundingClientRect();
@@ -250,6 +255,10 @@ class TableExpandedRowContent extends Component {
     this.el.style.height = null;
     this.el.style.transition = null;
     this.el.style.display = null;
+
+    const duration = getComputedStyle(this.el).getPropertyValue(
+      '--mt-table-opening-duration'
+    );
 
     if (!this.props.open) {
       if (initialBb.height) {
@@ -268,16 +277,11 @@ class TableExpandedRowContent extends Component {
 
     requestAnimationFrame(() => {
       if (!this.el) return;
+
       this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
-      this.el.addEventListener(
-        'transitionend',
-        function cb() {
-          if (!this.el) return;
-          this.el.style.setProperty('--mt-table-cellHeight', 'auto');
-          this.el.removeEventListener('transitionend', cb);
-        },
-        { once: true }
-      );
+      this.timeout = setTimeout(() => {
+        this.el && this.el.style.setProperty('--mt-table-cellHeight', 'auto');
+      }, duration);
     });
   }
 
