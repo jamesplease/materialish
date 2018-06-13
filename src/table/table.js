@@ -271,8 +271,10 @@ class TableExpandedRowContent extends Component {
       this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
       this.el.addEventListener(
         'transitionend',
-        () => {
-          this.el && this.el.style.setProperty('--mt-table-cellHeight', 'auto');
+        function cb() {
+          if (!this.el) return;
+          this.el.style.setProperty('--mt-table-cellHeight', 'auto');
+          this.el.removeEventListener('transitionend', cb);
         },
         { once: true }
       );
