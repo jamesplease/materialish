@@ -258,7 +258,7 @@ class TableExpandedRowContent extends Component {
           `${initialBb.height}px`
         );
         requestAnimationFrame(() => {
-          this.el.style.setProperty('--mt-table-cellHeight', 0);
+          this.el && this.el.style.setProperty('--mt-table-cellHeight', 0);
         });
         return;
       }
@@ -267,11 +267,12 @@ class TableExpandedRowContent extends Component {
     }
 
     requestAnimationFrame(() => {
+      if (!this.el) return;
       this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
       this.el.addEventListener(
         'transitionend',
         () => {
-          this.el.style.setProperty('--mt-table-cellHeight', 'auto');
+          this.el && this.el.style.setProperty('--mt-table-cellHeight', 'auto');
         },
         { once: true }
       );
