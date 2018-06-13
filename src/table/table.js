@@ -241,12 +241,8 @@ class TableExpandedRowContent extends Component {
 
   componentDidUpdate() {
     if (!this.el) return;
-    if (!this.props.open) {
-      this.el.style.setProperty('--mt-table-cellHeight', 0);
-      return;
-    }
 
-    if (!this.props.open) return;
+    const initialBb = this.el.getBoundingClientRect();
     this.el.style.transition = 'none';
     this.el.style.display = 'block';
     this.el.style.height = 'auto';
@@ -254,8 +250,31 @@ class TableExpandedRowContent extends Component {
     this.el.style.height = null;
     this.el.style.transition = null;
     this.el.style.display = null;
+
+    if (!this.props.open) {
+      if (initialBb.height) {
+        this.el.style.setProperty(
+          '--mt-table-cellHeight',
+          `${initialBb.height}px`
+        );
+        requestAnimationFrame(() => {
+          this.el.style.setProperty('--mt-table-cellHeight', 0);
+        });
+        return;
+      }
+      this.el.style.setProperty('--mt-table-cellHeight', 0);
+      return;
+    }
+
     requestAnimationFrame(() => {
       this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
+      this.el.addEventListener(
+        'transitionend',
+        () => {
+          this.el.style.setProperty('--mt-table-cellHeight', 'auto');
+        },
+        { once: true }
+      );
     });
   }
 
