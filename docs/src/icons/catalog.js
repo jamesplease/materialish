@@ -27,7 +27,8 @@ export class IconsCatalog extends Component {
       }
     );
 
-    const visibleCount = _.chain(filteredCategories)
+    const visibleCount = _
+      .chain(filteredCategories)
       .flatMap()
       .uniqBy('iconName')
       .value().length;
@@ -38,20 +39,22 @@ export class IconsCatalog extends Component {
         <h1 className="primaryHeader iconsCatalog_primaryHeader">
           Icons Catalog
         </h1>
-        <input
-          className="iconsCatalog_searchInput"
-          autoComplete="off"
-          autoFocus
-          inputMode="text"
-          spellCheck="false"
-          type="text"
-          placeholder="Filter icons"
-          value={query}
-          onChange={e => this.setState({ query: e.currentTarget.value })}
-        />
-        <p className="iconsCatalog_count">
-          Displaying <b>{visibleCount}</b> of <b>{totalCount}</b> icons.
-        </p>
+        <div className="iconsCatalog_heading">
+          <input
+            className="iconsCatalog_searchInput"
+            autoComplete="off"
+            autoFocus
+            inputMode="text"
+            spellCheck="false"
+            type="text"
+            placeholder="Filter icons"
+            value={query}
+            onChange={e => this.setState({ query: e.currentTarget.value })}
+          />
+          <p className="iconsCatalog_count">
+            Displaying <b>{visibleCount}</b> of <b>{totalCount}</b> icons.
+          </p>
+        </div>
         <div>
           {_.map(filteredCategories, (category, categoryName) => {
             if (!category.length) {
