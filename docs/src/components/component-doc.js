@@ -75,6 +75,7 @@ export class ComponentDoc extends Component {
             </Fragment>
           )}
         </CodeManager>
+        <Markdown markdownText={markdown} />
         <h2 className="secondaryHeader">Useful Links</h2>
         <ul className="componentDoc_links">
           <li className="componentDoc_linkItem">
@@ -91,7 +92,6 @@ export class ComponentDoc extends Component {
             </li>
           )}
         </ul>
-        <Markdown markdownText={markdown} />
       </div>
     );
   }
