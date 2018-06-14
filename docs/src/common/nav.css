@@ -12,6 +12,7 @@
   height: calc(100% - var(--headerHeight));
   overflow-y: scroll;
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: #fff;
 }
 
