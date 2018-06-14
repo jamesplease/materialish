@@ -1,20 +1,23 @@
 .markdown table {
   width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
 }
 
 .markdown th {
-  font-weight: bold;
+  font-weight: 500;
   text-align: left;
-  padding: 7px 10px;
+  padding: 13px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown tr:hover td {
+  background-color: #f9f9f9;
 }
 
 .markdown td {
-  padding: 7px 10px;
-}
-
-.markdown th:first-child,
-.markdown td:first-child {
-  padding-left: 0;
+  padding: 13px 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .markdown td:first-child,
