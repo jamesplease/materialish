@@ -45,16 +45,26 @@
 
 .componentDoc_noteEmoji {
   font-size: 1.2rem;
+  top: -4px;
+  margin-right: 5px;
 }
 
 .componentDoc_note {
   margin: 0px 0 0px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-size: 0.9rem;
   font-weight: 500;
-  border-bottom: 1px solid #4d585e;
   background-color: #314048;
-  color: #c5c7c8;
+  color: #9ec4d8;
+}
+
+.componentDoc_noteContent {
+  border-radius: 4px;
+  background-color: #3f576d;
+  margin: 3px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
 }
 
 .componentDoc_preview {
