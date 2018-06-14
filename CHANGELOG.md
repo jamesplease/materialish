@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.11.0 (2018/6/13)
+
+- New components: Input and InlineSpinner
+
 ### v0.10.1 (2018/6/13)
 
 - Fixes a bug in the Table.ExpandedRowContent
