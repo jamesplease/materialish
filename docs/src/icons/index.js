@@ -7,24 +7,6 @@ export class Icons extends Component {
     return (
       <div className="componentDoc">
         <h1 className="primaryHeader componentDoc_primaryHeader">Icons</h1>
-        <ul className="componentDoc_links">
-          <li className="componentDoc_linkItem">
-            <a
-              href="https://material.io/tools/icons/?style=baseline"
-              className="componentDoc_linkAnchor">
-              <i className="componentDoc_icon zmdi zmdi-file-text" /> Material
-              Design Icons Docs
-            </a>
-          </li>
-          <li className="componentDoc_linkItem">
-            <a
-              href="https://github.com/google/material-design-icons"
-              className="componentDoc_linkAnchor">
-              <i className="componentDoc_icon zmdi zmdi-file-text" /> Material
-              Designs Icons GitHub Repository
-            </a>
-          </li>
-        </ul>
         <p className="paragraph">
           Material Design includes a collection of icons. Materialish exports
           these icons as individual React components for you to use in your
@@ -39,6 +21,27 @@ export class Icons extends Component {
           <li className="icons_link">
             <Link to="/icons/catalog">Catalog</Link>: View and search the icon
             collection
+          </li>
+        </ul>
+        <h2 className="secondaryHeader componentDoc_standaloneSecondaryHeader">
+          Useful Links
+        </h2>
+        <ul className="componentDoc_links">
+          <li className="componentDoc_linkItem">
+            <a
+              href="https://material.io/tools/icons/?style=baseline"
+              className="componentDoc_linkAnchor">
+              <i className="componentDoc_icon zmdi zmdi-file-text" />Material
+              Design Icons Docs
+            </a>
+          </li>
+          <li className="componentDoc_linkItem">
+            <a
+              href="https://github.com/google/material-design-icons"
+              className="componentDoc_linkAnchor">
+              <i className="componentDoc_icon zmdi zmdi-file-text" />Material
+              Design Icons GitHub Repository
+            </a>
           </li>
         </ul>
       </div>

@@ -30,6 +30,10 @@ body {
   font-size: 1.6rem;
 }
 
+.componentDoc_standaloneSecondaryHeader {
+  margin-top: 60px;
+}
+
 a {
   color: var(--mainColor);
 }

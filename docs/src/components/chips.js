@@ -9,14 +9,7 @@ export class Chips extends Component {
     return (
       <div className="componentDoc">
         <h1 className="primaryHeader componentDoc_primaryHeader">Chips</h1>
-        <ul className="componentDoc_links">
-          <li className="componentDoc_linkItem">
-            <a href={materialDocsLink} className="componentDoc_linkAnchor">
-              <i className="componentDoc_icon zmdi zmdi-file-text" /> Material
-              Design Icons Docs
-            </a>
-          </li>
-        </ul>
+
         <p className="paragraph">
           Chips are versatile, compact elements that represent an input,
           attribute, or action. Materialish provides several different
@@ -39,6 +32,17 @@ export class Chips extends Component {
           <li className="icons_link">
             <Link to="/components/filter-chip">Filter Chip</Link>: an
             alternative to checkboxes.
+          </li>
+        </ul>
+        <h2 className="secondaryHeader componentDoc_standaloneSecondaryHeader">
+          Useful Links
+        </h2>
+        <ul className="componentDoc_links">
+          <li className="componentDoc_linkItem">
+            <a href={materialDocsLink} className="componentDoc_linkAnchor">
+              <i className="componentDoc_icon zmdi zmdi-file-text" /> Material
+              Guidelines
+            </a>
           </li>
         </ul>
       </div>
