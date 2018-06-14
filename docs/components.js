@@ -42,6 +42,13 @@ export default [
     component: 'src/components/component-doc',
   },
   {
+    name: 'Inline Spinner',
+    url: 'inline-spinner',
+    componentKey: 'inline-spinner',
+    description: 'An InlineSpinner is a nondeterministic loading indicator.',
+    component: 'src/components/component-doc',
+  },
+  {
     name: 'Radio Button',
     url: 'radio',
     componentKey: 'radio',
