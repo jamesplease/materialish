@@ -72,9 +72,11 @@ export class ComponentDoc extends Component {
                 />
               )}
               <div className="componentDoc_note">
-                <span className="componentDoc_noteEmoji">🙌</span> Heads up!
-                This code is editable. The preview above will update to reflect
-                your changes.
+                <div className="componentDoc_noteContent">
+                  <span className="componentDoc_noteEmoji">🙌</span> Heads up!
+                  This code is editable. The preview above will update to
+                  reflect your changes.
+                </div>
               </div>
               <Editor
                 style={{

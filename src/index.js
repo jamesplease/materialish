@@ -15,6 +15,7 @@ import FilterChip from './filter-chip/filter-chip';
 import Menu from './menu/menu';
 import Snackbar from './snackbar/snackbar';
 import Table from './table/table';
+import Input from './input/input';
 
 export {
   Avatar,
@@ -34,4 +35,5 @@ export {
   Menu,
   Snackbar,
   Table,
+  Input,
 };

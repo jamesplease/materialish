@@ -103,6 +103,14 @@ export default [
     materialDocsLink: 'https://material.io/design/components/data-tables.html',
   },
   {
+    name: 'Input',
+    url: 'input',
+    componentKey: 'input',
+    description: 'An input allows a user to provide or edit a text value.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/text-fields.html',
+  },
+  {
     name: 'Chips',
     url: 'chips',
     componentKey: 'chips',
