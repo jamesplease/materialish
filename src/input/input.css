@@ -1,0 +1,43 @@
+.mt-input {
+  font-size: calc(var(--mt-baseFontSize) * 0.875);
+  font-family: var(--mt-fontFamily, 'Roboto');
+  border: 1px solid #e1e0e0;
+  padding: 0.85em 0.8em;
+  border-radius: 2px;
+  min-width: 300px;
+  outline: none;
+  background-color: #fff;
+}
+
+.mt-input::placeholder {
+  color: #9e9d9d;
+}
+
+.mt-input:focus {
+  box-shadow: 0 0 0 1px #4a8fe2;
+  border: 1px solid #4a8fe2;
+  caret-color: #4a8fe2;
+}
+
+.mt-input-error {
+  border: 1px solid #e69c96;
+}
+
+.mt-input-error:focus {
+  box-shadow: 0 0 0 1px #f34335;
+  border: 1px solid #f34335;
+  caret-color: #f34335;
+}
+
+.mt-input:disabled {
+  border-color: #e1e0e0;
+  background-color: #f9f9f9f9;
+  color: #9e9d9d;
+}
+
+.mt-input:read-only,
+.mt-input:read-only:focus {
+  cursor: default;
+  box-shadow: none;
+  border-color: #e1e0e0;
+}
