@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.12.0 (2018/6/13)
+
+- Adds `nodeRef` to the `Input` component
+
 ### v0.11.0 (2018/6/13)
 
 - New components: Input and InlineSpinner
