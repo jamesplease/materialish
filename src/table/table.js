@@ -230,59 +230,27 @@ class TableExpandedRowContent extends Component {
     );
   }
 
-  componentDidMount() {
-    if (!this.el) return;
-    const bb = this.el.getBoundingClientRect();
-    this.el.style.setProperty(
-      '--mt-table-cellHeight',
-      this.props.open ? `${bb.height}px` : 0
-    );
+  getSnapshotBeforeUpdate() {
+    return this.el ? this.el.getBoundingClientRect() : null;
   }
 
-  componentDidUpdate() {
-    if (this.timeout) {
-      clearTimeout(this.timeout);
-      this.timeout = null;
-    }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (snapshot && this.el) {
+      if (prevProps.open !== this.props.open) {
+        const bb = this.el.getBoundingClientRect();
+        this.el.style.height = `${snapshot.height}px`;
 
-    if (!this.el) return;
-
-    const initialBb = this.el.getBoundingClientRect();
-    this.el.style.transition = 'none';
-    this.el.style.display = 'block';
-    this.el.style.height = 'auto';
-    const bb = this.el.getBoundingClientRect();
-    this.el.style.height = null;
-    this.el.style.transition = null;
-    this.el.style.display = null;
-
-    const duration = getComputedStyle(this.el).getPropertyValue(
-      '--mt-table-opening-duration'
-    );
-
-    if (!this.props.open) {
-      if (initialBb.height) {
-        this.el.style.setProperty(
-          '--mt-table-cellHeight',
-          `${initialBb.height}px`
-        );
         requestAnimationFrame(() => {
-          this.el && this.el.style.setProperty('--mt-table-cellHeight', 0);
+          requestAnimationFrame(() => {
+            this.el.style.transition = 'height .2s ease-out';
+            this.el.style.height = `${bb.height}px`;
+            setTimeout(() => {
+              this.el.style = '';
+            }, 200);
+          });
         });
-        return;
       }
-      this.el.style.setProperty('--mt-table-cellHeight', 0);
-      return;
     }
-
-    requestAnimationFrame(() => {
-      if (!this.el) return;
-
-      this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
-      this.timeout = setTimeout(() => {
-        this.el && this.el.style.setProperty('--mt-table-cellHeight', 'auto');
-      }, duration);
-    });
   }
 
   getRef = el => {

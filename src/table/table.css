@@ -32,12 +32,14 @@
 }
 
 .mt-table_expandedRowContent {
-  --mt-table-opening-duration: 200;
   flex-basis: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  height: var(--mt-table-cellHeight);
-  transition: height calc(1ms * var(--mt-table-opening-duration)) ease-out;
+  height: 0;
+}
+
+.mt-table_expandedRowContent-open {
+  height: auto;
 }
 
 .mt-table_row:after {
