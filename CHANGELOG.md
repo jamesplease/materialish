@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.12.1 (2018/6/18)
+
+- Fixes a bug in the Table.ExpandedRowContent
+
 ### v0.12.0 (2018/6/13)
 
 - Adds `nodeRef` to the `Input` component
