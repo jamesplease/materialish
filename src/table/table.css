@@ -35,8 +35,11 @@
   flex-basis: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  height: var(--mt-table-cellHeight);
-  transition: height 0.2s ease-out;
+  height: 0;
+}
+
+.mt-table_expandedRowContent-open {
+  height: auto;
 }
 
 .mt-table_row:after {

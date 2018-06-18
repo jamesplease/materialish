@@ -230,53 +230,27 @@ class TableExpandedRowContent extends Component {
     );
   }
 
-  componentDidMount() {
-    if (!this.el) return;
-    const bb = this.el.getBoundingClientRect();
-    this.el.style.setProperty(
-      '--mt-table-cellHeight',
-      this.props.open ? `${bb.height}px` : 0
-    );
+  getSnapshotBeforeUpdate() {
+    return this.el ? this.el.getBoundingClientRect() : null;
   }
 
-  componentDidUpdate() {
-    if (!this.el) return;
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (snapshot && this.el) {
+      if (prevProps.open !== this.props.open) {
+        const bb = this.el.getBoundingClientRect();
+        this.el.style.height = `${snapshot.height}px`;
 
-    const initialBb = this.el.getBoundingClientRect();
-    this.el.style.transition = 'none';
-    this.el.style.display = 'block';
-    this.el.style.height = 'auto';
-    const bb = this.el.getBoundingClientRect();
-    this.el.style.height = null;
-    this.el.style.transition = null;
-    this.el.style.display = null;
-
-    if (!this.props.open) {
-      if (initialBb.height) {
-        this.el.style.setProperty(
-          '--mt-table-cellHeight',
-          `${initialBb.height}px`
-        );
         requestAnimationFrame(() => {
-          this.el && this.el.style.setProperty('--mt-table-cellHeight', 0);
+          requestAnimationFrame(() => {
+            this.el.style.transition = 'height .2s ease-out';
+            this.el.style.height = `${bb.height}px`;
+            setTimeout(() => {
+              this.el.style = '';
+            }, 200);
+          });
         });
-        return;
       }
-      this.el.style.setProperty('--mt-table-cellHeight', 0);
-      return;
     }
-
-    requestAnimationFrame(() => {
-      if (!this.el) return;
-      this.el.style.setProperty('--mt-table-cellHeight', `${bb.height}px`);
-      this.el.addEventListener(
-        'transitionend',
-        () => {
-          this.el && this.el.style.setProperty('--mt-table-cellHeight', 'auto');
-        },
-        { once: true }
-      );
-    });
   }
 
   getRef = el => {
