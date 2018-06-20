@@ -17,6 +17,7 @@ import Snackbar from './snackbar/snackbar';
 import Table from './table/table';
 import Input from './input/input';
 import IconButton from './icon-button/icon-button';
+import Field from './field/field';
 
 export {
   Avatar,
@@ -38,4 +39,5 @@ export {
   Table,
   Input,
   IconButton,
+  Field,
 };

@@ -51,14 +51,37 @@ export default [
     component: 'src/components/component-doc',
     materialDocsLink: 'https://material.io/design/components/data-tables.html',
   },
+
   {
-    name: 'Input',
-    url: 'input',
-    componentKey: 'input',
-    editorHeight: '350px',
-    description: 'An input allows a user to provide or edit a text value.',
-    component: 'src/components/component-doc',
-    materialDocsLink: 'https://material.io/design/components/text-fields.html',
+    name: 'Text Fields',
+    url: 'text-fields',
+    componentKey: 'text-fields',
+    description: 'Text fields let users enter and edit text.',
+    component: 'src/components/text-fields',
+    materialDocsLink:
+      'https://material.io/design/components/progress-indicators.html#',
+    children: [
+      {
+        name: 'Field',
+        url: 'field',
+        componentKey: 'field',
+        editorHeight: '370px',
+        description: 'A field is an input with a label and error message.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/text-fields.html',
+      },
+      {
+        name: 'Input',
+        url: 'input',
+        componentKey: 'input',
+        editorHeight: '350px',
+        description: 'An input allows a user to provide or edit a text value.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/text-fields.html',
+      },
+    ],
   },
   {
     name: 'Progress Indicators',
