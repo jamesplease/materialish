@@ -79,9 +79,10 @@
 
 .nav_navSubLink,
 .nav_navLink {
-  display: block;
+  display: flex;
   font-size: 0.9rem;
-  padding: 13px calc(var(--standardContentPadding) + 25px);
+  padding: 13px var(--standardContentPadding) 13px
+    calc(var(--standardContentPadding) + 25px);
   -webkit-font-smoothing: antialiased;
   user-select: none;
   color: #616161;
@@ -91,6 +92,16 @@
 
 .nav_navSubLink {
   padding-left: calc(var(--standardContentPadding) + 45px);
+}
+
+.nav_expandIcon {
+  will-change: transform;
+  transition: transform 200ms;
+  margin-left: auto;
+}
+
+.nav_expandIcon-open {
+  transform: rotate(90deg);
 }
 
 @media (max-width: 1000px) {
