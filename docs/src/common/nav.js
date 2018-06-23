@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
 import _ from 'lodash';
-import { Link, withSiteData } from 'react-static';
+import { Link, withSiteData, withRouteData } from 'react-static';
 import { Expandable } from 'materialish';
 import IconKeyboardArrowRight from 'materialish/icon-keyboard-arrow-right';
 import Overlay from './overlay';
@@ -79,7 +79,7 @@ export class Nav extends Component {
               <ul className="nav_navSubList">
                 {sortedComponentsData.map(component => {
                   const hasChildren = Boolean(_.size(component.children));
-                  const isOpen = Boolean(openStates[component.name]);
+                  const isOpen = Boolean(openStates[component.componentKey]);
 
                   const arrowClassnames = classnames('nav_expandIcon', {
                     'nav_expandIcon-open': isOpen,
@@ -97,7 +97,7 @@ export class Nav extends Component {
                           this.setState({
                             openStates: {
                               ...openStates,
-                              [component.name]: true,
+                              [component.componentKey]: true,
                             },
                           });
                         }}>
@@ -114,7 +114,7 @@ export class Nav extends Component {
                               this.setState({
                                 openStates: {
                                   ...openStates,
-                                  [component.name]: !isOpen,
+                                  [component.componentKey]: !isOpen,
                                 },
                               });
                             }}
@@ -154,9 +154,20 @@ export class Nav extends Component {
     );
   }
 
-  state = {
-    openStates: {},
-  };
+  constructor(props) {
+    super(props);
+
+    const componentToOpen = props.parentComponent
+      ? props.parentComponent
+      : props.component;
+    const keyToOpen = componentToOpen.componentKey;
+
+    this.state = {
+      openStates: {
+        [keyToOpen]: true,
+      },
+    };
+  }
 
   onNavigate = () => {
     const { isMenuOpen, onToggleMenu } = this.props;
@@ -167,4 +178,4 @@ export class Nav extends Component {
   };
 }
 
-export default withSiteData(Nav);
+export default withSiteData(withRouteData(Nav));

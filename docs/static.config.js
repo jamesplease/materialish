@@ -120,6 +120,7 @@ export default {
               component: child.component,
               getData: async () => ({
                 component: child,
+                parentComponent: component,
                 markdown: readmes[child.componentKey],
                 example: examples[child.componentKey],
               }),
