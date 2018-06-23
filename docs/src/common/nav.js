@@ -104,9 +104,23 @@ export class Nav extends Component {
                         {component.name}
                         {hasChildren && (
                           <IconKeyboardArrowRight
+                            tabIndex="0"
                             className={arrowClassnames}
                             fill="#888"
                             size="28px"
+                            onKeyPress={e => {
+                              if (e.key === 'Enter') {
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                this.setState({
+                                  openStates: {
+                                    ...openStates,
+                                    [component.componentKey]: !isOpen,
+                                  },
+                                });
+                              }
+                            }}
                             onClick={e => {
                               e.stopPropagation();
                               e.preventDefault();
@@ -130,6 +144,7 @@ export class Nav extends Component {
                                   key={childComponent.name}
                                   className="nav_navSubListItem">
                                   <Link
+                                    tabIndex={isOpen ? 0 : -1}
                                     exact
                                     to={`/components/${childComponent.url}`}
                                     className="nav_navSubLink"

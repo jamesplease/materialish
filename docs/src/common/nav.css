@@ -33,9 +33,10 @@
   padding: 0;
 }
 
-.nav_subNavLink,
+.nav_navSubLink,
 .nav_navLink,
 .nav_navSectionLink {
+  outline: none;
   color: #222;
   text-decoration: none;
 }
@@ -73,7 +74,10 @@
 .nav_navSectionLink.active:after,
 .nav_navSectionLink:hover:after,
 .nav_navLink.active:after,
-.nav_navLink:hover:after {
+.nav_navLink:hover:after,
+.nav_navLink:focus:after,
+.nav_navSectionLink:focus:after,
+.nav_navSubLink:focus:after {
   opacity: 1;
 }
 
@@ -101,8 +105,10 @@
   padding: 6px;
   cursor: pointer;
   border-radius: 100%;
+  outline: none;
 }
 
+.nav_expandIcon:focus,
 .nav_expandIcon:hover {
   background-color: rgba(0, 0, 0, 0.07);
 }

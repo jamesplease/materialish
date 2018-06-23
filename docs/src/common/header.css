@@ -17,16 +17,29 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.header_logoLink,
+.header_appLink {
+  outline: none;
+}
+
 .header_appLink {
   color: #fff;
   text-decoration: none;
   font-weight: normal;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  padding: 3px 5px;
+}
+
+.header_appLink:focus {
+  /* border-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .materialishLogo {
   width: 33px;
   position: relative;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 /* See: https://github.com/nozzle/react-static/issues/622 */
@@ -42,6 +55,15 @@
   margin-left: auto;
   font-size: 1.5rem;
   color: #fff;
+  width: 34px;
+  text-align: center;
+  padding: 3px 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.header_githubLink:focus {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 @media (max-width: 1000px) {
