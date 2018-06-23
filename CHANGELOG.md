@@ -1,5 +1,13 @@
 # Changelog
 
+### v0.13.0 (2018/6/22)
+
+- New components: IconButton, Field
+- Removes box shadow on inputs on iOS
+- Adds support for monochromatic spinners
+- Add ability to configure the focus border of Inputs
+- Importing `materialish.css` is now the recommended way to load the CSS for the components
+
 ### v0.12.1 (2018/6/18)
 
 - Fixes a bug in the Table.ExpandedRowContent
