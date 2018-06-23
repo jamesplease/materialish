@@ -45,7 +45,8 @@
   opacity: 1;
 }
 
-.mt-menu_item-separator {
+.mt-menu_separator {
+  height: 0px;
   border-bottom: 1px solid #e3e2e2;
 }
 
