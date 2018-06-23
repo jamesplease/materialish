@@ -11,6 +11,8 @@
   min-width: 300px;
   outline: none;
   background-color: #fff;
+  /* Removes the box-shadow from iOS */
+  -webkit-appearance: none;
 }
 
 .mt-input::placeholder {
