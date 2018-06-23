@@ -2,7 +2,7 @@
 
 ```jsx
 import { Dialog } from 'materialish';
-import 'materialish/dialog.css';
+import 'materialish/materialish.css';
 ```
 
 Take note of the fact that a dialog is made up of several components. To see how they

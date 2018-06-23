@@ -2,7 +2,7 @@
 
 ```jsx
 import { Checkbox } from 'materialish';
-import 'materialish/checkbox.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

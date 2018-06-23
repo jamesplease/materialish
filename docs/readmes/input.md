@@ -2,7 +2,7 @@
 
 ```jsx
 import { Input } from 'materialish';
-import 'materialish/input.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props
