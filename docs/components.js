@@ -114,11 +114,10 @@ export default [
           'https://material.io/design/components/progress-indicators.html#circular-progress-indicators',
       },
       {
-        name: 'Inline Spinner',
-        url: 'inline-spinner',
-        componentKey: 'inline-spinner',
-        description:
-          'An InlineSpinner is a nondeterministic loading indicator.',
+        name: 'Loading Dots',
+        url: 'loading-dots',
+        componentKey: 'loading-dots',
+        description: 'Loading dots are a nondeterministic loading indicator.',
         component: 'src/components/component-doc',
       },
     ],

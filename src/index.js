@@ -4,7 +4,7 @@ import Checkbox from './checkbox/checkbox';
 import Switch from './switch/switch';
 import Avatar from './avatar/avatar';
 import Spinner from './spinner/spinner';
-import InlineSpinner from './inline-spinner/inline-spinner';
+import LoadingDots from './loading-dots/loading-dots';
 import Radio from './radio/radio';
 import Dialog from './dialog/dialog';
 import Elevation from './elevation/elevation';
@@ -27,7 +27,7 @@ export {
   Checkbox,
   Ripple,
   Spinner,
-  InlineSpinner,
+  LoadingDots,
   Switch,
   Radio,
   Dialog,
