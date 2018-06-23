@@ -34,3 +34,12 @@ import 'materialish/materialish.css';
 | ripple    | true          | No       | Whether or not to display the "ripple" effect when the menu item is clicked |
 | children  |               | No       | The contents to render within the menu item                                 |
 | ...rest   |               | No       | Other props are placed on the root element of the menu item                 |
+
+# `Menu.Separator`
+
+## Props
+
+| Prop Name | Default Value | Required | Description                                                      |
+| --------- | ------------- | -------- | ---------------------------------------------------------------- |
+| className |               | No       | Additional class name(s) to add to the menu separator            |
+| ...rest   |               | No       | Other props are placed on the root element of the menu separator |

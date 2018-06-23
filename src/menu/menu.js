@@ -22,7 +22,6 @@ class Item extends Component {
   render() {
     const {
       className = '',
-      separator = false,
       selected = false,
       ripple = true,
       children,
@@ -30,7 +29,7 @@ class Item extends Component {
     } = this.props;
     return (
       <div
-        className={`mt-menu_item ${separator ? 'mt-menu_item-separator' : ''} ${
+        className={`mt-menu_item ${
           selected ? 'mt-menu_item-selected' : ''
         } ${className}`}
         {...props}
@@ -60,9 +59,19 @@ class Item extends Component {
 
 Item.propTypes = {
   className: PropTypes.string,
-  separator: PropTypes.bool,
   selected: PropTypes.bool,
   ripple: PropTypes.bool,
 };
 
+function Separator(props) {
+  const { className, rest } = props;
+
+  return <div className={`mt-menu_separator ${className}`} {...rest} />;
+}
+
+Separator.propTypes = {
+  className: PropTypes.string,
+};
+
 Menu.Item = Item;
+Menu.Separator = Separator;
