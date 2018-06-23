@@ -9,4 +9,8 @@ setOptions({
   addonPanelInRight: true,
 });
 
-storiesOf('Spinner', module).add('Regular', () => <Spinner />);
+storiesOf('Spinner', module)
+  .add('Regular', () => <Spinner />)
+  .add('Monochromatic', () => (
+    <Spinner style={{ '--mt-spinnerColor': '#666' }} />
+  ));

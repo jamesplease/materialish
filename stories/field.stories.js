@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
 import { setOptions } from '@storybook/addon-options';
 import '../src/input/input.css';
+import '../src/field/field.css';
 import { Field } from '../src/index';
 
 setOptions({
