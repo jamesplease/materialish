@@ -2,7 +2,7 @@
 
 ```jsx
 import { Radio } from 'materialish';
-import 'materialish/radio.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

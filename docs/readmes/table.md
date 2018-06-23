@@ -2,7 +2,7 @@
 
 ```jsx
 import { Table } from 'materialish';
-import 'materialish/table.css';
+import 'materialish/materialish.css';
 ```
 
 # `Table`

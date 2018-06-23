@@ -2,8 +2,7 @@
 
 ```jsx
 import { ActionChip } from 'materialish';
-import 'materialish/chip.css';
-import 'materialish/ripple.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

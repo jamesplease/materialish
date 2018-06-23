@@ -2,8 +2,7 @@
 
 ```jsx
 import { Field } from 'materialish';
-import 'materialish/field.css';
-import 'materialish/input.css';
+import 'materialish/materialish.css';
 ```
 
 # `Field`

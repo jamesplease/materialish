@@ -2,7 +2,7 @@
 
 ```jsx
 import { Spinner } from 'materialish';
-import 'materialish/spinner.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

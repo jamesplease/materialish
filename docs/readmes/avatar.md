@@ -2,7 +2,7 @@
 
 ```jsx
 import { Avatar } from 'materialish';
-import 'materialish/avatar.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

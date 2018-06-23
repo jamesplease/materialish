@@ -2,8 +2,7 @@
 
 ```jsx
 import { Button } from 'materialish';
-import 'materialish/button.css';
-import 'materialish/ripple.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

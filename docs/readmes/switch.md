@@ -2,7 +2,7 @@
 
 ```jsx
 import { Switch } from 'materialish';
-import 'materialish/switch.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

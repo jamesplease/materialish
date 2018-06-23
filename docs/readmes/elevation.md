@@ -2,7 +2,7 @@
 
 ```jsx
 import { Elevation } from 'materialish';
-import 'materialish/elevation.css';
+import 'materialish/materialish.css';
 ```
 
 ## Props

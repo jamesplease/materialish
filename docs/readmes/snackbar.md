@@ -2,7 +2,7 @@
 
 ```jsx
 import { Snackbar } from 'materialish';
-import 'materialish/snackbar.css';
+import 'materialish/materialish.css';
 ```
 
 Note that Snackbars are frequently used with [Buttons](/components/button).
