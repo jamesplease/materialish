@@ -7,57 +7,6 @@ export default [
     component: 'src/components/component-doc',
   },
   {
-    name: 'Button',
-    url: 'button',
-    componentKey: 'button',
-    description:
-      'A button represents that an action will occur when the user clicks or touches it.',
-    component: 'src/components/component-doc',
-    materialDocsLink: 'https://material.io/guidelines/components/buttons.html',
-  },
-  {
-    name: 'Checkbox',
-    url: 'checkbox',
-    componentKey: 'checkbox',
-    description:
-      'A Checkbox represents a boolean value that can be in one of two states, true or false.',
-    component: 'src/components/component-doc',
-    materialDocsLink:
-      'https://material.io/design/components/selection-controls.html#checkboxes',
-  },
-  {
-    name: 'Switch',
-    url: 'switch',
-    componentKey: 'switch',
-    description: 'A Switch represents a value that can be toggled on or off.',
-    component: 'src/components/component-doc',
-    materialDocsLink:
-      'https://material.io/design/components/selection-controls.html#switches',
-  },
-  {
-    name: 'Spinner',
-    url: 'spinner',
-    componentKey: 'spinner',
-    description: 'A Spinner is a nondeterministic loading indicator.',
-    component: 'src/components/component-doc',
-  },
-  {
-    name: 'Inline Spinner',
-    url: 'inline-spinner',
-    componentKey: 'inline-spinner',
-    description: 'An InlineSpinner is a nondeterministic loading indicator.',
-    component: 'src/components/component-doc',
-  },
-  {
-    name: 'Radio Button',
-    url: 'radio',
-    componentKey: 'radio',
-    description: 'A Radio button represents one option among several choices.',
-    component: 'src/components/component-doc',
-    materialDocsLink:
-      'https://material.io/design/components/selection-controls.html#radio-buttons',
-  },
-  {
     name: 'Dialog',
     url: 'dialog',
     componentKey: 'dialog',
@@ -109,6 +58,97 @@ export default [
     description: 'An input allows a user to provide or edit a text value.',
     component: 'src/components/component-doc',
     materialDocsLink: 'https://material.io/design/components/text-fields.html',
+  },
+  {
+    name: 'Progress Indicators',
+    url: 'progress-indicators',
+    componentKey: 'progress-indicators',
+    description:
+      'Progress indicators provide information regarding the progress of a deterministic or nondeterministic process.',
+    component: 'src/components/progress-indicators',
+    materialDocsLink:
+      'https://material.io/design/components/progress-indicators.html#',
+    children: [
+      {
+        name: 'Spinner',
+        url: 'spinner',
+        componentKey: 'spinner',
+        description: 'A Spinner is a nondeterministic loading indicator.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/progress-indicators.html#circular-progress-indicators',
+      },
+      {
+        name: 'Inline Spinner',
+        url: 'inline-spinner',
+        componentKey: 'inline-spinner',
+        description:
+          'An InlineSpinner is a nondeterministic loading indicator.',
+        component: 'src/components/component-doc',
+      },
+    ],
+  },
+  {
+    name: 'Selection Controls',
+    url: 'selection-controls',
+    componentKey: 'selection-controls',
+    description: 'Selection controls allow the user to select options.',
+    component: 'src/components/selection-controls',
+    materialDocsLink:
+      'https://material.io/design/components/selection-controls.html',
+    children: [
+      {
+        name: 'Checkbox',
+        url: 'checkbox',
+        componentKey: 'checkbox',
+        description:
+          'A Checkbox represents a boolean value that can be in one of two states, true or false.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/selection-controls.html#checkboxes',
+      },
+      {
+        name: 'Radio Button',
+        url: 'radio',
+        componentKey: 'radio',
+        description:
+          'A Radio button represents one option among several choices.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/selection-controls.html#radio-buttons',
+      },
+      {
+        name: 'Switch',
+        url: 'switch',
+        componentKey: 'switch',
+        description:
+          'A Switch represents a value that can be toggled on or off.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/design/components/selection-controls.html#switches',
+      },
+    ],
+  },
+  {
+    name: 'Buttons',
+    url: 'buttons',
+    componentKey: 'buttons',
+    description:
+      'Button represent that an action will occur when the user clicks or touches them.',
+    component: 'src/components/buttons',
+    materialDocsLink: 'https://material.io/design/components/buttons.html',
+    children: [
+      {
+        name: 'Button',
+        url: 'button',
+        componentKey: 'button',
+        description:
+          'A button represents that an action will occur when the user clicks or touches it.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/guidelines/components/buttons.html',
+      },
+    ],
   },
   {
     name: 'Chips',

@@ -1,36 +1,27 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
 
-export class Chips extends Component {
+export class Buttons extends Component {
   render() {
     const { component } = this.props;
     const { materialDocsLink } = component;
 
     return (
       <div className="componentDoc">
-        <h1 className="primaryHeader componentDoc_primaryHeader">Chips</h1>
+        <h1 className="primaryHeader componentDoc_primaryHeader">Buttons</h1>
         <p className="paragraph">
-          Chips are versatile, compact elements that represent an input,
-          attribute, or action. Materialish provides several different
-          Components that reflect the different uses of Chips.
+          Button represent that an action will occur when the user clicks or
+          touches them.
         </p>
         <p />
         <ul className="icons_links">
           <li className="icons_link">
-            <Link to="/components/input-chip">Input Chip</Link>: represents an
-            entity or different attributes.
+            <Link to="/components/button">Button</Link>: a button that has text,
+            and may optionally also include an icon
           </li>
           <li className="icons_link">
-            <Link to="/components/action-chip">Action Chip</Link>: an
-            alternative to buttons.
-          </li>
-          <li className="icons_link">
-            <Link to="/components/choice-chip">Choice Chip</Link>: an
-            alternative to radio buttons.
-          </li>
-          <li className="icons_link">
-            <Link to="/components/filter-chip">Filter Chip</Link>: an
-            alternative to checkboxes.
+            <Link to="/components/icon-button">Icon Button</Link>: a round
+            button with an icon, and no text
           </li>
         </ul>
         <h2 className="secondaryHeader componentDoc_standaloneSecondaryHeader">
@@ -49,4 +40,4 @@ export class Chips extends Component {
   }
 }
 
-export default withRouteData(Chips);
+export default withRouteData(Buttons);
