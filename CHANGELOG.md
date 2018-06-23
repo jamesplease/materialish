@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.14.0 (2018/6/23)
+
+- New component: `ExpansionPanel`
+- The separator for Menus is now a standalone component, `Menu.Separator`, rather than a prop on a `Menu.Item`
+- `InlineSpinner` has been renamed to `LoadingDots`
+
 ### v0.13.0 (2018/6/22)
 
 - New components: IconButton, Field

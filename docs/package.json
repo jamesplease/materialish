@@ -21,7 +21,7 @@
     "codemirror": "^5.36.0",
     "fetch-dedupe": "^3.0.0",
     "highlight.js": "^9.12.0",
-    "materialish": "0.13.0",
+    "materialish": "0.14.0",
     "no-scroll": "2.1.1",
     "prop-types": "^15.6.1",
     "react": "^16.0.0",

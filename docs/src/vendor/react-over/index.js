@@ -23,7 +23,7 @@ class Provider extends Component {
     return (
       <OverContext.Provider value={this.providerValue}>
         {children}
-        {ReactDOM.createPortal(this.getPortalChild(), document.body)}
+        {this.getPortal()}
       </OverContext.Provider>
     );
   }
@@ -53,6 +53,14 @@ class Provider extends Component {
     // overelement that is currently visible. Within render, we loop the descriptions
     // and render overs.
     activeOverDescriptions: {},
+  };
+
+  getPortal = () => {
+    if (typeof document !== 'undefined') {
+      return ReactDOM.createPortal(this.getPortalChild(), document.body);
+    } else {
+      return null;
+    }
   };
 
   getPortalChild = () => {
