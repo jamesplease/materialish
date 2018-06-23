@@ -1,12 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
-import '../src/inline-spinner/inline-spinner.css';
-import { InlineSpinner } from '../src/index';
+import '../src/loading-dots/loading-dots.css';
+import { LoadingDots } from '../src/index';
 
 setOptions({
   name: 'Materialish',
   addonPanelInRight: true,
 });
 
-storiesOf('InlineSpinner', module).add('Regular', () => <InlineSpinner />);
+storiesOf('LoadingDots', module).add('Regular', () => <LoadingDots />);

@@ -22,7 +22,7 @@ export class ProgressIndicators extends Component {
             loading indicator
           </li>
           <li className="icons_link">
-            <Link to="/components/inline-spinner">Inline Spinner</Link>: a
+            <Link to="/components/loading-dots">Loading Dots</Link>: a
             nondeterministic loading indicator
           </li>
         </ul>

@@ -1,0 +1,26 @@
+.mt-loadingDots_circle {
+  fill: var(--mt-loadingDots-fill, #000);
+  animation: mt-loadingDots-jump var(--mt-loadingDots-animationDuration, 300ms)
+    cubic-bezier(0.68, 0.06, 0.68, 0.42) infinite alternate;
+  transform-origin: center;
+  animation-delay: var(--mt-loadingDots-delay, 0);
+  will-change: transform;
+}
+
+.mt-loadingDots_two {
+  --mt-loadingDots-delay: 0.1s;
+}
+
+.mt-loadingDots_three {
+  --mt-loadingDots-delay: 0.2s;
+}
+
+@keyframes mt-loadingDots-jump {
+  0%,
+  10% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 15px, 0);
+  }
+}
