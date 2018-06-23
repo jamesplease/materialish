@@ -22,6 +22,7 @@ function areEqualShallow(a, b) {
 export default class Table extends Component {
   render() {
     const { children, loading = false, className = '', ...props } = this.props;
+
     return (
       <TableContext.Provider value={this.state.context}>
         <div
@@ -53,6 +54,11 @@ export default class Table extends Component {
   };
 }
 
+Table.propTypes = {
+  className: PropTypes.string,
+  loading: PropTypes.bool,
+};
+
 class TableHead extends Component {
   render() {
     const { children, className = '', ...props } = this.props;
@@ -66,6 +72,10 @@ class TableHead extends Component {
     );
   }
 }
+
+TableHead.propTypes = {
+  className: PropTypes.string,
+};
 
 class TableHeadRow extends Component {
   render() {
@@ -88,6 +98,7 @@ class TableHeadRow extends Component {
 
   componentDidMount() {
     const { children, setColumnsProps } = this.props;
+
     const map = {};
     React.Children.forEach(children, (child, index) => {
       Object.keys(child.props).forEach(propName => {
@@ -97,11 +108,13 @@ class TableHeadRow extends Component {
         }
       });
     });
+
     setColumnsProps(map);
   }
 
   componentDidUpdate() {
     const { children, setColumnsProps, columnProps } = this.props;
+
     const map = {};
     React.Children.forEach(children, (child, index) => {
       Object.keys(child.props).forEach(propName => {
@@ -112,7 +125,6 @@ class TableHeadRow extends Component {
       });
     });
 
-    //Object is empty
     if (Object.keys(map).length === 0 && map.constructor === Object) {
       return;
     }
@@ -135,6 +147,10 @@ const WrappedTableHeadRow = props => {
   );
 };
 
+WrappedTableHeadRow.propTypes = {
+  className: PropTypes.string,
+};
+
 class TableHeadCell extends Component {
   render() {
     const { children, className = '', ...props } = this.props;
@@ -149,6 +165,12 @@ class TableHeadCell extends Component {
   }
 }
 
+TableHeadCell.propTypes = {
+  className: PropTypes.string,
+  width: PropTypes.string,
+  rightBorder: PropTypes.bool,
+};
+
 class TableBody extends Component {
   render() {
     const { className = '', children, ...props } = this.props;
@@ -159,6 +181,10 @@ class TableBody extends Component {
     );
   }
 }
+
+TableBody.propTypes = {
+  className: PropTypes.string,
+};
 
 class TableRow extends Component {
   render() {
@@ -187,6 +213,10 @@ class TableRow extends Component {
   }
 }
 
+TableRow.propTypes = {
+  className: PropTypes.string,
+};
+
 class TableCell extends Component {
   render() {
     const {
@@ -214,6 +244,12 @@ class TableCell extends Component {
     );
   }
 }
+
+TableCell.propTypes = {
+  className: PropTypes.string,
+  width: PropTypes.string,
+  rightBorder: PropTypes.bool,
+};
 
 class TableExpandedRowContent extends Component {
   render() {
