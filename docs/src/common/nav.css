@@ -80,6 +80,7 @@
 .nav_navSubLink,
 .nav_navLink {
   display: flex;
+  align-items: center;
   font-size: 0.9rem;
   padding: 13px var(--standardContentPadding) 13px
     calc(var(--standardContentPadding) + 25px);
@@ -87,7 +88,6 @@
   user-select: none;
   color: #616161;
   position: relative;
-  z-index: 0;
 }
 
 .nav_navSubLink {
@@ -98,6 +98,13 @@
   will-change: transform;
   transition: transform 200ms;
   margin-left: auto;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.nav_expandIcon:hover {
+  background-color: rgba(0, 0, 0, 0.07);
 }
 
 .nav_expandIcon-open {

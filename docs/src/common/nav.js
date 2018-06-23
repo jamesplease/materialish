@@ -94,20 +94,30 @@ export class Nav extends Component {
                         onClick={() => {
                           this.onNavigate();
 
-                          if (hasChildren) {
-                            this.setState({
-                              openStates: {
-                                ...openStates,
-                                [component.name]: !isOpen,
-                              },
-                            });
-                          }
+                          this.setState({
+                            openStates: {
+                              ...openStates,
+                              [component.name]: true,
+                            },
+                          });
                         }}>
                         {component.name}
                         {hasChildren && (
                           <IconKeyboardArrowRight
                             className={arrowClassnames}
                             fill="#888"
+                            size="28px"
+                            onClick={e => {
+                              e.stopPropagation();
+                              e.preventDefault();
+
+                              this.setState({
+                                openStates: {
+                                  ...openStates,
+                                  [component.name]: !isOpen,
+                                },
+                              });
+                            }}
                           />
                         )}
                       </Link>
