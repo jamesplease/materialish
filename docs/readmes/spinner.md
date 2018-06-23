@@ -18,3 +18,4 @@ import 'materialish/materialish.css';
 | Variable          | Default Value | Description                                        |
 | ----------------- | ------------- | -------------------------------------------------- |
 | --mt-baseFontSize | 1rem          | The size of the Spinner is based off of this value |
+| --mt-spinnerColor |               | Provide a color for a monochrome spinner           |

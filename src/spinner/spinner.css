@@ -23,19 +23,19 @@
 
 @keyframes mt-spinner-colors {
   0% {
-    stroke: #4285f4;
+    stroke: var(--mt-spinnerColor, #4285f4);
   }
   25% {
-    stroke: #de3e35;
+    stroke: var(--mt-spinnerColor, #de3e35);
   }
   50% {
-    stroke: #f7c223;
+    stroke: var(--mt-spinnerColor, #f7c223);
   }
   75% {
-    stroke: #1b9a59;
+    stroke: var(--mt-spinnerColor, #1b9a59);
   }
   100% {
-    stroke: #4285f4;
+    stroke: var(--mt-spinnerColor, #4285f4);
   }
 }
 
