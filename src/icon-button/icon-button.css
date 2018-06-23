@@ -1,0 +1,64 @@
+.mt-iconButton {
+  --_mt-iconButton-color: var(--mt-iconButton-color, #6d6c6c);
+  --_mt-iconButton-disabledColor: var(
+    --mt-iconButton-disabledColor,
+    rgba(0, 0, 0, 0.38)
+  );
+
+  all: initial;
+  font-size: calc(1.5 * var(--mt-baseFontSize, 1rem));
+  border: none;
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  touch-action: manipulation;
+  z-index: 0;
+
+  --mt-ripple-color: var(--_mt-iconButton-color);
+  --mt-ripple-spread: 1.2;
+}
+
+.mt-iconButton:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--_mt-iconButton-color);
+  opacity: 0;
+  border-radius: 2em;
+  z-index: -1;
+}
+
+.mt-iconButton:hover:after,
+.mt-iconButton:focus:after {
+  opacity: 0.1;
+}
+
+.mt-iconButton > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  fill: var(--_mt-iconButton-color);
+  pointer-events: none;
+}
+
+.mt-iconButton:disabled {
+  cursor: default;
+}
+
+.mt-iconButton:disabled > svg {
+  fill: var(--_mt-iconButton-disabledColor);
+}
+
+.mt-iconButton:disabled:hover:after,
+.mt-iconButton:disabled:focus:after {
+  opacity: 0;
+}

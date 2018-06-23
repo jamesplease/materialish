@@ -149,6 +149,16 @@ export default [
         materialDocsLink:
           'https://material.io/guidelines/components/buttons.html',
       },
+      {
+        name: 'Icon Button',
+        url: 'icon-button',
+        componentKey: 'icon-button',
+        description:
+          'An icon button represents that an action will occur when the user clicks or touches it.',
+        component: 'src/components/component-doc',
+        materialDocsLink:
+          'https://material.io/guidelines/components/buttons.html',
+      },
     ],
   },
   {
