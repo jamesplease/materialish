@@ -11,6 +11,7 @@ const homeMarkdown = fs.readFileSync('./src/home/index.md', fsOptions);
 const readmes = {
   avatar: fs.readFileSync('./readmes/avatar.md', fsOptions),
   button: fs.readFileSync('./readmes/button.md', fsOptions),
+  'icon-button': fs.readFileSync('./readmes/icon-button.md', fsOptions),
   checkbox: fs.readFileSync('./readmes/checkbox.md', fsOptions),
   switch: fs.readFileSync('./readmes/switch.md', fsOptions),
   icons: fs.readFileSync('./readmes/icons.md', fsOptions),
@@ -32,6 +33,7 @@ const readmes = {
 const examples = {
   avatar: fs.readFileSync('./examples/avatar.js', fsOptions),
   button: fs.readFileSync('./examples/button.js', fsOptions),
+  'icon-button': fs.readFileSync('./examples/icon-button.js', fsOptions),
   checkbox: fs.readFileSync('./examples/checkbox.js', fsOptions),
   switch: fs.readFileSync('./examples/switch.js', fsOptions),
   icons: fs.readFileSync('./examples/icons.js', fsOptions),

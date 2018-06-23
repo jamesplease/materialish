@@ -6,7 +6,6 @@
   );
 
   all: initial;
-  font-family: var(--mt-fontFamily, 'Roboto');
   font-size: calc(1.5 * var(--mt-baseFontSize, 1rem));
   border: none;
   position: relative;
