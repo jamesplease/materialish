@@ -24,13 +24,7 @@ storiesOf('ExpansionPanel', module)
             lobortis odio, a accumsan purus. Vivamus suscipit magna et nisl
             mattis vestibulum. Donec interdum leo elementum eros fringilla, ut
             varius velit volutpat. In porttitor tempus purus id lacinia.
-            Phasellus vitae blandit tellus, fermentum dictum libero. Nullam
-            lacus leo, convallis ut mattis non, luctus eu tellus. Cras elit
-            nisi, ultrices id fringilla quis, elementum at neque. Nam ut
-            pulvinar erat. Praesent tristique blandit erat, eu tincidunt lacus
-            congue ut. Morbi fermentum tincidunt velit, non ullamcorper nulla
-            vulputate at. Morbi est lectus, luctus et finibus id, lobortis at
-            ex.
+            Phasellus vitae blandit tellus, fermentum dictum libero.
           </p>
         </ExpansionPanel.Body>
       </ExpansionPanel>
@@ -44,12 +38,7 @@ storiesOf('ExpansionPanel', module)
             mattis vestibulum. Donec interdum leo elementum eros fringilla, ut
             varius velit volutpat. In porttitor tempus purus id lacinia.
             Phasellus vitae blandit tellus, fermentum dictum libero. Nullam
-            lacus leo, convallis ut mattis non, luctus eu tellus. Cras elit
-            nisi, ultrices id fringilla quis, elementum at neque. Nam ut
-            pulvinar erat. Praesent tristique blandit erat, eu tincidunt lacus
-            congue ut. Morbi fermentum tincidunt velit, non ullamcorper nulla
-            vulputate at. Morbi est lectus, luctus et finibus id, lobortis at
-            ex.
+            lacus leo, convallis ut mattis non, luctus eu tellus.
           </p>
         </ExpansionPanel.Body>
       </ExpansionPanel>
@@ -59,16 +48,7 @@ storiesOf('ExpansionPanel', module)
           <p style={{ margin: 0 }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque fermentum sed magna quis interdum. Suspendisse vitae
-            lobortis odio, a accumsan purus. Vivamus suscipit magna et nisl
-            mattis vestibulum. Donec interdum leo elementum eros fringilla, ut
-            varius velit volutpat. In porttitor tempus purus id lacinia.
-            Phasellus vitae blandit tellus, fermentum dictum libero. Nullam
-            lacus leo, convallis ut mattis non, luctus eu tellus. Cras elit
-            nisi, ultrices id fringilla quis, elementum at neque. Nam ut
-            pulvinar erat. Praesent tristique blandit erat, eu tincidunt lacus
-            congue ut. Morbi fermentum tincidunt velit, non ullamcorper nulla
-            vulputate at. Morbi est lectus, luctus et finibus id, lobortis at
-            ex.
+            lobortis odio, a accumsan purus.
           </p>
         </ExpansionPanel.Body>
       </ExpansionPanel>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './expansion-panel.css';
 import Expandable from '../expandable/expandable';
 import IconKeyboardArrowDown from '../icons/icon-keyboard-arrow-down';
 

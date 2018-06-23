@@ -51,7 +51,16 @@ export default [
     component: 'src/components/component-doc',
     materialDocsLink: 'https://material.io/design/components/data-tables.html',
   },
-
+  {
+    name: 'Expansion Panel',
+    url: 'expansion-panel',
+    componentKey: 'expansion-panel',
+    editorHeight: '900px',
+    wrapperStyle: { width: '100%' },
+    description:
+      'Expansion panels allow you to place details in a container that is initially hidden, but can be opened by the user.',
+    component: 'src/components/component-doc',
+  },
   {
     name: 'Text Fields',
     url: 'text-fields',

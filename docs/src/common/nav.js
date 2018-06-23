@@ -175,12 +175,15 @@ export class Nav extends Component {
     const componentToOpen = props.parentComponent
       ? props.parentComponent
       : props.component;
-    const keyToOpen = componentToOpen.componentKey;
+
+    const openStates = {};
+
+    if (componentToOpen) {
+      openStates[componentToOpen.componentKey] = true;
+    }
 
     this.state = {
-      openStates: {
-        [keyToOpen]: true,
-      },
+      openStates,
     };
   }
 
