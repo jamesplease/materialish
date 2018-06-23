@@ -38,28 +38,17 @@
   position: relative;
   border-radius: 5px;
   padding: 15px 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: box-shadow 0.2s;
 }
 
-.iconsCatalog_icon:after {
-  content: '';
-  background-color: #f2f2f2;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  border-radius: inherit;
-  will-change: opacity;
-  transition: opacity 150ms ease-in-out;
+.iconsCatalog_icon:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
-.iconsCatalog_icon:hover:after {
-  opacity: 1;
-}
-
-.iconsCatalog_icon > svg {
+.iconsCatalog_icon > svg,
+.iconsCatalog_iconDetails > svg {
   margin-bottom: 10px;
 }
 
@@ -68,6 +57,7 @@
   grid-column-gap: 20px;
   grid-row-gap: 50px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  padding: 0 5px;
 }
 
 .iconsCatalog_iconClass {
@@ -87,13 +77,36 @@
 }
 
 .iconsCatalog_category:first-child {
-  /* border-top: 1px solid #ddd; */
   padding-top: 40px;
 }
 
 .iconsCategory_categoryHeader {
   color: var(--mainColor);
   font-size: 1rem;
+  font-weight: 500;
+}
+
+.iconsCatalog_iconDetails {
+  background: #fff;
+  border-radius: 3px;
+  min-width: 400px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconsCatalog_importStatement {
+  font-size: 0.85rem;
+  margin-top: 15px;
+  background-color: #fafafa;
+  padding: 10px 8px;
+  border-radius: 3px;
+}
+
+.iconsCatalog_iconDetailsName {
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
