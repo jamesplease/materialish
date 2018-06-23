@@ -1,0 +1,55 @@
+.mt-field {
+  --_mt-field-labelColor: var(--mt-field-labelColor, #757575);
+  --_mt-field-labelErrorColor: var(--mt-field-labelErrorColor, #f34335);
+
+  font-size: var(--mt-baseFontSize, 1rem);
+  font-family: var(--mt-fontFamily, 'Roboto');
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.mt-field_label {
+  font-size: 0.875em;
+  padding: 0 0 0.7em;
+  color: var(--_mt-field-labelColor);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.mt-field_label > svg {
+  fill: var(--_mt-field-labelColor);
+  margin: 0 0.2em;
+}
+
+.mt-field_errorMessage {
+  font-size: 0.875em;
+  padding: 0.7em 0;
+  color: var(--_mt-field-labelErrorColor);
+  display: flex;
+  align-items: center;
+  margin-top: -2.6em;
+}
+
+.mt-field_errorMessage > svg {
+  fill: var(--_mt-field-labelErrorColor);
+  margin: 0 0.2em;
+}
+
+.mt-field_errorMessage > svg:first-child,
+.mt-field_label > svg:first-child {
+  margin: 0 0.2em 0 0;
+}
+
+.mt-field-required > .mt-field_label:after {
+  content: '*';
+  font-size: 1.3em;
+  color: var(--_mt-field-labelErrorColor);
+  position: absolute;
+  right: -0.6em;
+}
+
+.mt-field > .mt-input {
+  display: block;
+  margin-bottom: 2.5em;
+}
