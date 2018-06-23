@@ -65,8 +65,9 @@ export default [
         name: 'Field',
         url: 'field',
         componentKey: 'field',
-        editorHeight: '370px',
-        description: 'A field is an input with a label and error message.',
+        editorHeight: '620px',
+        description:
+          'A field allows a user to edit text, and provides a label and error message.',
         component: 'src/components/component-doc',
         materialDocsLink:
           'https://material.io/design/components/text-fields.html',
@@ -76,7 +77,8 @@ export default [
         url: 'input',
         componentKey: 'input',
         editorHeight: '350px',
-        description: 'An input allows a user to provide or edit a text value.',
+        description:
+          'An input is a standalone text input that allows a user to provide or edit a text value.',
         component: 'src/components/component-doc',
         materialDocsLink:
           'https://material.io/design/components/text-fields.html',
