@@ -25,6 +25,10 @@ import 'materialish/materialish.css';
 | --mt-field-labelColor      | #757575       | The color of the `Field.Label` text                                    |
 | --mt-field-labelErrorColor | #f34335       | The color of the `Field.ErrorMessage` text                             |
 
+# `Field.Input`
+
+This is an alias of [**Input**](/components/input).
+
 # `Field.Label`
 
 ## Props
