@@ -9,7 +9,7 @@
     }
   },
   "rules": {
-    "no-unused-vars": "error",
+    "no-unused-vars": ["error", {"ignoreRestSiblings": true}],
     "no-use-before-define": "error",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error"

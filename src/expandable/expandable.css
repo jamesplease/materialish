@@ -1,0 +1,8 @@
+.mt-expandable {
+  height: 0;
+  overflow: hidden;
+}
+
+.mt-expandable-open {
+  height: auto;
+}
