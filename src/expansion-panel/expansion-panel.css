@@ -1,0 +1,41 @@
+.mt-expansionPanel {
+  font-size: var(--mt-baseFontSize, 1rem);
+  font-family: var(--mt-fontFamily, 'Roboto');
+  display: block;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  background-color: #fff;
+  transition: margin 0.2s ease-out;
+}
+
+.mt-expansionPanel-open {
+  margin: 0 0 1em 0;
+}
+
+.mt-expansionPanel + .mt-expansionPanel-open {
+  margin: 1em 0;
+}
+
+.mt-expansionPanel_header {
+  padding: 0.75em 3em 0.75em 1.5em;
+  position: relative;
+}
+
+.mt-expansionPanel_icon {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #666;
+  position: absolute;
+  right: 1em;
+  top: calc(50% - 0.75em);
+  will-change: transform;
+  transition: transform 0.2s ease-out;
+}
+
+.mt-expansionPanel-open .mt-expansionPanel_icon {
+  transform: rotate(180deg);
+}
+
+.mt-expansionPanel_bodyWrapper {
+  padding: 0.5em 1.5em 1.5em;
+}

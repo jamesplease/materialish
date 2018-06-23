@@ -9,7 +9,7 @@
     "lint": "eslint components stories",
     "prepublish": "in-publish && npm run build || not-in-publish",
     "postpublish": "npm run clean",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "npm run icons && start-storybook -p 9001 -c .storybook",
     "clean": "rimraf ./dist ./es ./tmp ./lib ./*.js ./*.css ./material-icons-repo ./icons ./icons-src ./icons-index-src icons-data.json ./src/icons ./transpiled-icons",
     "copy-source": "node ./build/copy-source-files.js",
     "concat-css": "node ./build/concatenate-css-files.js",
