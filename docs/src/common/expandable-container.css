@@ -1,8 +1,0 @@
-.mt-expandableContainer {
-  height: 0;
-  overflow: hidden;
-}
-
-.mt-expandableContainer-open {
-  height: auto;
-}

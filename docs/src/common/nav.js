@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
 import _ from 'lodash';
 import { Link, withSiteData } from 'react-static';
+import { Expandable } from 'materialish';
 import IconKeyboardArrowRight from 'materialish/icon-keyboard-arrow-right';
 import Overlay from './overlay';
-import ExpandableContainer from './expandable-container';
 import './nav.css';
 
 export class Nav extends Component {
@@ -112,7 +112,7 @@ export class Nav extends Component {
                         )}
                       </Link>
                       {hasChildren && (
-                        <ExpandableContainer open={isOpen} durationMs="200">
+                        <Expandable open={isOpen} durationMs="200">
                           <ul>
                             {component.children.map(childComponent => {
                               return (
@@ -130,7 +130,7 @@ export class Nav extends Component {
                               );
                             })}
                           </ul>
-                        </ExpandableContainer>
+                        </Expandable>
                       )}
                     </li>
                   );

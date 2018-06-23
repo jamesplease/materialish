@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import './expandable-container.css';
 
-//
-// Heads up!
-// This will one day be a part of Materialish directly.
-//
-export default class ExpandableContainer extends Component {
+export default class Expandable extends Component {
   render() {
-    const { className = '', open = false, ...props } = this.props;
+    const { className = '', open = false, durationMs, ...props } = this.props;
+
     return (
       <div
         ref={this.getRef}
-        className={`mt-expandableContainer ${
-          open ? 'mt-expandableContainer-open' : ''
+        className={`mt-expandable ${
+          open ? 'mt-expandable-open' : ''
         } ${className}`}
         {...props}
       />
