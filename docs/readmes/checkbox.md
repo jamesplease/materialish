@@ -15,9 +15,9 @@ import 'materialish/checkbox.css';
 
 ## CSS Variables
 
-| Variable                      | Default Value | Description                                         |
-| ----------------------------- | ------------- | --------------------------------------------------- |
-| --mt-baseFontSize             | 1rem          | The size of the checkbox is based off of this value |
-| --mt-checkbox-backgroundColor | #2196f3       | The background color of the checkbox                |
-| --mt-checkbox-tickColor       | #ffffff       | The color of the checkbox's tick                    |
-| --mt-checkbox-focusColor      | #e8e8e8       | The color of the focused circle layer               |
+| Variable                      | Default Value           | Description                                         |
+| ----------------------------- | ----------------------- | --------------------------------------------------- |
+| --mt-baseFontSize             | 1rem                    | The size of the checkbox is based off of this value |
+| --mt-checkbox-backgroundColor | --mt-mainColor, #2196f3 | The background color of the checkbox                |
+| --mt-checkbox-tickColor       | #ffffff                 | The color of the checkbox's tick                    |
+| --mt-checkbox-focusColor      | #e8e8e8                 | The color of the focused circle layer               |

@@ -1,36 +1,29 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
 
-export class Chips extends Component {
+export class ProgressIndicators extends Component {
   render() {
     const { component } = this.props;
     const { materialDocsLink } = component;
 
     return (
       <div className="componentDoc">
-        <h1 className="primaryHeader componentDoc_primaryHeader">Chips</h1>
+        <h1 className="primaryHeader componentDoc_primaryHeader">
+          Progress Indicators
+        </h1>
         <p className="paragraph">
-          Chips are versatile, compact elements that represent an input,
-          attribute, or action. Materialish provides several different
-          Components that reflect the different uses of Chips.
+          Progress indicators provide information regarding the progress of a
+          deterministic or nondeterministic process.
         </p>
         <p />
         <ul className="icons_links">
           <li className="icons_link">
-            <Link to="/components/input-chip">Input Chip</Link>: represents an
-            entity or different attributes.
+            <Link to="/components/spinner">Spinner</Link>: a nondeterministic
+            loading indicator
           </li>
           <li className="icons_link">
-            <Link to="/components/action-chip">Action Chip</Link>: an
-            alternative to buttons.
-          </li>
-          <li className="icons_link">
-            <Link to="/components/choice-chip">Choice Chip</Link>: an
-            alternative to radio buttons.
-          </li>
-          <li className="icons_link">
-            <Link to="/components/filter-chip">Filter Chip</Link>: an
-            alternative to checkboxes.
+            <Link to="/components/inline-spinner">Inline Spinner</Link>: a
+            nondeterministic loading indicator
           </li>
         </ul>
         <h2 className="secondaryHeader componentDoc_standaloneSecondaryHeader">
@@ -49,4 +42,4 @@ export class Chips extends Component {
   }
 }
 
-export default withRouteData(Chips);
+export default withRouteData(ProgressIndicators);

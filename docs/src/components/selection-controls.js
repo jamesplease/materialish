@@ -1,36 +1,32 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
 
-export class Chips extends Component {
+export class SelectionControls extends Component {
   render() {
     const { component } = this.props;
     const { materialDocsLink } = component;
 
     return (
       <div className="componentDoc">
-        <h1 className="primaryHeader componentDoc_primaryHeader">Chips</h1>
+        <h1 className="primaryHeader componentDoc_primaryHeader">
+          Selection Controls
+        </h1>
         <p className="paragraph">
-          Chips are versatile, compact elements that represent an input,
-          attribute, or action. Materialish provides several different
-          Components that reflect the different uses of Chips.
+          Selection controls allow the user to select options.
         </p>
         <p />
         <ul className="icons_links">
           <li className="icons_link">
-            <Link to="/components/input-chip">Input Chip</Link>: represents an
-            entity or different attributes.
+            <Link to="/components/checkbox">Checkbox</Link>: represents a
+            boolean value that can be in one of two states, true or false
           </li>
           <li className="icons_link">
-            <Link to="/components/action-chip">Action Chip</Link>: an
-            alternative to buttons.
+            <Link to="/components/radio">Radio Button</Link>: represents one
+            option among several choices
           </li>
           <li className="icons_link">
-            <Link to="/components/choice-chip">Choice Chip</Link>: an
-            alternative to radio buttons.
-          </li>
-          <li className="icons_link">
-            <Link to="/components/filter-chip">Filter Chip</Link>: an
-            alternative to checkboxes.
+            <Link to="/components/switch">Switch</Link>: represents a value that
+            can be toggled on or off
           </li>
         </ul>
         <h2 className="secondaryHeader componentDoc_standaloneSecondaryHeader">
@@ -49,4 +45,4 @@ export class Chips extends Component {
   }
 }
 
-export default withRouteData(Chips);
+export default withRouteData(SelectionControls);

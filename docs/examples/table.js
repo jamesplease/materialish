@@ -4,41 +4,41 @@ class TableExample extends Component {
       <Table>
         <Table.Head>
           <Table.HeadRow>
-            <Table.HeadCell>File</Table.HeadCell>
+            <Table.HeadCell>Name</Table.HeadCell>
+            <Table.HeadCell>Active</Table.HeadCell>
+            <Table.HeadCell>Join Date</Table.HeadCell>
             <Table.HeadCell>Status</Table.HeadCell>
-            <Table.HeadCell>Due Date</Table.HeadCell>
-            <Table.HeadCell>Size</Table.HeadCell>
-            <Table.HeadCell>Assignee</Table.HeadCell>
+            <Table.HeadCell>Location</Table.HeadCell>
           </Table.HeadRow>
         </Table.Head>
         <Table.Body>
           <Table.Row>
-            <Table.Cell>Test.doc</Table.Cell>
-            <Table.Cell>Not Delivered</Table.Cell>
-            <Table.Cell>6/12/2018</Table.Cell>
-            <Table.Cell>128kb</Table.Cell>
-            <Table.Cell>kermit@test.com</Table.Cell>
+            <Table.Cell>James S.</Table.Cell>
+            <Table.Cell>Yes</Table.Cell>
+            <Table.Cell>6/12/2013</Table.Cell>
+            <Table.Cell>Member</Table.Cell>
+            <Table.Cell>Maryland</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Test.doc</Table.Cell>
-            <Table.Cell>Not Delivered</Table.Cell>
-            <Table.Cell>6/12/2018</Table.Cell>
-            <Table.Cell>128kb</Table.Cell>
-            <Table.Cell>kermit@test.com</Table.Cell>
+            <Table.Cell>Javier P.</Table.Cell>
+            <Table.Cell>No</Table.Cell>
+            <Table.Cell>5/12/2018</Table.Cell>
+            <Table.Cell>Contributor</Table.Cell>
+            <Table.Cell>California</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Test.doc</Table.Cell>
-            <Table.Cell>Not Delivered</Table.Cell>
-            <Table.Cell>6/12/2018</Table.Cell>
-            <Table.Cell>128kb</Table.Cell>
-            <Table.Cell>kermit@test.com</Table.Cell>
+            <Table.Cell>Terri S.</Table.Cell>
+            <Table.Cell>Yes</Table.Cell>
+            <Table.Cell>1/12/2018</Table.Cell>
+            <Table.Cell>Contributor</Table.Cell>
+            <Table.Cell>Texas</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Test.doc</Table.Cell>
-            <Table.Cell>Not Delivered</Table.Cell>
+            <Table.Cell>Deepthi K.</Table.Cell>
+            <Table.Cell>Yes</Table.Cell>
             <Table.Cell>6/12/2018</Table.Cell>
-            <Table.Cell>128kb</Table.Cell>
-            <Table.Cell>kermit@test.com</Table.Cell>
+            <Table.Cell>Member</Table.Cell>
+            <Table.Cell>Spain</Table.Cell>
           </Table.Row>
         </Table.Body>
       </Table>
