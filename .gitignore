@@ -7,6 +7,7 @@ package-lock.json.*
 dist
 es
 lib
+src/icons/*.js
 /*.js
 /*.css
 
@@ -25,3 +26,4 @@ website/i18n/*
 /icons-src
 /icons-index-src
 /icons-data.json
+/transpiled-icons

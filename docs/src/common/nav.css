@@ -27,6 +27,10 @@
   margin-bottom: 15px;
 }
 
+.nav_navListItem:last-child {
+  margin-bottom: 50px;
+}
+
 .nav_navList {
   width: var(--navWidth);
   margin: 0;

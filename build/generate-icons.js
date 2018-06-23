@@ -11,7 +11,7 @@ const ICONS_REPO_DIR = 'material-icons-repo';
 
 const MATERIAL_ICONS_REPO_PATH = path.join(__dirname, '..', ICONS_REPO_DIR);
 const PROJECT_DIRECTORY = path.join(__dirname, '..');
-const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-src');
+const OUTPUT_DIRECTORY = path.join(PROJECT_DIRECTORY, 'src', 'icons');
 const OUTPUT_INDEX_DIRECTORY = path.join(PROJECT_DIRECTORY, 'icons-index-src');
 const OUTPUT_INDEX_FILEPATH = path.join(OUTPUT_INDEX_DIRECTORY, 'index.js');
 const OUTPUT_METADATA_FILEPATH = path.join(
@@ -138,7 +138,7 @@ clone(
 
         console.log(
           chalk.blue(
-            `  ✔ Successfully created ${fileCount} SVG component files. They can be found in ./icons`
+            `  ✔ Successfully created ${fileCount} SVG component files. They can be found in ./src`
           )
         );
         console.log(chalk.blue('Creating index.js...'));
