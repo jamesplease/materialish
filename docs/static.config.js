@@ -25,6 +25,7 @@ const readmes = {
   table: fs.readFileSync('./readmes/table.md', fsOptions),
   input: fs.readFileSync('./readmes/input.md', fsOptions),
   field: fs.readFileSync('./readmes/field.md', fsOptions),
+  'expansion-panel': fs.readFileSync('./readmes/expansion-panel.md', fsOptions),
   'input-chip': fs.readFileSync('./readmes/input-chip.md', fsOptions),
   'action-chip': fs.readFileSync('./readmes/action-chip.md', fsOptions),
   'filter-chip': fs.readFileSync('./readmes/filter-chip.md', fsOptions),
@@ -48,6 +49,10 @@ const examples = {
   table: fs.readFileSync('./examples/table.js', fsOptions),
   input: fs.readFileSync('./examples/input.js', fsOptions),
   field: fs.readFileSync('./examples/field.js', fsOptions),
+  'expansion-panel': fs.readFileSync(
+    './examples/expansion-panel.js',
+    fsOptions
+  ),
   'input-chip': fs.readFileSync('./examples/input-chip.js', fsOptions),
   'action-chip': fs.readFileSync('./examples/action-chip.js', fsOptions),
   'filter-chip': fs.readFileSync('./examples/filter-chip.js', fsOptions),
@@ -120,6 +125,7 @@ export default {
               component: child.component,
               getData: async () => ({
                 component: child,
+                parentComponent: component,
                 markdown: readmes[child.componentKey],
                 example: examples[child.componentKey],
               }),

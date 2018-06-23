@@ -13,6 +13,15 @@
   margin: 0 3px 0 6px;
 }
 
+.footer_licenseLink {
+  outline: none;
+  padding: 3px 5px;
+}
+
+.footer_licenseLink:focus {
+  background-color: #f0f5ff;
+}
+
 .footer_licenseLink-short {
   color: inherit;
 }
@@ -22,6 +31,14 @@
   color: inherit;
   display: flex;
   align-items: center;
+  outline: none;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.footer_githubLink:focus {
+  color: var(--mainColor);
+  background-color: #f0f5ff;
 }
 
 .footer_icon {

@@ -19,6 +19,7 @@ import Input from './input/input';
 import IconButton from './icon-button/icon-button';
 import Field from './field/field';
 import Expandable from './expandable/expandable';
+import ExpansionPanel from './expansion-panel/expansion-panel';
 
 export {
   Avatar,
@@ -42,4 +43,5 @@ export {
   IconButton,
   Field,
   Expandable,
+  ExpansionPanel,
 };

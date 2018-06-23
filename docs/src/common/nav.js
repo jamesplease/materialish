@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
 import _ from 'lodash';
-import { Link, withSiteData } from 'react-static';
+import { Link, withSiteData, withRouteData } from 'react-static';
 import { Expandable } from 'materialish';
 import IconKeyboardArrowRight from 'materialish/icon-keyboard-arrow-right';
 import Overlay from './overlay';
@@ -79,7 +79,7 @@ export class Nav extends Component {
               <ul className="nav_navSubList">
                 {sortedComponentsData.map(component => {
                   const hasChildren = Boolean(_.size(component.children));
-                  const isOpen = Boolean(openStates[component.name]);
+                  const isOpen = Boolean(openStates[component.componentKey]);
 
                   const arrowClassnames = classnames('nav_expandIcon', {
                     'nav_expandIcon-open': isOpen,
@@ -94,20 +94,44 @@ export class Nav extends Component {
                         onClick={() => {
                           this.onNavigate();
 
-                          if (hasChildren) {
-                            this.setState({
-                              openStates: {
-                                ...openStates,
-                                [component.name]: !isOpen,
-                              },
-                            });
-                          }
+                          this.setState({
+                            openStates: {
+                              ...openStates,
+                              [component.componentKey]: true,
+                            },
+                          });
                         }}>
                         {component.name}
                         {hasChildren && (
                           <IconKeyboardArrowRight
+                            tabIndex="0"
                             className={arrowClassnames}
                             fill="#888"
+                            size="28px"
+                            onKeyPress={e => {
+                              if (e.key === 'Enter') {
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                this.setState({
+                                  openStates: {
+                                    ...openStates,
+                                    [component.componentKey]: !isOpen,
+                                  },
+                                });
+                              }
+                            }}
+                            onClick={e => {
+                              e.stopPropagation();
+                              e.preventDefault();
+
+                              this.setState({
+                                openStates: {
+                                  ...openStates,
+                                  [component.componentKey]: !isOpen,
+                                },
+                              });
+                            }}
                           />
                         )}
                       </Link>
@@ -120,6 +144,7 @@ export class Nav extends Component {
                                   key={childComponent.name}
                                   className="nav_navSubListItem">
                                   <Link
+                                    tabIndex={isOpen ? 0 : -1}
                                     exact
                                     to={`/components/${childComponent.url}`}
                                     className="nav_navSubLink"
@@ -144,9 +169,23 @@ export class Nav extends Component {
     );
   }
 
-  state = {
-    openStates: {},
-  };
+  constructor(props) {
+    super(props);
+
+    const componentToOpen = props.parentComponent
+      ? props.parentComponent
+      : props.component;
+
+    const openStates = {};
+
+    if (componentToOpen) {
+      openStates[componentToOpen.componentKey] = true;
+    }
+
+    this.state = {
+      openStates,
+    };
+  }
 
   onNavigate = () => {
     const { isMenuOpen, onToggleMenu } = this.props;
@@ -157,4 +196,4 @@ export class Nav extends Component {
   };
 }
 
-export default withSiteData(Nav);
+export default withSiteData(withRouteData(Nav));

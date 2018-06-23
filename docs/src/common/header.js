@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <header className="header">
         <i className="zmdi zmdi-menu header_navToggle" onClick={onToggleMenu} />
-        <Link to="/">
+        <Link to="/" tabIndex="-1" className="header_logoLink">
           <img src={logo} className="materialishLogo" />
         </Link>
         <h1 className="header_appName">
