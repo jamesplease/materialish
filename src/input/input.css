@@ -1,4 +1,8 @@
 .mt-input {
+  --_mt-input-focusBorderColor: var(
+    --mt-input-focusBorderColor,
+    var(--mt-mainColor, #4a8fe2)
+  );
   font-size: calc(var(--mt-baseFontSize) * 0.875);
   font-family: var(--mt-fontFamily, 'Roboto');
   border: 1px solid #e1e0e0;
@@ -7,6 +11,8 @@
   min-width: 300px;
   outline: none;
   background-color: #fff;
+  /* Removes the box-shadow from iOS */
+  -webkit-appearance: none;
 }
 
 .mt-input::placeholder {
@@ -14,9 +20,9 @@
 }
 
 .mt-input:focus {
-  box-shadow: 0 0 0 1px #4a8fe2;
-  border: 1px solid #4a8fe2;
-  caret-color: #4a8fe2;
+  box-shadow: 0 0 0 1px var(--_mt-input-focusBorderColor);
+  border: 1px solid var(--_mt-input-focusBorderColor);
+  caret-color: var(--_mt-input-focusBorderColor);
 }
 
 .mt-input-error {

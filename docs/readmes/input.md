@@ -16,7 +16,8 @@ import 'materialish/materialish.css';
 
 ## CSS Variables
 
-| Variable          | Default Value | Description                                                           |
-| ----------------- | ------------- | --------------------------------------------------------------------- |
-| --mt-baseFontSize | 1rem          | The text size and dimensions of the input are based off of this value |
-| --mt-fontFamily   | 'Roboto'      | The font family to use for the input text                             |
+| Variable                    | Default Value           | Description                                                           |
+| --------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| --mt-baseFontSize           | 1rem                    | The text size and dimensions of the input are based off of this value |
+| --mt-fontFamily             | 'Roboto'                | The font family to use for the input text                             |
+| --mt-input-focusBorderColor | --mt-mainColor, #4a8fe2 | The border color to use when the input is focused                     |
