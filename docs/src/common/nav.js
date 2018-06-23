@@ -2,12 +2,15 @@ import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
 import _ from 'lodash';
 import { Link, withSiteData } from 'react-static';
+import IconKeyboardArrowRight from 'materialish/icon-keyboard-arrow-right';
 import Overlay from './overlay';
+import ExpandableContainer from './expandable-container';
 import './nav.css';
 
 export class Nav extends Component {
   render() {
     const { components, isMenuOpen, onToggleMenu } = this.props;
+    const { openStates } = this.state;
 
     // This ensures that the components appear in the navigation in
     // alphabetical order
@@ -76,6 +79,11 @@ export class Nav extends Component {
               <ul className="nav_navSubList">
                 {sortedComponentsData.map(component => {
                   const hasChildren = Boolean(_.size(component.children));
+                  const isOpen = Boolean(openStates[component.name]);
+
+                  const arrowClassnames = classnames('nav_expandIcon', {
+                    'nav_expandIcon-open': isOpen,
+                  });
 
                   return (
                     <li className="nav_navSubListItem" key={component.name}>
@@ -83,27 +91,46 @@ export class Nav extends Component {
                         exact
                         to={`/components/${component.url}`}
                         className="nav_navLink"
-                        onClick={this.onNavigate}>
+                        onClick={() => {
+                          this.onNavigate();
+
+                          if (hasChildren) {
+                            this.setState({
+                              openStates: {
+                                ...openStates,
+                                [component.name]: !isOpen,
+                              },
+                            });
+                          }
+                        }}>
                         {component.name}
+                        {hasChildren && (
+                          <IconKeyboardArrowRight
+                            className={arrowClassnames}
+                            fill="#888"
+                          />
+                        )}
                       </Link>
                       {hasChildren && (
-                        <ul>
-                          {component.children.map(childComponent => {
-                            return (
-                              <li
-                                key={childComponent.name}
-                                className="nav_navSubListItem">
-                                <Link
-                                  exact
-                                  to={`/components/${childComponent.url}`}
-                                  className="nav_navSubLink"
-                                  onClick={this.onNavigate}>
-                                  {childComponent.name}
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </ul>
+                        <ExpandableContainer open={isOpen} durationMs="200">
+                          <ul>
+                            {component.children.map(childComponent => {
+                              return (
+                                <li
+                                  key={childComponent.name}
+                                  className="nav_navSubListItem">
+                                  <Link
+                                    exact
+                                    to={`/components/${childComponent.url}`}
+                                    className="nav_navSubLink"
+                                    onClick={this.onNavigate}>
+                                    {childComponent.name}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </ExpandableContainer>
                       )}
                     </li>
                   );
@@ -116,6 +143,10 @@ export class Nav extends Component {
       </Fragment>
     );
   }
+
+  state = {
+    openStates: {},
+  };
 
   onNavigate = () => {
     const { isMenuOpen, onToggleMenu } = this.props;
