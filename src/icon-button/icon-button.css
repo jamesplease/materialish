@@ -5,6 +5,7 @@
     rgba(0, 0, 0, 0.38)
   );
 
+  all: initial;
   font-family: var(--mt-fontFamily, 'Roboto');
   font-size: calc(1.5 * var(--mt-baseFontSize, 1rem));
   border: none;
@@ -48,6 +49,10 @@
   transform: translate3d(-50%, -50%, 0);
   fill: var(--_mt-iconButton-color);
   pointer-events: none;
+}
+
+.mt-iconButton:disabled {
+  cursor: default;
 }
 
 .mt-iconButton:disabled > svg {
