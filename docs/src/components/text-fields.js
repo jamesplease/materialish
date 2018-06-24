@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
-import { Field, Input, Table } from 'materialish';
+import { Field, Input, TextArea, Table } from 'materialish';
 
 export class TextFields extends Component {
   render() {
     const { component } = this.props;
     const { materialDocsLink } = component;
-    const { input, field } = this.state;
+    const { input, field, textarea } = this.state;
 
     return (
       <div className="componentDoc">
@@ -61,6 +61,22 @@ export class TextFields extends Component {
                 error message
               </Table.Cell>
             </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                <TextArea
+                  value={textarea}
+                  onChange={e => this.setState({ textarea: e.target.value })}
+                  style={{ width: '230px', minWidth: '230px' }}
+                />
+              </Table.Cell>
+              <Table.Cell>
+                <Link to="/components/text-area">TextArea</Link>
+              </Table.Cell>
+              <Table.Cell>
+                a standalone, multiline text input, for when you do not need a
+                label or error message
+              </Table.Cell>
+            </Table.Row>
           </Table.Body>
         </Table>
         <h2 className="secondaryHeader componentDoc_standaloneSecondaryHeader">
@@ -81,6 +97,7 @@ export class TextFields extends Component {
   state = {
     field: 'Paris, France',
     input: '',
+    textarea: '',
   };
 }
 

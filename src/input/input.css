@@ -1,4 +1,5 @@
-.mt-input {
+.mt-input,
+.mt-textarea {
   --_mt-input-focusBorderColor: var(
     --mt-input-focusBorderColor,
     var(--mt-mainColor, #4a8fe2)
@@ -13,36 +14,44 @@
   background-color: #fff;
   /* Removes the box-shadow from iOS */
   -webkit-appearance: none;
+  resize: none;
 }
 
-.mt-input::placeholder {
+.mt-input::placeholder,
+.mt-textarea::placeholder {
   color: #9e9d9d;
 }
 
-.mt-input:focus {
+.mt-input:focus,
+.mt-textarea:focus {
   box-shadow: 0 0 0 1px var(--_mt-input-focusBorderColor);
   border: 1px solid var(--_mt-input-focusBorderColor);
   caret-color: var(--_mt-input-focusBorderColor);
 }
 
-.mt-input-error {
+.mt-input-error,
+.mt-textarea-error {
   border: 1px solid #e69c96;
 }
 
-.mt-input-error:focus {
+.mt-input-error:focus,
+.mt-textarea-error:focus {
   box-shadow: 0 0 0 1px #f34335;
   border: 1px solid #f34335;
   caret-color: #f34335;
 }
 
-.mt-input:disabled {
+.mt-input:disabled,
+.mt-textarea:disabled {
   border-color: #e1e0e0;
   background-color: #f9f9f9f9;
   color: #9e9d9d;
 }
 
 .mt-input:read-only,
-.mt-input:read-only:focus {
+.mt-input:read-only:focus,
+.mt-textarea:read-only,
+.mt-textarea:read-only:focus {
   cursor: default;
   box-shadow: none;
   border-color: #e1e0e0;

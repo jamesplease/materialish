@@ -29,6 +29,10 @@ import 'materialish/materialish.css';
 
 This is an alias of [**Input**](/components/input).
 
+# `Field.TextArea`
+
+This is an alias of [**TextArea**](/components/text-area).
+
 # `Field.Label`
 
 ## Props

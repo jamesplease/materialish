@@ -49,7 +49,8 @@
   right: -0.6em;
 }
 
-.mt-field > .mt-input {
+.mt-field > .mt-input,
+.mt-field > .mt-textarea {
   display: block;
   margin-bottom: 2.5em;
 }

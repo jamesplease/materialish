@@ -16,6 +16,7 @@ import Menu from './menu/menu';
 import Snackbar from './snackbar/snackbar';
 import Table from './table/table';
 import Input from './input/input';
+import TextArea from './text-area/text-area';
 import IconButton from './icon-button/icon-button';
 import Field from './field/field';
 import Expandable from './expandable/expandable';
@@ -40,6 +41,7 @@ export {
   Snackbar,
   Table,
   Input,
+  TextArea,
   IconButton,
   Field,
   Expandable,
