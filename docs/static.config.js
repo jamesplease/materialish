@@ -33,6 +33,7 @@ const readmes = {
   snackbar: fs.readFileSync('./readmes/snackbar.md', fsOptions),
   table: fs.readFileSync('./readmes/table.md', fsOptions),
   input: fs.readFileSync('./readmes/input.md', fsOptions),
+  'text-area': fs.readFileSync('./readmes/text-area.md', fsOptions),
   field: fs.readFileSync('./readmes/field.md', fsOptions),
   'expansion-panel': fs.readFileSync('./readmes/expansion-panel.md', fsOptions),
   'input-chip': fs.readFileSync('./readmes/input-chip.md', fsOptions),
@@ -57,6 +58,7 @@ const examples = {
   snackbar: fs.readFileSync('./examples/snackbar.js', fsOptions),
   table: fs.readFileSync('./examples/table.js', fsOptions),
   input: fs.readFileSync('./examples/input.js', fsOptions),
+  'text-area': fs.readFileSync('./examples/text-area.js', fsOptions),
   field: fs.readFileSync('./examples/field.js', fsOptions),
   'expansion-panel': fs.readFileSync(
     './examples/expansion-panel.js',
