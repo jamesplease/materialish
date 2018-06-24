@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import ReactMarkdown from "react-markdown";
-import { fetchDedupe } from "fetch-dedupe";
-import CodeHighlighter from "./code-highlighter";
+import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
+import { fetchDedupe } from 'fetch-dedupe';
+import CodeHighlighter from './code-highlighter';
 
 export default class Markdown extends Component {
   render() {
@@ -14,16 +14,16 @@ export default class Markdown extends Component {
     return (
       <ReactMarkdown
         source={markdownText}
-        className="markdown"
+        className={`markdown ${this.props.className}`}
         renderers={{
-          code: CodeHighlighter
+          code: CodeHighlighter,
         }}
       />
     );
   }
 
   state = {
-    markdownText: null
+    markdownText: null,
   };
 
   componentDidMount() {
@@ -41,9 +41,9 @@ export default class Markdown extends Component {
   fetchMarkdown = props => {
     const { markdownUrl } = props || this.props;
 
-    fetchDedupe(markdownUrl, { responseType: "text" }).then(res => {
+    fetchDedupe(markdownUrl, { responseType: 'text' }).then(res => {
       this.setState({
-        markdownText: res.data
+        markdownText: res.data,
       });
     });
   };

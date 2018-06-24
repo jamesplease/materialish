@@ -30,6 +30,15 @@ body {
   font-size: 1.6rem;
 }
 
+.editorialPage {
+  max-width: 550px;
+}
+
+.editorialPage h2,
+.editorialPage .secondaryHeader {
+  margin-top: 20px;
+}
+
 .componentDoc_standaloneSecondaryHeader {
   margin-top: 60px;
 }
