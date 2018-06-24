@@ -7,6 +7,15 @@ const fs = require('fs');
 const fsOptions = { encoding: 'utf-8' };
 
 const homeMarkdown = fs.readFileSync('./src/home/index.md', fsOptions);
+const philosophyMarkdown = fs.readFileSync(
+  './src/home/philosophy.md',
+  fsOptions
+);
+
+const alternativesMarkdown = fs.readFileSync(
+  './src/home/alternatives.md',
+  fsOptions
+);
 
 const readmes = {
   avatar: fs.readFileSync('./readmes/avatar.md', fsOptions),
@@ -78,6 +87,20 @@ export default {
         component: 'src/home/index',
         getData: async () => ({
           homeMarkdown,
+        }),
+      },
+      {
+        path: '/philosophy',
+        component: 'src/home/philosophy',
+        getData: async () => ({
+          philosophyMarkdown,
+        }),
+      },
+      {
+        path: '/alternatives',
+        component: 'src/home/alternatives',
+        getData: async () => ({
+          alternativesMarkdown,
         }),
       },
       {

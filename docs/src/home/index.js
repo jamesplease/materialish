@@ -6,7 +6,7 @@ export class Home extends Component {
   render() {
     const { homeMarkdown } = this.props;
 
-    return <Markdown markdownText={homeMarkdown} />;
+    return <Markdown markdownText={homeMarkdown} className="editorialPage" />;
   }
 }
 

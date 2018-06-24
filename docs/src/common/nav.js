@@ -38,6 +38,26 @@ export class Nav extends Component {
                 onClick={this.onNavigate}>
                 Introduction
               </Link>
+              <ul className="nav_navSubList">
+                <li className="nav_navSubListItem">
+                  <Link
+                    exact
+                    to="/philosophy"
+                    className="nav_navLink"
+                    onClick={this.onNavigate}>
+                    Philosophy
+                  </Link>
+                </li>
+                <li className="nav_navSubListItem">
+                  <Link
+                    exact
+                    to="/alternatives"
+                    className="nav_navLink"
+                    onClick={this.onNavigate}>
+                    Alternatives
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="nav_navListItem">
               <Link

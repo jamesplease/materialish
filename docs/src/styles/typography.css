@@ -30,6 +30,11 @@ body {
   font-size: 1.6rem;
 }
 
+.editorialPage h2,
+.editorialPage .secondaryHeader {
+  margin-top: 20px;
+}
+
 .componentDoc_standaloneSecondaryHeader {
   margin-top: 60px;
 }
@@ -57,5 +62,15 @@ a {
 
 .paragraph,
 .markdown p {
+  line-height: 1.7;
+}
+
+.markdown ul {
+  margin-left: 40px;
+  list-style: inherit;
+}
+
+.markdown li {
+  margin-bottom: 10px;
   line-height: 1.7;
 }

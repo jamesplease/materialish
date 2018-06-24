@@ -8,15 +8,19 @@
   flex-direction: column;
 }
 
-.app_bodyContents>* {
+.app_bodyContents > * {
   width: 100%;
   max-width: calc(var(--maxAppWidth) - var(--navWidth));
   margin: 0 auto;
   flex: 1;
 }
 
-.app_bodyContents>*:first-child {
+.app_bodyContents > *:first-child {
   margin-bottom: 100px;
+}
+
+.app_bodyContents > .editorialPage:first-child {
+  max-width: 650px;
 }
 
 @media (max-width: 1000px) {
@@ -25,7 +29,7 @@
     margin-left: 0;
     width: 100%;
   }
-  .app_bodyContents>* {
+  .app_bodyContents > * {
     width: 100%;
     max-width: none;
     margin: 0;
