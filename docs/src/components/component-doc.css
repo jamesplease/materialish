@@ -77,3 +77,11 @@
 .componentDoc_editor .CodeMirror {
   min-height: var(--editorHeight, 300px);
 }
+
+.componentDoc_componentsTable {
+  margin-top: 30px;
+}
+
+.componentDoc_componentsTable .mt-table_row:hover:after {
+  opacity: 0;
+}

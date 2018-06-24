@@ -12,7 +12,6 @@ export class Icons extends Component {
           these icons as individual React components for you to use in your
           applications.
         </p>
-        <p />
         <ul className="icons_links">
           <li className="icons_link">
             <Link to="/icons/usage">Usage</Link>: Learn how to import and use
