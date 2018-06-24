@@ -1,15 +1,13 @@
 ## Usage
 
 First, identify the icon that you want to use. You can see the full list of icons
-in [**the catalog**](/icons/catalog).
-
-Material provides nearly one thousand icons, so it can be useful to narrow your results
-using the filter functionality.
+in [**the catalog**](/icons/catalog). Material provides nearly one thousand icons, so it can be
+useful to narrow your results using the filter functionality on that page.
 
 Once you find an icon, you can click it to see the import statement that you can use
 in your code.
 
-Let's assume that we want an icon related to wifi. After typing "wifi" into the
+Imagine that we want an icon related to wifi. After typing "wifi" into the
 search box, we can see the one that we want: `IconWifiLock`.
 
 Clicking it shows us the import statement:
@@ -25,7 +23,7 @@ SVG, you do not need to load any CSS to use them.
 
 | Prop Name | Default Value | Required | Description                                      |
 | --------- | ------------- | -------- | ------------------------------------------------ |
-| size      | "1em"         | No       | The size of the SVG                              |
+| size      | "1em"         | No       | The size of the icon                             |
 | ...rest   |               | No       | Other props are placed on the root `svg` element |
 
 ## Performance
