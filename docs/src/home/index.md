@@ -5,11 +5,10 @@ Materialish is a collection of React components that are loosely inspired by
 
 ## Getting Started
 
-We encourage anyone who wishes to use Materialish to start off by reading the
-[Philosophy](/philosophy) of the library. Understanding the goals of the library
-will help you to use it successfully.
+We encourage anyone newcomers to start off by reading the [philosophy](/philosophy) of the library.
+Understanding the library's goals will help you set your expectations.
 
-Once you have read about this project's philosophy, you should be ready to install it.
+Once you have read about the project's philosophy, you are ready to install it.
 
 ## Installation
 

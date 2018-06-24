@@ -65,6 +65,12 @@ a {
   line-height: 1.7;
 }
 
+.markdown ul {
+  margin-left: 40px;
+  list-style: inherit;
+}
+
 .markdown li {
   margin-bottom: 10px;
+  line-height: 1.7;
 }
