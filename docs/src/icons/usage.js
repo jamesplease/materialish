@@ -30,8 +30,8 @@ export class Usage extends Component {
         </h1>
         <p className="paragraph">
           Each icon provided by Materialish is an individual React Component.
-          Because the components render SVG, you do not need to import a CSS
-          file to use the icons.
+          Because the components render SVG, you do not need to import CSS file
+          to use the icons.
         </p>
         <CodeManager code={example}>
           {({ code, handleCodeChange }) => (
