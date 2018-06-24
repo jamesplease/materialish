@@ -9,8 +9,7 @@ We encourage anyone who wishes to use Materialish to start off by reading the
 [Philosophy](/philosophy) of the library. Understanding the goals of the library
 will help you to use it successfully.
 
-If you have read the philosophy, and agree with the library's goals, then you are
-ready to get started by installing it.
+Once you have read about this project's philosophy, you should be ready to install it.
 
 ## Installation
 

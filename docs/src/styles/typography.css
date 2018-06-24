@@ -30,10 +30,6 @@ body {
   font-size: 1.6rem;
 }
 
-.editorialPage {
-  max-width: 550px;
-}
-
 .editorialPage h2,
 .editorialPage .secondaryHeader {
   margin-top: 20px;
@@ -67,4 +63,8 @@ a {
 .paragraph,
 .markdown p {
   line-height: 1.7;
+}
+
+.markdown li {
+  margin-bottom: 10px;
 }

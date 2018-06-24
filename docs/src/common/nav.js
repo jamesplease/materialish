@@ -48,6 +48,15 @@ export class Nav extends Component {
                     Philosophy
                   </Link>
                 </li>
+                <li className="nav_navSubListItem">
+                  <Link
+                    exact
+                    to="/alternatives"
+                    className="nav_navLink"
+                    onClick={this.onNavigate}>
+                    Alternatives
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav_navListItem">

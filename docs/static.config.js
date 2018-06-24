@@ -12,6 +12,11 @@ const philosophyMarkdown = fs.readFileSync(
   fsOptions
 );
 
+const alternativesMarkdown = fs.readFileSync(
+  './src/home/alternatives.md',
+  fsOptions
+);
+
 const readmes = {
   avatar: fs.readFileSync('./readmes/avatar.md', fsOptions),
   button: fs.readFileSync('./readmes/button.md', fsOptions),
@@ -89,6 +94,13 @@ export default {
         component: 'src/home/philosophy',
         getData: async () => ({
           philosophyMarkdown,
+        }),
+      },
+      {
+        path: '/alternatives',
+        component: 'src/home/alternatives',
+        getData: async () => ({
+          alternativesMarkdown,
         }),
       },
       {
