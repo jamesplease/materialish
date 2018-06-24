@@ -3,15 +3,23 @@
 First, identify the icon that you want to use. You can see the full list of icons
 in [**the catalog**](/icons/catalog).
 
-Let's assume that we want the `wifi_lock` icon. Each icon's path within the
-`materialish` project is prefixed with `icon-`, and underscores are replaced
-with hyphens.
+Material provides nearly one thousand icons, so it can be useful to narrow your results
+using the filter functionality.
 
-Accordingly, `wifi_lock` can be found at `materialish/icon-wifi-lock`:
+Once you find an icon, you can click it to see the import statement that you can use
+in your code.
+
+Let's assume that we want an icon related to wifi. After typing "wifi" into the
+search box, we can see the one that we want: `IconWifiLock`.
+
+Clicking it shows us the import statement:
 
 ```jsx
 import IconWifiLock from 'materialish/icon-wifi-lock';
 ```
+
+From here, we can use it as we would any other React component. And remember, because the icons are
+SVG, you do not need to load any CSS to use them.
 
 ## Props
 
