@@ -90,7 +90,8 @@
   display: flex;
   align-items: center;
   font-size: 0.9rem;
-  padding: 13px var(--standardContentPadding) 13px
+  height: 43px;
+  padding: 6px var(--standardContentPadding) 6px
     calc(var(--standardContentPadding) + 25px);
   -webkit-font-smoothing: antialiased;
   user-select: none;
