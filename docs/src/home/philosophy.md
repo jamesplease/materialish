@@ -76,8 +76,8 @@ learning curve of Materialish if we were to to expose that API publicly.
 Thirdly, the CSS-in-JS space is evolving rapidly. There is no way to know which library will win the overall market share
 over the next few years, so we believe it is a risk to adopt any one library at this time.
 
-By implementing Materialish using plain CSS, we feel that the library is more likely to remain useful for a longer period
-of time, have fewer major refactors, and without any API or feature tradeoffs.
+By implementing Materialish using plain CSS, we believe that the library is more likely to remain useful for a longer period
+of time, with fewer large refactors.
 
 ## Browser Support
 
