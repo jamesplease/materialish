@@ -28,6 +28,7 @@ export class TextFields extends Component {
                 <Field required>
                   <Field.Label>Place of Residence</Field.Label>
                   <Field.Input
+                    error
                     value={field}
                     onChange={e => this.setState({ field: e.target.value })}
                     style={{ width: '230px', minWidth: '230px' }}
