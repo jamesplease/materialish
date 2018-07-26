@@ -57,7 +57,7 @@ export default class InputChip extends Component {
     }
 
     if (onClick) {
-      onClick();
+      onClick(e);
     }
   };
 }

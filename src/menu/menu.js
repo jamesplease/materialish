@@ -52,7 +52,7 @@ class Item extends Component {
     }
 
     if (onClick) {
-      onClick();
+      onClick(e);
     }
   };
 }

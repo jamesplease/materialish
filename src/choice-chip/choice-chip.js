@@ -27,7 +27,7 @@ class ChoiceChip extends Component {
     }
 
     if (onClick) {
-      onClick();
+      onClick(e);
     }
   };
 }

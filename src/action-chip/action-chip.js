@@ -31,7 +31,7 @@ class ActionChip extends Component {
     }
 
     if (onClick) {
-      onClick();
+      onClick(e);
     }
   };
 }
