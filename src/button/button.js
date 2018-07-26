@@ -46,7 +46,7 @@ class Button extends Component {
     }
 
     if (onClick) {
-      onClick();
+      onClick(e);
     }
   };
 }
