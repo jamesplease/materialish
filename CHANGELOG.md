@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.15.0 (2018/8/8)
+
+- New component: `ProgressBar`
+- Avatar images now maintain aspect ratio
+
 ### v0.14.2 (2018/7/31)
 
 - Click event handlers for all components are now passed the click event.
