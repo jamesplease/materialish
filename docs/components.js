@@ -67,8 +67,7 @@ export default [
     componentKey: 'text-fields',
     description: 'Text fields let users enter and edit text.',
     component: 'src/components/text-fields',
-    materialDocsLink:
-      'https://material.io/design/components/progress-indicators.html#',
+    materialDocsLink: 'https://material.io/design/components/text-fields.html',
     children: [
       {
         name: 'Field',
@@ -141,6 +140,8 @@ export default [
         wrapperStyle: {
           width: '250px',
         },
+        materialDocsLink:
+          'https://material.io/design/components/progress-indicators.html#linear-progress-indicators',
       },
     ],
   },
