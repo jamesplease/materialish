@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 
 export default class Expandable extends Component {
   render() {
-    const { className = '', durationMs, ...props } = this.props;
+    const {
+      className = '',
+      durationMs,
+      onTransitionEnd,
+      onTransitionStart,
+      ...props
+    } = this.props;
     const { isOpen } = this.state;
 
     return (
@@ -54,6 +60,12 @@ export default class Expandable extends Component {
       if (prevState.isOpen !== this.state.isOpen) {
         const { durationMs = 200 } = this.props;
 
+        const animationType = this.state.isOpen ? 'open' : 'close';
+
+        if (this.props.onTransitionStart) {
+          this.props.onTransitionStart(animationType);
+        }
+
         const bb = this.el.getBoundingClientRect();
         this.el.style.height = `${snapshot.height}px`;
 
@@ -65,9 +77,16 @@ export default class Expandable extends Component {
             setTimeout(() => {
               this.el.style = '';
 
-              this.setState({
-                isAnimating: false,
-              });
+              this.setState(
+                {
+                  isAnimating: false,
+                },
+                () => {
+                  if (this.props.onTransitionEnd) {
+                    this.props.onTransitionEnd(animationType);
+                  }
+                }
+              );
             }, durationMs);
           });
         });
