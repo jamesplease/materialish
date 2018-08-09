@@ -17,8 +17,8 @@ export default class ProgressBar extends Component {
           indeterminate ? 'mt-progressBar-indeterminate' : ''
         } ${className}`}
         style={{
-          '--progress': loaded,
-          '--loaded': indeterminate ? 100 : buffered,
+          '--mt-progressBar-loaded': loaded,
+          '--mt-progressBar-buffered': indeterminate ? 100 : buffered,
           ...style,
         }}>
         <div className="mt-progressBar_buffer" />

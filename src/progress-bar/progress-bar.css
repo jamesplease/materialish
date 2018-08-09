@@ -4,8 +4,8 @@
     var(--mt-mainColor, #2196f3)
   );
 
-  --loaded: 50;
-  --progress: 30;
+  --mt-progressBar-buffered: 50;
+  --mt-progressBar-loaded: 30;
 
   font-size: var(--mt-baseFontSize, 1rem);
   height: 0.25em;
@@ -35,7 +35,7 @@
   top: 0;
   left: 0;
   transform-origin: center left;
-  transform: scaleX(calc(var(--loaded) / 100));
+  transform: scaleX(calc(var(--mt-progressBar-buffered) / 100));
   will-change: transform;
   transition: transform 0.2s ease-out;
 }
@@ -48,14 +48,14 @@
   top: 0;
   left: 0;
   transform-origin: center left;
-  transform: scaleX(calc(var(--progress) / 100));
+  transform: scaleX(calc(var(--mt-progressBar-loaded) / 100));
   will-change: transform;
   transition: transform 0.2s ease-out;
 }
 
 .mt-progressBar-indeterminate {
-  --loaded: 100;
-  --progress: 100;
+  --mt-progressBar-buffered: 100;
+  --mt-progressBar-loaded: 100;
 }
 
 .mt-progressBar-indeterminate .mt-progressBar_loaded {
