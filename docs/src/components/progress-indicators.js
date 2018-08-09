@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
-import { Spinner, LoadingDots, Table } from 'materialish';
+import { Spinner, LoadingDots, ProgressBar, Table } from 'materialish';
 
 export class ProgressIndicators extends Component {
   render() {
@@ -43,6 +43,18 @@ export class ProgressIndicators extends Component {
               </Table.Cell>
               <Table.Cell>
                 another nondeterministic loading indicator
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                <ProgressBar loaded={75} />
+              </Table.Cell>
+              <Table.Cell>
+                <Link to="/components/progress-bar">Progress Bar</Link>
+              </Table.Cell>
+              <Table.Cell>
+                a horizontal loading indicator that can represent deterministic
+                and nondeterministic processes
               </Table.Cell>
             </Table.Row>
           </Table.Body>

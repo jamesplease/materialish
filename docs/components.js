@@ -131,6 +131,17 @@ export default [
         description: 'Loading dots are a nondeterministic loading indicator.',
         component: 'src/components/component-doc',
       },
+      {
+        name: 'Progress Bar',
+        url: 'progress-bar',
+        componentKey: 'progress-bar',
+        description:
+          'Progress bars can represent nondeterministic and deterministic processes.',
+        component: 'src/components/component-doc',
+        wrapperStyle: {
+          width: '250px',
+        },
+      },
     ],
   },
   {
