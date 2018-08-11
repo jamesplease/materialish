@@ -1,4 +1,5 @@
 import React, { Component, PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import Ripple from '../ripple/ripple';
 
 const NavigationContext = React.createContext();
@@ -9,16 +10,17 @@ export default class Navigation extends Component {
       className = '',
       children,
       centered = false,
-      fullwidth = false,
+      fullWidth = false,
       vertical = false,
       ...props
     } = this.props;
+
     return (
       <NavigationContext.Provider value={this.updateTrackerPosition}>
         <div
           className={`mt-navigation ${
             centered ? 'mt-navigation-centered' : ''
-          } ${fullwidth ? 'mt-navigation-fullWidth' : ''} ${
+          } ${fullWidth ? 'mt-navigation-fullWidth' : ''} ${
             vertical ? 'mt-navigation-vertical' : ''
           } ${className}`}
           ref={this.getRef}
@@ -82,9 +84,17 @@ export default class Navigation extends Component {
   };
 }
 
+Navigation.propTypes = {
+  centered: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  vertical: PropTypes.bool,
+  className: PropTypes.string,
+};
+
 class Tracker extends PureComponent {
   render() {
     const { left, top, width, height } = this.props;
+
     return (
       <div
         className="mt-navigation_tracker"
@@ -138,6 +148,7 @@ class Item extends Component {
       active,
       ...props
     } = this.props;
+
     return (
       <button
         href="#"
@@ -185,3 +196,9 @@ Navigation.Item = props => (
     )}
   </NavigationContext.Consumer>
 );
+
+Navigation.Item.propTypes = {
+  ripple: PropTypes.bool,
+  className: PropTypes.string,
+  active: PropTypes.bool,
+};
