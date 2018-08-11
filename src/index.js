@@ -22,6 +22,7 @@ import Field from './field/field';
 import Expandable from './expandable/expandable';
 import ExpansionPanel from './expansion-panel/expansion-panel';
 import ProgressBar from './progress-bar/progress-bar';
+import Navigation from './navigation/navigation';
 
 export {
   Avatar,
@@ -48,4 +49,5 @@ export {
   Expandable,
   ExpansionPanel,
   ProgressBar,
+  Navigation,
 };

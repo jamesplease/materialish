@@ -62,6 +62,17 @@ export default [
     component: 'src/components/component-doc',
   },
   {
+    name: 'Navigation',
+    url: 'navigation',
+    componentKey: 'navigation',
+    editorHeight: '700px',
+    wrapperStyle: { width: '100%' },
+    description:
+      'Navigations organize content or pages within your application.',
+    component: 'src/components/component-doc',
+    materialDocsLink: 'https://material.io/design/components/tabs.html',
+  },
+  {
     name: 'Text Fields',
     url: 'text-fields',
     componentKey: 'text-fields',

@@ -1,0 +1,116 @@
+.mt-navigation {
+  --_mt-navigation-color: var(
+    --mt-navigation-color,
+    var(--mt-mainColor, #2196f3)
+  );
+
+  width: 100%;
+  font-size: calc(0.875 * var(--mt-baseFontSize, 1rem));
+  font-family: var(--mt-fontFamily, 'Roboto');
+  background-color: #fff;
+  display: flex;
+  color: #757575;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  position: relative;
+  align-items: stretch;
+
+  --mt-ripple-color: var(--_mt-navigation-color);
+}
+
+.mt-navigation-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.mt-navigation-centered {
+  justify-content: center;
+}
+
+.mt-navigation-fullWidth .mt-navigation_item {
+  flex: 1;
+}
+
+.mt-navigation_item {
+  font-size: 1em;
+  font-family: inherit;
+  min-width: 6.5em;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  padding: 1.15em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.mt-navigation_item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0;
+  z-index: -1;
+}
+
+.mt-navigation_item:hover:after,
+.mt-navigation_item:focus:after {
+  opacity: 0.03;
+}
+
+.mt-navigation_item > svg {
+  width: 1.7em;
+  height: 1.7em;
+  fill: #757575;
+}
+
+.mt-navigation_item-active {
+  color: var(--_mt-navigation-color);
+}
+
+.mt-navigation_item-active > svg {
+  fill: var(--_mt-navigation-color);
+}
+
+.mt-navigation-vertical .mt-navigation_item {
+  text-align: left;
+  justify-content: flex-start;
+  flex-direction: row;
+  min-width: auto;
+}
+
+.mt-navigation_tracker {
+  position: absolute;
+  left: var(--mt-tracker-left, 0);
+  bottom: 0;
+  width: var(--mt-tracker-width, 8.5em);
+  height: 3px;
+  background-color: var(--_mt-navigation-color);
+  transform: translateX(0);
+  transform-origin: top left;
+  transition: transform 0.2s ease-out;
+}
+
+.mt-navigation-vertical .mt-navigation_tracker {
+  width: 3px;
+  height: var(--mt-tracker-height);
+  top: var(--mt-tracker-top, 0);
+  bottom: initial;
+  left: 0;
+}
