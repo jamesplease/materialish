@@ -36,6 +36,7 @@ const readmes = {
   input: fs.readFileSync('./readmes/input.md', fsOptions),
   'text-area': fs.readFileSync('./readmes/text-area.md', fsOptions),
   field: fs.readFileSync('./readmes/field.md', fsOptions),
+  navigation: fs.readFileSync('./readmes/navigation.md', fsOptions),
   'expansion-panel': fs.readFileSync('./readmes/expansion-panel.md', fsOptions),
   'input-chip': fs.readFileSync('./readmes/input-chip.md', fsOptions),
   'action-chip': fs.readFileSync('./readmes/action-chip.md', fsOptions),
@@ -62,6 +63,7 @@ const examples = {
   input: fs.readFileSync('./examples/input.js', fsOptions),
   'text-area': fs.readFileSync('./examples/text-area.js', fsOptions),
   field: fs.readFileSync('./examples/field.js', fsOptions),
+  navigation: fs.readFileSync('./examples/navigation.js', fsOptions),
   'expansion-panel': fs.readFileSync(
     './examples/expansion-panel.js',
     fsOptions
