@@ -12,11 +12,12 @@ export default class Navigation extends Component {
       centered = false,
       fullWidth = false,
       vertical = false,
+      ripple,
       ...props
     } = this.props;
 
     return (
-      <NavigationContext.Provider value={this.updateTrackerPosition}>
+      <NavigationContext.Provider value={this.state}>
         <div
           className={`mt-navigation ${
             centered ? 'mt-navigation-centered' : ''
@@ -37,14 +38,31 @@ export default class Navigation extends Component {
     );
   }
 
-  state = {
-    tracker: {
-      left: 0,
-      width: 0,
-      height: 0,
-      top: 0,
-    },
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tracker: {
+        left: 0,
+        width: 0,
+        height: 0,
+        top: 0,
+      },
+      ripple:
+        typeof props.ripple === 'undefined' ? true : Boolean(props.ripple),
+      updateTrackerPosition: this.updateTrackerPosition,
+    };
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.ripple !== nextProps.ripple) {
+      return {
+        ripple: nextProps.ripple,
+      };
+    }
+
+    return null;
+  }
 
   componentDidMount() {
     this.updateTrackerPosition();
@@ -89,6 +107,7 @@ Navigation.propTypes = {
   fullWidth: PropTypes.bool,
   vertical: PropTypes.bool,
   className: PropTypes.string,
+  ripple: PropTypes.bool,
 };
 
 class Tracker extends PureComponent {
@@ -191,9 +210,15 @@ class Item extends Component {
 
 Navigation.Item = props => (
   <NavigationContext.Consumer>
-    {updateTrackerPosition => (
-      <Item {...props} updateTrackerPosition={updateTrackerPosition} />
-    )}
+    {({ ripple, updateTrackerPosition }) => {
+      return (
+        <Item
+          ripple={ripple}
+          {...props}
+          updateTrackerPosition={updateTrackerPosition}
+        />
+      );
+    }}
   </NavigationContext.Consumer>
 );
 
