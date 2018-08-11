@@ -85,3 +85,14 @@ Materialish is built for internal applications at Netflix, which affords us the 
 browsers only.
 
 If your project requires support for older, or legacy browsers, then Materialish may not be the right solution.
+
+## Mobile Support
+
+Materialish was built for an internal suite of applications at Netflix. At this time, mobile support is not a priority.
+Typically, we won't do anything that completely breaks a mobile application (if we do, let us know). Instead, what this means is
+that some parts of Materialish won't be optimized for small screens.
+
+Perhaps the best example of this is the Table component. It isn't responsive.
+
+Our mobile support is in some ways embodied by this very website. Although it _generally_ works on mobile, there are some
+improvements that we would like to make to it.
