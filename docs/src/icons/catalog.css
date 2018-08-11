@@ -97,12 +97,35 @@
   align-items: center;
 }
 
-.iconsCatalog_importStatement {
-  font-size: 0.85rem;
+.iconsCatalog_detailsImport {
   margin-top: 15px;
   background-color: #fafafa;
-  padding: 10px 8px;
   border-radius: 3px;
+}
+
+.iconsCatalog_importStatement {
+  font-size: 0.85rem;
+  padding: 10px 8px;
+}
+
+.iconsCatalog_copyImportBtn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 0 3px 3px 0;
+  background-color: transparent;
+  border-left: 1px solid #eee;
+  fill: var(--mainColor);
+  padding: 10px 8px;
+  width: 40px;
+  outline: none;
+}
+
+.iconsCatalog_copyImportBtn:hover {
+  background-color: #efedfb;
+}
+
+.iconsCatalog_copyImportBtn:focus {
+  border: 1px solid var(--mainColor);
 }
 
 .iconsCatalog_iconDetailsName {
