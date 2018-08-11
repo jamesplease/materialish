@@ -4,7 +4,7 @@
   justify-content: flex-end;
   min-height: calc(100% - var(--headerHeight));
   overflow-y: scroll;
-  padding-top: var(--appTopPadding);
+  padding: var(--appTopPadding) 0;
   border-right: 1px solid #e1dfe6;
   position: fixed;
   left: 0;
