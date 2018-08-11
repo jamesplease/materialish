@@ -3,15 +3,23 @@ import PropTypes from 'prop-types';
 
 class Avatar extends Component {
   render() {
-    const { className = '', image, initials = '', ...props } = this.props;
+    const {
+      className = '',
+      image,
+      initials = '',
+      style,
+      ...props
+    } = this.props;
 
     return (
-      <div className={`mt-avatar ${className}`} {...props}>
-        {image ? (
-          <img className="mt-avatar_image" src={image} alt="" />
-        ) : (
-          <div className="mt-avatar_initials">{initials}</div>
-        )}
+      <div
+        className={`mt-avatar ${className}`}
+        style={{
+          '--mt-avatar-bg-image': `url('${image}')`,
+          ...style,
+        }}
+        {...props}>
+        {!image && <div className="mt-avatar_initials">{initials}</div>}
       </div>
     );
   }

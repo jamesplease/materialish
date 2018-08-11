@@ -7,6 +7,8 @@
   */
   --_mt-avatar-backgroundColor: var(--mt-avatar-backgroundColor, #ccc);
   --_mt-avatar-color: var(--mt-avatar-color, #333);
+  --_mt-avatar-bg-image: var(--mt-avatar-bg-image, 'none');
+
   font-size: var(--mt-baseFontSize, 1rem);
   font-family: var(--mt-fontFamily, 'Roboto');
   width: 2.5em;
@@ -17,12 +19,11 @@
   align-items: center;
   justify-content: center;
   background-color: var(--_mt-avatar-backgroundColor);
+  background-image: var(--_mt-avatar-bg-image);
+  background-size: cover;
+  background-position: center;
   color: var(--_mt-avatar-color);
   vertical-align: middle;
-}
-
-.mt-avatar_image {
-  height: 100%;
 }
 
 .mt-avatar_initials {
