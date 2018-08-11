@@ -30,6 +30,10 @@ body {
   font-size: 1.6rem;
 }
 
+.markdown h1 + h2 {
+  margin-top: 10px;
+}
+
 .editorialPage h2,
 .editorialPage .secondaryHeader {
   margin-top: 20px;

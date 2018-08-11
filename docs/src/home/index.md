@@ -24,3 +24,10 @@ or [yarn](https://yarnpkg.com/):
 ```
 yarn add materialish
 ```
+
+### Prerequisites
+
+You are responsible for loading [Roboto](https://fonts.google.com/specimen/Roboto) in whatever
+way makes the most sense for your application.
+
+Aside from that, your application needs to be able to render React components and import CSS files.
