@@ -16,10 +16,12 @@ setOptions({
 storiesOf('Navigation', module)
   .addDecorator(withKnobs)
   .add('Regular', () => (
-    <Navigation vertical={boolean('Vertical', false, 'PROPS')}>
+    <Navigation
+      vertical={boolean('Vertical', false, 'PROPS')}
+      ripple={boolean('Ripple', false, 'PROPS')}>
       <Navigation.Item active>One</Navigation.Item>
       <Navigation.Item>Item Two Hundred and a half</Navigation.Item>
-      <Navigation.Item>Three</Navigation.Item>
+      <Navigation.Item ripple>Three</Navigation.Item>
     </Navigation>
   ))
   .add('With Icons', () => (
