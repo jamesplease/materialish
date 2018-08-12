@@ -31,8 +31,7 @@
   padding: 3px 5px;
 }
 
-.header_appLink:focus {
-  /* border-color: #fff; */
+.header_appLink.focus-visible {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -62,7 +61,7 @@
   outline: none;
 }
 
-.header_githubLink:focus {
+.header_githubLink.focus-visible {
   background-color: rgba(255, 255, 255, 0.25);
 }
 

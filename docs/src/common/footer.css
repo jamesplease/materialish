@@ -18,7 +18,7 @@
   padding: 3px 5px;
 }
 
-.footer_licenseLink:focus {
+.footer_licenseLink.focus-visible {
   background-color: #f0f5ff;
 }
 
@@ -36,7 +36,7 @@
   padding: 3px 5px;
 }
 
-.footer_githubLink:focus {
+.footer_githubLink.focus-visible {
   color: var(--mainColor);
   background-color: #f0f5ff;
 }

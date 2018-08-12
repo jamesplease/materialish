@@ -113,7 +113,7 @@
   outline: none;
 }
 
-.nav_expandIcon:focus,
+.nav_expandIcon.focus-visible,
 .nav_expandIcon:hover {
   background-color: rgba(0, 0, 0, 0.07);
 }
