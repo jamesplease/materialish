@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import * as MaterialishIcons from 'materialish/icons';
 import iconsData from 'materialish/icons-data.json';
+import Clipboard from 'react-clipboard.js';
 import _ from 'lodash';
 import { Elevation } from 'materialish';
+import IconContentCopy from 'materialish/icon-content-copy';
 import { withRouteData } from 'react-static';
 import Over from '../vendor/react-over';
 import CodeHighlighter from '../vendor/doc-components/markdown/code-highlighter';
@@ -63,7 +65,7 @@ export class IconsCatalog extends Component {
                   />
                   <p className="iconsCatalog_count">
                     Displaying <b>{visibleCount}</b> of <b>{totalCount}</b>{' '}
-                    icons.
+                    icons. Click an icon to see how to import it.
                   </p>
                 </div>
                 <div>
@@ -98,11 +100,20 @@ export class IconsCatalog extends Component {
                                           <span className="iconsCatalog_iconClass">
                                             {icon.iconClass}
                                           </span>
-                                          <CodeHighlighter
-                                            className="iconsCatalog_importStatement"
-                                            inline
-                                            value={importStatement}
-                                          />
+                                          <div className="iconsCatalog_detailsImport">
+                                            <CodeHighlighter
+                                              className="iconsCatalog_importStatement"
+                                              inline
+                                              value={importStatement}
+                                            />
+                                            <Clipboard
+                                              className="iconsCatalog_copyImportBtn"
+                                              data-clipboard-text={
+                                                importStatement
+                                              }>
+                                              <IconContentCopy size="1.3em" />
+                                            </Clipboard>
+                                          </div>
                                         </div>
                                       </Elevation>
                                     ),
