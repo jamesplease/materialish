@@ -124,7 +124,7 @@
   background-color: #efedfb;
 }
 
-.iconsCatalog_copyImportBtn:focus {
+.iconsCatalog_copyImportBtn.focus-visible {
   border: 1px solid var(--mainColor);
 }
 

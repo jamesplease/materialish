@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'focus-visible';
 import './styles/index.css';
 import './styles/typography.css';
 import './styles/editor.css';
