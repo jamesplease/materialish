@@ -65,7 +65,7 @@ export class IconsCatalog extends Component {
                   />
                   <p className="iconsCatalog_count">
                     Displaying <b>{visibleCount}</b> of <b>{totalCount}</b>{' '}
-                    icons.
+                    icons. Click an icon to see how to import it.
                   </p>
                 </div>
                 <div>
