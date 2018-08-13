@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.16.0 (2018/8/12)
+
+- New component: `Navigation`
+- Fixes the position of the `IconButton` ripple
+- The `Avatar` component now places the image as a background image
+
 ### v0.15.0 (2018/8/8)
 
 - New component: `ProgressBar`
