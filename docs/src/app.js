@@ -10,11 +10,14 @@ import Nav from './common/nav';
 import Footer from './common/footer';
 import historyWithQuery from './common/utils/history-with-query';
 
-const history = historyWithQuery(
-  createBrowserHistory(),
-  queryString.stringify,
-  queryString.parse
-);
+let history;
+if (typeof document !== 'undefined') {
+  history = historyWithQuery(
+    createBrowserHistory(),
+    queryString.stringify,
+    queryString.parse
+  );
+}
 
 class App extends Component {
   render() {

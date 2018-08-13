@@ -16,7 +16,7 @@ import './catalog.css';
 export class IconsCatalog extends Component {
   render() {
     const { location } = this.props.history;
-    const { query, pathname } = location;
+    const { query = {}, pathname } = location;
     const { search = '' } = query;
 
     const lowercaseQuery = search.toLowerCase();
