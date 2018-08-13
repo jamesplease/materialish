@@ -3,8 +3,10 @@ import * as MaterialishIcons from 'materialish/icons';
 import iconsData from 'materialish/icons-data.json';
 import Clipboard from 'react-clipboard.js';
 import _ from 'lodash';
+import { CSSTransition } from 'react-transition-group';
 import { Elevation } from 'materialish';
 import IconContentCopy from 'materialish/icon-content-copy';
+import IconClose from 'materialish/icon-close';
 import { withRouteData } from 'react-static';
 import Over from '../vendor/react-over';
 import CodeHighlighter from '../vendor/doc-components/markdown/code-highlighter';
@@ -43,6 +45,8 @@ export class IconsCatalog extends Component {
       .value().length;
     const totalCount = _.size(iconsData.icons);
 
+    const displayDeleteIcon = Boolean(search);
+
     return (
       <Over.Provider>
         <Over.Consumer>
@@ -53,25 +57,50 @@ export class IconsCatalog extends Component {
                   Icons Catalog
                 </h1>
                 <div className="iconsCatalog_heading">
-                  <input
-                    className="iconsCatalog_searchInput"
-                    autoComplete="off"
-                    autoFocus
-                    inputMode="text"
-                    spellCheck="false"
-                    maxLength="50"
-                    type="text"
-                    placeholder="Filter icons"
-                    value={search}
-                    onChange={e =>
-                      this.props.history.replace({
-                        pathname,
-                        query: {
-                          search: e.currentTarget.value,
-                        },
-                      })
-                    }
-                  />
+                  <div className="iconCatalog_searchContainer">
+                    <input
+                      className="iconsCatalog_searchInput"
+                      autoComplete="off"
+                      autoFocus
+                      inputMode="text"
+                      spellCheck="false"
+                      maxLength="50"
+                      type="text"
+                      placeholder="Filter icons"
+                      value={search}
+                      onChange={e =>
+                        this.props.history.replace({
+                          pathname,
+                          query: {
+                            search: e.currentTarget.value,
+                          },
+                        })
+                      }
+                    />
+                    <CSSTransition
+                      in={displayDeleteIcon}
+                      timeout={300}
+                      mountOnEnter
+                      unmountOnExit
+                      classNames="iconsCatalog_clearSearchIcon">
+                      <IconClose
+                        size="1.75rem"
+                        tabIndex="0"
+                        role="button"
+                        aria-label="Clear search"
+                        onKeyDown={e => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            this.resetSearch();
+                          }
+                        }}
+                        onClick={this.resetSearch}
+                        className="iconsCatalog_clearSearchIcon"
+                      />
+                    </CSSTransition>
+                  </div>
                   <p className="iconsCatalog_count">
                     Displaying <b>{visibleCount}</b> of <b>{totalCount}</b>{' '}
                     icons. Click an icon to see how to import it.
@@ -157,6 +186,16 @@ export class IconsCatalog extends Component {
       </Over.Provider>
     );
   }
+
+  resetSearch = () => {
+    const { location } = this.props.history;
+    const { pathname } = location;
+
+    this.props.history.replace({
+      pathname,
+      query: {},
+    });
+  };
 }
 
 export default withRouteData(IconsCatalog);
