@@ -13,8 +13,11 @@ import './catalog.css';
 
 export class IconsCatalog extends Component {
   render() {
-    const { query } = this.state;
-    const lowercaseQuery = query.toLowerCase();
+    const { location } = this.props.history;
+    const { query, pathname } = location;
+    const { search = '' } = query;
+
+    const lowercaseQuery = search.toLowerCase();
 
     const filteredCategories = _.mapValues(
       iconsData.categories,
@@ -56,11 +59,17 @@ export class IconsCatalog extends Component {
                     autoFocus
                     inputMode="text"
                     spellCheck="false"
+                    maxLength="50"
                     type="text"
                     placeholder="Filter icons"
-                    value={query}
+                    value={search}
                     onChange={e =>
-                      this.setState({ query: e.currentTarget.value })
+                      this.props.history.replace({
+                        pathname,
+                        query: {
+                          search: e.currentTarget.value,
+                        },
+                      })
                     }
                   />
                   <p className="iconsCatalog_count">
@@ -148,10 +157,6 @@ export class IconsCatalog extends Component {
       </Over.Provider>
     );
   }
-
-  state = {
-    query: '',
-  };
 }
 
 export default withRouteData(IconsCatalog);
