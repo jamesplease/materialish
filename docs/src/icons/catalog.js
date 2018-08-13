@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import * as MaterialishIcons from 'materialish/icons';
 import iconsData from 'materialish/icons-data.json';
 import Clipboard from 'react-clipboard.js';
@@ -59,6 +59,7 @@ export class IconsCatalog extends Component {
                 <div className="iconsCatalog_heading">
                   <div className="iconCatalog_searchContainer">
                     <input
+                      ref={this.searchRef}
                       className="iconsCatalog_searchInput"
                       autoComplete="off"
                       autoFocus
@@ -187,6 +188,8 @@ export class IconsCatalog extends Component {
     );
   }
 
+  searchRef = createRef();
+
   resetSearch = () => {
     const { location } = this.props.history;
     const { pathname } = location;
@@ -195,6 +198,10 @@ export class IconsCatalog extends Component {
       pathname,
       query: {},
     });
+
+    if (this.searchRef.current) {
+      this.searchRef.current.focus();
+    }
   };
 }
 
