@@ -4,7 +4,7 @@ import iconsData from 'materialish/icons-data.json';
 import Clipboard from 'react-clipboard.js';
 import _ from 'lodash';
 import { CSSTransition } from 'react-transition-group';
-import { Elevation } from 'materialish';
+import { Elevation, Input } from 'materialish';
 import IconContentCopy from 'materialish/icon-content-copy';
 import IconClose from 'materialish/icon-close';
 import { withRouteData } from 'react-static';
@@ -63,51 +63,35 @@ export class IconsCatalog extends Component {
                   Icons Catalog
                 </h1>
                 <div className="iconsCatalog_heading">
-                  <div className="iconCatalog_searchContainer">
-                    <input
-                      ref={this.searchRef}
-                      className="iconsCatalog_searchInput"
-                      autoComplete="off"
-                      autoFocus
-                      inputMode="text"
-                      spellCheck="false"
-                      maxLength="50"
-                      type="text"
-                      placeholder="Filter icons"
-                      value={search}
-                      onChange={e =>
-                        this.props.history.replace({
-                          pathname,
-                          query: {
-                            search: e.currentTarget.value,
-                          },
-                        })
-                      }
-                    />
-                    <CSSTransition
-                      in={displayDeleteIcon}
-                      timeout={300}
-                      mountOnEnter
-                      unmountOnExit
-                      classNames="iconsCatalog_clearSearchIcon">
-                      <IconClose
-                        size="1.75rem"
-                        tabIndex="0"
-                        role="button"
-                        aria-label="Clear search"
-                        onKeyDown={e => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            e.stopPropagation();
+                  <Input
+                    clearable
+                    onClickClear={e => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        e.stopPropagation();
 
-                            this.resetSearch();
-                          }
-                        }}
-                        onClick={this.resetSearch}
-                        className="iconsCatalog_clearSearchIcon"
-                      />
-                    </CSSTransition>
-                  </div>
+                        this.resetSearch();
+                      }
+                    }}
+                    nodeRef={this.searchRef}
+                    className="iconsCatalog_searchInput"
+                    autoComplete="off"
+                    autoFocus
+                    inputMode="text"
+                    spellCheck="false"
+                    maxLength="50"
+                    type="text"
+                    placeholder="Filter icons"
+                    value={search}
+                    onChange={e =>
+                      this.props.history.replace({
+                        pathname,
+                        query: {
+                          search: e.currentTarget.value,
+                        },
+                      })
+                    }
+                  />
                   <p className="iconsCatalog_count">
                     Displaying <b>{visibleCount}</b> of <b>{totalCount}</b>{' '}
                     icons. Click an icon to see how to import it.

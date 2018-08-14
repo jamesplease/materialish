@@ -10,7 +10,7 @@ export default class Input extends Component {
       icon,
       error = false,
       clearable = false,
-      onClickClear,
+      onClear,
       value,
       nodeRef,
       disabled = false,
@@ -60,12 +60,12 @@ export default class Input extends Component {
                 e.preventDefault();
                 e.stopPropagation();
 
-                if (typeof onClickClear === 'function') {
-                  onClickClear(e);
+                if (typeof onClear === 'function') {
+                  onClear(e);
                 }
               }
             }}
-            onClick={onClickClear}
+            onClick={onClear}
           />
         )}
       </div>

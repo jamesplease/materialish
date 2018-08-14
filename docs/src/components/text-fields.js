@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouteData, Link } from 'react-static';
 import { Field, Input, TextArea, Table } from 'materialish';
+import './text-fields.css';
 
 export class TextFields extends Component {
   render() {
@@ -31,7 +32,7 @@ export class TextFields extends Component {
                     error
                     value={field}
                     onChange={e => this.setState({ field: e.target.value })}
-                    style={{ width: '230px', minWidth: '230px' }}
+                    className="textFields_exampleField"
                   />
                   <Field.ErrorMessage>
                     Invalid place of residence.
@@ -50,7 +51,7 @@ export class TextFields extends Component {
                 <Input
                   value={input}
                   onChange={e => this.setState({ input: e.target.value })}
-                  style={{ width: '230px', minWidth: '230px' }}
+                  className="textFields_exampleInput"
                 />
               </Table.Cell>
               <Table.Cell>
