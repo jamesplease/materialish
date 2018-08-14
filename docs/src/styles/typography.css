@@ -47,9 +47,13 @@ a {
   color: var(--mainColor);
 }
 
+.markdown pre {
+  border: 1px solid #d8e4fb;
+}
+
 .markdown pre,
 .markdown code {
-  background-color: #f0f5ff;
+  background-color: #f4f8ff;
 }
 
 .hljs {

@@ -21,10 +21,10 @@ SVG, you do not need to load any CSS to use them.
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                      |
-| --------- | ------------- | -------- | ------------------------------------------------ |
-| size      | "1em"         | No       | The size of the icon                             |
-| ...rest   |               | No       | Other props are placed on the root `svg` element |
+| Prop Name | Default Value | Description                                      |
+| --------- | ------------- | ------------------------------------------------ |
+| size      | "1em"         | The size of the icon                             |
+| ...rest   |               | Other props are placed on the root `svg` element |
 
 ## Performance
 

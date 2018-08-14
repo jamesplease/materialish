@@ -9,12 +9,12 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                         |
-| --------- | ------------- | -------- | ------------------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the menu                         |
-| open      | false         | No       | Whether or not this ExpansionPanel is expanded                      |
-| children  |               | Yes      | A single `ExpansionPanel.Header` and a single `ExpansionPanel.Body` |
-| ...rest   |               | No       | Other props are placed on the root element                          |
+| Prop Name | Default Value | Description                                                         |
+| --------- | ------------- | ------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the menu                         |
+| open      | false         | Whether or not this ExpansionPanel is expanded                      |
+| children  |               | A single `ExpansionPanel.Header` and a single `ExpansionPanel.Body` |
+| ...rest   |               | Other props are placed on the root element                          |
 
 ## CSS Variables
 
@@ -27,19 +27,19 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                    |
-| --------- | ------------- | -------- | -------------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the panel header            |
-| children  |               | No       | The content to display in the header of the expansion panel    |
-| ...rest   |               | No       | Other props are placed on the root element of the panel header |
+| Prop Name | Default Value | Description                                                    |
+| --------- | ------------- | -------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the panel header            |
+| children  |               | The content to display in the header of the expansion panel    |
+| ...rest   |               | Other props are placed on the root element of the panel header |
 
 # `ExpansionPanel.Body`
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                                                  |
-| --------- | ------------- | -------- | ------------------------------------------------------------------------------------------------------------ |
-| className |               | No       | Additional class name(s) to add to the panel body                                                            |
-| children  |               | No       | The content to display in the body of the expansion panel                                                    |
-| open      | _inherited_   | No       | Whether or not the panel is open. This value is inherited from the parent, so you do not need to provide it. |
-| ...rest   |               | No       | Other props are placed on the root element of the panel body                                                 |
+| Prop Name | Default Value | Description                                                                                                  |
+| --------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
+| className |               | Additional class name(s) to add to the panel body                                                            |
+| children  |               | The content to display in the body of the expansion panel                                                    |
+| open      | _inherited_   | Whether or not the panel is open. This value is inherited from the parent, so you do not need to provide it. |
+| ...rest   |               | Other props are placed on the root element of the panel body                                                 |

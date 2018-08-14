@@ -7,12 +7,12 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                               |
-| --------- | ------------- | -------- | --------------------------------------------------------- |
-| children  |               | No       | The contents that are rendered                            |
-| className |               | No       | Additional class name(s) to add to the Button             |
-| ripple    | true          | No       | Whether or not to display the "ripple" effect             |
-| ...rest   |               | No       | Other props are placed on the underlying `button` element |
+| Prop Name | Default Value | Description                                               |
+| --------- | ------------- | --------------------------------------------------------- |
+| children  |               | The contents that are rendered                            |
+| className |               | Additional class name(s) to add to the Button             |
+| ripple    | true          | Whether or not to display the "ripple" effect             |
+| ...rest   |               | Other props are placed on the underlying `button` element |
 
 ## CSS Variables
 

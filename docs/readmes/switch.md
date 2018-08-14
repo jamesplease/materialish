@@ -7,11 +7,11 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                              |
-| --------- | ------------- | -------- | -------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the Switch            |
-| style     |               | No       | Inline styles to add to the root element of the Switch   |
-| ...rest   |               | No       | Other props are placed on the underlying `input` element |
+| Prop Name | Default Value | Description                                              |
+| --------- | ------------- | -------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the Switch            |
+| style     |               | Inline styles to add to the root element of the Switch   |
+| ...rest   |               | Other props are placed on the underlying `input` element |
 
 ## CSS Variables
 

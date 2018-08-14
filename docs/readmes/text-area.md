@@ -7,12 +7,12 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                                          |
-| --------- | ------------- | -------- | ---------------------------------------------------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the textarea                                                      |
-| error     | false         | No       | Whether or not the textarea is in an invalid state                                                   |
-| nodeRef   |               |          | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `textarea` element |
-| ...rest   |               | No       | Other props are placed on the root `textarea` element                                                |
+| Prop Name | Default Value | Description                                                                                          |
+| --------- | ------------- | ---------------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the textarea                                                      |
+| error     | false         | Whether or not the textarea is in an invalid state                                                   |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `textarea` element |
+| ...rest   |               | Other props are placed on the root `textarea` element                                                |
 
 ## CSS Variables
 

@@ -12,10 +12,10 @@ are used together, refer to the example above.
 
 All of the components of a dialog receive the same props.
 
-| Prop Name | Default Value | Required | Description                                                        |
-| --------- | ------------- | -------- | ------------------------------------------------------------------ |
-| className |               | No       | Additional class name(s) to add to the dialog component            |
-| ...rest   |               | No       | Other props are placed on the root element of the dialog component |
+| Prop Name | Default Value | Description                                                        |
+| --------- | ------------- | ------------------------------------------------------------------ |
+| className |               | Additional class name(s) to add to the dialog component            |
+| ...rest   |               | Other props are placed on the root element of the dialog component |
 
 ## CSS Variables
 
