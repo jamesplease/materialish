@@ -21,7 +21,6 @@
   display: block;
   min-height: var(--mt-menuItemMinHeight);
   margin: 0;
-  padding: 1.1em 1.7em;
   z-index: 0;
   cursor: pointer;
 }
@@ -53,4 +52,22 @@
 .mt-menu_item-selected:after {
   background-color: #e1e0e0;
   opacity: 1;
+}
+
+.mt-menu_button,
+.mt-menu_link {
+  border: none;
+  display: inline-block;
+  font: inherit;
+  background-color: transparent;
+  padding: 1.1em 1.7em;
+  margin: 0;
+  width: 100%;
+  outline: none;
+  text-align: inherit;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
 }

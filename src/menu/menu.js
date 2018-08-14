@@ -31,10 +31,17 @@ class Item extends Component {
       <div
         className={`mt-menu_item ${
           selected ? 'mt-menu_item-selected' : ''
-        } ${className}`}
-        {...props}
-        onClick={this.onClick}>
-        {children}
+        } ${className}`}>
+        {!props.href && (
+          <button className="mt-menu_button" {...props} onClick={this.onClick}>
+            {children}
+          </button>
+        )}
+        {props.href && (
+          <a className="mt-menu_link" {...props} onClick={this.onClick}>
+            {children}
+          </a>
+        )}
         {ripple && <Ripple ref={this.getRippleRef} />}
       </div>
     );
