@@ -2,12 +2,17 @@
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
+  border: 1px solid #ddd;
+  border-radius: 2px;
 }
 
 .markdown th {
   font-weight: 500;
+  font-size: 0.8rem;
   text-align: left;
   padding: 13px 10px;
+  color: #757575;
+  background-color: #fafafa;
   border-bottom: 1px solid #ddd;
 }
 
@@ -16,11 +21,17 @@
 }
 
 .markdown td {
+  font-size: 0.85rem;
   padding: 13px 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.markdown tr:last-child td {
+  border-bottom: none;
 }
 
 .markdown td:first-child,
 .markdown td:nth-child(2) {
   font-family: monospace;
+  font-size: 0.9rem;
 }
