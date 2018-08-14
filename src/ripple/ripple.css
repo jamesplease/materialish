@@ -34,17 +34,17 @@
 }
 
 .mt-ripple-active::after {
-  animation: ripple 0.9s;
+  animation: ripple 0.6s;
 }
 
 @keyframes ripple {
   from {
-    opacity: 0.5;
-    transform: scale(0);
+    opacity: 0.3;
+    transform: scale(var(--_mt-ripple-spread));
   }
 
   to {
-    transform: scale(calc(3 * var(--_mt-ripple-spread)));
+    transform: scale(calc(4 * var(--_mt-ripple-spread)));
     opacity: 0;
   }
 }
