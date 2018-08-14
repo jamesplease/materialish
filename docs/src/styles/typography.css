@@ -19,6 +19,25 @@ body {
   font-size: 2.3rem;
 }
 
+.componentDoc_editor ~ .markdown h1 {
+  margin-top: 80px;
+  font-size: 2.6rem;
+}
+
+.markdown h1 code {
+  padding: 0 5px;
+  margin-left: -5px;
+  border-radius: 3px;
+}
+
+/* Hi this is bad CSS. This allows you to write a paragraph or two
+  describing sub-components on a docs page. As of Aug 2018, this is used
+  on the Table docs page */
+.markdown h1 ~ h1 + p + h2,
+.markdown h1 ~ h1 + p + p + h2 {
+  margin-top: 30px;
+}
+
 .primaryHeader:first-child,
 .markdown h1:first-child {
   margin-top: 25px;
@@ -27,7 +46,7 @@ body {
 .secondaryHeader,
 .markdown h2 {
   margin: 80px 0 20px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .markdown h1 + h2 {
@@ -36,7 +55,7 @@ body {
 
 .editorialPage h2,
 .editorialPage .secondaryHeader {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .componentDoc_standaloneSecondaryHeader {
