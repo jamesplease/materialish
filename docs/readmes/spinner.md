@@ -7,11 +7,11 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value                               | Required | Description                                               |
-| --------- | ------------------------------------------- | -------- | --------------------------------------------------------- |
-| size      | "calc(var(--mt-baseFontSize, 1rem) \* 1.5)" | No       | The size of the Spinner                                   |
-| className |                                             | No       | Additional class name(s) to add to the root `svg` element |
-| ...rest   |                                             | No       | Other props are placed on the root `svg` element          |
+| Prop Name | Default Value                               | Description                                               |
+| --------- | ------------------------------------------- | --------------------------------------------------------- |
+| size      | "calc(var(--mt-baseFontSize, 1rem) \* 1.5)" | The size of the Spinner                                   |
+| className |                                             | Additional class name(s) to add to the root `svg` element |
+| ...rest   |                                             | Other props are placed on the root `svg` element          |
 
 ## CSS Variables
 

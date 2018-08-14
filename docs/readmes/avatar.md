@@ -7,12 +7,12 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                              |
-| --------- | ------------- | -------- | -------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the Avatar            |
-| image     |               | No       | The URL for the user's picture                           |
-| initials  |               | No       | The user's initials                                      |
-| ...rest   |               | No       | Other props are placed on the root element of the Avatar |
+| Prop Name | Default Value | Description                                              |
+| --------- | ------------- | -------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the Avatar            |
+| image     |               | The URL for the user's picture                           |
+| initials  |               | The user's initials                                      |
+| ...rest   |               | Other props are placed on the root element of the Avatar |
 
 ## CSS Variables
 

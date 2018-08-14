@@ -9,15 +9,15 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                       |
-| --------- | ------------- | -------- | --------------------------------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the navigation                                 |
-| children  |               | No       | One or more `Navigation.Item` components                                          |
-| vertical  | false         | No       | Whether to render the navigation vertically or horizontally                       |
-| centered  | false         | No       | Pass `true` to center the `Navigation.Item`s within the navigation                |
-| fullWidth | false         | No       | Pass `true` for the `Navigation.Item`s to span the entire width of the navigation |
-| ripple    | true          | No       | Pass `false` to disable the ripple effect on the Navigation                       |
-| ...rest   |               | No       | Other props are placed on the root node of the navigation                         |
+| Prop Name | Default Value | Description                                                                       |
+| --------- | ------------- | --------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the navigation                                 |
+| children  |               | One or more `Navigation.Item` components                                          |
+| vertical  | false         | Whether to render the navigation vertically or horizontally                       |
+| centered  | false         | Pass `true` to center the `Navigation.Item`s within the navigation                |
+| fullWidth | false         | Pass `true` for the `Navigation.Item`s to span the entire width of the navigation |
+| ripple    | true          | Pass `false` to disable the ripple effect on the Navigation                       |
+| ...rest   |               | Other props are placed on the root node of the navigation                         |
 
 ## CSS Variables
 
@@ -31,10 +31,10 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                               |
-| --------- | ------------- | -------- | ----------------------------------------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the navigation item                                    |
-| children  |               | No       | The contents to render within the navigation item                                         |
-| active    | false         | No       | Pass `true` for this item to be active. Only one item should be active at a time.         |
-| ripple    |               | No       | Use this prop to override the Navigation's `ripple` prop on a per-`Navigation.Item` basis |
-| ...rest   |               | No       | Other props are placed on the root element of the navigation item                         |
+| Prop Name | Default Value | Description                                                                               |
+| --------- | ------------- | ----------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the navigation item                                    |
+| children  |               | The contents to render within the navigation item                                         |
+| active    | false         | Pass `true` for this item to be active. Only one item should be active at a time.         |
+| ripple    |               | Use this prop to override the Navigation's `ripple` prop on a per-`Navigation.Item` basis |
+| ...rest   |               | Other props are placed on the root element of the navigation item                         |

@@ -7,10 +7,10 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value                                 | Required | Description                                      |
-| --------- | --------------------------------------------- | -------- | ------------------------------------------------ |
-| size      | "calc(var(--mt-baseFontSize, 1rem) \* 1.125)" | No       | The size of the LoadingDots                      |
-| ...rest   |                                               | No       | Other props are placed on the root `svg` element |
+| Prop Name | Default Value                                 | Description                                      |
+| --------- | --------------------------------------------- | ------------------------------------------------ |
+| size      | "calc(var(--mt-baseFontSize, 1rem) \* 1.125)" | The size of the LoadingDots                      |
+| ...rest   |                                               | Other props are placed on the root `svg` element |
 
 ## CSS Variables
 

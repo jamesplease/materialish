@@ -9,10 +9,10 @@ Note that Snackbars are frequently used with [Buttons](/components/button).
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                     |
-| --------- | ------------- | -------- | ----------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the snackbar |
-| ...rest   |               | No       | Other props are placed on the root element      |
+| Prop Name | Default Value | Description                                     |
+| --------- | ------------- | ----------------------------------------------- |
+| className |               | Additional class name(s) to add to the snackbar |
+| ...rest   |               | Other props are placed on the root element      |
 
 ## CSS Variables
 

@@ -7,11 +7,11 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                             |
-| --------- | ------------- | -------- | --------------------------------------------------------------------------------------- |
-| className |               | No       | Additional class name(s) to add to the elevation                                        |
-| depth     | 1             | No       | A value between 0 and 5 that represents how far from the page the element should appear |
-| ...rest   |               | No       | Other props are placed on the root element of the elevation                             |
+| Prop Name | Default Value | Description                                                                             |
+| --------- | ------------- | --------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the elevation                                        |
+| depth     | 1             | A value between 0 and 5 that represents how far from the page the element should appear |
+| ...rest   |               | Other props are placed on the root element of the elevation                             |
 
 ## CSS Variables
 

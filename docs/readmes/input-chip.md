@@ -7,14 +7,14 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Required | Description                                                                             |
-| --------- | ------------- | -------- | --------------------------------------------------------------------------------------- |
-| children  |               | No       | The contents that are rendered within the chip                                          |
-| className |               | No       | Additional class name(s) to add to the chip                                             |
-| onClick   |               | No       | Providing an `onClick` prop will enable the "ripple" effect when a user clicks the chip |
-| ripple    | true          | No       | Whether or not to display the "ripple" effect for chips with an `onClick` prop          |
-| icon      |               | No       | A [Materialish icon](/icons) element to render in the chip                              |
-| ...rest   |               | No       | Other props are placed on the root element                                              |
+| Prop Name | Default Value | Description                                                                             |
+| --------- | ------------- | --------------------------------------------------------------------------------------- |
+| children  |               | The contents that are rendered within the chip                                          |
+| className |               | Additional class name(s) to add to the chip                                             |
+| onClick   |               | Providing an `onClick` prop will enable the "ripple" effect when a user clicks the chip |
+| ripple    | true          | Whether or not to display the "ripple" effect for chips with an `onClick` prop          |
+| icon      |               | A [Materialish icon](/icons) element to render in the chip                              |
+| ...rest   |               | Other props are placed on the root element                                              |
 
 ## CSS Variables
 
