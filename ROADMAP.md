@@ -2,7 +2,7 @@
 
 These are future improvements we plan for Materialish.
 
-- **Improved accessibility**. Using ARIA labels and following a specification, such as WCAG AA, to ensure that this library
+- **Improved accessibility**. Using ARIA attributes and following a specification, such as WCAG AA, to ensure that this library
   is accessible.
   
 - **Interaction examples**. Now that we are nearing completeness for the "base" components, it is time for us to focus
