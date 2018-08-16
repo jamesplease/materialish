@@ -82,21 +82,18 @@
 .mt-input_closeBtn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 0.625em;
   fill: #999;
+  transform: translateY(-50%);
   cursor: pointer;
-  will-change: opacity;
-  opacity: 1;
-  transition: opacity 250ms ease-in-out;
   outline: none;
   border: 2px solid transparent;
   border-radius: 3px;
   box-sizing: border-box;
   opacity: 0;
   will-change: opacity;
-  pointer-events: none;
   transition: opacity 300ms ease-in-out;
+  pointer-events: none;
 }
 
 .mt-input_closeBtn:focus {
