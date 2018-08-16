@@ -18,7 +18,6 @@ cd materialish
 Next, install the dependencies using [npm](https://www.npmjs.com/).
 
 ```
-cd materialish
 npm install
 ```
 
@@ -53,14 +52,16 @@ Then, install the dependencies that are specific to the docs:
 npm install
 ```
 
-Once that's done, you're ready to start up the site. To do that, execute this command:
+Once that's done, you can now run the site locally. To do that, execute this command:
 
 ```
 npm start
 ```
 
+The terminal will let you know the URL of your locally-running site.
+
 > Heads up: the website is a bit complex from a developer's perspective right now. We prioritized getting it working over making it the simplest it could possibly be. If you're trying to make a change, but are unable to,
-> please [reach out](https://github.com/jamesplease/materialish/issues/new?title=Contributing+help) and we'll do our best to help you out.
+> please [reach out](https://github.com/jamesplease/materialish/issues/new?title=Contributing+help) and we'll do our best to help you get things working.
 
 ### One More Thing...
 
