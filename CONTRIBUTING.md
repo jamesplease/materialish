@@ -21,5 +21,5 @@ npm run storybook
 
 ### Disclaimer
 
-Presently, we're only building these components to support Content Algorithms use cases.
+Presently, we're only building these components to support Content Creative Engineering (CCE) use cases.
 We encourage you to fork the components if you need additional functionality.
