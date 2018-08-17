@@ -70,12 +70,15 @@ export default class Navigation extends Component {
   }
 
   componentWillUnmount() {
+    this.unmounted = true;
     window.removeEventListener('resize', this.onResize);
   }
 
   onResize = () => {
     requestAnimationFrame(() => {
-      this.updateTrackerPosition();
+      if (!this.unmounted) {
+        this.updateTrackerPosition();
+      }
     });
   };
 
