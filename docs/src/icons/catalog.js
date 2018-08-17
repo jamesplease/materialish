@@ -8,6 +8,7 @@ import { Elevation } from 'materialish';
 import IconContentCopy from 'materialish/icon-content-copy';
 import IconClose from 'materialish/icon-close';
 import { withRouteData } from 'react-static';
+import aliases from './aliases.json';
 import Over from '../vendor/react-over';
 import CodeHighlighter from '../vendor/doc-components/markdown/code-highlighter';
 import { morph } from '../common/utils/react-over-animations';
@@ -29,11 +30,16 @@ export class IconsCatalog extends Component {
             return false;
           }
 
-          return (
-            icon.iconName.toLowerCase().includes(lowercaseQuery) ||
-            icon.iconClass.toLowerCase().includes(lowercaseQuery) ||
-            categoryName.toLowerCase().includes(lowercaseQuery)
-          );
+          const iconAliases = aliases[icon.iconName] || [];
+
+          const wordsToCheck = [
+            ...iconAliases,
+            icon.iconName.toLowerCase(),
+            icon.iconClass.toLowerCase(),
+            categoryName.toLowerCase(),
+          ];
+
+          return wordsToCheck.some(word => word.includes(lowercaseQuery));
         });
       }
     );
