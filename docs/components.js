@@ -255,7 +255,7 @@ export default [
         description:
           'Action chips represent that an action will occur when a user clicks or touches it. They are an alternative to buttons.',
         component: 'src/components/component-doc',
-        editorHeight: '410px',
+        editorHeight: '480px',
         materialDocsLink:
           'https://material.io/design/components/chips.html#action-chips',
       },

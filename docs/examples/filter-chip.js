@@ -4,9 +4,9 @@ class FilterChipExample extends Component {
       <Fragment>
         <FilterChip>Netflix</FilterChip>
         {' '}
-        <FilterChip>Amazon</FilterChip>
-        {' '}
         <FilterChip>Hulu</FilterChip>
+        {' '}
+        <FilterChip icon={<IconTv />}>Cable</FilterChip>
       </Fragment>
     );
   }

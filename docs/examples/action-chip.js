@@ -5,9 +5,15 @@ function onClick() {
 class ActionChipExample extends Component {
   render() {
     return (
-      <ActionChip onClick={onClick}>
-        <IconDelete style={iconStyle} /> Delete Item
-      </ActionChip>
+      <Fragment>
+        <ActionChip onClick={onClick}>
+          Perform Action
+        </ActionChip>
+        {' '}
+        <ActionChip onClick={onClick}>
+          <IconDelete style={iconStyle} /> Delete Item
+        </ActionChip>
+      </Fragment>
     );
   }
 }
