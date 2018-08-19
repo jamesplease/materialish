@@ -8,6 +8,7 @@ class ActionChip extends Component {
       className = '',
       ripple = true,
       children,
+      icon,
       nodeRef,
       ...props
     } = this.props;
@@ -20,6 +21,10 @@ class ActionChip extends Component {
         } ${className}`}
         {...props}
         onClick={this.onClick}>
+        {icon &&
+          React.cloneElement(icon, {
+            className: `mt-chip_icon ${icon.props.className}`,
+          })}
         <div className="mt-chip_chip">{children}</div>
         {ripple && props.onClick && <Ripple ref={this.getRippleRef} />}
       </button>

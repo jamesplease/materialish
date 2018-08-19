@@ -10,8 +10,11 @@ class InputChipExample extends Component {
   render() {
     return (
       <Fragment>
-        <InputChip onClose={onClose}>San Francisco</InputChip>
-        <InputChip onClick={onClick}>Click me</InputChip>
+        <InputChip icon={<IconBusiness />}>San Francisco</InputChip>
+        {' '}
+        <InputChip onClick={onClick}>Clickable</InputChip>
+        {' '}
+        <InputChip onClose={onClose}>Closeable</InputChip>
       </Fragment>
     );
   }

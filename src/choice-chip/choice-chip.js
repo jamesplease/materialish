@@ -8,6 +8,7 @@ class ChoiceChip extends Component {
       className = '',
       ripple = true,
       children,
+      icon,
       nodeRef,
       ...props
     } = this.props;
@@ -20,6 +21,10 @@ class ChoiceChip extends Component {
           ref={nodeRef}
           {...props}
         />
+        {icon &&
+          React.cloneElement(icon, {
+            className: `mt-chip_choiceIcon ${icon.props.className}`,
+          })}
         <div className="mt-chip_chip">{children}</div>
         {ripple && <Ripple ref={this.getRippleRef} />}
       </div>

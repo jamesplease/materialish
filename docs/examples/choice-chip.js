@@ -2,9 +2,17 @@ class ChoiceChipExample extends Component {
   render() {
     return (
       <Fragment>
-        <ChoiceChip name="size">Small</ChoiceChip>
-        <ChoiceChip name="size">Medium</ChoiceChip>
-        <ChoiceChip name="size">Large</ChoiceChip>
+        <ChoiceChip name="size" icon={<IconLaptop/>}>
+          Laptop
+        </ChoiceChip>
+        {' '}
+        <ChoiceChip name="size" icon={<IconPhoneIphone/>}>
+          Phone
+        </ChoiceChip>
+        {' '}
+        <ChoiceChip name="size">
+          Other
+        </ChoiceChip>
       </Fragment>
     );
   }

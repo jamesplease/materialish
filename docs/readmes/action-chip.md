@@ -12,6 +12,7 @@ import 'materialish/materialish.css';
 | children  |               | The contents that are rendered within the chip                                                     |
 | className |               | Additional class name(s) to add to the chip                                                        |
 | ripple    | true          | Whether or not to display the "ripple" effect                                                      |
+| icon      |               | A [Materialish icon](/icons) element to render in the chip                                         |
 | nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `button` element |
 | ...rest   |               | Other props are placed on the root element                                                         |
 

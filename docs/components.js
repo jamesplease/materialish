@@ -244,7 +244,7 @@ export default [
         description:
           'Input chips represent information, such as an entity or different attributes.',
         component: 'src/components/component-doc',
-        editorHeight: '470px',
+        editorHeight: '480px',
         materialDocsLink:
           'https://material.io/design/components/chips.html#input-chips',
       },
@@ -255,7 +255,7 @@ export default [
         description:
           'Action chips represent that an action will occur when a user clicks or touches it. They are an alternative to buttons.',
         component: 'src/components/component-doc',
-        editorHeight: '410px',
+        editorHeight: '460px',
         materialDocsLink:
           'https://material.io/design/components/chips.html#action-chips',
       },
@@ -266,6 +266,7 @@ export default [
         description:
           'Choice chips allow for the selection of a single chip from a set of options. They are an alternative to dropdowns and radio buttons.',
         component: 'src/components/component-doc',
+        editorHeight: '460px',
         materialDocsLink:
           'https://material.io/design/components/chips.html#choice-chips',
       },
@@ -276,6 +277,7 @@ export default [
         description:
           'Filter chips use descriptive words to filter content. They are an alternative to checkboxes.',
         component: 'src/components/component-doc',
+        editorHeight: '350px',
         materialDocsLink:
           'https://material.io/design/components/chips.html#filter-chips',
       },
