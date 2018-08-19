@@ -3,7 +3,9 @@ class FilterChipExample extends Component {
     return (
       <Fragment>
         <FilterChip>Netflix</FilterChip>
+        {' '}
         <FilterChip>Amazon</FilterChip>
+        {' '}
         <FilterChip>Hulu</FilterChip>
       </Fragment>
     );
