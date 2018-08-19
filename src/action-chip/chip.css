@@ -62,8 +62,7 @@
 .mt-chip_chip {
   position: static;
   color: var(--_mt-chip-textColor);
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   vertical-align: middle;
   padding: 0;
   white-space: nowrap;
@@ -118,6 +117,7 @@
   cursor: pointer;
 }
 
+.mt-chip_choiceIcon,
 .mt-chip_icon {
   display: inline-block;
   vertical-align: middle;
@@ -134,6 +134,7 @@
 }
 
 .mt-chip_checkmark ~ .mt-chip_chip,
+.mt-chip_choiceIcon ~ .mt-chip_chip,
 .mt-chip_icon ~ .mt-chip_chip {
   padding-left: 0.25em;
 }
