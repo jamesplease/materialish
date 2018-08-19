@@ -2,7 +2,7 @@
   --_mt-chip-backgroundColor: var(--mt-chip-backgroundColor, #e0dfe0);
   --_mt-chip-backgroundColorFocus: var(
     --mt-chip-backgroundColorFocus,
-    rgb(51, 51, 51, 0.2)
+    rgba(51, 51, 51, 0.2)
   );
   --_mt-chip-backgroundColorActive: var(
     --mt-chip-backgroundColorActive,
@@ -10,7 +10,11 @@
   );
   --_mt-chip-backgroundColorActiveFocus: var(
     --mt-chip-backgroundColorActiveFocus,
-    rgb(33, 150, 243, 0.2)
+    rgba(33, 150, 243, 0.2)
+  );
+  --_mt-chip-rippleColor: var(
+    --mt-chip-rippleColor,
+    var(--mt-mainColor, #2196f3)
   );
   --_mt-chip-textColor: var(--mt-chip-textColor, #212121);
   --_mt-chip-textColorActive: var(--mt-chip-textColorActive, #005496);
@@ -165,5 +169,5 @@
 }
 
 .mt-chip_input:checked ~ .mt-ripple {
-  --mt-ripple-color: var(--mt-mainColor, #2196f3);
+  --mt-ripple-color: var(--_mt-chip-rippleColor);
 }
