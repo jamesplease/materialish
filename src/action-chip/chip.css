@@ -153,6 +153,10 @@
   transition: opacity 0.01s linear;
 }
 
+.mt-chip_input:checked ~ .mt-chip_choiceIcon {
+  fill: var(--_mt-chip-textColorActive);
+}
+
 .mt-chip_input:checked ~ .mt-chip_checkmark {
   width: 1.5em;
 }
