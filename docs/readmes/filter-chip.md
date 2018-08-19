@@ -7,13 +7,14 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Description                                                |
-| --------- | ------------- | ---------------------------------------------------------- |
-| children  |               | The contents that are rendered within the chip             |
-| className |               | Additional class name(s) to add to the chip                |
-| ripple    | true          | Whether or not to display the "ripple" effect              |
-| icon      |               | A [Materialish icon](/icons) element to render in the chip |
-| ...rest   |               | Other props are placed on the underlying `input` element   |
+| Prop Name | Default Value | Description                                                                                    |
+| --------- | ------------- | ---------------------------------------------------------------------------------------------- |
+| children  |               | The contents that are rendered within the chip                                                 |
+| className |               | Additional class name(s) to add to the chip                                                    |
+| ripple    | true          | Whether or not to display the "ripple" effect                                                  |
+| icon      |               | A [Materialish icon](/icons) element to render in the chip                                     |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `input` node |
+| ...rest   |               | Other props are placed on the underlying `input` element                                       |
 
 ## CSS Variables
 

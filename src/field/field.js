@@ -7,24 +7,29 @@ export default class Field extends Component {
   static Input = InputComponent;
   static TextArea = TextAreaComponent;
 
-  static Label = ({ className = '', children, ...props }) => (
-    <div className={`mt-field_label ${className}`} {...props}>
+  static Label = ({ className = '', children, nodeRef, ...props }) => (
+    <div className={`mt-field_label ${className}`} ref={nodeRef} {...props}>
       <span>{children}</span>
     </div>
   );
 
-  static ErrorMessage = ({ className = '', ...props }) => (
-    <div className={`mt-field_errorMessage ${className}`} {...props} />
+  static ErrorMessage = ({ className = '', nodeRef, ...props }) => (
+    <div
+      className={`mt-field_errorMessage ${className}`}
+      ref={nodeRef}
+      {...props}
+    />
   );
 
   render() {
-    const { className = '', required = false, ...props } = this.props;
+    const { className = '', required = false, nodeRef, ...props } = this.props;
 
     return (
       <label
         className={`mt-field ${
           required ? 'mt-field-required' : ''
         } ${className}`}
+        ref={nodeRef}
         {...props}
       />
     );

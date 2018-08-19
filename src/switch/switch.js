@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 
 class Switch extends Component {
   render() {
-    const { className = '', style, ...props } = this.props;
+    const { className = '', style, nodeRef, ...props } = this.props;
     return (
       <div className={`mt-switch ${className}`} {...style}>
-        <input type="checkbox" className="mt-switch_input" {...props} />
+        <input
+          type="checkbox"
+          className="mt-switch_input"
+          ref={nodeRef}
+          {...props}
+        />
         <div className="mt-switch_switch" />
         <div className="mt-switch_focus" />
       </div>

@@ -21,11 +21,18 @@ function areEqualShallow(a, b) {
 
 export default class Table extends Component {
   render() {
-    const { children, loading = false, className = '', ...props } = this.props;
+    const {
+      children,
+      loading = false,
+      className = '',
+      nodeRef,
+      ...props
+    } = this.props;
 
     return (
       <TableContext.Provider value={this.state.context}>
         <div
+          ref={nodeRef}
           className={`mt-table ${
             loading ? 'mt-table-loading' : ''
           } ${className}`}
@@ -61,9 +68,10 @@ Table.propTypes = {
 
 class TableHead extends Component {
   render() {
-    const { children, className = '', ...props } = this.props;
+    const { children, className = '', nodeRef, ...props } = this.props;
     return (
       <div
+        ref={nodeRef}
         className={`mt-table_header ${className}`}
         role="rowgroup"
         {...props}>
@@ -81,13 +89,16 @@ class TableHeadRow extends Component {
   render() {
     const {
       children,
+      nodeRef,
       className = '',
       columnProps, // eslint-disable-line
       setColumnsProps, // eslint-disable-line
       ...props
     } = this.props;
+
     return (
       <div
+        ref={nodeRef}
         className={`mt-table_row mt-table_headerRow ${className}`}
         role="row"
         {...props}>
@@ -153,9 +164,11 @@ WrappedTableHeadRow.propTypes = {
 
 class TableHeadCell extends Component {
   render() {
-    const { children, className = '', ...props } = this.props;
+    const { children, className = '', nodeRef, ...props } = this.props;
+
     return (
       <TableCell
+        ref={nodeRef}
         className={`mt-table_headerCell ${className}`}
         role="columnheader"
         {...props}>
@@ -173,9 +186,14 @@ TableHeadCell.propTypes = {
 
 class TableBody extends Component {
   render() {
-    const { className = '', children, ...props } = this.props;
+    const { className = '', children, nodeRef, ...props } = this.props;
+
     return (
-      <div className={`mt-table_body ${className}`} role="rowgroup" {...props}>
+      <div
+        ref={nodeRef}
+        className={`mt-table_body ${className}`}
+        role="rowgroup"
+        {...props}>
         {children}
       </div>
     );
@@ -188,12 +206,14 @@ TableBody.propTypes = {
 
 class TableRow extends Component {
   render() {
-    const { children, className = '', ...props } = this.props;
+    const { children, className = '', nodeRef, ...props } = this.props;
     const isClickable = typeof props.onClick === 'function';
+
     return (
       <TableContext.Consumer>
         {({ columnProps }) => (
           <div
+            ref={nodeRef}
             className={`mt-table_row ${
               isClickable ? 'mt-table-clickableElement' : ''
             } ${className}`}
@@ -225,10 +245,13 @@ class TableCell extends Component {
       rightBorder = false,
       width,
       style,
+      nodeRef,
       ...props
     } = this.props;
+
     return (
       <div
+        ref={nodeRef}
         className={`mt-table_cell ${
           rightBorder ? 'mt-table_cell-rightBorder' : ''
         } ${className}`}
@@ -254,6 +277,7 @@ TableCell.propTypes = {
 class TableExpandedRowContent extends Component {
   render() {
     const { className = '', children, open, ...props } = this.props;
+
     return (
       <div
         className={`mt-table_expandedRowContent ${

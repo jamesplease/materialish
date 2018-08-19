@@ -7,11 +7,13 @@ class Spinner extends Component {
       size = 'calc(var(--mt-baseFontSize, 1rem) * 1.5)',
       className = '',
       style,
+      nodeRef,
       ...props
     } = this.props;
 
     return (
       <svg
+        ref={nodeRef}
         className={`mt-spinner ${className}`}
         style={{
           width: size,

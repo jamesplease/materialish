@@ -9,12 +9,13 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Description                                                        |
-| --------- | ------------- | ------------------------------------------------------------------ |
-| className |               | Additional class name(s) to add to the menu item                   |
-| required  | false         | Whether or not the value that this field represents is required    |
-| children  |               | Render the Input, Label, and ErrorMessage as children              |
-| ...rest   |               | The rest of the props are spread on the underlying `label` element |
+| Prop Name | Default Value | Description                                                                                 |
+| --------- | ------------- | ------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the menu item                                            |
+| required  | false         | Whether or not the value that this field represents is required                             |
+| children  |               | Render the Input, Label, and ErrorMessage as children                                       |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the root node |
+| ...rest   |               | The rest of the props are spread on the underlying `label` element                          |
 
 ## CSS Variables
 
@@ -37,18 +38,20 @@ This is an alias of [**TextArea**](/components/text-area).
 
 ## Props
 
-| Prop Name | Default Value | Description                                            |
-| --------- | ------------- | ------------------------------------------------------ |
-| className |               | Additional class name(s) to add to the menu item       |
-| children  |               | The value to display as the label                      |
-| ...rest   |               | The other props are spread onto the underlying element |
+| Prop Name | Default Value | Description                                                                                 |
+| --------- | ------------- | ------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the menu item                                            |
+| children  |               | The value to display as the label                                                           |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the root node |
+| ...rest   |               | The other props are spread onto the underlying element                                      |
 
 # `Field.ErrorMessage`
 
 ## Props
 
-| Prop Name | Default Value | Description                                            |
-| --------- | ------------- | ------------------------------------------------------ |
-| className |               | Additional class name(s) to add to the menu item       |
-| children  |               | The message to display as the error                    |
-| ...rest   |               | The other props are spread onto the underlying element |
+| Prop Name | Default Value | Description                                                                                 |
+| --------- | ------------- | ------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the menu item                                            |
+| children  |               | The message to display as the error                                                         |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the root node |
+| ...rest   |               | The other props are spread onto the underlying element                                      |

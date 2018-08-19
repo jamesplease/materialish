@@ -9,10 +9,12 @@ export default class ProgressBar extends Component {
       loaded = 0,
       buffered = 100,
       indeterminate = false,
+      nodeRef,
     } = this.props;
 
     return (
       <div
+        ref={nodeRef}
         className={`mt-progressBar ${
           indeterminate ? 'mt-progressBar-indeterminate' : ''
         } ${className}`}

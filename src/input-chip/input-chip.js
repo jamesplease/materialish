@@ -10,14 +10,17 @@ export default class InputChip extends Component {
       icon,
       ripple = true,
       children,
+      nodeRef,
       ...props
     } = this.props;
+
     return (
       <div
         className={`mt-chip ${
           props.onClick ? '' : 'mt-chip-notClickable'
         } ${className}`}
-        onClick={this.onClick}>
+        onClick={this.onClick}
+        ref={nodeRef}>
         {icon &&
           React.cloneElement(icon, {
             className: `mt-chip_icon ${icon.props.className}`,

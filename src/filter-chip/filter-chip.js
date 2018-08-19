@@ -9,12 +9,18 @@ class FilterChip extends Component {
       ripple = true,
       icon,
       children,
+      nodeRef,
       ...props
     } = this.props;
 
     return (
       <div className={`mt-chip ${className}`} onClick={this.onClick}>
-        <input type="checkbox" className="mt-chip_input" {...props} />
+        <input
+          type="checkbox"
+          className="mt-chip_input"
+          ref={nodeRef}
+          {...props}
+        />
         {icon &&
           React.cloneElement(icon, {
             className: `mt-chip_icon ${icon.props.className}`,

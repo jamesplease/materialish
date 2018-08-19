@@ -6,11 +6,13 @@ export default class LoadingDots extends Component {
     const {
       size = 'calc(var(--mt-baseFontSize, 1rem) * 1.125)',
       style,
+      nodeRef,
       ...rest
     } = this.props;
 
     return (
       <svg
+        ref={nodeRef}
         style={{
           width: size,
           height: size,

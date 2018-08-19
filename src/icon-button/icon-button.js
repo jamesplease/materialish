@@ -4,10 +4,17 @@ import PropTypes from 'prop-types';
 
 export default class IconButton extends Component {
   render() {
-    const { className = '', ripple = true, children, ...props } = this.props;
+    const {
+      className = '',
+      ripple = true,
+      children,
+      nodeRef,
+      ...props
+    } = this.props;
 
     return (
       <button
+        ref={nodeRef}
         className={`mt-iconButton ${className}`}
         {...props}
         onClick={this.onClick}>

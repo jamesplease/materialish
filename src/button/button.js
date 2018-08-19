@@ -13,6 +13,7 @@ class Button extends Component {
       stroked = false,
       compact = flat,
       ripple = true,
+      nodeRef,
       ...otherProps
     } = this.props;
 
@@ -26,6 +27,7 @@ class Button extends Component {
     return (
       <button
         {...otherProps}
+        ref={nodeRef}
         className={componentClassNames}
         onClick={this.onClick}>
         {ripple && <Ripple ref={this.getRippleRef} />}
