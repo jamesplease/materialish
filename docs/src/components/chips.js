@@ -7,6 +7,9 @@ import {
   FilterChip,
   Table,
 } from 'materialish';
+import IconBusiness from 'materialish/icon-business';
+import IconPhoneIphone from 'materialish/icon-phone-iphone';
+import IconEmail from 'materialish/icon-email';
 
 export class Chips extends Component {
   render() {
@@ -41,7 +44,7 @@ export class Chips extends Component {
           <Table.Body>
             <Table.Row>
               <Table.Cell>
-                <InputChip>San Francisco</InputChip>
+                <InputChip icon={<IconBusiness />}>San Francisco</InputChip>
               </Table.Cell>
               <Table.Cell>
                 <Link to="/components/input-chip">Input Chip</Link>
@@ -55,7 +58,9 @@ export class Chips extends Component {
             </Table.Row>
             <Table.Row>
               <Table.Cell>
-                <ActionChip onClick={() => {}}>Perform Action</ActionChip>
+                <ActionChip onClick={() => {}} icon={<IconEmail />}>
+                  Send Email
+                </ActionChip>
               </Table.Cell>
               <Table.Cell>
                 <Link to="/components/action-chip">Action Chip</Link>
@@ -67,7 +72,9 @@ export class Chips extends Component {
             </Table.Row>
             <Table.Row>
               <Table.Cell>
-                <ChoiceChip name="size">Small</ChoiceChip>
+                <ChoiceChip name="size" icon={<IconPhoneIphone />}>
+                  Phone
+                </ChoiceChip>
               </Table.Cell>
               <Table.Cell>
                 <Link to="/components/choice-chip">Choice Chip</Link>
