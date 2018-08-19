@@ -24,7 +24,7 @@ class App extends Component {
     const { isMenuOpen } = this.state;
 
     return (
-      <Router history={history}>
+      <Router history={history} autoScrollToHash={false}>
         <Fragment>
           <Header onToggleMenu={this.onToggleMenu} />
           <div className="app_body">
