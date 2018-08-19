@@ -22,7 +22,13 @@ const OUTPUT_METADATA_FILEPATH = path.join(
 const template = `import React from "react";
 
 export default function [[classname]](props) {
-  const { size = "1em", ...rest } = props;
+  const { size = "1em", style, ...rest } = props;
+
+  const styleToApply = {
+    width: size,
+    height: size,
+    ...style
+  };
 
   return (
     [[svg]]
@@ -123,8 +129,8 @@ clone(
 
         let svg = contents
           .replace('>', ' {...rest} > ')
-          .replace(/width="48"/, 'width={size}')
-          .replace(/height="48"/, 'height={size}');
+          .replace(/width="48"/, '')
+          .replace(/height="48"/, 'style={styleToApply}');
 
         // This ensures that SVG attribute names with hyphens are prop'd
         _.forEach(svgAttributeList, attrName => {
