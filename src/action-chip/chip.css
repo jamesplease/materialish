@@ -62,7 +62,8 @@
 .mt-chip_chip {
   position: static;
   color: var(--_mt-chip-textColor);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   vertical-align: middle;
   padding: 0;
   white-space: nowrap;
