@@ -1,5 +1,4 @@
 .mt-chip {
-  --_mt-chip-mainColor: var(--mt-mainColor, #2196f3);
   --_mt-chip-backgroundColor: var(--mt-chip-backgroundColor, #e0dfe0);
   --_mt-chip-backgroundColorFocus: var(
     --mt-chip-backgroundColorFocus,
@@ -14,10 +13,7 @@
     rgb(33, 150, 243, 0.2)
   );
   --_mt-chip-textColor: var(--mt-chip-textColor, #212121);
-  --_mt-chip-textColorActive: var(
-    --mt-chip-textColorActive,
-    var(--_mt-chip-mainColor)
-  );
+  --_mt-chip-textColorActive: var(--mt-chip-textColorActive, #005496);
   --mt-ripple-color: rgba(0, 0, 0, 0.5);
   font-size: calc(var(--mt-baseFontSize, 1rem) * 0.875);
   font-family: var(--mt-fontFamily, 'Roboto');
@@ -169,5 +165,5 @@
 }
 
 .mt-chip_input:checked ~ .mt-ripple {
-  --mt-ripple-color: var(--_mt-chip_mainColor, #2196f3);
+  --mt-ripple-color: var(--mt-mainColor, #2196f3);
 }

@@ -20,10 +20,10 @@ import 'materialish/materialish.css';
 | ------------------------------------ | ---------------------- | -------------------------------------------------------------------- |
 | --mt-baseFontSize                    | 1rem                   | The text size and dimensions of the chip are based off of this value |
 | --mt-fontFamily                      | 'Roboto'               | The font family to use for the chip text                             |
-| --mt-mainColor                       | #2196f3                | The colors of the chip will be based off of this value               |
+| --mt-mainColor                       | #2196f3                | The color of the ripple will be based off of this value              |
 | --mt-chip-backgroundColor            | #e0dfe0                | The background color of the chip                                     |
 | --mt-chip-backgroundColorFocus       | rgb(51, 51, 51, 0.2)   | The background color of the chip when it is focused                  |
 | --mt-chip-backgroundColorActive      | rgb(33, 150, 243, 0.2) | The background color of the chip when is active                      |
 | --mt-chip-backgroundColorActiveFocus | --mt-mainColor         | The background color of the chip when it active and focused          |
 | --mt-chip-textColor                  | #212121                | The text color for the chip                                          |
-| --mt-chip-textColorActive            | --mt-mainColor         | The text color for the active chip                                   |
+| --mt-chip-textColorActive            | #005496                | The text color for the active chip                                   |
