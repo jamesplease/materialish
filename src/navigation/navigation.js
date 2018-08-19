@@ -173,7 +173,6 @@ class Item extends Component {
 
     return (
       <button
-        href="#"
         className={`mt-navigation_item ${
           active ? 'mt-navigation_item-active' : ''
         } ${className}`}
