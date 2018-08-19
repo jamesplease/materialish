@@ -48,7 +48,13 @@ let fileCount = 0;
 clone(
   'https://github.com/google/material-design-icons.git',
   MATERIAL_ICONS_REPO_PATH,
-  {},
+  {
+    // This ensures a stable release of Material Design Icons
+    // https://github.com/google/material-design-icons/releases/tag/3.0.1
+    // Version release date: Sept. 2016
+    // As of Aug 2018, this is the latest release.
+    checkout: 'a6145e167b4a3a65640dd6279319cbc77a7e4e96',
+  },
   () => {
     console.log(
       chalk.blue(
