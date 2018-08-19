@@ -7,15 +7,16 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Description                                               |
-| --------- | ------------- | --------------------------------------------------------- |
-| children  |               | The contents that are rendered                            |
-| className |               | Additional class name(s) to add to the Button             |
-| ripple    | true          | Whether or not to display the "ripple" effect             |
-| flat      | false         | Pass `true` to remove the button's background color       |
-| raised    | false         | Whether or not to display a drop shadow                   |
-| stroked   | false         | Pass `true` to render as an outline button                |
-| ...rest   |               | Other props are placed on the underlying `button` element |
+| Prop Name | Default Value | Description                                                                                        |
+| --------- | ------------- | -------------------------------------------------------------------------------------------------- |
+| children  |               | The contents that are rendered                                                                     |
+| className |               | Additional class name(s) to add to the Button                                                      |
+| ripple    | true          | Whether or not to display the "ripple" effect                                                      |
+| flat      | false         | Pass `true` to remove the button's background color                                                |
+| raised    | false         | Whether or not to display a drop shadow                                                            |
+| stroked   | false         | Pass `true` to render as an outline button                                                         |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `button` element |
+| ...rest   |               | Other props are placed on the underlying `button` element                                          |
 
 ## CSS Variables
 

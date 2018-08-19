@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 
 export default class Snackbar extends Component {
   render() {
-    const { className = '', ...props } = this.props;
-    return <div className={`mt-snackbar ${className}`} {...props} />;
+    const { className = '', nodeRef, ...props } = this.props;
+
+    return (
+      <div className={`mt-snackbar ${className}`} ref={nodeRef} {...props} />
+    );
   }
 }
 

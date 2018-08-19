@@ -9,10 +9,11 @@ Note that Snackbars are frequently used with [Buttons](/components/button).
 
 ## Props
 
-| Prop Name | Default Value | Description                                     |
-| --------- | ------------- | ----------------------------------------------- |
-| className |               | Additional class name(s) to add to the snackbar |
-| ...rest   |               | Other props are placed on the root element      |
+| Prop Name | Default Value | Description                                                                                 |
+| --------- | ------------- | ------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the snackbar                                             |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the root node |
+| ...rest   |               | Other props are placed on the root element                                                  |
 
 ## CSS Variables
 

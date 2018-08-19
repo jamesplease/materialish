@@ -7,7 +7,7 @@ function clamp(min, val, max) {
 
 class Elevation extends Component {
   render() {
-    const { className = '', depth = 1, ...props } = this.props;
+    const { className = '', depth = 1, nodeRef, ...props } = this.props;
 
     const depthToUse = Number.isNaN(depth) ? 1 : depth;
     const clampedDepth = clamp(0, depthToUse, 5);
@@ -15,6 +15,7 @@ class Elevation extends Component {
     return (
       <div
         className={`mt-elevation mt-elevation-${clampedDepth} ${className}`}
+        ref={nodeRef}
         {...props}
       />
     );

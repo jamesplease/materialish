@@ -178,8 +178,7 @@ class Item extends Component {
           active ? 'mt-navigation_item-active' : ''
         } ${className}`}
         {...props}
-        onClick={this.onClick}
-        ref={this.getRef}>
+        onClick={this.onClick}>
         {children}
         {ripple && <Ripple ref={this.getRippleRef} />}
       </button>

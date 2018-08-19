@@ -8,11 +8,13 @@ class Avatar extends Component {
       image,
       initials = '',
       style,
+      nodeRef,
       ...props
     } = this.props;
 
     return (
       <div
+        ref={nodeRef}
         className={`mt-avatar ${className}`}
         style={{
           '--mt-avatar-bg-image': `url('${image}')`,

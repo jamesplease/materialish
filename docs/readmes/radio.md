@@ -7,11 +7,12 @@ import 'materialish/materialish.css';
 
 ## Props
 
-| Prop Name | Default Value | Description                                              |
-| --------- | ------------- | -------------------------------------------------------- |
-| className |               | Additional class name(s) to add to the Radio             |
-| style     |               | Inline styles to add to the root element of the Radio    |
-| ...rest   |               | Other props are placed on the underlying `input` element |
+| Prop Name | Default Value | Description                                                                                    |
+| --------- | ------------- | ---------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the Radio                                                   |
+| style     |               | Inline styles to add to the root element of the Radio                                          |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `input` node |
+| ...rest   |               | Other props are placed on the underlying `input` element                                       |
 
 ## CSS Variables
 
