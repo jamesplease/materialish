@@ -31,7 +31,6 @@ export default class Expandable extends Component {
 
     this.state = {
       isOpen: props.open,
-      isOpenQueue: null,
       isAnimating: false,
     };
   }
@@ -40,16 +39,14 @@ export default class Expandable extends Component {
     // When the open prop differs from our previous state, then we either need to
     // start animating, or we need to queue the open
     if (nextProps.open !== prevState.isOpen) {
-      if (prevState.isAnimating) {
-        return {
-          isOpenQueue: nextProps.open,
-        };
-      } else {
+      if (!prevState.isAnimating) {
         return {
           isAnimating: true,
           isOpen: nextProps.open,
         };
       }
+
+      return null;
     }
 
     return null;
