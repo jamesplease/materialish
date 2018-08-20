@@ -32,12 +32,6 @@ export default class Input extends Component {
           disabled ? 'mt-input_container-disabled' : ''
         } ${className}`}
         style={style}>
-        {hasIcon
-          ? React.cloneElement(icon, {
-              size: iconSize,
-              className: `mt-input-icon ${iconClass}`,
-            })
-          : null}
         <input
           className={`mt-input ${error ? 'mt-input-error' : ''} ${
             clearable ? 'mt-input-clearable' : ''
@@ -47,6 +41,12 @@ export default class Input extends Component {
           disabled={disabled}
           {...props}
         />
+        {hasIcon
+          ? React.cloneElement(icon, {
+              size: iconSize,
+              className: `mt-input-icon ${iconClass}`,
+            })
+          : null}
         {clearable && (
           <IconClose
             className={`mt-input_closeBtn ${
