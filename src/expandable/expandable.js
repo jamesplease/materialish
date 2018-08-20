@@ -7,7 +7,6 @@ export default class Expandable extends Component {
       durationMs,
       onTransitionEnd,
       onTransitionStart,
-      nodeRef,
       ...props
     } = this.props;
     const { isOpen } = this.state;
@@ -18,7 +17,6 @@ export default class Expandable extends Component {
         className={`mt-expandable ${
           isOpen ? 'mt-expandable-open' : ''
         } ${className}`}
-        ref={nodeRef}
         {...props}
       />
     );
