@@ -12,6 +12,9 @@ import 'materialish/materialish.css';
 | className |               | Additional class name(s) to add to the input                                                      |
 | error     | false         | Whether or not the input is in an invalid state                                                   |
 | nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the `input` element |
+| clearable | false         | Pass `true` to display a button to clear the input when there is text                             |
+| onClear   |               | A function that is called when the user clicks the clear button (see the `clearable` prop)        |
+| icon      |               | An optional [Icon](/icons) to display on the left side of the input                               |
 | ...rest   |               | Other props are placed on the root `input` element                                                |
 
 ## CSS Variables

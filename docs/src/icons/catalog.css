@@ -1,47 +1,10 @@
-.iconCatalog_searchContainer {
-  margin-bottom: 10px;
-  display: inline-block;
-  position: relative;
-}
-
-.iconsCatalog_clearSearchIcon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0.625rem;
-  fill: #999;
-  cursor: pointer;
-  will-change: opacity;
-  opacity: 1;
-  transition: opacity 250ms ease-in-out;
-  outline: none;
-  border: 2px solid transparent;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-.iconsCatalog_clearSearchIcon.focus-visible {
-  border-color: var(--mainColor);
-}
-
-.iconsCatalog_clearSearchIcon-enter,
-.iconsCatalog_clearSearchIcon-exit-active {
-  opacity: 0;
-}
-
-.iconsCatalog_clearSearchIcon-enter-active {
-  opacity: 1;
-}
-
 .iconsCatalog_searchInput {
-  padding: 10px 15px;
-  padding-right: 2.6rem;
-  width: 350px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  font-family: Roboto;
-  font-size: 1rem;
-  outline: none;
+  --mt-input-focusBorderColor: var(--mainColor);
+  margin-bottom: 10px;
+}
+
+.iconsCatalog_searchInput .mt-input {
+  width: 22rem;
 }
 
 .iconsCatalog_primaryHeader {
@@ -59,10 +22,6 @@
 
 .iconsCatalog_count {
   margin-bottom: 0;
-}
-
-.iconsCatalog_searchInput:focus {
-  border: 1px solid var(--mainColor);
 }
 
 .iconsCatalog_icon {
@@ -169,7 +128,8 @@
 }
 
 @media (max-width: 650px) {
-  .iconsCatalog_searchInput {
+  .iconsCatalog_searchInput,
+  .iconsCatalog_searchInput .mt-input {
     width: 100%;
   }
 

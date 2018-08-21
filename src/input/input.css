@@ -1,20 +1,42 @@
-.mt-input,
+.mt-input_container,
 .mt-textarea {
   --_mt-input-focusBorderColor: var(
     --mt-input-focusBorderColor,
     var(--mt-mainColor, #4a8fe2)
   );
+
   font-size: calc(var(--mt-baseFontSize) * 0.875);
   font-family: var(--mt-fontFamily, 'Roboto');
+}
+
+.mt-input_container {
+  position: relative;
+  display: inline-block;
+}
+
+.mt-input {
+  font-size: 1em;
+}
+
+.mt-input,
+.mt-textarea {
   border: 1px solid #e1e0e0;
   padding: 0.85em 0.8em;
-  border-radius: 2px;
-  min-width: 300px;
+  border-radius: 0.1875em;
+  min-width: 18.75em;
   outline: none;
   background-color: #fff;
   /* Removes the box-shadow from iOS */
   -webkit-appearance: none;
   resize: none;
+}
+
+.mt-input-clearable {
+  padding-right: 2.6em;
+}
+
+.mt-input-withIcon {
+  padding-left: 2.6em;
 }
 
 .mt-input::placeholder,
@@ -55,4 +77,48 @@
   cursor: default;
   box-shadow: none;
   border-color: #e1e0e0;
+}
+
+.mt-input_closeBtn {
+  position: absolute;
+  top: 50%;
+  right: 0.625em;
+  fill: #999;
+  transform: translateY(-50%);
+  cursor: pointer;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  box-sizing: border-box;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 300ms ease-in-out;
+  pointer-events: none;
+}
+
+.mt-input_closeBtn:focus {
+  border-color: var(--_mt-input-focusBorderColor);
+}
+
+.mt-input_closeBtn-visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mt-input:disabled + .mt-input_closeBtn-visible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mt-input-icon {
+  position: absolute;
+  left: 0.625em;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #999;
+  pointer-events: none;
+}
+
+.mt-input_container-disabled .mt-input-icon {
+  opacity: 0.75;
 }

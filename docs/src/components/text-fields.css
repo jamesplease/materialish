@@ -1,0 +1,5 @@
+.textFields_exampleField .mt-input,
+.textFields_exampleInput .mt-input {
+  width: 230px;
+  min-width: 230px;
+}
