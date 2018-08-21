@@ -1,5 +1,15 @@
 # Changelog
 
+### v0.17.0 (2018/8/xx)
+
+- The ripple more closely aligns with the new Material specification
+- The Icon `size` prop now sizes the icons correctly in Firefox
+- The contrast of Chips has been increased. Note that there is now a new variable for
+  the foreground color of chips.
+- All Chips now support an `icon` prop
+- All Components now support a `nodeRef` prop
+- Inputs now support an `icon` and `clearable` prop
+
 ### v0.16.0 (2018/8/12)
 
 - New component: `Navigation`
