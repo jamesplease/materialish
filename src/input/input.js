@@ -12,7 +12,6 @@ export default class Input extends Component {
       clearable = false,
       onClear,
       value,
-      nodeRef,
       disabled = false,
       ...props
     } = this.props;
@@ -36,7 +35,7 @@ export default class Input extends Component {
           className={`mt-input ${error ? 'mt-input-error' : ''} ${
             clearable ? 'mt-input-clearable' : ''
           } ${hasIcon ? 'mt-input-withIcon' : ''}`}
-          ref={nodeRef}
+          ref={this.getRef}
           value={value}
           disabled={disabled}
           {...props}
@@ -70,6 +69,18 @@ export default class Input extends Component {
         )}
       </div>
     );
+  }
+
+  getRef = ref => {
+    const { nodeRef } = this.props;
+
+    if (typeof nodeRef === 'function') {
+      nodeRef(ref);
+    } else if (nodeRef && nodeRef.hasOwnProperty('current')) {
+      nodeRef.current = ref;
+    }
+
+    this.nodeRef = ref;
   }
 }
 
