@@ -13,6 +13,7 @@ export default class Input extends Component {
       onClear,
       value,
       disabled = false,
+      nodeRef, // Unused; this is to remove it from `...props`
       ...props
     } = this.props;
 
