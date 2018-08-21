@@ -68,7 +68,15 @@ export default class Input extends Component {
                 }
               }
             }}
-            onClick={onClear}
+            onClick={(e) => {
+              if (this.nodeRef && this.nodeRef.focus) {
+                this.nodeRef.focus();
+              }
+
+              if (typeof onClear === 'function') {
+                onClear(e);
+              }
+            }}
           />
         )}
       </div>
