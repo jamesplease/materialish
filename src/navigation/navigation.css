@@ -75,8 +75,7 @@
 }
 
 .mt-navigation_item > svg {
-  width: 1.7em;
-  height: 1.7em;
+  --_mt-iconSize: 1.7em;
   fill: #757575;
 }
 

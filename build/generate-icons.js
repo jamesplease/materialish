@@ -22,11 +22,18 @@ const OUTPUT_METADATA_FILEPATH = path.join(
 const template = `import React from "react";
 
 export default function [[classname]](props) {
-  const { size = "1em", style, ...rest } = props;
+  const { size, style, ...rest } = props;
+
+  const baseStyles = {};
+
+  if (size) {
+    baseStyles['--_mt-iconSize'] = size;
+  }
 
   const styleToApply = {
-    width: size,
-    height: size,
+    ...baseStyles,
+    width: 'var(--_mt-iconSize, 1em)',
+    height: 'var(--_mt-iconSize, 1em)',
     ...style
   };
 
