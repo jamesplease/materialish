@@ -1,3 +1,9 @@
+/**
+ * Materialish typings.
+ * TODO: TS does not yet support bundling *.d.ts files, so for now all definitions will live here:
+ * https://github.com/Microsoft/TypeScript/issues/4433
+ */
+
 import React from 'react';
 
 function refFn<T>(): React.RefObject<T>;
