@@ -100,9 +100,10 @@ Expanded row content should be used as a sibling of a Table Cell.
 
 ## Props
 
-| Prop Name | Default Value | Description                                                                 |
-| --------- | ------------- | --------------------------------------------------------------------------- |
-| className |               | Additional class name(s) to add to the expanded row content                 |
-| children  |               | An array of `Table.Cell` elements to render within the expanded row content |
-| open      | false         | Whether or not to display the expanded content                              |
-| ...rest   |               | Other props are placed on the root element of the expanded row content      |
+| Prop Name | Default Value | Description                                                                                 |
+| --------- | ------------- | ------------------------------------------------------------------------------------------- |
+| className |               | Additional class name(s) to add to the expanded row content                                 |
+| children  |               | An array of `Table.Cell` elements to render within the expanded row content                 |
+| open      | false         | Whether or not to display the expanded content                                              |
+| nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the root node |
+| ...rest   |               | Other props are placed on the root element of the expanded row content                      |
