@@ -322,7 +322,7 @@ class TableExpandedRowContent extends Component {
     if (typeof nodeRef === 'string') {
       if (process.env.NODE_ENV !== 'production') {
         warning(
-          `You passed a string ref as an Input component's nodeRef prop. ` +
+          `You passed a string ref as an TableExpandedRowContent component's nodeRef prop. ` +
             `String refs are not supported in Materialish components. You may only pass a ` +
             `callback ref or the value returned by createRef(). Your ref has been ignored.`,
           'INVALID_NODE_REF_PROP'
