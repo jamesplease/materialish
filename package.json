@@ -52,6 +52,7 @@
     "*.css",
     "icons-data.json"
   ],
+  "types": "dist/materialish.d.ts",
   "homepage": "https://materialish.js.org",
   "dependencies": {
     "classnames": "^2.2.5",
