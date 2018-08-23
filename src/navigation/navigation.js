@@ -1,6 +1,7 @@
 import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Ripple from '../ripple/ripple';
+import warning from '../utils/warning';
 
 const NavigationContext = React.createContext();
 
@@ -13,6 +14,7 @@ export default class Navigation extends Component {
       fullWidth = false,
       vertical = false,
       ripple,
+      nodeRef, // Unused; this is to remove it from `...props`
       ...props
     } = this.props;
 
@@ -82,8 +84,25 @@ export default class Navigation extends Component {
     });
   };
 
-  getRef = el => {
-    this.el = el;
+  getRef = ref => {
+    const { nodeRef } = this.props;
+
+    this.el = ref;
+
+    if (typeof nodeRef === 'string') {
+      if (process.env.NODE_ENV !== 'production') {
+        warning(
+          `You passed a string ref as a Navigation component's nodeRef prop. ` +
+            `String refs are not supported in Materialish components. You may only pass a ` +
+            `callback ref or the value returned by createRef(). Your ref has been ignored.`,
+          'INVALID_NODE_REF_PROP'
+        );
+      }
+    } else if (typeof nodeRef === 'function') {
+      nodeRef(ref);
+    } else if (nodeRef && nodeRef.hasOwnProperty('current')) {
+      nodeRef.current = ref;
+    }
   };
 
   updateTrackerPosition = () => {
@@ -168,11 +187,13 @@ class Item extends Component {
       ripple = true,
       updateTrackerPosition,
       active,
+      nodeRef,
       ...props
     } = this.props;
 
     return (
       <button
+        ref={nodeRef}
         className={`mt-navigation_item ${
           active ? 'mt-navigation_item-active' : ''
         } ${className}`}

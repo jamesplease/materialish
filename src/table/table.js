@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import warning from '../utils/warning';
 
 const TableContext = React.createContext({ columnProps: {} });
 
@@ -276,7 +277,7 @@ TableCell.propTypes = {
 
 class TableExpandedRowContent extends Component {
   render() {
-    const { className = '', children, open, ...props } = this.props;
+    const { className = '', children, open, nodeRef, ...props } = this.props;
 
     return (
       <div
@@ -313,8 +314,25 @@ class TableExpandedRowContent extends Component {
     }
   }
 
-  getRef = el => {
-    this.el = el;
+  getRef = ref => {
+    const { nodeRef } = this.props;
+
+    this.el = ref;
+
+    if (typeof nodeRef === 'string') {
+      if (process.env.NODE_ENV !== 'production') {
+        warning(
+          `You passed a string ref as an TableExpandedRowContent component's nodeRef prop. ` +
+            `String refs are not supported in Materialish components. You may only pass a ` +
+            `callback ref or the value returned by createRef(). Your ref has been ignored.`,
+          'INVALID_NODE_REF_PROP'
+        );
+      }
+    } else if (typeof nodeRef === 'function') {
+      nodeRef(ref);
+    } else if (nodeRef && nodeRef.hasOwnProperty('current')) {
+      nodeRef.current = ref;
+    }
   };
 }
 
