@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { fetchDedupe } from 'fetch-dedupe';
 import CodeHighlighter from './code-highlighter';
+import AnchorHeading from './anchor-heading';
 
 export default class Markdown extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class Markdown extends Component {
         source={markdownText}
         className={`markdown ${this.props.className}`}
         renderers={{
+          heading: AnchorHeading,
           code: CodeHighlighter,
         }}
       />
