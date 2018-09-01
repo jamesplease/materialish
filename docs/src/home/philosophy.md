@@ -26,7 +26,7 @@ that solve the needs of every application out there.
 What Materialish can (and does) do is provide a common visual languages to support the wide variety of
 interactions you see in components like dropdowns. With these visual components, you can add interactions to a
 dropdown as needed. You may recognize the value in separating these distinct concerns if you have ever struggled
-to change the interaction of a component that provides interactions for you.
+to change the interaction of a component that provides them for you.
 
 We recognize that you cannot build an application without interactions, and we plan to provide guides and examples
 that demonstrate how to add common interactions to Materialish components, but they do not exist at this time.
