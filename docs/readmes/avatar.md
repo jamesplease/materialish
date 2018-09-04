@@ -12,6 +12,7 @@ import 'materialish/materialish.css';
 | className |               | Additional class name(s) to add to the Avatar                                               |
 | image     |               | The URL for the user's picture                                                              |
 | initials  |               | The user's initials                                                                         |
+| alt  |                    | The user's name                                                                         |
 | nodeRef   |               | Pass a [ref](https://reactjs.org/docs/refs-and-the-dom.html) to get access to the root node |
 | ...rest   |               | Other props are placed on the root element of the Avatar                                    |
 

@@ -7,6 +7,7 @@ class Avatar extends Component {
       className = '',
       image,
       initials = '',
+      alt = '',
       style,
       nodeRef,
       ...props
@@ -20,6 +21,8 @@ class Avatar extends Component {
           '--mt-avatar-bg-image': `url('${image}')`,
           ...style,
         }}
+        role="img"
+        aria-label={alt}
         {...props}>
         {!image && <div className="mt-avatar_initials">{initials}</div>}
       </div>

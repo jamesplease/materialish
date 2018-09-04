@@ -14,6 +14,7 @@ storiesOf('Avatar', module)
   .add('Regular', () => (
     <Avatar
       image="https://randomuser.me/api/portraits/women/50.jpg"
+      alt="Jayden Peyton"
       onClick={action('clicked')}
     />
   ))
