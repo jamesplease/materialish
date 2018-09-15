@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import uniqid from 'uniqid';
 import Ripple from '../ripple/ripple';
 
 class FilterChip extends Component {
@@ -12,11 +13,13 @@ class FilterChip extends Component {
       nodeRef,
       ...props
     } = this.props;
+    const id = uniqid('mt-chip-');
 
     return (
       <div className={`mt-chip ${className}`} onClick={this.onClick}>
         <input
           type="checkbox"
+          id={id}
           className="mt-chip_input"
           ref={nodeRef}
           {...props}
@@ -33,7 +36,7 @@ class FilterChip extends Component {
             d="M1.73,12.91 8.1,19.28 22.79,4.59"
           />
         </svg>
-        <div className="mt-chip_chip">{children}</div>
+        <label htmlFor={id} className="mt-chip_chip">{children}</label>
         {ripple && <Ripple ref={this.getRippleRef} />}
       </div>
     );

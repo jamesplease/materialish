@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import uniqid from 'uniqid';
 import Ripple from '../ripple/ripple';
 
 class ChoiceChip extends Component {
@@ -12,11 +13,13 @@ class ChoiceChip extends Component {
       nodeRef,
       ...props
     } = this.props;
+    const id = uniqid('mt-chip-');
 
     return (
       <div className={`mt-chip ${className}`} onClick={this.onClick}>
         <input
           type="radio"
+          id={id}
           className="mt-chip_input"
           ref={nodeRef}
           {...props}
@@ -25,7 +28,7 @@ class ChoiceChip extends Component {
           React.cloneElement(icon, {
             className: `mt-chip_choiceIcon ${icon.props.className}`,
           })}
-        <div className="mt-chip_chip">{children}</div>
+        <label htmlFor={id} className="mt-chip_chip">{children}</label>
         {ripple && <Ripple ref={this.getRippleRef} />}
       </div>
     );
