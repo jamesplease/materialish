@@ -135,7 +135,7 @@ clone(
         iconData.icons.push(iconInformation);
 
         let svg = contents
-          .replace('>', ' {...rest} > ')
+          .replace('>', ' aria-hidden="true" focusable="false" {...rest} > ')
           .replace(/width="48"/, '')
           .replace(/height="48"/, 'style={styleToApply}');
 

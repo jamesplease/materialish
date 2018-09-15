@@ -13,7 +13,7 @@ class Ripple extends Component {
       '--mt-ripple-left': left,
     };
 
-    return <span style={styles} className={classname} onClick={this.onClick} />;
+    return <span style={styles} className={classname} onClick={this.onClick} aria-hidden="true"/>;
   }
 
   state = {

@@ -1,7 +1,7 @@
 class IconButtonsExample extends Component {
   render() {
     return (
-      <IconButton>
+      <IconButton aria-label="Alarm">
         <IconAlarmOn />
       </IconButton>
     );
