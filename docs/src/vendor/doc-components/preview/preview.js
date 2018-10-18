@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import { transform } from '@babel/standalone';
 
 const ERROR_TIMEOUT = 500;
 
@@ -22,16 +21,18 @@ export default class Preview extends Component {
   };
 
   componentDidMount() {
-    this.executeCode();
+    if (!this.props.err) {
+      this.executeCode();
+    }
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch() {
     this.setState({ hasError: true });
   }
 
   componentDidUpdate(prevProps) {
     clearTimeout(this.timeoutID);
-    if (this.props.code !== prevProps.code) {
+    if (this.props.code !== prevProps.code && !this.props.err) {
       this.executeCode();
     }
   }
@@ -39,17 +40,6 @@ export default class Preview extends Component {
   setTimeout = () => {
     clearTimeout(this.timeoutID);
     this.timeoutID = setTimeout(...arguments);
-  };
-
-  compileCode = () => {
-    const code = `
-      (function (${Object.keys(this.props.scope).join(", ")}, mountNode) {
-        ${this.props.code}
-      });`;
-
-    return transform(code, {
-      presets: ['es2017', 'stage-3', 'react'],
-    }).code;
   };
 
   buildScope = mountNode => {
@@ -71,12 +61,14 @@ export default class Preview extends Component {
     }
 
     try {
-      ReactDOM.render(eval(this.compileCode())(...scope), mountNode);
+      const code = this.props.compiledCode;
+
+      ReactDOM.render(eval(code)(...scope), mountNode);
       if (this.state.error) {
         this.setState({ error: null });
       }
     } catch (err) {
-      this.setTimeout(() => {
+      setTimeout(() => {
         this.setState({ error: err.toString() });
       }, ERROR_TIMEOUT);
     }

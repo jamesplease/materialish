@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { fetchDedupe } from 'fetch-dedupe';
+import { transform } from '@babel/standalone';
 
 export default class CodeManager extends React.Component {
   render() {
     const { children } = this.props;
-    const { code } = this.state;
+    const { compiledCode, err, inputCode } = this.state;
 
-    if (code === null) {
+    if (inputCode === null) {
       return null;
     }
 
     return children({
-      code,
-      handleCodeChange: this.handleCodeChange
+      inputCode,
+      compiledCode,
+      err,
+      handleCodeChange: this.handleCodeChange,
     });
   }
 
@@ -23,14 +26,45 @@ export default class CodeManager extends React.Component {
 
   static defaultProps = {
     codeTextUrl: null,
+  };
+
+  constructor(props) {
+    super(props);
+
+    let initialState = {};
+
+    if (props.initialCode) {
+      initialState = this.compileCode(this.props.initialCode);
+    }
+
+    this.state = initialState;
   }
 
-  state = {
-    code: null
+  compileCode = inputCode => {
+    const code = `
+      (function (${Object.keys(this.props.scope).join(', ')}, mountNode) {
+        ${inputCode}
+      });`;
+
+    const returnValue = {
+      inputCode,
+      compiledCode: null,
+      err: null,
+    };
+
+    try {
+      returnValue.compiledCode = transform(code, {
+        presets: ['es2017', 'stage-3', 'react'],
+      }).code;
+    } catch (e) {
+      returnValue.err = e;
+    }
+
+    return returnValue;
   };
 
   handleCodeChange = code => {
-    this.setState({ code });
+    this.setState(this.compileCode(code));
   };
 
   componentWillReceiveProps(nextProps) {
@@ -44,10 +78,6 @@ export default class CodeManager extends React.Component {
   componentDidMount() {
     if (this.props.codeTextUrl) {
       this.fetchCode();
-    } else if (this.props.code) {
-      this.setState({
-        code: this.props.code
-      });
     }
   }
 
@@ -55,9 +85,7 @@ export default class CodeManager extends React.Component {
     const { codeTextUrl } = props || this.props;
 
     fetchDedupe(codeTextUrl, { responseType: 'text' }).then(res => {
-      this.setState({
-        code: res.data
-      });
+      this.setState(this.compileCode(res.data));
     });
   };
 }
