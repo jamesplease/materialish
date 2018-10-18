@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 let CodeMirror;
 if (typeof document !== 'undefined') {
@@ -24,6 +25,12 @@ class Editor extends React.Component {
     tabSize: 2,
     theme: 'oceanic-next',
   };
+
+  constructor(props) {
+    super(props);
+
+    this.debouncedOnChange = _.debounce(props.onChange, 500);
+  }
 
   componentDidMount() {
     if (!CodeMirror) {
@@ -51,14 +58,9 @@ class Editor extends React.Component {
 
   handleChange = () => {
     if (!this.props.readOnly && this.props.onChange) {
-      this.props.onChange(this.editor.getValue());
+      this.debouncedOnChange(this.editor.getValue());
     }
   };
-
-  setCode(code) {
-    this.editor.getDoc().setValue(code);
-    this.handleChange();
-  }
 
   render() {
     const { className, style } = this.props;
