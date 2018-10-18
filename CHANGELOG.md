@@ -1,6 +1,6 @@
 # Changelog
 
-### v0.17.0 (2018/8/xx)
+### v0.17.0 (2018/10/18)
 
 - The ripple more closely aligns with the new Material specification
 - The Icon `size` prop now sizes the icons correctly in Firefox
