@@ -41,6 +41,7 @@ export class Usage extends Component {
                   className="componentDoc_preview"
                   code={inputCode}
                   compiledCode={compiledCode}
+                  scope={demoScope}
                   err={err}
                 />
               )}

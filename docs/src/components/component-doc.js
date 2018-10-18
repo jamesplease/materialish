@@ -56,6 +56,7 @@ export class ComponentDoc extends Component {
                     code={inputCode}
                     compiledCode={compiledCode}
                     err={err}
+                    scope={demoScope}
                   />
                 )}
                 <div className="componentDoc_note">
