@@ -34,13 +34,14 @@ export class Usage extends Component {
           to use the icons.
         </p>
         <CodeManager initialCode={example} scope={demoScope}>
-          {({ code, handleCodeChange }) => (
+          {({ inputCode, compiledCode, err, handleCodeChange }) => (
             <Fragment>
-              {code && (
+              {inputCode && (
                 <Preview
                   className="componentDoc_preview"
-                  code={code}
-                  scope={demoScope}
+                  code={inputCode}
+                  compiledCode={compiledCode}
+                  err={err}
                 />
               )}
               <div className="componentDoc_note">
@@ -51,7 +52,7 @@ export class Usage extends Component {
               <Editor
                 className="componentDoc_editor"
                 theme="oceanic-next"
-                codeText={code}
+                codeText={inputCode}
                 onChange={handleCodeChange}
               />
             </Fragment>
