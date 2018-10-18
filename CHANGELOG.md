@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.17.1 (2018/10/18)
+
+- Ensures stroked buttons have the same dimensions as other button types
+
 ### v0.17.0 (2018/10/18)
 
 - The ripple more closely aligns with the new Material specification
