@@ -56,6 +56,9 @@ export class Usage extends Component {
                 codeText={inputCode}
                 onChange={handleCodeChange}
               />
+              {err && (
+                <pre className="componentDoc_errorMsg">{err.toString()}</pre>
+              )}
             </Fragment>
           )}
         </CodeManager>
