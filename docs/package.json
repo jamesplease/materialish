@@ -34,7 +34,7 @@
     "react-lowlight": "^2.0.0",
     "react-markdown": "^3.3.0",
     "react-router": "^4.2.0",
-    "react-static": "^5.9.5",
+    "react-static": "^5.9.12",
     "react-transition-group": "2.4.0",
     "react-transition-group-plus": "0.5.3"
   },
