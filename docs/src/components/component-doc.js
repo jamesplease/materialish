@@ -56,7 +56,6 @@ export class ComponentDoc extends Component {
                     code={inputCode}
                     compiledCode={compiledCode}
                     err={err}
-                    scope={demoScope}
                   />
                 )}
                 <div className="componentDoc_note">
@@ -73,7 +72,6 @@ export class ComponentDoc extends Component {
                   className="componentDoc_editor"
                   theme="oceanic-next"
                   codeText={inputCode}
-                  compiledCode={compiledCode}
                   onChange={handleCodeChange}
                 />
                 {err && (
