@@ -5,10 +5,10 @@ import Elevation from '../elevation/elevation';
 
 export default class Menu extends Component {
   render() {
-    const { className = '', ...props } = this.props;
+    const { className = '', nodeRef, ...props } = this.props;
     return (
       <Elevation depth={1}>
-        <ul className={`mt-menu ${className}`} {...props} />
+        <ul className={`mt-menu ${className}`} ref={nodeRef} {...props} />
       </Elevation>
     );
   }
@@ -25,13 +25,16 @@ class Item extends Component {
       selected = false,
       ripple = true,
       children,
+      nodeRef,
       ...props
     } = this.props;
+
     return (
       <div
         className={`mt-menu_item ${
           selected ? 'mt-menu_item-selected' : ''
         } ${className}`}
+        ref={nodeRef}
         {...props}
         onClick={this.onClick}>
         {children}
@@ -64,9 +67,11 @@ Item.propTypes = {
 };
 
 function Separator(props) {
-  const { className, rest } = props;
+  const { className, nodeRef, ...rest } = props;
 
-  return <div className={`mt-menu_separator ${className}`} {...rest} />;
+  return (
+    <div className={`mt-menu_separator ${className}`} ref={nodeRef} {...rest} />
+  );
 }
 
 Separator.propTypes = {
