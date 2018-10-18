@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import { transform } from '@babel/standalone';
 
 const ERROR_TIMEOUT = 500;
 
@@ -27,7 +26,7 @@ export default class Preview extends Component {
     }
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch() {
     this.setState({ hasError: true });
   }
 
