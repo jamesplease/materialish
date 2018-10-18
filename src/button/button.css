@@ -6,9 +6,15 @@
     2. Otherwise, `mt-mainColor` will be applied
     3. Otherwise, `teal` will be applied
   */
-  --_mt-button-backgroundColor: var( --mt-button-backgroundColor, var(--mt-mainColor, #2196f3));
+  --_mt-button-backgroundColor: var(
+    --mt-button-backgroundColor,
+    var(--mt-mainColor, #2196f3)
+  );
   --_mt-button-textColor: var(--mt-button-textColor, #fff);
-  --_mt-button-disabledTextColor: var( --mt-button-disabledTextColor, rgba(0, 0, 0, 0.38));
+  --_mt-button-disabledTextColor: var(
+    --mt-button-disabledTextColor,
+    rgba(0, 0, 0, 0.38)
+  );
   all: initial;
   font-family: var(--mt-fontFamily, 'Roboto');
   position: relative;
@@ -74,7 +80,8 @@
 }
 
 .mt-button-raised {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .mt-button-raised:disabled {
@@ -101,6 +108,15 @@
 
 .mt-button-stroked {
   border: 0.17em solid var(--_mt-button-backgroundColor);
+  /*
+    To ensure that stroked buttons are the same height as regular buttons, we adjust
+    the padding here. We subtract the width of the border, 0.17, from the padding of
+    a regular button, to arrive at these values.
+
+    For more, see gh-295
+    https://github.com/jamesplease/materialish/issues/295
+  */
+  padding: 0.48em 0.98em;
 }
 
 .mt-button-flat:disabled,
