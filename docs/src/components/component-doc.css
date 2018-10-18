@@ -88,3 +88,12 @@
 .componentDoc_componentsTable .mt-table_row:hover:after {
   opacity: 0;
 }
+
+.componentDoc_errorMsg {
+  margin: 0;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: #bd3f3f;
+  color: #fff;
+  border-radius: 0 0 5px 5px;
+}

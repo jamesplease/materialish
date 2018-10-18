@@ -33,7 +33,7 @@ export class Usage extends Component {
           Because the components render SVG, you do not need to import CSS file
           to use the icons.
         </p>
-        <CodeManager code={example}>
+        <CodeManager initialCode={example} scope={demoScope}>
           {({ code, handleCodeChange }) => (
             <Fragment>
               {code && (

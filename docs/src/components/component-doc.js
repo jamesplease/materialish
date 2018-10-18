@@ -45,35 +45,43 @@ export class ComponentDoc extends Component {
       <div className="componentDoc">
         <h1 className="primaryHeader componentDoc_primaryHeader">{name}</h1>
         <p className="paragraph">{description}</p>
-        <CodeManager code={example}>
-          {({ code, handleCodeChange }) => (
-            <Fragment>
-              {code && (
-                <Preview
-                  wrapperStyle={wrapperStyle}
-                  className="componentDoc_preview"
-                  code={code}
-                  scope={demoScope}
-                />
-              )}
-              <div className="componentDoc_note">
-                <div className="componentDoc_noteContent">
-                  <span className="componentDoc_noteEmoji">🙌</span> Heads up!
-                  This code is editable. The preview above will update to
-                  reflect your changes.
+        <CodeManager initialCode={example} scope={demoScope}>
+          {({ inputCode, compiledCode, err, handleCodeChange }) => {
+            return (
+              <Fragment>
+                {inputCode && (
+                  <Preview
+                    wrapperStyle={wrapperStyle}
+                    className="componentDoc_preview"
+                    code={inputCode}
+                    compiledCode={compiledCode}
+                    err={err}
+                    scope={demoScope}
+                  />
+                )}
+                <div className="componentDoc_note">
+                  <div className="componentDoc_noteContent">
+                    <span className="componentDoc_noteEmoji">🙌</span> Heads up!
+                    This code is editable. The preview above will update to
+                    reflect your changes.
+                  </div>
                 </div>
-              </div>
-              <Editor
-                style={{
-                  '--editorHeight': editorHeight,
-                }}
-                className="componentDoc_editor"
-                theme="oceanic-next"
-                codeText={code}
-                onChange={handleCodeChange}
-              />
-            </Fragment>
-          )}
+                <Editor
+                  style={{
+                    '--editorHeight': editorHeight,
+                  }}
+                  className="componentDoc_editor"
+                  theme="oceanic-next"
+                  codeText={inputCode}
+                  compiledCode={compiledCode}
+                  onChange={handleCodeChange}
+                />
+                {err && (
+                  <pre className="componentDoc_errorMsg">{err.toString()}</pre>
+                )}
+              </Fragment>
+            );
+          }}
         </CodeManager>
         <Markdown markdownText={markdown} />
         <h2 className="secondaryHeader">Useful Links</h2>
