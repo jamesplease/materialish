@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.17.2 (2018/10/18)
+
+- Fixes a bug where Avatars would fetch attempt to fetch an invalid URL
+
 ### v0.17.1 (2018/10/18)
 
 - Ensures stroked buttons have the same dimensions as other button types
