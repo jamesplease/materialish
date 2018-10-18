@@ -17,7 +17,7 @@ class Avatar extends Component {
         ref={nodeRef}
         className={`mt-avatar ${className}`}
         style={{
-          '--mt-avatar-bg-image': `url('${image}')`,
+          '--mt-avatar-bg-image': image && `url('${image}')`,
           ...style,
         }}
         {...props}>
