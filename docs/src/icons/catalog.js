@@ -3,10 +3,8 @@ import * as MaterialishIcons from 'materialish/icons';
 import iconsData from 'materialish/icons-data.json';
 import Clipboard from 'react-clipboard.js';
 import _ from 'lodash';
-import { CSSTransition } from 'react-transition-group';
 import { Elevation, Input } from 'materialish';
 import IconContentCopy from 'materialish/icon-content-copy';
-import IconClose from 'materialish/icon-close';
 import { withRouteData } from 'react-static';
 import aliases from './aliases.json';
 import Over from '../vendor/react-over';
@@ -51,8 +49,6 @@ export class IconsCatalog extends Component {
       .value().length;
     const totalCount = _.size(iconsData.icons);
 
-    const displayDeleteIcon = Boolean(search);
-
     return (
       <Over.Provider>
         <Over.Consumer>
@@ -65,13 +61,8 @@ export class IconsCatalog extends Component {
                 <div className="iconsCatalog_heading">
                   <Input
                     clearable
-                    onClickClear={e => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        e.stopPropagation();
-
+                    onClear={() => {
                         this.resetSearch();
-                      }
                     }}
                     nodeRef={this.searchRef}
                     className="iconsCatalog_searchInput"
