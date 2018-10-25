@@ -1,0 +1,1 @@
+"class IconsExample extends Component {\n  render() {\n    return (\n      <Fragment>\n        <IconError fill=\"red\" />\n        <IconWifiLock size=\"1.5rem\" />\n        <IconTransferWithinAStation size=\"38px\" fill=\"cadetblue\" />\n      </Fragment>\n    );\n  }\n}\n\nreturn <IconsExample />;\n"
