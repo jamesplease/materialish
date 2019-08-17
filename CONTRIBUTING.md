@@ -5,23 +5,15 @@
 > [open an issue](https://github.com/jamesplease/materialish/issues/new?title=Contributing+help),
 > and we'll do our best to help out.
 
-To begin contributing, you'll first need to
-[clone this repository](https://help.github.com/articles/cloning-a-repository/),
-then navigate into the repository's directory.
+To begin contributing, you'll need to
 
-```
-git clone git@github.com:jamesplease/materialish.git
-
-cd materialish
-```
-
-Next, install the dependencies using [npm](https://www.npmjs.com/).
-
-```
-npm install
-```
-
-Awesome – you're ready to contribute!
+1. Fork the Materialish repository on Github.
+2. Clone your fork to your machine `git clone git@github.com:<YOUR-USER-NAME>/materialish.git`.
+3. Navigate into project directory `cd materialish/`.
+4. Install the dependencies `npm install`.
+5. Create a branch `git checkout -b feature/new-contribute`.
+6. Make your Magic, then push to GitHub `git push --set-upstream origin feature/new-contribute`.
+7. Open GitHub and submit your Pull Request.
 
 ### Contributing to the Code
 
@@ -40,23 +32,9 @@ As you make changes to the source code, the storybook will update automatically.
 
 The documentation can be found in `./docs`. There is an additional installation step to update the docs.
 
-First, navigate into the docs folder:
-
-```
-cd docs
-```
-
-Then, install the dependencies that are specific to the docs:
-
-```
-npm install
-```
-
-Once that's done, you can now run the site locally. To do that, execute this command:
-
-```
-npm start
-```
+1. Navigate into the docs folder `cd docs/`.
+2. Install the dependencies that are specific to the docs `npm install`
+3. Run the site locally `npm start`
 
 The terminal will let you know the URL of your locally-running site.
 
